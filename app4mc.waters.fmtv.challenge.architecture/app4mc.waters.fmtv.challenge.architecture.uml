@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_PlWtgH_XEeq1j4EUwdsVmw" name="app4mc">
+  <ownedComment xmi:type="uml:Comment" xmi:id="_AtVzkH_bEeq1j4EUwdsVmw" annotatedElement="_ShCJkH_ZEeq1j4EUwdsVmw">
+    <body>Localization component includes the EKF task</body>
+  </ownedComment>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_P2HGUH_XEeq1j4EUwdsVmw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_PqMxQH_XEeq1j4EUwdsVmw" name="Interaction1"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_8AlbcH_YEeq1j4EUwdsVmw" name="GPS Grabber">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_Eiy3oH_aEeq1j4EUwdsVmw" name="gps_output" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_QBDgIH_ZEeq1j4EUwdsVmw" name="Lidar Grabber">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_59JHkH_ZEeq1j4EUwdsVmw" name="Lider_output" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_hDXfsH_bEeq1j4EUwdsVmw" name="occupancy_grid" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_ShCJkH_ZEeq1j4EUwdsVmw" name="Localization">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_2kJygH_ZEeq1j4EUwdsVmw" name="lidar_input" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_C1C8YH_aEeq1j4EUwdsVmw" name="gps_input" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_WMM-UH_aEeq1j4EUwdsVmw" name="vehicle_status" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_bOFHUH_bEeq1j4EUwdsVmw" name="environment_state" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_AN2QoH_aEeq1j4EUwdsVmw" client="_2kJygH_ZEeq1j4EUwdsVmw" supplier="_59JHkH_ZEeq1j4EUwdsVmw"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_GUPAEH_aEeq1j4EUwdsVmw" client="_C1C8YH_aEeq1j4EUwdsVmw" supplier="_Eiy3oH_aEeq1j4EUwdsVmw"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_IWw4gH_aEeq1j4EUwdsVmw" name="CANBus Interface">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_RXCmMH_aEeq1j4EUwdsVmw" name="vehicle_status" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_Afzb8H_dEeq1j4EUwdsVmw" name="vehicle_commands" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_YSpGYH_aEeq1j4EUwdsVmw" client="_WMM-UH_aEeq1j4EUwdsVmw" supplier="_RXCmMH_aEeq1j4EUwdsVmw"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_ZvuIYH_aEeq1j4EUwdsVmw" name="Path Planner">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_RYx2IH_bEeq1j4EUwdsVmw" name="environment_state" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_fr1FAH_bEeq1j4EUwdsVmw" name="occupancy_grid" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_hrPikH_cEeq1j4EUwdsVmw" name="lane" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_2qlqUH_cEeq1j4EUwdsVmw" name="vehicle_goal_state" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_diINkH_bEeq1j4EUwdsVmw" client="_RYx2IH_bEeq1j4EUwdsVmw" supplier="_bOFHUH_bEeq1j4EUwdsVmw"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_i8asAH_bEeq1j4EUwdsVmw" client="_fr1FAH_bEeq1j4EUwdsVmw" supplier="_hDXfsH_bEeq1j4EUwdsVmw"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_t98fwH_bEeq1j4EUwdsVmw" name="Sensor Fusion">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_x1uCkH_bEeq1j4EUwdsVmw" name="lidar_input" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_L-HHwH_cEeq1j4EUwdsVmw" name="bounding_box" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_4rC7oH_bEeq1j4EUwdsVmw" client="_x1uCkH_bEeq1j4EUwdsVmw" supplier="_59JHkH_ZEeq1j4EUwdsVmw"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_8l-gIH_bEeq1j4EUwdsVmw" name="Camera">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="__yOZsH_bEeq1j4EUwdsVmw" name="frame" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_EMPt8H_cEeq1j4EUwdsVmw" name="Object Detection">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_G3EVcH_cEeq1j4EUwdsVmw" name="frame" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_IbumIH_cEeq1j4EUwdsVmw" name="bounding_box" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_KtvFAH_cEeq1j4EUwdsVmw" client="_G3EVcH_cEeq1j4EUwdsVmw" supplier="__yOZsH_bEeq1j4EUwdsVmw"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_N0xHYH_cEeq1j4EUwdsVmw" client="_L-HHwH_cEeq1j4EUwdsVmw" supplier="_IbumIH_cEeq1j4EUwdsVmw"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_QPQz4H_cEeq1j4EUwdsVmw" name="Lane Detection">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_SkKOsH_cEeq1j4EUwdsVmw" name="frame" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_fF54AH_cEeq1j4EUwdsVmw" name="lane" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_kKIm4H_cEeq1j4EUwdsVmw" client="_hrPikH_cEeq1j4EUwdsVmw" supplier="_fF54AH_cEeq1j4EUwdsVmw"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_tXcrAH_cEeq1j4EUwdsVmw" name="Controller">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_5PlWoH_cEeq1j4EUwdsVmw" name="vehicle_goal_state" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_-NCIEH_cEeq1j4EUwdsVmw" name="vehicle_commands" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_7T-3UH_cEeq1j4EUwdsVmw" client="_5PlWoH_cEeq1j4EUwdsVmw" supplier="_2qlqUH_cEeq1j4EUwdsVmw"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_lLuKQH_dEeq1j4EUwdsVmw" client="_SkKOsH_cEeq1j4EUwdsVmw" supplier="__yOZsH_bEeq1j4EUwdsVmw"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_ooKb8H_dEeq1j4EUwdsVmw" client="_-NCIEH_cEeq1j4EUwdsVmw" supplier="_Afzb8H_dEeq1j4EUwdsVmw"/>
+</uml:Model>

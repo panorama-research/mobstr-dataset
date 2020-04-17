@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <notation:Diagram xmi:id="_PrkDMH_XEeq1j4EUwdsVmw" type="PapyrusUMLSequenceDiagram" name="Sequence Diagram" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_PrkDMX_XEeq1j4EUwdsVmw" type="Interaction_Shape">
+      <children xmi:type="notation:DecorationNode" xmi:id="_PrkDMn_XEeq1j4EUwdsVmw" type="Interaction_NameLabel"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_PrkDM3_XEeq1j4EUwdsVmw" type="Interaction_SubfragmentCompartment">
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PrkDNH_XEeq1j4EUwdsVmw"/>
+      </children>
+      <element xmi:type="uml:Interaction" href="app4mc.waters.fmtv.challenge.architecture.uml#_PqMxQH_XEeq1j4EUwdsVmw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PrkDNX_XEeq1j4EUwdsVmw"/>
+    </children>
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_PrkDNn_XEeq1j4EUwdsVmw" name="diagram_compatibility_version" stringValue="1.4.0"/>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_PrkDN3_XEeq1j4EUwdsVmw"/>
+    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_PrkDOH_XEeq1j4EUwdsVmw" diagramKindId="org.eclipse.papyrus.uml.diagram.sequence">
+      <owner xmi:type="uml:Model" href="app4mc.waters.fmtv.challenge.architecture.uml#_PlWtgH_XEeq1j4EUwdsVmw"/>
+    </styles>
+    <element xmi:type="uml:Interaction" href="app4mc.waters.fmtv.challenge.architecture.uml#_PqMxQH_XEeq1j4EUwdsVmw"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_Pr2XEH_XEeq1j4EUwdsVmw" type="PapyrusUMLComponentDiagram" name="Component Diagram" measurementUnit="Pixel">
+    <children xmi:type="notation:Shape" xmi:id="_8A0E8H_YEeq1j4EUwdsVmw" type="Component_PackagedElementShape">
+      <children xmi:type="notation:DecorationNode" xmi:id="_8A7ZsH_YEeq1j4EUwdsVmw" type="Component_NameLabel"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_8A7ZsX_YEeq1j4EUwdsVmw" type="Component_FloatingNameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8A7Zsn_YEeq1j4EUwdsVmw" y="15"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_8A918H_YEeq1j4EUwdsVmw" type="Component_StructureCompartment">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_8A918X_YEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8A918n_YEeq1j4EUwdsVmw"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_8B4b8H_YEeq1j4EUwdsVmw" type="compartment_shape_display">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_8B4b8X_YEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8B4b8n_YEeq1j4EUwdsVmw"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_Ei5lUH_aEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_Ei5lUn_aEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_Ei6MYH_aEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_Ei6MYX_aEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_Ei6MYn_aEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#_Eiy3oH_aEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ei5lUX_aEeq1j4EUwdsVmw" x="100" y="111"/>
+      </children>
+      <element xmi:type="uml:Component" href="app4mc.waters.fmtv.challenge.architecture.uml#_8AlbcH_YEeq1j4EUwdsVmw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8A0E8X_YEeq1j4EUwdsVmw" x="60" y="640" width="201" height="121"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_QBMqEH_ZEeq1j4EUwdsVmw" type="Component_PackagedElementShape">
+      <children xmi:type="notation:DecorationNode" xmi:id="_QBSJoH_ZEeq1j4EUwdsVmw" type="Component_NameLabel"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_QBSJoX_ZEeq1j4EUwdsVmw" type="Component_FloatingNameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_QBSJon_ZEeq1j4EUwdsVmw" y="15"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_QBSJo3_ZEeq1j4EUwdsVmw" type="Component_StructureCompartment">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_QBSJpH_ZEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QBSJpX_ZEeq1j4EUwdsVmw"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_QBXCIH_ZEeq1j4EUwdsVmw" type="compartment_shape_display">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_QBXCIX_ZEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QBXCIn_ZEeq1j4EUwdsVmw"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_59P1QH_ZEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_59P1Qn_ZEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_59P1Q3_ZEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_59P1RH_ZEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_59P1RX_ZEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#_59JHkH_ZEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_59P1QX_ZEeq1j4EUwdsVmw" x="100" y="91"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_hDh3wH_bEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_hDh3wn_bEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_hDh3w3_bEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_hDh3xH_bEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_hDh3xX_bEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#_hDXfsH_bEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hDh3wX_bEeq1j4EUwdsVmw" x="160" y="40"/>
+      </children>
+      <element xmi:type="uml:Component" href="app4mc.waters.fmtv.challenge.architecture.uml#_QBDgIH_ZEeq1j4EUwdsVmw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QBMqEX_ZEeq1j4EUwdsVmw" x="500" y="280" width="170" height="101"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_ShKFYH_ZEeq1j4EUwdsVmw" type="Component_PackagedElementShape">
+      <children xmi:type="notation:DecorationNode" xmi:id="_ShO94H_ZEeq1j4EUwdsVmw" type="Component_NameLabel"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_ShO94X_ZEeq1j4EUwdsVmw" type="Component_FloatingNameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ShO94n_ZEeq1j4EUwdsVmw" y="15"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_ShO943_ZEeq1j4EUwdsVmw" type="Component_StructureCompartment">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_ShO95H_ZEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ShO95X_ZEeq1j4EUwdsVmw"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_ShUdcH_ZEeq1j4EUwdsVmw" type="compartment_shape_display">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_ShUdcX_ZEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ShUdcn_ZEeq1j4EUwdsVmw"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_2kRHQH_ZEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_2kRHQn_ZEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_2kRHQ3_ZEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_2kRuUH_ZEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_2kRuUX_ZEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#_2kJygH_ZEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2kRHQX_ZEeq1j4EUwdsVmw" x="140" y="-10"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_C1JDAH_aEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C1JDAn_aEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C1JDA3_aEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C1JDBH_aEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C1JDBX_aEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#_C1C8YH_aEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C1JDAX_aEeq1j4EUwdsVmw" x="-10" y="20"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_WMU6IH_aEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_WMU6In_aEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_WMU6I3_aEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_WMU6JH_aEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_WMU6JX_aEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#_WMM-UH_aEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WMU6IX_aEeq1j4EUwdsVmw" x="80" y="60"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_bOO4UH_bEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_bOO4Un_bEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_bOO4U3_bEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_bOO4VH_bEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_bOO4VX_bEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#_bOFHUH_bEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bOO4UX_bEeq1j4EUwdsVmw" x="20" y="60"/>
+      </children>
+      <element xmi:type="uml:Component" href="app4mc.waters.fmtv.challenge.architecture.uml#_ShCJkH_ZEeq1j4EUwdsVmw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ShKFYX_ZEeq1j4EUwdsVmw" x="340" y="160"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_IW6CcH_aEeq1j4EUwdsVmw" type="Component_PackagedElementShape">
+      <children xmi:type="notation:DecorationNode" xmi:id="_IW_iAH_aEeq1j4EUwdsVmw" type="Component_NameLabel"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_IW_iAX_aEeq1j4EUwdsVmw" type="Component_FloatingNameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_IW_iAn_aEeq1j4EUwdsVmw" y="15"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_IW_iA3_aEeq1j4EUwdsVmw" type="Component_StructureCompartment">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_IW_iBH_aEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IW_iBX_aEeq1j4EUwdsVmw"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_IXClUH_aEeq1j4EUwdsVmw" type="compartment_shape_display">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_IXClUX_aEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IXClUn_aEeq1j4EUwdsVmw"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_RXLJEH_aEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_RXLJEn_aEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_RXLJE3_aEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_RXLwIH_aEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_RXLwIX_aEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#_RXCmMH_aEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RXLJEX_aEeq1j4EUwdsVmw" x="80" y="60"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_AgCsgH_dEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_AgCsgn_dEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_AgCsg3_dEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_AgCshH_dEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_AgCshX_dEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#_Afzb8H_dEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AgCsgX_dEeq1j4EUwdsVmw" x="20" y="60"/>
+      </children>
+      <element xmi:type="uml:Component" href="app4mc.waters.fmtv.challenge.architecture.uml#_IWw4gH_aEeq1j4EUwdsVmw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IW6CcX_aEeq1j4EUwdsVmw" x="300" y="280"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_Zv0PAH_aEeq1j4EUwdsVmw" type="Component_PackagedElementShape">
+      <children xmi:type="notation:DecorationNode" xmi:id="_Zv5HgH_aEeq1j4EUwdsVmw" type="Component_NameLabel"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_Zv5HgX_aEeq1j4EUwdsVmw" type="Component_FloatingNameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Zv5Hgn_aEeq1j4EUwdsVmw" y="15"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_Zv5Hg3_aEeq1j4EUwdsVmw" type="Component_StructureCompartment">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_Zv5HhH_aEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Zv5HhX_aEeq1j4EUwdsVmw"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_Zv8K0H_aEeq1j4EUwdsVmw" type="compartment_shape_display">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_Zv8K0X_aEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Zv8K0n_aEeq1j4EUwdsVmw"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_RZDi8H_bEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_RZDi8n_bEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_RZDi83_bEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_RZDi9H_bEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_RZDi9X_bEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#_RYx2IH_bEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RZDi8X_bEeq1j4EUwdsVmw" x="120" y="-10"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_fr-O8H_bEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_fr-O8n_bEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_fr-O83_bEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_fr-O9H_bEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_fr-O9X_bEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#_fr1FAH_bEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fr-O8X_bEeq1j4EUwdsVmw" x="140" y="60"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_hrezIH_cEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_hrezIn_cEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_hrezI3_cEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_hrezJH_cEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_hrezJX_cEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#_hrPikH_cEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hrezIX_cEeq1j4EUwdsVmw" x="37" y="60"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_2q0T0H_cEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_2q0T0n_cEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_2q0T03_cEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_2q0T1H_cEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_2q0T1X_cEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#_2qlqUH_cEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2q0T0X_cEeq1j4EUwdsVmw" x="140" y="20"/>
+      </children>
+      <element xmi:type="uml:Component" href="app4mc.waters.fmtv.challenge.architecture.uml#_ZvuIYH_aEeq1j4EUwdsVmw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Zv0PAX_aEeq1j4EUwdsVmw" x="520" y="40"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_AtfkkH_bEeq1j4EUwdsVmw" type="Comment_Shape">
+      <children xmi:type="notation:DecorationNode" xmi:id="_AtkdEH_bEeq1j4EUwdsVmw" type="Comment_BodyLabel"/>
+      <element xmi:type="uml:Comment" href="app4mc.waters.fmtv.challenge.architecture.uml#_AtVzkH_bEeq1j4EUwdsVmw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AtfkkX_bEeq1j4EUwdsVmw" x="860" y="40"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_t-GQwH_bEeq1j4EUwdsVmw" type="Component_PackagedElementShape">
+      <children xmi:type="notation:DecorationNode" xmi:id="_t-LJQH_bEeq1j4EUwdsVmw" type="Component_NameLabel"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_t-LJQX_bEeq1j4EUwdsVmw" type="Component_FloatingNameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_t-LJQn_bEeq1j4EUwdsVmw" y="15"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_t-LJQ3_bEeq1j4EUwdsVmw" type="Component_StructureCompartment">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_t-LJRH_bEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_t-LJRX_bEeq1j4EUwdsVmw"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_t-OMkH_bEeq1j4EUwdsVmw" type="compartment_shape_display">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_t-OMkX_bEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_t-OMkn_bEeq1j4EUwdsVmw"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_x15owH_bEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_x15own_bEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_x15ow3_bEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_x15oxH_bEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_x15oxX_bEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#_x1uCkH_bEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x15owX_bEeq1j4EUwdsVmw" x="140" y="20"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_L-T8EH_cEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_L-T8En_cEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_L-T8E3_cEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_L-T8FH_cEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_L-T8FX_cEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#_L-HHwH_cEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L-T8EX_cEeq1j4EUwdsVmw" x="60" y="60"/>
+      </children>
+      <element xmi:type="uml:Component" href="app4mc.waters.fmtv.challenge.architecture.uml#_t98fwH_bEeq1j4EUwdsVmw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_t-GQwX_bEeq1j4EUwdsVmw" x="40" y="40"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_8mFN0H_bEeq1j4EUwdsVmw" type="Component_PackagedElementShape">
+      <children xmi:type="notation:DecorationNode" xmi:id="_8mKGUH_bEeq1j4EUwdsVmw" type="Component_NameLabel"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_8mKGUX_bEeq1j4EUwdsVmw" type="Component_FloatingNameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8mKGUn_bEeq1j4EUwdsVmw" y="15"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_8mKGU3_bEeq1j4EUwdsVmw" type="Component_StructureCompartment">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_8mKGVH_bEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8mKGVX_bEeq1j4EUwdsVmw"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_8mNJoH_bEeq1j4EUwdsVmw" type="compartment_shape_display">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_8mNJoX_bEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8mNJon_bEeq1j4EUwdsVmw"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="__ybOAH_bEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="__ybOAn_bEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="__ybOA3_bEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="__ybOBH_bEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="__ybOBX_bEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#__yOZsH_bEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="__ybOAX_bEeq1j4EUwdsVmw" x="140" y="-10"/>
+      </children>
+      <element xmi:type="uml:Component" href="app4mc.waters.fmtv.challenge.architecture.uml#_8l-gIH_bEeq1j4EUwdsVmw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8mFN0X_bEeq1j4EUwdsVmw" x="20" y="380"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_EMV0kH_cEeq1j4EUwdsVmw" type="Component_PackagedElementShape">
+      <children xmi:type="notation:DecorationNode" xmi:id="_EMatEH_cEeq1j4EUwdsVmw" type="Component_NameLabel"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_EMatEX_cEeq1j4EUwdsVmw" type="Component_FloatingNameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_EMatEn_cEeq1j4EUwdsVmw" y="15"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_EMbUIH_cEeq1j4EUwdsVmw" type="Component_StructureCompartment">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_EMbUIX_cEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EMbUIn_cEeq1j4EUwdsVmw"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_EMdwYH_cEeq1j4EUwdsVmw" type="compartment_shape_display">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_EMdwYX_cEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EMdwYn_cEeq1j4EUwdsVmw"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_G3RJwH_cEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_G3RJwn_cEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_G3RJw3_cEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_G3RJxH_cEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_G3RJxX_cEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#_G3EVcH_cEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G3RJwX_cEeq1j4EUwdsVmw" x="100" y="60"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_Ib6zYH_cEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_Ib6zYn_cEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_Ib6zY3_cEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_Ib6zZH_cEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_Ib6zZX_cEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#_IbumIH_cEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ib6zYX_cEeq1j4EUwdsVmw" x="120" y="-10"/>
+      </children>
+      <element xmi:type="uml:Component" href="app4mc.waters.fmtv.challenge.architecture.uml#_EMPt8H_cEeq1j4EUwdsVmw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EMV0kX_cEeq1j4EUwdsVmw" x="80" y="200"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_QPW6gH_cEeq1j4EUwdsVmw" type="Component_PackagedElementShape">
+      <children xmi:type="notation:DecorationNode" xmi:id="_QPbzAH_cEeq1j4EUwdsVmw" type="Component_NameLabel"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_QPbzAX_cEeq1j4EUwdsVmw" type="Component_FloatingNameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_QPbzAn_cEeq1j4EUwdsVmw" y="15"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_QPbzA3_cEeq1j4EUwdsVmw" type="Component_StructureCompartment">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_QPbzBH_cEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QPbzBX_cEeq1j4EUwdsVmw"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_QPe2UH_cEeq1j4EUwdsVmw" type="compartment_shape_display">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_QPe2UX_cEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QPe2Un_cEeq1j4EUwdsVmw"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_SkYRIH_cEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_SkYRIn_cEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_SkYRI3_cEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_SkYRJH_cEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_SkYRJX_cEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#_SkKOsH_cEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SkYRIX_cEeq1j4EUwdsVmw" x="-10" y="40"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_fGIhgH_cEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_fGIhgn_cEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_fGIhg3_cEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_fGIhhH_cEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_fGIhhX_cEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#_fF54AH_cEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fGIhgX_cEeq1j4EUwdsVmw" x="140" y="60"/>
+      </children>
+      <element xmi:type="uml:Component" href="app4mc.waters.fmtv.challenge.architecture.uml#_QPQz4H_cEeq1j4EUwdsVmw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QPW6gX_cEeq1j4EUwdsVmw" x="340" y="500"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_tXl08H_cEeq1j4EUwdsVmw" type="Component_PackagedElementShape">
+      <children xmi:type="notation:DecorationNode" xmi:id="_tXqtcH_cEeq1j4EUwdsVmw" type="Component_NameLabel"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_tXqtcX_cEeq1j4EUwdsVmw" type="Component_FloatingNameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_tXqtcn_cEeq1j4EUwdsVmw" y="15"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_tXqtc3_cEeq1j4EUwdsVmw" type="Component_StructureCompartment">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_tXqtdH_cEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tXqtdX_cEeq1j4EUwdsVmw"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_tXtwwH_cEeq1j4EUwdsVmw" type="compartment_shape_display">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_tXtwwX_cEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tXtwwn_cEeq1j4EUwdsVmw"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_5P0AIH_cEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_5P0nMH_cEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_5P0nMX_cEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_5P0nMn_cEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_5P0nM3_cEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#_5PlWoH_cEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5P0AIX_cEeq1j4EUwdsVmw" x="120" y="-10"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_-NRYoH_cEeq1j4EUwdsVmw" type="Port_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_-NRYon_cEeq1j4EUwdsVmw" type="Port_NameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_-NRYo3_cEeq1j4EUwdsVmw" x="25" y="3"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_-NRYpH_cEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_-NRYpX_cEeq1j4EUwdsVmw" x="25" y="-10"/>
+        </children>
+        <element xmi:type="uml:Port" href="app4mc.waters.fmtv.challenge.architecture.uml#_-NCIEH_cEeq1j4EUwdsVmw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-NRYoX_cEeq1j4EUwdsVmw" x="-10" y="60"/>
+      </children>
+      <element xmi:type="uml:Component" href="app4mc.waters.fmtv.challenge.architecture.uml#_tXcrAH_cEeq1j4EUwdsVmw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tXl08X_cEeq1j4EUwdsVmw" x="740" y="520"/>
+    </children>
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_Pr2XEX_XEeq1j4EUwdsVmw" name="diagram_compatibility_version" stringValue="1.4.0"/>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_Pr2XEn_XEeq1j4EUwdsVmw"/>
+    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_Pr2XE3_XEeq1j4EUwdsVmw" diagramKindId="org.eclipse.papyrus.uml.diagram.component.root.package">
+      <owner xmi:type="uml:Model" href="app4mc.waters.fmtv.challenge.architecture.uml#_PlWtgH_XEeq1j4EUwdsVmw"/>
+    </styles>
+    <element xmi:type="uml:Model" href="app4mc.waters.fmtv.challenge.architecture.uml#_PlWtgH_XEeq1j4EUwdsVmw"/>
+    <edges xmi:type="notation:Connector" xmi:id="_APnyQH_aEeq1j4EUwdsVmw" type="Usage_Edge" source="_2kRHQH_ZEeq1j4EUwdsVmw" target="_59P1QH_ZEeq1j4EUwdsVmw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_APsqwH_aEeq1j4EUwdsVmw" type="Usage_NameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_APsqwX_aEeq1j4EUwdsVmw" y="60"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_APsqwn_aEeq1j4EUwdsVmw" type="Usage_StereotypeLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_APsqw3_aEeq1j4EUwdsVmw" y="30"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_APnyQX_aEeq1j4EUwdsVmw"/>
+      <element xmi:type="uml:Usage" href="app4mc.waters.fmtv.challenge.architecture.uml#_AN2QoH_aEeq1j4EUwdsVmw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_APnyQn_aEeq1j4EUwdsVmw" points="[454, 230, -643984, -643984]$[543, 290, -643984, -643984]"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AQBa4H_aEeq1j4EUwdsVmw" id="(0.5,0.15)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_GUWU0H_aEeq1j4EUwdsVmw" type="Usage_Edge" source="_C1JDAH_aEeq1j4EUwdsVmw" target="_Ei5lUH_aEeq1j4EUwdsVmw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_GUbNUH_aEeq1j4EUwdsVmw" type="Usage_NameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GUbNUX_aEeq1j4EUwdsVmw" y="60"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_GUbNUn_aEeq1j4EUwdsVmw" type="Usage_StereotypeLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GUbNU3_aEeq1j4EUwdsVmw" y="30"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_GUWU0X_aEeq1j4EUwdsVmw"/>
+      <element xmi:type="uml:Usage" href="app4mc.waters.fmtv.challenge.architecture.uml#_GUPAEH_aEeq1j4EUwdsVmw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GUWU0n_aEeq1j4EUwdsVmw" points="[379, 230, -643984, -643984]$[130, 290, -643984, -643984]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_YSyQUH_aEeq1j4EUwdsVmw" type="Usage_Edge" source="_WMU6IH_aEeq1j4EUwdsVmw" target="_RXLJEH_aEeq1j4EUwdsVmw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_YS3I0H_aEeq1j4EUwdsVmw" type="Usage_NameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_YS3I0X_aEeq1j4EUwdsVmw" y="60"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_YS3I0n_aEeq1j4EUwdsVmw" type="Usage_StereotypeLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_YS3I03_aEeq1j4EUwdsVmw" y="30"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_YSyQUX_aEeq1j4EUwdsVmw"/>
+      <element xmi:type="uml:Usage" href="app4mc.waters.fmtv.challenge.architecture.uml#_YSpGYH_aEeq1j4EUwdsVmw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YSyQUn_aEeq1j4EUwdsVmw" points="[417, 230, -643984, -643984]$[417, 290, -643984, -643984]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_diR-kH_bEeq1j4EUwdsVmw" type="Usage_Edge" source="_RZDi8H_bEeq1j4EUwdsVmw" target="_bOO4UH_bEeq1j4EUwdsVmw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_diYFMH_bEeq1j4EUwdsVmw" type="Usage_NameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_diYsQH_bEeq1j4EUwdsVmw" y="60"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_diYsQX_bEeq1j4EUwdsVmw" type="Usage_StereotypeLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_diYsQn_bEeq1j4EUwdsVmw" y="30"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_diR-kX_bEeq1j4EUwdsVmw"/>
+      <element xmi:type="uml:Usage" href="app4mc.waters.fmtv.challenge.architecture.uml#_diINkH_bEeq1j4EUwdsVmw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_diR-kn_bEeq1j4EUwdsVmw" points="[548, 100, -643984, -643984]$[417, 160, -643984, -643984]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_i8hZsH_bEeq1j4EUwdsVmw" type="Usage_Edge" source="_fr-O8H_bEeq1j4EUwdsVmw" target="_hDh3wH_bEeq1j4EUwdsVmw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_i8mSMH_bEeq1j4EUwdsVmw" type="Usage_NameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_i8m5QH_bEeq1j4EUwdsVmw" y="60"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_i8m5QX_bEeq1j4EUwdsVmw" type="Usage_StereotypeLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_i8m5Qn_bEeq1j4EUwdsVmw" y="30"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_i8hZsX_bEeq1j4EUwdsVmw"/>
+      <element xmi:type="uml:Usage" href="app4mc.waters.fmtv.challenge.architecture.uml#_i8asAH_bEeq1j4EUwdsVmw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_i8hZsn_bEeq1j4EUwdsVmw" points="[586, 100, -643984, -643984]$[586, 290, -643984, -643984]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_4rKQYH_bEeq1j4EUwdsVmw" type="Usage_Edge" source="_x15owH_bEeq1j4EUwdsVmw" target="_59P1QH_ZEeq1j4EUwdsVmw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_4rOh0H_bEeq1j4EUwdsVmw" type="Usage_NameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_4rOh0X_bEeq1j4EUwdsVmw" y="60"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_4rOh0n_bEeq1j4EUwdsVmw" type="Usage_StereotypeLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_4rOh03_bEeq1j4EUwdsVmw" y="30"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_4rKQYX_bEeq1j4EUwdsVmw"/>
+      <element xmi:type="uml:Usage" href="app4mc.waters.fmtv.challenge.architecture.uml#_4rC7oH_bEeq1j4EUwdsVmw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4rKQYn_bEeq1j4EUwdsVmw" points="[200, 77, -643984, -643984]$[615, 371, -643984, -643984]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_Kt1ysH_cEeq1j4EUwdsVmw" type="Usage_Edge" source="_G3RJwH_cEeq1j4EUwdsVmw" target="__ybOAH_bEeq1j4EUwdsVmw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_Kt6rMH_cEeq1j4EUwdsVmw" type="Usage_NameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Kt6rMX_cEeq1j4EUwdsVmw" y="60"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_Kt6rMn_cEeq1j4EUwdsVmw" type="Usage_StereotypeLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Kt6rM3_cEeq1j4EUwdsVmw" y="30"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_Kt1ysX_cEeq1j4EUwdsVmw"/>
+      <element xmi:type="uml:Usage" href="app4mc.waters.fmtv.challenge.architecture.uml#_KtvFAH_cEeq1j4EUwdsVmw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Kt1ysn_cEeq1j4EUwdsVmw" points="[188, 280, -643984, -643984]$[173, 390, -643984, -643984]"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KuU64H_cEeq1j4EUwdsVmw" id="(0.6,0.8)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_N06RUH_cEeq1j4EUwdsVmw" type="Usage_Edge" source="_L-T8EH_cEeq1j4EUwdsVmw" target="_Ib6zYH_cEeq1j4EUwdsVmw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_N0_w4H_cEeq1j4EUwdsVmw" type="Usage_NameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_N0_w4X_cEeq1j4EUwdsVmw" y="60"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_N0_w4n_cEeq1j4EUwdsVmw" type="Usage_StereotypeLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_N0_w43_cEeq1j4EUwdsVmw" y="30"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_N06RUX_cEeq1j4EUwdsVmw"/>
+      <element xmi:type="uml:Usage" href="app4mc.waters.fmtv.challenge.architecture.uml#_N0xHYH_cEeq1j4EUwdsVmw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_N06RUn_cEeq1j4EUwdsVmw" points="[120, 119, -643984, -643984]$[209, 210, -643984, -643984]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_kKRw0H_cEeq1j4EUwdsVmw" type="Usage_Edge" source="_hrezIH_cEeq1j4EUwdsVmw" target="_fGIhgH_cEeq1j4EUwdsVmw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_kKWpUH_cEeq1j4EUwdsVmw" type="Usage_NameLabel">
+        <styles xmi:type="notation:BooleanValueStyle" xmi:id="_wi6hcH_cEeq1j4EUwdsVmw" name="IS_UPDATED_POSITION" booleanValue="true"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_kKWpUX_cEeq1j4EUwdsVmw" x="2" y="57"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_kKWpUn_cEeq1j4EUwdsVmw" type="Usage_StereotypeLabel">
+        <styles xmi:type="notation:BooleanValueStyle" xmi:id="_wjNcYH_cEeq1j4EUwdsVmw" name="IS_UPDATED_POSITION" booleanValue="true"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_kKWpU3_cEeq1j4EUwdsVmw" x="2" y="27"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_kKRw0X_cEeq1j4EUwdsVmw"/>
+      <element xmi:type="uml:Usage" href="app4mc.waters.fmtv.challenge.architecture.uml#_kKIm4H_cEeq1j4EUwdsVmw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kKRw0n_cEeq1j4EUwdsVmw" points="[597, 120, -643984, -643984]$[492, 580, -643984, -643984]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_7UE98H_cEeq1j4EUwdsVmw" type="Usage_Edge" source="_5P0AIH_cEeq1j4EUwdsVmw" target="_2q0T0H_cEeq1j4EUwdsVmw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_7UJ2cH_cEeq1j4EUwdsVmw" type="Usage_NameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7UJ2cX_cEeq1j4EUwdsVmw" y="60"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_7UJ2cn_cEeq1j4EUwdsVmw" type="Usage_StereotypeLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7UJ2c3_cEeq1j4EUwdsVmw" y="30"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_7UE98X_cEeq1j4EUwdsVmw"/>
+      <element xmi:type="uml:Usage" href="app4mc.waters.fmtv.challenge.architecture.uml#_7T-3UH_cEeq1j4EUwdsVmw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_7UE98n_cEeq1j4EUwdsVmw" points="[865, 510, -643984, -643984]$[669, 60, -643984, -643984]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_lL1fAH_dEeq1j4EUwdsVmw" type="Usage_Edge" source="_SkYRIH_cEeq1j4EUwdsVmw" target="__ybOAH_bEeq1j4EUwdsVmw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_lL6XgH_dEeq1j4EUwdsVmw" type="Usage_NameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_lL6XgX_dEeq1j4EUwdsVmw" y="60"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_lL6Xgn_dEeq1j4EUwdsVmw" type="Usage_StereotypeLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_lL6Xg3_dEeq1j4EUwdsVmw" y="30"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_lL1fAX_dEeq1j4EUwdsVmw"/>
+      <element xmi:type="uml:Usage" href="app4mc.waters.fmtv.challenge.architecture.uml#_lLuKQH_dEeq1j4EUwdsVmw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lL1fAn_dEeq1j4EUwdsVmw" points="[332, 540, -643984, -643984]$[160, 380, -643984, -643984]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lMaGwH_dEeq1j4EUwdsVmw" id="(0.35,0.2)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_ooRJoH_dEeq1j4EUwdsVmw" type="Usage_Edge" source="_-NRYoH_cEeq1j4EUwdsVmw" target="_AgCsgH_dEeq1j4EUwdsVmw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_ooWCIH_dEeq1j4EUwdsVmw" type="Usage_NameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ooWCIX_dEeq1j4EUwdsVmw" y="60"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_ooWCIn_dEeq1j4EUwdsVmw" type="Usage_StereotypeLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ooWCI3_dEeq1j4EUwdsVmw" y="30"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_ooRJoX_dEeq1j4EUwdsVmw"/>
+      <element xmi:type="uml:Usage" href="app4mc.waters.fmtv.challenge.architecture.uml#_ooKb8H_dEeq1j4EUwdsVmw"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ooRJon_dEeq1j4EUwdsVmw" points="[730, 584, -643984, -643984]$[334, 360, -643984, -643984]"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>
