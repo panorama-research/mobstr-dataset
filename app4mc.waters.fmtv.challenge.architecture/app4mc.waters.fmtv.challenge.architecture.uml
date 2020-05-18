@@ -11,7 +11,7 @@
     <ownedAttribute xmi:type="uml:Port" xmi:id="_Eiy3oH_aEeq1j4EUwdsVmw" name="gps_output" aggregation="composite"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_QBDgIH_ZEeq1j4EUwdsVmw" name="Lidar Grabber">
-    <ownedAttribute xmi:type="uml:Port" xmi:id="_59JHkH_ZEeq1j4EUwdsVmw" name="Lider_output" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_59JHkH_ZEeq1j4EUwdsVmw" name="lidar_output" aggregation="composite"/>
     <ownedAttribute xmi:type="uml:Port" xmi:id="_hDXfsH_bEeq1j4EUwdsVmw" name="occupancy_grid" aggregation="composite"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_ShCJkH_ZEeq1j4EUwdsVmw" name="Localization">
