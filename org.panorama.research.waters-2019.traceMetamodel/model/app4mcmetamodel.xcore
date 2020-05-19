@@ -1,0 +1,38 @@
+package org.panorama.research.waters2019.tracemetamodel
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.util.EcoreUtil
+
+class APP4MCTracemodel{
+	contains RelatedTo[0..*] traces
+} 
+
+class RelatedTo {
+	derived String ID get {
+			EcoreUtil.generateUUID();
+	}
+	String name
+	refers EObject [0..*] item 
+}
+
+class Realized_by extends RelatedTo{
+	
+}
+
+class Excecuted_by extends RelatedTo { 
+	
+}
+
+class Prevented_by extends RelatedTo {
+	
+}
+
+class Formalized_by extends RelatedTo{
+	 
+}
+
+class Implemented_by extends RelatedTo{
+	 
+}
+
+
+

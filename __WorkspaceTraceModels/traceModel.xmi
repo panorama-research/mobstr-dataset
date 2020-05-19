@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tracemetamodel:APP4MCTracemodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tracemetamodel="org.eclipse.capra.app4mc.tracemetamodel">
+  <traces xsi:type="tracemetamodel:Prevented_by" name="">
+    <item href="artifactWrappers.xmi#//@artifacts.0"/>
+    <item href="artifactWrappers.xmi#//@artifacts.1"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:Realized_by" name=" ">
+    <item href="artifactWrappers.xmi#//@artifacts.1"/>
+    <item href="../org.panorama-research.waters-2019.architecture/waters-challenge-2019-architecture.uml#_EMPt8H_cEeq1j4EUwdsVmw"/>
+    <item href="../org.panorama-research.waters-2019.architecture/waters-challenge-2019-architecture.uml#_tXcrAH_cEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:Implemented_by" name="">
+    <item href="../org.panorama-research.waters-2019.architecture/waters-challenge-2019-architecture.uml#_EMPt8H_cEeq1j4EUwdsVmw"/>
+    <item href="../org.panorama-research.waters-2019.amalthea/ChallengeModel_release_fix.amxmi#Detection?type=Task"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:Excecuted_by" name="">
+    <item href="../org.panorama-research.waters-2019.architecture/waters-challenge-2019-architecture.uml#_EMPt8H_cEeq1j4EUwdsVmw"/>
+    <item href="../org.panorama-research.waters-2019.amalthea/ChallengeModel_release_fix.amxmi#Detection_Function?type=Runnable"/>
+  </traces>
+  <traces name="">
+    <item href="artifactWrappers.xmi#//@artifacts.1"/>
+    <item href="artifactWrappers.xmi#//@artifacts.2"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:Formalized_by" name="">
+    <item href="artifactWrappers.xmi#//@artifacts.2"/>
+    <item href="../org.panorama-research.waters-2019.amalthea/ChallengeModel_release_fix.amxmi#//@constraintsModel/@requirements.6"/>
+  </traces>
+</tracemetamodel:APP4MCTracemodel>

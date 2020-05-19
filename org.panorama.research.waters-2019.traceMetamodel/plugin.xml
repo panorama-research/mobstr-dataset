@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated app4mcmetamodel -->
+      <package
+            uri="org.panorama.research.waters2019.tracemetamodel"
+            class="org.panorama.research.waters2019.tracemetamodel.TracemetamodelPackage"
+            genModel="model/app4mcmetamodel.xcore"/>
+   </extension>
+   <extension
+         point="org.eclipse.capra.configuration.traceabilityMetaModel">
+      <TraceabilityMetaModelAdapter
+            class="org.panorama.research.waters2019.tracemetamodel.APP4MCMetamodelAdapter">
+      </TraceabilityMetaModelAdapter>
+   </extension>
+
+</plugin>
