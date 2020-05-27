@@ -4,6 +4,10 @@ This repository contains additional artifacts such as requirements and architect
 
 Requirements and architectural information have been derived directly from the challenge description. We make no claim on the completeness or correctness of any of the artefacts available for download here.
 
+Additionally the repo contains a custom traceability information model (TIM) that defines which link types can be created between the different artifacts. The current TIM is given in the TIM.pptx file. 
+
+The TIM assumes one is using [Eclipse Capra](https://projects.eclipse.org/projects/modeling.capra) and is therefore implemented as a traceability extension point of the Eclipse Capra tool. The TIM project is org.panorama.research.waters-2019.traceMetamodel
+
 All artefacts provided here are under [Eclipse Public License v2.0][5]. Copyright 2020 by [contributors](CONTRIBUTORS).
 
 [1]: https://www.ecrts.org/archives/fileadmin/WebsitesArchiv/ecrts2019/waters/waters-industrial-challenge/index.html
