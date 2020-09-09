@@ -1,0 +1,6 @@
+[1] function not executed, although necessary ("omitted")
+[2] function executed, although not necessary ("unintended")
+[3] function executed with too high intensity ("too strong", "too high")
+[4] function executed with too low intensity ("too weak", "too low")
+[5] function executed too early ("too early")
+[6] function executed too late ("too late")
