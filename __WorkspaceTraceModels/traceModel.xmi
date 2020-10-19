@@ -15,7 +15,7 @@
   </traces>
   <traces xsi:type="tracemetamodel:Excecuted_by" name="">
     <item href="../org.panorama-research.waters-2019.architecture/waters-challenge-2019-architecture.uml#_EMPt8H_cEeq1j4EUwdsVmw"/>
-    <item href="../org.panorama-research.waters-2019.amalthea/ChallengeModel_release_fix.amxmi#Detection_Function?type=Runnable"/>
+    <item href="../org.panorama-research.waters-2019.amalthea/waters-challenge-2019.amxmi#Detection_Function?type=Runnable"/>
   </traces>
   <traces name="">
     <item href="artifactWrappers.xmi#//@artifacts.1"/>
@@ -23,6 +23,6 @@
   </traces>
   <traces xsi:type="tracemetamodel:Formalized_by" name="">
     <item href="artifactWrappers.xmi#//@artifacts.2"/>
-    <item href="../org.panorama-research.waters-2019.amalthea/ChallengeModel_release_fix.amxmi#//@constraintsModel/@requirements.6"/>
+    <item href="../org.panorama-research.waters-2019.amalthea/waters-challenge-2019.amxmi#//@constraintsModel/@requirements.6"/>
   </traces>
 </tracemetamodel:APP4MCTracemodel>
