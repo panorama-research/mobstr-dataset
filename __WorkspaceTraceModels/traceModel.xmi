@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tracemetamodel:APP4MCTracemodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tracemetamodel="org.eclipse.capra.app4mc.tracemetamodel">
+<tracemetamodel:APP4MCTracemodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tracemetamodel="org.panorama.research.waters2019.tracemetamodel">
   <traces xsi:type="tracemetamodel:Prevented_by" name="">
     <item href="artifactWrappers.xmi#//@artifacts.0"/>
     <item href="artifactWrappers.xmi#//@artifacts.1"/>

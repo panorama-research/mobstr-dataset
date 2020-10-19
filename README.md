@@ -11,14 +11,14 @@ The TIM assumes one is using [Eclipse Capra](https://projects.eclipse.org/projec
 ### How to use the custom TIM
 The current TIM is not packaged yet with a Capra distribution and therefore can only be used in the development environment. Use the following instructions to try out the TIM.  
 
-* Download Eclipse Capra developement environment using instructions provided on this [link](https://wiki.eclipse.org/Capra)
-* Close the project `org.eclipse.capra.generic.tracemodels`
-* Add the project `org.panorama.research.waters-2019.traceMetamodel` to your workspace
-* Make sure that all the projects have no errors.
+* Download Eclipse Capra developement environment using instructions provided [here](https://wiki.eclipse.org/Capra#Using_the_Eclipse_Installer)
+* Close the project `org.eclipse.capra.generic.tracemodel`
+* Import the project `org.panorama.research.waters-2019.traceMetamodel` into your workspace. 
+* Make sure that all the projects have no errors. Some of Capra's test projects might show compilation errors due to the missing `org.eclipse.capra.generic.tracemodel` project. These can be ignored.
 * Click on Run --> Run Configurations and create a new Eclipse Application Configuration
-* Select your running workspace
+* Select a new folder as the workspace for your Eclipse application
 * Click "Apply", then "Run"
-* Once the new workspace opens, create or import projects that you want to use to create traceability links (in this case the projects in this repo)
+* Once the new workspace opens, import the projects in this repository (apart from `org.panorama.research.waters-2019.traceMetamodel`)
 * Go to perspectives and switch to the Capra perspective
 * Follow [this video](https://www.youtube.com/watch?v=XRtLs5OT_yM&feature=youtu.be) to create and visualize traceability links.
 
