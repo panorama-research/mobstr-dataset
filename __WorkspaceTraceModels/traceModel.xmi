@@ -11,7 +11,7 @@
   </traces>
   <traces xsi:type="tracemetamodel:Implemented_by" name="">
     <item href="../org.panorama-research.waters-2019.architecture/waters-challenge-2019-architecture.uml#_EMPt8H_cEeq1j4EUwdsVmw"/>
-    <item href="../org.panorama-research.waters-2019.amalthea/ChallengeModel_release_fix.amxmi#Detection?type=Task"/>
+    <item href="../org.panorama-research.waters-2019.amalthea/waters-challenge-2019.amxmi#Detection?type=Task"/>
   </traces>
   <traces xsi:type="tracemetamodel:Excecuted_by" name="">
     <item href="../org.panorama-research.waters-2019.architecture/waters-challenge-2019-architecture.uml#_EMPt8H_cEeq1j4EUwdsVmw"/>
