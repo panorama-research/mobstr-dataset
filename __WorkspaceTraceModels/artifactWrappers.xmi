@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
-<artifactmodel:ArtifactWrapperContainer
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:artifactmodel="org.eclipse.capra.generic.artifactmodel">
-  <artifacts
-      path="/Users/salomem/capra-develop-2019-06/runtime-New_configuration/org.panorama-research.waters-2019.hazards/waters-challenge-2019-hazards.xlsx\\::Tabelle1\\::Hazard 1"
-      uri="/Users/salomem/capra-develop-2019-06/runtime-New_configuration/org.panorama-research.waters-2019.hazards/waters-challenge-2019-hazards.xlsx\\::Tabelle1\\::Hazard 1"
-      name="ID Hazard 1: Collision with obstacle"
-      identifier="/Users/salomem/capra-develop-2019-06/runtime-New_configuration/org.panorama-research.waters-2019.hazards/waters-challenge-2019-hazards.xlsx\\::Tabelle1\\::Hazard 1"
-      ArtifactHandler="org.eclipse.capra.handler.office.OfficeHandler"/>
-  <artifacts
-      path="/Users/salomem/Dropbox/PHD/Traceability/PANORAMA/git_repo/waters_challenge_artifacts/org.panorama-research.waters-2019.requirements/waters-challenge-2019-requirements.xlsx\\::Sheet1\\::REQ  1.2"
-      uri="/Users/salomem/Dropbox/PHD/Traceability/PANORAMA/git_repo/waters_challenge_artifacts/org.panorama-research.waters-2019.requirements/waters-challenge-2019-requirements.xlsx\\::Sheet1\\::REQ  1.2"
-      name="ID REQ  1.2: The system shall perform an emergency manoeuvre to avoid vulnerable road users "
-      identifier="/Users/salomem/Dropbox/PHD/Traceability/PANORAMA/git_repo/waters_challenge_artifacts/org.panorama-research.waters-2019.requirements/waters-challenge-2019-requirements.xlsx\\::Sheet1\\::REQ  1.2"
-      ArtifactHandler="org.eclipse.capra.handler.office.OfficeHandler"/>
-  <artifacts
-      path="/Users/salomem/Dropbox/PHD/Traceability/PANORAMA/git_repo/waters_challenge_artifacts/org.panorama-research.waters-2019.requirements/waters-challenge-2019-requirements.xlsx\\::Sheet1\\::REQ  1.2.1.1"
-      uri="/Users/salomem/Dropbox/PHD/Traceability/PANORAMA/git_repo/waters_challenge_artifacts/org.panorama-research.waters-2019.requirements/waters-challenge-2019-requirements.xlsx\\::Sheet1\\::REQ  1.2.1.1"
-      name="ID REQ  1.2.1.1: The system shall break within 50ms after the vulnerable user is detected within a dangerous zone"
-      identifier="/Users/salomem/Dropbox/PHD/Traceability/PANORAMA/git_repo/waters_challenge_artifacts/org.panorama-research.waters-2019.requirements/waters-challenge-2019-requirements.xlsx\\::Sheet1\\::REQ  1.2.1.1"
-      ArtifactHandler="org.eclipse.capra.handler.office.OfficeHandler"/>
-  <artifacts
-      path="/Users/salomem/Dropbox/PHD/Traceability/PANORAMA/git_repo/waters_challenge_artifacts/org.panorama-research.waters-2019.requirements/waters-challenge-2019-requirements.xlsx\\::Sheet1\\::REQ  1.1"
-      uri="/Users/salomem/Dropbox/PHD/Traceability/PANORAMA/git_repo/waters_challenge_artifacts/org.panorama-research.waters-2019.requirements/waters-challenge-2019-requirements.xlsx\\::Sheet1\\::REQ  1.1"
-      name="ID REQ  1.1: The system shall detect all vulnerable road users"
-      identifier="/Users/salomem/Dropbox/PHD/Traceability/PANORAMA/git_repo/waters_challenge_artifacts/org.panorama-research.waters-2019.requirements/waters-challenge-2019-requirements.xlsx\\::Sheet1\\::REQ  1.1"
-      ArtifactHandler="org.eclipse.capra.handler.office.OfficeHandler"/>
+<artifactmodel:ArtifactWrapperContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:artifactmodel="org.eclipse.capra.generic.artifactmodel">
+  <artifacts path="/Users/janste/git/waters-challenge-2019/org.panorama-research.waters-2019.requirements/waters-challenge-2019-requirements_v2.xlsx\\::Requirements\\::2" uri="/Users/janste/git/waters-challenge-2019/org.panorama-research.waters-2019.requirements/waters-challenge-2019-requirements_v2.xlsx\\::Requirements\\::2" name="ID 2: H-1 | SG-1 | The system shall prevent omitting required breaking maneuvers. | Safety goal" identifier="/Users/janste/git/waters-challenge-2019/org.panorama-research.waters-2019.requirements/waters-challenge-2019-requirements_v2.xlsx\\::Requirements\\::2" ArtifactHandler="org.eclipse.capra.handler.office.OfficeHandler"/>
+  <artifacts path="/Users/janste/git/waters-challenge-2019/org.panorama-research.waters-2019.hazards/waters-challenge-hazards_v2.xlsx\\::Hazards\\::2" uri="/Users/janste/git/waters-challenge-2019/org.panorama-research.waters-2019.hazards/waters-challenge-hazards_v2.xlsx\\::Hazards\\::2" name="ID 2: Omitted breaking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestrian running across the street 20 m in front of the ego vehicle | While driving, the vehicle is not able to stop in time to avoid a collision with a road user or a static obstacle and hits the road user or static obstacle. | Sensor failure in the detection of obstacles; controller failure; failure of the break actuator | E3 | S3 | C3 | C" identifier="/Users/janste/git/waters-challenge-2019/org.panorama-research.waters-2019.hazards/waters-challenge-hazards_v2.xlsx\\::Hazards\\::2" ArtifactHandler="org.eclipse.capra.handler.office.OfficeHandler"/>
+  <artifacts path="/Users/janste/git/waters-challenge-2019/org.panorama-research.waters-2019.requirements/waters-challenge-2019-requirements_v2.xlsx\\::Requirements\\::130" uri="/Users/janste/git/waters-challenge-2019/org.panorama-research.waters-2019.requirements/waters-challenge-2019-requirements_v2.xlsx\\::Requirements\\::130" name="ID 130: The system shall perform a breaking maneuver to avoid collisions with obstacles. | Functional" identifier="/Users/janste/git/waters-challenge-2019/org.panorama-research.waters-2019.requirements/waters-challenge-2019-requirements_v2.xlsx\\::Requirements\\::130" ArtifactHandler="org.eclipse.capra.handler.office.OfficeHandler"/>
 </artifactmodel:ArtifactWrapperContainer>
