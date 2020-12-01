@@ -14,33 +14,34 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
-public class APP4MCMetamodelAdapter extends AbstractMetaModelAdapter implements TraceMetaModelAdapter {
+public class WatersChallengeTIMAdapter extends AbstractMetaModelAdapter implements TraceMetaModelAdapter {
 
 	private static final int DEFAULT_INITIAL_TRANSITIVITY_DEPTH = 1;
 
 	@Override
 	public EObject createModel() {
 		// TODO Auto-generated method stub
-		return TracemetamodelFactory.eINSTANCE.createAPP4MCTracemodel();
+		return TracemetamodelFactory.eINSTANCE.createWatersChallengeTIM();
 	}
 
 	@Override
 	public Collection<EClass> getAvailableTraceTypes(List<EObject> selection) {
 		Collection<EClass> traceTypes = new ArrayList<>();
 		if (selection.size() > 1) {
-			traceTypes.add(TracemetamodelPackage.eINSTANCE.getExcecuted_by());
-			traceTypes.add(TracemetamodelPackage.eINSTANCE.getFormalized_by());
-			traceTypes.add(TracemetamodelPackage.eINSTANCE.getPrevented_by());
-			traceTypes.add(TracemetamodelPackage.eINSTANCE.getRealized_by());
-			traceTypes.add(TracemetamodelPackage.eINSTANCE.getImplemented_by());
+			traceTypes.add(TracemetamodelPackage.eINSTANCE.getExcecutedBy());
+			traceTypes.add(TracemetamodelPackage.eINSTANCE.getFormalizedBy());
+			traceTypes.add(TracemetamodelPackage.eINSTANCE.getPreventedBy());
+			traceTypes.add(TracemetamodelPackage.eINSTANCE.getRealizedBy());
+			traceTypes.add(TracemetamodelPackage.eINSTANCE.getImplementedBy());
 			traceTypes.add(TracemetamodelPackage.eINSTANCE.getRelatedTo());
+			traceTypes.add(TracemetamodelPackage.eINSTANCE.getDerivedFrom());
 		}
 		return traceTypes;
 	}
 
 	@Override
 	public EObject createTrace(EClass traceType, EObject traceModel, List<EObject> selection) {
-		APP4MCTracemodel tm = (APP4MCTracemodel) traceModel;
+		WatersChallengeTIM tm = (WatersChallengeTIM) traceModel;
 		EObject trace = TracemetamodelFactory.eINSTANCE.create(traceType);
 		RelatedTo relatedToTrace = (RelatedTo) trace;
 		relatedToTrace.getItem().addAll(selection);
@@ -66,7 +67,7 @@ public class APP4MCMetamodelAdapter extends AbstractMetaModelAdapter implements 
 
 	@Override
 	public boolean isThereATraceBetween(EObject firstElement, EObject secondElement, EObject traceModel) {
-		APP4MCTracemodel root = (APP4MCTracemodel) traceModel;
+		WatersChallengeTIM root = (WatersChallengeTIM) traceModel;
 		List<RelatedTo> relevantLinks = new ArrayList<RelatedTo>();
 		List<RelatedTo> allTraces = root.getTraces();
 
@@ -82,7 +83,7 @@ public class APP4MCMetamodelAdapter extends AbstractMetaModelAdapter implements 
 
 	@Override
 	public List<Connection> getConnectedElements(EObject element, EObject tracemodel) {
-		APP4MCTracemodel root = (APP4MCTracemodel) tracemodel;
+		WatersChallengeTIM root = (WatersChallengeTIM) tracemodel;
 		List<Connection> connections = new ArrayList<>();
 		List<RelatedTo> traces = root.getTraces();
 
@@ -104,7 +105,7 @@ public class APP4MCMetamodelAdapter extends AbstractMetaModelAdapter implements 
 	@Override
 	public List<Connection> getConnectedElements(EObject element, EObject tracemodel,
 			List<String> selectedRelationshipTypes) {
-		APP4MCTracemodel root = (APP4MCTracemodel) tracemodel;
+		WatersChallengeTIM root = (WatersChallengeTIM) tracemodel;
 		List<Connection> connections = new ArrayList<>();
 		List<RelatedTo> traces = root.getTraces();
 
@@ -156,7 +157,7 @@ public class APP4MCMetamodelAdapter extends AbstractMetaModelAdapter implements 
 
 	@Override
 	public List<Connection> getAllTraceLinks(EObject traceModel) {
-		APP4MCTracemodel model = (APP4MCTracemodel) traceModel;
+		WatersChallengeTIM model = (WatersChallengeTIM) traceModel;
 		List<Connection> allLinks = new ArrayList<>();
 
 		for (RelatedTo trace : model.getTraces()) {
@@ -172,8 +173,8 @@ public class APP4MCMetamodelAdapter extends AbstractMetaModelAdapter implements 
 	@Override
 	public void deleteTrace(List<Connection> toDelete, EObject traceModel) {
 		List<Object> toRemove = new ArrayList<>();
-		if (traceModel instanceof APP4MCTracemodel) {
-			APP4MCTracemodel tModel = (APP4MCTracemodel) traceModel;
+		if (traceModel instanceof WatersChallengeTIM) {
+			WatersChallengeTIM tModel = (WatersChallengeTIM) traceModel;
 			for (Connection c : toDelete) {
 				for (RelatedTo trace : tModel.getTraces()) {
 					if (EcoreUtil.equals(trace, c.getTlink())) {

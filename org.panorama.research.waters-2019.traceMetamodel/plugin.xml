@@ -11,12 +11,12 @@
       <package
             uri="org.panorama.research.waters2019.tracemetamodel"
             class="org.panorama.research.waters2019.tracemetamodel.TracemetamodelPackage"
-            genModel="model/app4mcmetamodel.xcore"/>
+            genModel="model/waters-challenge-tim.xcore"/>
    </extension>
    <extension
          point="org.eclipse.capra.configuration.traceabilityMetaModel">
       <TraceabilityMetaModelAdapter
-            class="org.panorama.research.waters2019.tracemetamodel.APP4MCMetamodelAdapter">
+            class="org.panorama.research.waters2019.tracemetamodel.WatersChallengeTIMAdapter">
       </TraceabilityMetaModelAdapter>
    </extension>
 
