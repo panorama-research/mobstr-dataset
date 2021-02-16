@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.panorama-research.waters-2019.traceMetamodel;singleton:=true
-Automatic-Module-Name: org.panorama-research.waters-2019.traceMetamodel
+Bundle-SymbolicName: org.panorama-research.waters-2019.traceMetamodel.test;singleton:=true
+Automatic-Module-Name: org.panorama-research.waters-2019.traceMetamodel.test
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -13,12 +13,17 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.emf.ecore.xcore.lib,
  org.eclipse.capra.core,
+ org.eclipse.capra.testsupport,
+ org.eclipse.capra.ui,
+ org.eclipse.capra.handler.office,
+ org.eclipse.capra.ui.office,
+ org.eclipse.ui,
+ org.panorama-research.waters-2019.traceMetamodel,
  ode.concept.deis.meta-model;visibility:=reexport,
  org.eclipse.papyrus.emf.facet.custom.metamodel;visibility:=reexport,
  org.eclipse.app4mc.amalthea.model;visibility:=reexport,
  org.eclipse.uml2.types;visibility:=reexport,
- org.eclipse.uml2.uml;visibility:=reexport
+ org.eclipse.uml2.uml;visibility:=reexport,
+ org.junit
 Bundle-ActivationPolicy: lazy
-Export-Package: org.panorama.research.waters2019.tracemetamodel,
- org.panorama.research.waters2019.tracemetamodel.impl,
- org.panorama.research.waters2019.tracemetamodel.util
+Export-Package: org.panorama.research.waters2019.tracemetamodel.test;x-internal:=true
