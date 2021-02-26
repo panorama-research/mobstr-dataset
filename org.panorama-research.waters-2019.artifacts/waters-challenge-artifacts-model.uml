@@ -87,7 +87,7 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_ubWBQBeYEeuTMqUKo8T8Tw" name="Item Definition">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_4_b6QGoaEeu4hZ1ilZwfnw" name="storageType" visibility="private" type="_a8dywGRwEeuR2YWzGyrvYw" isReadOnly="true">
-      <defaultValue xmi:type="uml:LiteralString" xmi:id="_4_b6QWoaEeu4hZ1ilZwfnw" value="FILE"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_4_b6QWoaEeu4hZ1ilZwfnw" value="PDF"/>
     </ownedAttribute>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_wA9UMBeYEeuTMqUKo8T8Tw" name="Panorama Safety Process">
@@ -157,7 +157,7 @@ We do not consider this plan for the purposes of this example.</body>
 These artifacts are not yet available for the example.</body>
     </ownedComment>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_uWMDoGoaEeu4hZ1ilZwfnw" name="storageType" visibility="private" type="_a8dywGRwEeuR2YWzGyrvYw" isReadOnly="true">
-      <defaultValue xmi:type="uml:LiteralString" xmi:id="_zNETAGoaEeu4hZ1ilZwfnw" value="FILE"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_zNETAGoaEeu4hZ1ilZwfnw" value="HTML"/>
     </ownedAttribute>
   </packagedElement>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_iPrxoCKZEeuQ1-ZyASRQbw" name="&lt;&lt;generates>>" client="_xunI0BeYEeuTMqUKo8T8Tw" supplier="_K8D6ICKZEeuQ1-ZyASRQbw"/>
