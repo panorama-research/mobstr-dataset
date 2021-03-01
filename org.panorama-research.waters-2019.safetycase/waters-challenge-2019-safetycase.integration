@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="ASCII"?>
+<integration_:DDIPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:architecture_="http://www.deis-project.eu/ode/mergedODE/architecture" xmlns:argumentation_="http://www.deis-project.eu/ode/mergedODE/sacm/argumentation" xmlns:failureLogic_="http://www.deis-project.eu/ode/mergedODE/failureLogic" xmlns:integration_="http://www.deis-project.eu/ode/mergedODE/integration" name="WATERS example 2" description="">
+  <odeProductPackages xsi:type="failureLogic_:FailureLogicPackage" Id="3" name="" description="">
+    <failureModels xsi:type="failureLogic_:FaultTree" Id="4" name="WATERS example.cft" description="">
+      <keyValueMaps key="visibility">
+        <values tag="isPublic" value="true"/>
+      </keyValueMaps>
+      <keyValueMaps key="visibility">
+        <values tag="isPublic" value="true"/>
+      </keyValueMaps>
+    </failureModels>
+  </odeProductPackages>
+  <odeProductPackages xsi:type="architecture_:DesignPackage" Id="1" name="WATERS example" description="">
+    <systems Id="2" name="WATERS example" description="" failureModels="//@odeProductPackages.0/@failureModels.0">
+      <keyValueMaps key="visibility">
+        <values tag="isPublic" value="true"/>
+      </keyValueMaps>
+      <contexts Id="5" name="WATERS example" description="" usageHistory=""/>
+    </systems>
+  </odeProductPackages>
+  <assuranceCasePackages gid="">
+    <argumentPackage gid="1">
+      <name lang="English" content="SafetyCase"/>
+      <taggedValue gid="2">
+        <key>
+          <value lang="isPublic" content="true"/>
+        </key>
+      </taggedValue>
+      <taggedValue gid="3">
+        <key>
+          <value lang="owner" content="WATERS example"/>
+        </key>
+      </taggedValue>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="4">
+        <name lang="English" content="G1"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="The system is acceptably safe."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="5" assertionDeclaration="axiomatic">
+        <name lang="English" content="C1"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="ISO 26262"/>
+          </content>
+        </description>
+        <taggedValue gid="6">
+          <key>
+            <value lang="English" content="context"/>
+          </key>
+        </taggedValue>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="7">
+        <name lang="English" content="G2"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="All hazards have been identified and assessed."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="8">
+        <name lang="English" content="G3"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="All identified hazards have been mitigated."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="9">
+        <name lang="English" content="G4"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="The system correctly performs its intended functionality."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="10" assertionDeclaration="axiomatic">
+        <name lang="English" content="C2"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="ISO 26262 - Part 3"/>
+          </content>
+        </description>
+        <taggedValue gid="11">
+          <key>
+            <value lang="English" content="context"/>
+          </key>
+        </taggedValue>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="12" assertionDeclaration="axiomatic">
+        <name lang="English" content="C3"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Clearly defined roles were used in the process."/>
+          </content>
+        </description>
+        <taggedValue gid="13">
+          <key>
+            <value lang="English" content="context"/>
+          </key>
+        </taggedValue>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="14">
+        <name lang="English" content="G5"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="All people involved in the HARA process are experienced enough."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="15">
+        <name lang="English" content="G6"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="All methods were executed according to guidelines."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:ArtifactReference" gid="16">
+        <name lang="English" content="Sn1"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="CVs of the involved peoples"/>
+          </content>
+        </description>
+        <taggedValue gid="17">
+          <key>
+            <value lang="English" content="solution"/>
+          </key>
+        </taggedValue>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:ArtifactReference" gid="18">
+        <name lang="English" content="Sn2"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Certificates"/>
+          </content>
+        </description>
+        <taggedValue gid="19">
+          <key>
+            <value lang="English" content="solution"/>
+          </key>
+        </taggedValue>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:ArtifactReference" gid="20">
+        <name lang="English" content="Sn3"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Reviews"/>
+          </content>
+        </description>
+        <taggedValue gid="21">
+          <key>
+            <value lang="English" content="solution"/>
+          </key>
+        </taggedValue>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:ArtifactReference" gid="22">
+        <name lang="English" content="Sn4"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Change logs"/>
+          </content>
+        </description>
+        <taggedValue gid="23">
+          <key>
+            <value lang="English" content="solution"/>
+          </key>
+        </taggedValue>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="24">
+        <name lang="English" content="G7"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="All risks for all identified hazards have been assessed."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="25">
+        <name lang="English" content="G8"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Avoid hazard H-1 (Omitted breaking maneuver)&#xA;&#xA;ASIL C"/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:ArtifactReference" gid="26">
+        <name lang="English" content="Sn5"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Hazard list"/>
+          </content>
+        </description>
+        <taggedValue gid="27">
+          <key>
+            <value lang="English" content="solution"/>
+          </key>
+        </taggedValue>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="28">
+        <name lang="English" content="G9"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Avoid hazard H-2 (Omitted avoidance maneuver)&#xA;&#xA;ASIL C"/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="29">
+        <name lang="English" content="G10"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Avoid hazard H-3 (Unintended breaking)&#xA;&#xA;ASIL B"/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="30">
+        <name lang="English" content="G11"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Avoid hazard H-4 (Unintended acceleration)&#xA;&#xA;ASIL B"/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="31">
+        <name lang="English" content="G12"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Avoid hazard H-5 (Unintended leaving of the road)&#xA;&#xA;ASIL D"/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="32">
+        <name lang="English" content="G13"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="All critical causes leading to the hazard have been identified."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="33">
+        <name lang="English" content="G14"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Appropriate risk control measures have been defined for all critical causes."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="34">
+        <name lang="English" content="G15"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="All risk control measures together lead to an acceptable hazard occurrence probability."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="35">
+        <name lang="English" content="G16"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="All risk control measues have been properly realized in the system."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="36" assertionDeclaration="axiomatic">
+        <name lang="English" content="C5"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Acceptable occurrence probability according to ISO 26262 - Part 4 standard and the defined ASIL"/>
+          </content>
+        </description>
+        <taggedValue gid="37">
+          <key>
+            <value lang="English" content="context"/>
+          </key>
+        </taggedValue>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="38" assertionDeclaration="axiomatic">
+        <name lang="English" content="C6"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Analysis techniques recommended by ISO 26262 for ASIL C"/>
+          </content>
+        </description>
+        <taggedValue gid="39">
+          <key>
+            <value lang="English" content="context"/>
+          </key>
+        </taggedValue>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="40">
+        <name lang="English" content="G17"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Deductive analysis techniques (Fault Tree Analysis) were used."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="41">
+        <name lang="English" content="G18"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Inductive analysis techniques (Failure Mode and Effects Analysis) were used."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="42">
+        <name lang="English" content="G19"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Risk control measures were defined for all failure modes identified in the FMEA."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="43" assertionDeclaration="axiomatic">
+        <name lang="English" content="C7"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="FMEA for hazard H-1 (Omitted breaking maneuver)"/>
+          </content>
+        </description>
+        <taggedValue gid="44">
+          <key>
+            <value lang="English" content="context"/>
+          </key>
+        </taggedValue>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="45">
+        <name lang="English" content="G20"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="No failure mode in FMEA leads to hazard H-1 without an appropriate measure."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="46">
+        <name lang="English" content="G21"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="The tolerable hazard rate of hazard H-1 (random hardware failures) is sufficiently low (&lt; 10E-7 / h for ASIL C)."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:ArtifactReference" gid="47">
+        <name lang="English" content="Sn6"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="FMEA sheet"/>
+          </content>
+        </description>
+        <taggedValue gid="48">
+          <key>
+            <value lang="English" content="solution"/>
+          </key>
+        </taggedValue>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:ArtifactReference" gid="49">
+        <name lang="English" content="Sn7"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Fault Tree Analysis for top event H-1"/>
+          </content>
+        </description>
+        <taggedValue gid="50">
+          <key>
+            <value lang="English" content="solution"/>
+          </key>
+        </taggedValue>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="51">
+        <name lang="English" content="G22"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Each failure combination leading to hazard H-1 is addressed properly by a safety requirement."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="52">
+        <name lang="English" content="G23"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="All safety requirements are allocated to safety functions and explicitly address their interfaces."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="53">
+        <name lang="English" content="G24"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Safety test cases cover all defined safety requirements relevant for the assurance of hazard H-1 and are associated with the system architecture."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="54">
+        <name lang="English" content="G25"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="All safety test cases relevant for hazard H-1 have been executed successfully."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:ArtifactReference" gid="55">
+        <name lang="English" content="Sn8"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Safety validation test report and results"/>
+          </content>
+        </description>
+        <taggedValue gid="56">
+          <key>
+            <value lang="English" content="solution"/>
+          </key>
+        </taggedValue>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="57" assertionDeclaration="axiomatic">
+        <name lang="English" content="C8"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Functional, software, and hardware test cases have been defined from functional, software, and hardware requirements."/>
+          </content>
+        </description>
+        <taggedValue gid="58">
+          <key>
+            <value lang="English" content="context"/>
+          </key>
+        </taggedValue>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:Claim" gid="59">
+        <name lang="English" content="G26"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="All test cases have been executed sucessfully."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:ArtifactReference" gid="60">
+        <name lang="English" content="Sn9"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Software unit test report, hardware unit test report, integration test report, system test report"/>
+          </content>
+        </description>
+        <taggedValue gid="61">
+          <key>
+            <value lang="English" content="solution"/>
+          </key>
+        </taggedValue>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:ArtifactReference" gid="62">
+        <name lang="English" content="Sn10"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Fault Tree Analysis"/>
+          </content>
+        </description>
+        <taggedValue gid="63">
+          <key>
+            <value lang="English" content="solution"/>
+          </key>
+        </taggedValue>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:ArgumentReasoning" gid="65">
+        <name lang="English" content="S1"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="The residual risk of potential hazards after mitigation is acceptable."/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:AssertedInference" gid="64" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.2 //@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.3 //@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.4" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.0" reasoning="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.43"/>
+      <argumentationElement xsi:type="argumentation_:ArgumentReasoning" gid="67">
+        <name lang="English" content="S2"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Argumentation over systematic method execution"/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:AssertedInference" gid="66" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.7 //@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.8 //@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.13" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.2" reasoning="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.45"/>
+      <argumentationElement xsi:type="argumentation_:ArgumentReasoning" gid="69">
+        <name lang="English" content="S3"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Argumentation over each identified hazard"/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:AssertedInference" gid="68" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.14 //@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.16 //@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.17 //@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.18 //@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.19" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.3" reasoning="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.47"/>
+      <argumentationElement xsi:type="argumentation_:ArgumentReasoning" gid="71">
+        <name lang="English" content="S4"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Argumentation over activities to demonstrate sufficient low occurrence probability of hazard"/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:AssertedInference" gid="70" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.20 //@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.21 //@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.22 //@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.23" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.14" reasoning="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.49"/>
+      <argumentationElement xsi:type="argumentation_:ArgumentReasoning" gid="73">
+        <name lang="English" content="S5"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Argumentation over the use of appropriate analysis techniques"/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:AssertedInference" gid="72" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.26 //@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.27" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.20" reasoning="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.51"/>
+      <argumentationElement xsi:type="argumentation_:ArgumentReasoning" gid="75">
+        <name lang="English" content="S6"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Argumentation over the mitigation of all failures with appropriate risk control measures"/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:AssertedInference" gid="74" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.28" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.21" reasoning="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.53"/>
+      <argumentationElement xsi:type="argumentation_:ArgumentReasoning" gid="77">
+        <name lang="English" content="S7"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Argumentation over performing systematic safety analysis of the hazard to show the absence of failures"/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:AssertedInference" gid="76" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.30 //@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.31" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.22" reasoning="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.55"/>
+      <argumentationElement xsi:type="argumentation_:ArgumentReasoning" gid="79">
+        <name lang="English" content="S8"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Argumentation over traceability from hazard to risk control measures and the successful validation that all critical failures lead to safety state within the fault tolerant time interval"/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:AssertedInference" gid="78" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.34 //@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.35 //@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.36 //@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.37" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.23" reasoning="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.57"/>
+      <argumentationElement xsi:type="argumentation_:ArgumentReasoning" gid="81">
+        <name lang="English" content="S9"/>
+        <description gid="">
+          <content>
+            <value lang="English" content="Argumentation over successful execution of an extensive test set covering all functional requirements"/>
+          </content>
+        </description>
+      </argumentationElement>
+      <argumentationElement xsi:type="argumentation_:AssertedInference" gid="80" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.40" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.4" reasoning="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.59"/>
+      <argumentationElement xsi:type="argumentation_:AssertedContext" gid="82" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.1" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.0"/>
+      <argumentationElement xsi:type="argumentation_:AssertedContext" gid="83" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.5" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.45"/>
+      <argumentationElement xsi:type="argumentation_:AssertedContext" gid="84" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.6" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.45"/>
+      <argumentationElement xsi:type="argumentation_:AssertedEvidence" gid="85" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.9" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.7"/>
+      <argumentationElement xsi:type="argumentation_:AssertedEvidence" gid="86" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.10" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.7"/>
+      <argumentationElement xsi:type="argumentation_:AssertedEvidence" gid="87" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.11" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.8"/>
+      <argumentationElement xsi:type="argumentation_:AssertedEvidence" gid="88" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.12" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.8"/>
+      <argumentationElement xsi:type="argumentation_:AssertedEvidence" gid="89" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.15" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.13"/>
+      <argumentationElement xsi:type="argumentation_:AssertedContext" gid="90" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.24" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.49"/>
+      <argumentationElement xsi:type="argumentation_:AssertedContext" gid="91" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.25" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.51"/>
+      <argumentationElement xsi:type="argumentation_:AssertedContext" gid="92" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.29" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.53"/>
+      <argumentationElement xsi:type="argumentation_:AssertedContext" gid="93" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.29" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.55"/>
+      <argumentationElement xsi:type="argumentation_:AssertedEvidence" gid="94" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.32" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.30"/>
+      <argumentationElement xsi:type="argumentation_:AssertedEvidence" gid="95" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.33" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.31"/>
+      <argumentationElement xsi:type="argumentation_:AssertedEvidence" gid="96" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.38" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.37"/>
+      <argumentationElement xsi:type="argumentation_:AssertedContext" gid="97" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.39" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.59"/>
+      <argumentationElement xsi:type="argumentation_:AssertedEvidence" gid="98" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.41" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.40"/>
+      <argumentationElement xsi:type="argumentation_:AssertedEvidence" gid="99" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.42" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.26"/>
+      <argumentationElement xsi:type="argumentation_:AssertedEvidence" gid="100" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.32" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.27"/>
+      <argumentationElement xsi:type="argumentation_:AssertedEvidence" gid="101" source="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.32" target="//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.28"/>
+    </argumentPackage>
+  </assuranceCasePackages>
+</integration_:DDIPackage>
