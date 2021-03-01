@@ -4,14 +4,29 @@ This repository contains artifacts such as requirements and architecture models 
 
 The artifacts in this repository are based on the solution to the challenge provided by the [PANORAMA research project][2] in the [APP4MC Eclipse project][3]. The corresponding AMALTHEA model for the challenge is included here. The original file can be found in the [APP4MC Github Repository][4].
 
-Requirements and architectural information have been derived directly from the challenge description. All other artifacts are based on this. We make no claim on the completeness or correctness of the artifacts available for download here.
+The system described in the WATERS FMTV 2019 challenge is an automated driving system that includes lane following and routing features. The original challenge definition was used as a starting point, but refinements have been applied when necessary. We make no claim on the completeness or correctness of any of the artefacts available for download here.
 
+## Included Artifacts
+
+| *Artifact* | *Description* |
+|----|----|
+| org.panorama-research.waters-2019.amalthea | The Amalthea model of the original solution to the WATERS FMTV 2019 Challenge by the [PANORAMA research project][2] |
+| org.panorama-research.waters-2019.architecture | A UML model of the components of the system. |
+| org.panorama-research.waters-2019.artifacts | A UML model of the relevant artifacts for the WATERS challenge. This information model is used as the foundation for the TIM. |
+| org.panorama-research.waters-2019.fmea | An [ODE model][6] containing the Failure Mode and Effects Analysis for the system. | 
+| org.panorama-research.waters-2019.hazards | An Excel spreadsheet with the identified hazards of the system. |
+| org.panorama-research.waters-2019.requirements | An Excel spreadsheet with the requirements of the system, including safety requirements. |
+| org.panorama-research.waters-2019.safetycase |  An [ODE model][6] containing the safety case for the system. |
+| org.panorama-research.waters-2019.traceMetamodel | An Eclipse plugin project containing the implementation of the traceability information model for Eclipse Capra (see below). |
+| org.panorama-research.waters-2019.traceMetamodel.test | An Eclipse test plugin with test cases for the TIM implementation. |
+| WATERS_Industrial_Challenge_2019_final.pdf | The original WATERS FMTV 2019 Challenge description on which the artifacts in this repository are based. |
+
+
+## How to use the custom TIM
 Additionally the repository contains a custom traceability information model (TIM) that defines which link types can be created between the different artifacts. The current TIM is based on the artifact model in project `org.panorama.research.waters-2019.traceMetamodel`. It is implemented for use in  [Eclipse Capra](https://eclipse.org/capra).  The TIM project is located in `org.panorama.research.waters-2019.traceMetamodel`.
 
 
-## How to Use the Custom TIM
-
-The current TIM is not packaged yet with an Eclipse Capra distribution and therefore can only be used in the development environment. Use the following instructions to try out the TIM.  
+Use the following instructions to try out the TIM.  
 
 * Download Eclipse Capra development environment using instructions provided [here](https://wiki.eclipse.org/Capra#Using_the_Eclipse_Installer)
 * Close the project `org.eclipse.capra.generic.tracemodel`
@@ -36,3 +51,4 @@ All artifacts provided here are under [Eclipse Public License v2.0][5]. Copyrigh
 [3]: https://www.eclipse.org/app4mc/
 [4]: https://git.eclipse.org/c/app4mc/org.eclipse.app4mc.examples.git/tree/WATERS-FMTV-challenges
 [5]: https://www.eclipse.org/legal/epl-2.0/
+[6]: https://github.com/Digital-Dependability-Identities
