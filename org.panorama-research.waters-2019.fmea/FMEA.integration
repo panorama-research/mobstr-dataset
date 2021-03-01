@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<integration_:DDIPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:architecture_="http://www.deis-project.eu/ode/mergedODE/architecture" xmlns:dependability_="http://www.deis-project.eu/ode/mergedODE/dependability" xmlns:failureLogic_="http://www.deis-project.eu/ode/mergedODE/failureLogic" xmlns:integration_="http://www.deis-project.eu/ode/mergedODE/integration" name="WATERS Challenge">
+  <odeProductPackages xsi:type="failureLogic_:FailureLogicPackage" name="">
+    <failureModels xsi:type="failureLogic_:FMEA" name="WATERS Example">
+      <entries name="1" effect="//@odeProductPackages.0/@failureModels.1/@failures.3" mode="//@odeProductPackages.0/@failureModels.1/@failures.0"/>
+      <entries name="2" effect="//@odeProductPackages.0/@failureModels.1/@failures.4" mode="//@odeProductPackages.0/@failureModels.1/@failures.1"/>
+      <entries name="3" effect="//@odeProductPackages.0/@failureModels.1/@failures.5" mode="//@odeProductPackages.0/@failureModels.1/@failures.2"/>
+      <entries name="4" effect="//@odeProductPackages.0/@failureModels.2/@failures.1" mode="//@odeProductPackages.0/@failureModels.2/@failures.0"/>
+      <entries name="5" effect="//@odeProductPackages.0/@failureModels.2/@failures.3" mode="//@odeProductPackages.0/@failureModels.2/@failures.2"/>
+      <entries name="6" effect="//@odeProductPackages.0/@failureModels.2/@failures.5" mode="//@odeProductPackages.0/@failureModels.2/@failures.4"/>
+      <entries name="7" effect="//@odeProductPackages.0/@failureModels.2/@failures.7" mode="//@odeProductPackages.0/@failureModels.2/@failures.6"/>
+      <entries name="8" effect="//@odeProductPackages.0/@failureModels.2/@failures.9" mode="//@odeProductPackages.0/@failureModels.2/@failures.8"/>
+      <entries name="9" effect="//@odeProductPackages.0/@failureModels.2/@failures.11" mode="//@odeProductPackages.0/@failureModels.2/@failures.10"/>
+      <entries name="10" effect="//@odeProductPackages.0/@failureModels.2/@failures.13" mode="//@odeProductPackages.0/@failureModels.2/@failures.12"/>
+      <entries name="11" effect="//@odeProductPackages.0/@failureModels.2/@failures.15" mode="//@odeProductPackages.0/@failureModels.2/@failures.14"/>
+      <entries name="12" effect="//@odeProductPackages.0/@failureModels.3/@failures.5" mode="//@odeProductPackages.0/@failureModels.3/@failures.0"/>
+      <entries name="13" effect="//@odeProductPackages.0/@failureModels.3/@failures.8" mode="//@odeProductPackages.0/@failureModels.3/@failures.1"/>
+      <entries name="14" effect="//@odeProductPackages.0/@failureModels.3/@failures.6" mode="//@odeProductPackages.0/@failureModels.3/@failures.2"/>
+      <entries name="15" effect="//@odeProductPackages.0/@failureModels.3/@failures.7" mode="//@odeProductPackages.0/@failureModels.3/@failures.3"/>
+      <entries name="16" effect="//@odeProductPackages.0/@failureModels.3/@failures.7" mode="//@odeProductPackages.0/@failureModels.3/@failures.4"/>
+      <entries name="17" effect="//@odeProductPackages.0/@failureModels.4/@failures.3" mode="//@odeProductPackages.0/@failureModels.4/@failures.0"/>
+      <entries name="18" effect="//@odeProductPackages.0/@failureModels.4/@failures.4" mode="//@odeProductPackages.0/@failureModels.4/@failures.1"/>
+      <entries name="19" effect="//@odeProductPackages.0/@failureModels.4/@failures.5" mode="//@odeProductPackages.0/@failureModels.4/@failures.2"/>
+      <entries name="20" effect="//@odeProductPackages.0/@failureModels.5/@failures.6" mode="//@odeProductPackages.0/@failureModels.5/@failures.0"/>
+      <entries name="21" effect="//@odeProductPackages.0/@failureModels.5/@failures.7" mode="//@odeProductPackages.0/@failureModels.5/@failures.1"/>
+      <entries name="22" effect="//@odeProductPackages.0/@failureModels.5/@failures.8" mode="//@odeProductPackages.0/@failureModels.5/@failures.2"/>
+      <entries name="23" effect="//@odeProductPackages.0/@failureModels.5/@failures.8" mode="//@odeProductPackages.0/@failureModels.5/@failures.3"/>
+      <entries name="24" effect="//@odeProductPackages.0/@failureModels.5/@failures.9" mode="//@odeProductPackages.0/@failureModels.5/@failures.4"/>
+      <entries name="25" effect="//@odeProductPackages.0/@failureModels.5/@failures.10" mode="//@odeProductPackages.0/@failureModels.5/@failures.5"/>
+      <entries name="26" effect="//@odeProductPackages.0/@failureModels.6/@failures.4" mode="//@odeProductPackages.0/@failureModels.6/@failures.0"/>
+      <entries name="27" effect="//@odeProductPackages.0/@failureModels.6/@failures.5" mode="//@odeProductPackages.0/@failureModels.5/@failures.1"/>
+      <entries name="28" effect="//@odeProductPackages.0/@failureModels.6/@failures.6" mode="//@odeProductPackages.0/@failureModels.6/@failures.2"/>
+      <entries name="29" effect="//@odeProductPackages.0/@failureModels.6/@failures.4" mode="//@odeProductPackages.0/@failureModels.6/@failures.3"/>
+      <entries name="30" effect="//@odeProductPackages.0/@failureModels.7/@failures.3" mode="//@odeProductPackages.0/@failureModels.7/@failures.0"/>
+      <entries name="31" effect="//@odeProductPackages.0/@failureModels.7/@failures.4" mode="//@odeProductPackages.0/@failureModels.7/@failures.1"/>
+      <entries name="32" effect="//@odeProductPackages.0/@failureModels.7/@failures.5" mode="//@odeProductPackages.0/@failureModels.7/@failures.2"/>
+      <entries name="33" effect="//@odeProductPackages.0/@failureModels.8/@failures.3" mode="//@odeProductPackages.0/@failureModels.8/@failures.0"/>
+      <entries name="34" effect="//@odeProductPackages.0/@failureModels.8/@failures.4" mode="//@odeProductPackages.0/@failureModels.8/@failures.1"/>
+      <entries name="35" effect="//@odeProductPackages.0/@failureModels.8/@failures.5" mode="//@odeProductPackages.0/@failureModels.8/@failures.2"/>
+      <entries name="36" effect="//@odeProductPackages.0/@failureModels.9/@failures.6" mode="//@odeProductPackages.0/@failureModels.9/@failures.0"/>
+      <entries name="37" effect="//@odeProductPackages.0/@failureModels.9/@failures.7" mode="//@odeProductPackages.0/@failureModels.9/@failures.1"/>
+      <entries name="38" effect="//@odeProductPackages.0/@failureModels.9/@failures.8" mode="//@odeProductPackages.0/@failureModels.9/@failures.2"/>
+      <entries name="39" effect="//@odeProductPackages.0/@failureModels.9/@failures.9" mode="//@odeProductPackages.0/@failureModels.9/@failures.3"/>
+      <entries name="40" effect="//@odeProductPackages.0/@failureModels.9/@failures.10" mode="//@odeProductPackages.0/@failureModels.9/@failures.4"/>
+      <entries name="41" effect="//@odeProductPackages.0/@failureModels.9/@failures.11" mode="//@odeProductPackages.0/@failureModels.9/@failures.5"/>
+    </failureModels>
+    <failureModels name="GPS Grabber">
+      <failures name="No position information provided by the GPS grabber" originType="Internal" failureClass="Omission"/>
+      <failures name="Erroneous position infomration provided by the GPS grabber" originType="Internal" failureClass="Incorrect"/>
+      <failures name="Stuck-at failure of the GPS grabber" originType="Internal" failureClass="Late"/>
+      <failures name="No localization by GPS" originType="Output"/>
+      <failures name="Wrong GPS information; inaccurate localization" originType="Output"/>
+      <failures name="Wrong GPS information" originType="Output"/>
+    </failureModels>
+    <failureModels name="Lidar Grabber">
+      <failures name="No point cloud provided by the lidar grabber" originType="Internal" failureClass="Omission"/>
+      <failures name="No information about objects provided by the lidar" originType="Output"/>
+      <failures name="Erroneous point cloud provded by the lidar grabber (false negative)" originType="Internal" failureClass="Too little"/>
+      <failures name="Objects not detected by lidar" originType="Output"/>
+      <failures name="Erroneous point cloud provided by the lidar grabber (false positive)" originType="Internal" failureClass="Too much"/>
+      <failures name="Ghost objectives provided by lidar" originType="Output"/>
+      <failures name="Point cloud provided too late by the lidar grabber" originType="Internal" failureClass="Late"/>
+      <failures name="Wrong (outdated) objects provided by lidar" originType="Output"/>
+      <failures name="No occupancy grid provided by the lidar grabber" originType="Internal" failureClass="Omission"/>
+      <failures name="No precise information about the distance to obstacles by lidar" originType="Output" failureClass=""/>
+      <failures name="Erroneous occupancy grid provided by the lidar grabber (false negative)" originType="Internal" failureClass="Too little"/>
+      <failures name="Distance to objects measured as too high" originType="Output"/>
+      <failures name="Erroneous occupancy grid provided by the lidar grabber (false positive)" originType="Internal" failureClass="Too much"/>
+      <failures name="Distance to objects measured as too low" originType="Output"/>
+      <failures name="Occupancy grid provided too late by the lidar grabber" originType="Internal" failureClass="Late"/>
+      <failures name="Wrong (outdated) information about the distance to objects provided by lidar" originType="Output"/>
+    </failureModels>
+    <failureModels name="Image Grabber">
+      <failures name="Internal faiilure of the image grabber leading to omission of image" originType="Internal" failureClass="Omission"/>
+      <failures name="Completely erroneous image provided by the image grabber" originType="Internal" failureClass="Incorrect"/>
+      <failures name="Partially erroneous image provided by the image grabber" originType="Internal" failureClass="Incorrect"/>
+      <failures name="Stuck-at failure of the image grabber (still image)" originType="Internal" failureClass="Late"/>
+      <failures name="Image provided too late by the image grabber (old image)" originType="Internal" failureClass="Late"/>
+      <failures name="No image provided by the image grabber" originType="Output"/>
+      <failures name="Ghost objectives or lanes / Missing objects or lanes on the image" originType="Output"/>
+      <failures name="Wrong (outdated) lane boundaries or objects on the image" originType="Output"/>
+      <failures name="Images with wrong (or no) objects or lanes" originType="Output"/>
+    </failureModels>
+    <failureModels name="CAN Bus">
+      <failures name="Loss of CAN messages" originType="Internal" failureClass="Omission"/>
+      <failures name="Delay of CAN messages" originType="Internal" failureClass="Late"/>
+      <failures name="Erroneous CAN message" originType="Internal" failureClass="Incorrect"/>
+      <failures name="No vehicle information available" originType="Output"/>
+      <failures name="Wrong (outdated) vehicle information available" originType="Output"/>
+      <failures name="Erroneous vehicle information available"/>
+    </failureModels>
+    <failureModels name="Object Detection">
+      <failures name="Internal failure of the object detection leading to loss of object detection" originType="Internal" failureClass="Omission"/>
+      <failures name="Incorrect object detection by camera and lidar (false positive)" originType="Internal" failureClass="To much"/>
+      <failures name="Incorrect object detection by camera and lidar (false negative)" originType="Internal" failureClass="Too little"/>
+      <failures name="Delayed detection of objects" originType="Internal" failureClass="Late"/>
+      <failures name="Wrong classification of objects due to internal error" originType="Internal" failureClass="Incorrect"/>
+      <failures name="Wrong positioning of objects by camera and lidar" originType="Internal" failureClass="Incorrect"/>
+      <failures name="Objects on the road are not detected" originType="Output"/>
+      <failures name="Ghost objectives are detected on the road" originType="Output"/>
+      <failures name="Objects on the road are detected too late" originType="Output"/>
+      <failures name="False classification of objects on the road" originType="Output"/>
+      <failures name="Erroneous distance to objects" originType="Output" failureClass=""/>
+    </failureModels>
+    <failureModels name="Lane Detection">
+      <failures name="Internal failure of the lane detection leading to loss of lane detection" originType="Internal" failureClass="Omission"/>
+      <failures name="Incorrect lane detection (false positive)" originType="Internal" failureClass="Too much"/>
+      <failures name="Delayed detection of lanes" originType="Internal" failureClass="Late"/>
+      <failures name="Incorrect lane detection (false negative)" originType="Internal" failureClass="Too little"/>
+      <failures name="Lanes are not detected" originType="Output"/>
+      <failures name="Ghost lanes are detected" originType="Output"/>
+      <failures name="Lanes are detected too late" originType="Output"/>
+    </failureModels>
+    <failureModels name="Localization">
+      <failures name="Loss of localization" originType="Internal" failureClass="Omission"/>
+      <failures name="Internal failure leading to an erroneously calculated vehicle position" originType="Internal" failureClass="Incorrect"/>
+      <failures name="Delayed localization" originType="Internal" failureClass="Late"/>
+      <failures name="No information about the vehicle postion and distance to obstacles around the vehicle" originType="Output"/>
+      <failures name="Incorrect vehicle position information on the road" originType="Output"/>
+      <failures name="Distance to objects on the road is calculated too high" originType="Output"/>
+    </failureModels>
+    <failureModels name="Path Planner">
+      <failures name="Omission of control commands" originType="Internal" failureClass="Omission"/>
+      <failures name="Erroneous control commands" originType="Internal" failureClass="Incorrect"/>
+      <failures name="Delayed control commands" originType="Internal" failureClass="Late"/>
+      <failures name="No steering and speed signal is provided by the path planner" originType="Output"/>
+      <failures name="Wrong steering or speed signal is provided  by the path planner" originType="Output"/>
+      <failures name="Steering or speed signal is provided too late  by the path planner" originType="Output"/>
+    </failureModels>
+    <failureModels name="Controller">
+      <failures name="Omission of steering commands" originType="Internal" failureClass="Omission"/>
+      <failures name="Erroneous steering commands" originType="Internal" failureClass="Incorrect"/>
+      <failures name="Delayed steering commands" originType="Internal" failureClass="Late"/>
+      <failures name="Omission of speed commands" originType="Internal" failureClass="Omission"/>
+      <failures name="Erroneous speed commands" originType="Internal" failureClass="Incorrect"/>
+      <failures name="Delayed speed commands" originType="Internal" failureClass="Late"/>
+      <failures name="No steering signal is provided by the controller" originType="Output"/>
+      <failures name="Wrong steering signal is provided  by the controller" originType="Output"/>
+      <failures name="Steering signal is provided too late  by the controller" originType="Output"/>
+      <failures name="No speed signal is provided  by the controller" originType="Output"/>
+      <failures name="Wrong speed signal is provided  by the controller" originType="Output"/>
+      <failures name="Speed signal is provided too late  by the controller" originType="Output"/>
+    </failureModels>
+  </odeProductPackages>
+  <odeProductPackages xsi:type="architecture_:DesignPackage">
+    <systems name="WATERS Example" subSystems="//@odeProductPackages.1/@systems.4 //@odeProductPackages.1/@systems.10 //@odeProductPackages.1/@systems.1 //@odeProductPackages.1/@systems.3 //@odeProductPackages.1/@systems.6 //@odeProductPackages.1/@systems.2 //@odeProductPackages.1/@systems.8 //@odeProductPackages.1/@systems.5 //@odeProductPackages.1/@systems.9 //@odeProductPackages.1/@systems.7" failureModels="//@odeProductPackages.0/@failureModels.0"/>
+    <systems xsi:type="architecture_:PhysicalComponent" name="GPS Grabber" failureModels="//@odeProductPackages.0/@failureModels.1"/>
+    <systems xsi:type="architecture_:PhysicalComponent" name="Lidar Grabber" failureModels="//@odeProductPackages.0/@failureModels.2"/>
+    <systems xsi:type="architecture_:PhysicalComponent" name="Image Grabber" failureModels="//@odeProductPackages.0/@failureModels.3"/>
+    <systems xsi:type="architecture_:PhysicalComponent" name="CAN Bus" failureModels="//@odeProductPackages.0/@failureModels.4"/>
+    <systems xsi:type="architecture_:PhysicalComponent" name="Object Detection" failureModels="//@odeProductPackages.0/@failureModels.5"/>
+    <systems xsi:type="architecture_:PhysicalComponent" name="Lane Detection" failureModels="//@odeProductPackages.0/@failureModels.6"/>
+    <systems xsi:type="architecture_:PhysicalComponent" name="Sensor Fusion"/>
+    <systems xsi:type="architecture_:PhysicalComponent" name="Localization" failureModels="//@odeProductPackages.0/@failureModels.7"/>
+    <systems xsi:type="architecture_:PhysicalComponent" name="Path Planner" failureModels="//@odeProductPackages.0/@failureModels.8"/>
+    <systems xsi:type="architecture_:PhysicalComponent" name="Controller" failureModels="//@odeProductPackages.0/@failureModels.9"/>
+  </odeProductPackages>
+  <odeProductPackages xsi:type="dependability_:HARAPackage" name="WATERS Example">
+    <hazards name="H-1" description="Omitted breaking maneuver" failures="//@odeProductPackages.0/@failureModels.2/@failures.1 //@odeProductPackages.0/@failureModels.2/@failures.11 //@odeProductPackages.0/@failureModels.3/@failures.6 //@odeProductPackages.0/@failureModels.3/@failures.7 //@odeProductPackages.0/@failureModels.2/@failures.3 //@odeProductPackages.0/@failureModels.2/@failures.9 //@odeProductPackages.0/@failureModels.3/@failures.5 //@odeProductPackages.0/@failureModels.3/@failures.8 //@odeProductPackages.0/@failureModels.4/@failures.3 //@odeProductPackages.0/@failureModels.4/@failures.4 //@odeProductPackages.0/@failureModels.4/@failures.5 //@odeProductPackages.0/@failureModels.5/@failures.6 //@odeProductPackages.0/@failureModels.5/@failures.8 //@odeProductPackages.0/@failureModels.5/@failures.9 //@odeProductPackages.0/@failureModels.6/@failures.4 //@odeProductPackages.0/@failureModels.6/@failures.5 //@odeProductPackages.0/@failureModels.6/@failures.6 //@odeProductPackages.0/@failureModels.7/@failures.3 //@odeProductPackages.0/@failureModels.7/@failures.4 //@odeProductPackages.0/@failureModels.8/@failures.3 //@odeProductPackages.0/@failureModels.8/@failures.4 //@odeProductPackages.0/@failureModels.8/@failures.5 //@odeProductPackages.0/@failureModels.9/@failures.9 //@odeProductPackages.0/@failureModels.9/@failures.10 //@odeProductPackages.0/@failureModels.9/@failures.11"/>
+    <hazards name="H-2" description="Omitted avoidance maneuver" failures="//@odeProductPackages.0/@failureModels.2/@failures.1 //@odeProductPackages.0/@failureModels.2/@failures.3 //@odeProductPackages.0/@failureModels.2/@failures.5 //@odeProductPackages.0/@failureModels.2/@failures.9 //@odeProductPackages.0/@failureModels.2/@failures.11 //@odeProductPackages.0/@failureModels.3/@failures.5 //@odeProductPackages.0/@failureModels.3/@failures.8 //@odeProductPackages.0/@failureModels.3/@failures.6 //@odeProductPackages.0/@failureModels.3/@failures.7 //@odeProductPackages.0/@failureModels.4/@failures.3 //@odeProductPackages.0/@failureModels.4/@failures.4 //@odeProductPackages.0/@failureModels.5/@failures.8 //@odeProductPackages.0/@failureModels.5/@failures.6 //@odeProductPackages.0/@failureModels.6/@failures.4 //@odeProductPackages.0/@failureModels.6/@failures.6 //@odeProductPackages.0/@failureModels.5/@failures.7 //@odeProductPackages.0/@failureModels.7/@failures.3 //@odeProductPackages.0/@failureModels.7/@failures.4 //@odeProductPackages.0/@failureModels.8/@failures.3 //@odeProductPackages.0/@failureModels.8/@failures.5 //@odeProductPackages.0/@failureModels.9/@failures.6 //@odeProductPackages.0/@failureModels.9/@failures.8"/>
+    <hazards name="H-3" description="Unintended breaking" failures="//@odeProductPackages.0/@failureModels.2/@failures.1 //@odeProductPackages.0/@failureModels.2/@failures.5 //@odeProductPackages.0/@failureModels.2/@failures.9 //@odeProductPackages.0/@failureModels.2/@failures.13 //@odeProductPackages.0/@failureModels.3/@failures.6 //@odeProductPackages.0/@failureModels.4/@failures.5 //@odeProductPackages.0/@failureModels.5/@failures.7 //@odeProductPackages.0/@failureModels.5/@failures.9 //@odeProductPackages.0/@failureModels.6/@failures.5 //@odeProductPackages.0/@failureModels.8/@failures.4 //@odeProductPackages.0/@failureModels.9/@failures.10"/>
+    <hazards name="H-4" description="Unintended acceleration" failures="//@odeProductPackages.0/@failureModels.2/@failures.1 //@odeProductPackages.0/@failureModels.2/@failures.3 //@odeProductPackages.0/@failureModels.2/@failures.9 //@odeProductPackages.0/@failureModels.2/@failures.11 //@odeProductPackages.0/@failureModels.3/@failures.5 //@odeProductPackages.0/@failureModels.3/@failures.8 //@odeProductPackages.0/@failureModels.3/@failures.6 //@odeProductPackages.0/@failureModels.3/@failures.7 //@odeProductPackages.0/@failureModels.4/@failures.5 //@odeProductPackages.0/@failureModels.5/@failures.6 //@odeProductPackages.0/@failureModels.5/@failures.8 //@odeProductPackages.0/@failureModels.5/@failures.9 //@odeProductPackages.0/@failureModels.6/@failures.5 //@odeProductPackages.0/@failureModels.7/@failures.5 //@odeProductPackages.0/@failureModels.8/@failures.4 //@odeProductPackages.0/@failureModels.9/@failures.10"/>
+    <hazards name="H-5" description="Unintended leaving of the road" failures="//@odeProductPackages.0/@failureModels.3/@failures.5 //@odeProductPackages.0/@failureModels.3/@failures.8 //@odeProductPackages.0/@failureModels.3/@failures.6 //@odeProductPackages.0/@failureModels.3/@failures.7 //@odeProductPackages.0/@failureModels.4/@failures.3 //@odeProductPackages.0/@failureModels.4/@failures.4 //@odeProductPackages.0/@failureModels.4/@failures.5 //@odeProductPackages.0/@failureModels.5/@failures.9 //@odeProductPackages.0/@failureModels.6/@failures.4 //@odeProductPackages.0/@failureModels.6/@failures.5 //@odeProductPackages.0/@failureModels.6/@failures.6 //@odeProductPackages.0/@failureModels.7/@failures.3 //@odeProductPackages.0/@failureModels.7/@failures.4 //@odeProductPackages.0/@failureModels.7/@failures.5 //@odeProductPackages.0/@failureModels.8/@failures.4 //@odeProductPackages.0/@failureModels.8/@failures.3 //@odeProductPackages.0/@failureModels.8/@failures.5 //@odeProductPackages.0/@failureModels.9/@failures.6 //@odeProductPackages.0/@failureModels.9/@failures.7 //@odeProductPackages.0/@failureModels.9/@failures.8"/>
+  </odeProductPackages>
+  <odeProductPackages xsi:type="dependability_:DependabilityPackage">
+    <measures name="Include a second environemnt senor (image grabber)" mitigates="//@odeProductPackages.0/@failureModels.2/@failures.3 //@odeProductPackages.0/@failureModels.2/@failures.5 //@odeProductPackages.0/@failureModels.2/@failures.9 //@odeProductPackages.0/@failureModels.2/@failures.1 //@odeProductPackages.0/@failureModels.2/@failures.13 //@odeProductPackages.0/@failureModels.2/@failures.11"/>
+    <measures name="Add plausibility checks in the sensor fusion component" mitigates="//@odeProductPackages.0/@failureModels.2/@failures.1 //@odeProductPackages.0/@failureModels.2/@failures.3 //@odeProductPackages.0/@failureModels.2/@failures.5"/>
+    <measures name="Add plausibility checks in the path planner component" mitigates="//@odeProductPackages.0/@failureModels.2/@failures.9 //@odeProductPackages.0/@failureModels.2/@failures.11 //@odeProductPackages.0/@failureModels.2/@failures.13"/>
+    <measures name="Add plausibility checks in the object detection component" mitigates="//@odeProductPackages.0/@failureModels.3/@failures.5 //@odeProductPackages.0/@failureModels.3/@failures.8 //@odeProductPackages.0/@failureModels.3/@failures.6 //@odeProductPackages.0/@failureModels.3/@failures.7"/>
+    <measures name="Add a second camera" mitigates="//@odeProductPackages.0/@failureModels.3/@failures.5 //@odeProductPackages.0/@failureModels.3/@failures.4 //@odeProductPackages.0/@failureModels.3/@failures.6 //@odeProductPackages.0/@failureModels.3/@failures.7"/>
+    <measures name="Add an independent, redundant object detection component (dual modular redundancy)" mitigates="//@odeProductPackages.0/@failureModels.5/@failures.6 //@odeProductPackages.0/@failureModels.5/@failures.8 //@odeProductPackages.0/@failureModels.5/@failures.7 //@odeProductPackages.0/@failureModels.5/@failures.9"/>
+    <measures name="Integrate a fusion component (voter) for the two object detection components" mitigates="//@odeProductPackages.0/@failureModels.5/@failures.8 //@odeProductPackages.0/@failureModels.5/@failures.6 //@odeProductPackages.0/@failureModels.5/@failures.7 //@odeProductPackages.0/@failureModels.5/@failures.9"/>
+    <measures name="Add an independent, redundant lane detection component (dual modular redundancy)" mitigates="//@odeProductPackages.0/@failureModels.6/@failures.4 //@odeProductPackages.0/@failureModels.6/@failures.6 //@odeProductPackages.0/@failureModels.6/@failures.5"/>
+    <measures name="Integrate a fusion component (voter) for the two lane detection components" mitigates="//@odeProductPackages.0/@failureModels.6/@failures.5 //@odeProductPackages.0/@failureModels.6/@failures.4 //@odeProductPackages.0/@failureModels.6/@failures.6"/>
+    <measures name="Add monitoring component to perform plausibility checks for the sensor fusion"/>
+    <measures name="Add a monitoring component to perfom plausibility checks on vehicle position" mitigates="//@odeProductPackages.0/@failureModels.7/@failures.5 //@odeProductPackages.0/@failureModels.7/@failures.3 //@odeProductPackages.0/@failureModels.7/@failures.4"/>
+    <measures name="Add independant, redundant path planner component (hot standby - automated switch between normal and degradaed mode)" mitigates="//@odeProductPackages.0/@failureModels.8/@failures.3 //@odeProductPackages.0/@failureModels.8/@failures.4"/>
+    <measures name="Integrate a fustion component (switch) for the two path planners" mitigates="//@odeProductPackages.0/@failureModels.8/@failures.3 //@odeProductPackages.0/@failureModels.8/@failures.4"/>
+    <measures name="Add a monitoring component to check end-to-end latencies (switch to degradated mode if specified latencies are violated)" mitigates="//@odeProductPackages.0/@failureModels.8/@failures.5"/>
+    <measures name="Add plausibility and limit checks" mitigates="//@odeProductPackages.0/@failureModels.9/@failures.6 //@odeProductPackages.0/@failureModels.9/@failures.8 //@odeProductPackages.0/@failureModels.9/@failures.7 //@odeProductPackages.0/@failureModels.9/@failures.9 //@odeProductPackages.0/@failureModels.9/@failures.11 //@odeProductPackages.0/@failureModels.9/@failures.10"/>
+  </odeProductPackages>
+</integration_:DDIPackage>
