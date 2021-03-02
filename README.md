@@ -28,7 +28,7 @@ Additionally the repository contains a custom traceability information model (TI
 
 Use the following instructions to try out the TIM.  
 
-* Download Eclipse Capra development environment using instructions provided [here](https://wiki.eclipse.org/Capra#Using_the_Eclipse_Installer)
+* Download Eclipse Capra development environment using instructions provided [here](https://wiki.eclipse.org/Capra#Using_the_Eclipse_Installer). Make sure that you are using the current `develop` branch.
 * Close the project `org.eclipse.capra.generic.tracemodel`
 * Import the project `org.panorama.research.waters-2019.traceMetamodel` into your workspace. 
 * Make sure that all the projects have no errors. Some of Eclipse Capra's test projects might show compilation errors due to the missing `org.eclipse.capra.generic.tracemodel` project. These can be ignored.
@@ -39,7 +39,7 @@ Use the following instructions to try out the TIM.
 * Go to Window --> Perspectives and switch to the Capra perspective
 * Follow [this video](https://www.youtube.com/watch?v=XRtLs5OT_yM&feature=youtu.be) to create and visualize traceability links.
 
-In case you get an error that the wrong APP4MC version is installed, please open `waters-challenge-2019.amxmi` in a text editor and change the model version to the APP4MC version you have installed (usually either 0.9.7 or 0.9.9, depending on the target platform chosen for Eclipse Capra).
+In case you get an error that the wrong APP4MC version is installed, please open `waters-challenge-2019.amxmi` in a text editor and change the model version to the APP4MC version you have installed (usually either 0.9.7 or 1.0.0, depending on the version of Eclipse that you are using and thus the target platform chosen for Eclipse Capra).
 
 
 ## License and Copyright
