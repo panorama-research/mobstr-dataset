@@ -2,7 +2,7 @@
 
 This repository contains artifacts such as requirements and architecture models for the [WATERS FMTV 2019 challenge][1]. The WATERS FMTV 2019 challenge is an industrial case study used as part of the 10th International Workshop on Analysis Tools and Methodologies for Embedded and Real-time Systems (WATERS). It was originally proposed by Arne Hamann, Dakshina Dasari, and Falk Wurst, Corporate Research Robert Bosch GmbH and Ignacio Sañudo, Nicola Capodieci, Paolo Burgio and Marko Bertogna, University of Modena and Reggio Emilia. 
 
-The artifacts in this repository are based on the solution to the challenge provided by the [PANORAMA research project][2] in the [APP4MC Eclipse project][3]. The corresponding AMALTHEA model for the challenge is included here. The original file can be found in the [APP4MC Github Repository][4].
+The artifacts in this repository are based on the challenge description and are provided by the [PANORAMA research project][2], specifically by the [contributors][7]. The corresponding AMALTHEA model for the challenge is included here. The original file can be found in the [Eclipse APP4MC Github Repository][4].
 
 The system described in the WATERS FMTV 2019 challenge is an automated driving system that includes lane following and routing features. The original challenge definition was used as a starting point, but refinements have been applied when necessary. We make no claim on the completeness or correctness of any of the artefacts available for download here.
 
@@ -10,7 +10,7 @@ The system described in the WATERS FMTV 2019 challenge is an automated driving s
 
 | *Artifact* | *Description* |
 |----|----|
-| org.panorama-research.waters-2019.amalthea | The Amalthea model of the original solution to the WATERS FMTV 2019 Challenge by the [PANORAMA research project][2] |
+| org.panorama-research.waters-2019.amalthea | The Amalthea model of the WATERS FMTV 2019 Challenge by the [PANORAMA research project][2]. You will need [Eclipse APP4MC][3] to open the model. |
 | org.panorama-research.waters-2019.architecture | A UML model of the components of the system. |
 | org.panorama-research.waters-2019.artifacts | A UML model of the relevant artifacts for the WATERS challenge. This information model is used as the foundation for the TIM. |
 | org.panorama-research.waters-2019.fmea | An [ODE model][6] containing the Failure Mode and Effects Analysis for the system. | 
@@ -52,3 +52,4 @@ All artifacts provided here are under [Eclipse Public License v2.0][5]. Copyrigh
 [4]: https://git.eclipse.org/c/app4mc/org.eclipse.app4mc.examples.git/tree/WATERS-FMTV-challenges
 [5]: https://www.eclipse.org/legal/epl-2.0/
 [6]: https://github.com/Digital-Dependability-Identities
+[7]: CONTRIBUTORS
