@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="ASCII"?>
+<css:EmbeddedStyleSheet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:css="http://www.eclipse.org/papyrus/infra/gmfdiag/css" label="names_only" content="Port > Label {&#xD;&#xA;    maskLabel: name&#xD;&#xA;}"/>
