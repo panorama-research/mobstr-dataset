@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_PlWtgH_XEeq1j4EUwdsVmw" name="WATERS Industrial Challenge 2019">
-  <ownedComment xmi:type="uml:Comment" xmi:id="_AtVzkH_bEeq1j4EUwdsVmw" annotatedElement="_ShCJkH_ZEeq1j4EUwdsVmw">
-    <body>Localization component includes the EKF task</body>
-  </ownedComment>
   <packageImport xmi:type="uml:PackageImport" xmi:id="_P2HGUH_XEeq1j4EUwdsVmw">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
@@ -72,17 +69,17 @@
       <ownedAttribute xmi:type="uml:Port" xmi:id="_bihlsGX7Eeu5Bd8fMshJEA" name="fused_objects" aggregation="composite"/>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_7_dyIGX7Eeu5Bd8fMshJEA" name="lidar_input" aggregation="composite"/>
       <ownedAttribute xmi:type="uml:Port" xmi:id="__vo4IGX7Eeu5Bd8fMshJEA" name="frame" aggregation="composite"/>
-      <packagedElement xmi:type="uml:Component" xmi:id="_h63n8GRzEeu5Bd8fMshJEA" name="Object Localization via LIDAR">
+      <packagedElement xmi:type="uml:Component" xmi:id="_h63n8GRzEeu5Bd8fMshJEA" name="Object Localization via Lidar">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_sRFVEGX4Eeu5Bd8fMshJEA" name="lidar_input" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_kWg1wGX5Eeu5Bd8fMshJEA" name="object_poses" aggregation="composite"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Component" xmi:id="_le1d8GRzEeu5Bd8fMshJEA" name="Object Localization via CAMERA">
+      <packagedElement xmi:type="uml:Component" xmi:id="_le1d8GRzEeu5Bd8fMshJEA" name="Object Localization via Camera">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_w0ICcGX4Eeu5Bd8fMshJEA" name="frame" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_sRE4kGX5Eeu5Bd8fMshJEA" name="bounding_box" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_sRE4kGX5Eeu5Bd8fMshJEA" name="bounding_boxes" aggregation="composite"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_t98fwH_bEeq1j4EUwdsVmw" name="Sensor Fusion">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_x1uCkH_bEeq1j4EUwdsVmw" name="object_poses" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_L-HHwH_cEeq1j4EUwdsVmw" name="bounding_box" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_L-HHwH_cEeq1j4EUwdsVmw" name="bounding_boxes" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_aVIDgIlGEeqZns6eDXpo_Q" name="fused objects" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_uEEnYOH7EequeMCZdIuVEw" name="sensor_warnings" aggregation="composite"/>
       </packagedElement>
@@ -104,7 +101,7 @@
     <ownedAttribute xmi:type="uml:Port" xmi:id="_jN75YOH9EequeMCZdIuVEw" name="controller_warnings" aggregation="composite"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Usage" xmi:id="_7T-3UH_cEeq1j4EUwdsVmw" client="_5PlWoH_cEeq1j4EUwdsVmw" supplier="_2qlqUH_cEeq1j4EUwdsVmw"/>
-  <packagedElement xmi:type="uml:Usage" xmi:id="_lLuKQH_dEeq1j4EUwdsVmw" client="_SkKOsH_cEeq1j4EUwdsVmw" supplier="__yOZsH_bEeq1j4EUwdsVmw"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_lLuKQH_dEeq1j4EUwdsVmw" client="_SkKOsH_cEeq1j4EUwdsVmw" supplier="_PlWtgH_XEeq1j4EUwdsVmw"/>
   <packagedElement xmi:type="uml:Usage" xmi:id="_ooKb8H_dEeq1j4EUwdsVmw" client="_-NCIEH_cEeq1j4EUwdsVmw" supplier="_Afzb8H_dEeq1j4EUwdsVmw"/>
   <packagedElement xmi:type="uml:Usage" xmi:id="_x193oIlGEeqZns6eDXpo_Q" client="_vaSfYIlGEeqZns6eDXpo_Q" supplier="_aVIDgIlGEeqZns6eDXpo_Q"/>
   <packagedElement xmi:type="uml:Component" xmi:id="_h5v1AOH6EequeMCZdIuVEw" name="Driver Warnings">
@@ -112,7 +109,7 @@
     <ownedAttribute xmi:type="uml:Port" xmi:id="_oDqSMOH9EequeMCZdIuVEw" name="controller_input" aggregation="composite"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Usage" xmi:id="_9BRmgOH7EequeMCZdIuVEw" client="_3tc8cOH7EequeMCZdIuVEw" supplier="_uEEnYOH7EequeMCZdIuVEw"/>
-  <packagedElement xmi:type="uml:Usage" xmi:id="_pRDSYOH9EequeMCZdIuVEw" client="_oDqSMOH9EequeMCZdIuVEw" supplier="_jN75YOH9EequeMCZdIuVEw"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_pRDSYOH9EequeMCZdIuVEw" client="_oDqSMOH9EequeMCZdIuVEw" supplier="_PlWtgH_XEeq1j4EUwdsVmw"/>
   <packagedElement xmi:type="uml:Usage" xmi:id="_jpSFkEBYEeu6P58lsTAauw" client="_h7o4AEBYEeu6P58lsTAauw" supplier="_59JHkH_ZEeq1j4EUwdsVmw"/>
   <packagedElement xmi:type="uml:Usage" xmi:id="_c263sGX5Eeu5Bd8fMshJEA" client="_EF0xMGR7Eeu5Bd8fMshJEA" supplier="_G3EVcH_cEeq1j4EUwdsVmw"/>
   <packagedElement xmi:type="uml:Usage" xmi:id="_gLdKkGX5Eeu5Bd8fMshJEA" client="_w0ICcGX4Eeu5Bd8fMshJEA" supplier="__vo4IGX7Eeu5Bd8fMshJEA"/>
@@ -130,4 +127,11 @@
   <packagedElement xmi:type="uml:Usage" xmi:id="_jYdnMGX7Eeu5Bd8fMshJEA" client="_IbumIH_cEeq1j4EUwdsVmw" supplier="_bihlsGX7Eeu5Bd8fMshJEA"/>
   <packagedElement xmi:type="uml:Usage" xmi:id="_-pd6QGX7Eeu5Bd8fMshJEA" client="_7_dyIGX7Eeu5Bd8fMshJEA" supplier="_ZcYt0GR1Eeu5Bd8fMshJEA"/>
   <packagedElement xmi:type="uml:Usage" xmi:id="_Bhug0GX8Eeu5Bd8fMshJEA" client="__vo4IGX7Eeu5Bd8fMshJEA" supplier="_G3EVcH_cEeq1j4EUwdsVmw"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_hklGYHwCEeuNhcGKPoMAnQ" client="_ovqJgEBYEeu6P58lsTAauw" supplier="_h7o4AEBYEeu6P58lsTAauw"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_i4qkcHwCEeuNhcGKPoMAnQ" client="_9xzlQEBmEeu6P58lsTAauw" supplier="_C1C8YH_aEeq1j4EUwdsVmw"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_jeVdUHwCEeuNhcGKPoMAnQ" client="_7UBUMEBmEeu6P58lsTAauw" supplier="_vzLuQEBmEeu6P58lsTAauw"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_s8HmYHwCEeuNhcGKPoMAnQ" client="__369MEBmEeu6P58lsTAauw" supplier="_WMM-UH_aEeq1j4EUwdsVmw"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_ueZ4gHwCEeuNhcGKPoMAnQ" client="_CR9WsEBnEeu6P58lsTAauw" supplier="_WMM-UH_aEeq1j4EUwdsVmw"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_4VZy0HwCEeuNhcGKPoMAnQ" client="_4-auwEBmEeu6P58lsTAauw" supplier="_89zVcEBmEeu6P58lsTAauw"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_4uoLIHwCEeuNhcGKPoMAnQ" client="_bOFHUH_bEeq1j4EUwdsVmw" supplier="_nPKewEBmEeu6P58lsTAauw"/>
 </uml:Model>
