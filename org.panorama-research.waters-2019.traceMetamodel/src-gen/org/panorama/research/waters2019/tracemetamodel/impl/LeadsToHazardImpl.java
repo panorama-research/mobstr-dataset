@@ -4,7 +4,7 @@ package org.panorama.research.waters2019.tracemetamodel.impl;
 
 import java.util.Collection;
 
-import ode.base.Element;
+import ode.failureLogic.Failure;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -44,7 +44,7 @@ public class LeadsToHazardImpl extends DirectedTraceLinkImpl implements LeadsToH
 	 * @generated
 	 * @ordered
 	 */
-	protected Element source;
+	protected Failure source;
 
 	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference list.
@@ -81,10 +81,10 @@ public class LeadsToHazardImpl extends DirectedTraceLinkImpl implements LeadsToH
 	 * @generated
 	 */
 	@Override
-	public Element getSource() {
+	public Failure getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject)source;
-			source = (Element)eResolveProxy(oldSource);
+			source = (Failure)eResolveProxy(oldSource);
 			if (source != oldSource) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TracemetamodelPackage.LEADS_TO_HAZARD__SOURCE, oldSource, source));
@@ -98,7 +98,7 @@ public class LeadsToHazardImpl extends DirectedTraceLinkImpl implements LeadsToH
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Element basicGetSource() {
+	public Failure basicGetSource() {
 		return source;
 	}
 
@@ -108,8 +108,8 @@ public class LeadsToHazardImpl extends DirectedTraceLinkImpl implements LeadsToH
 	 * @generated
 	 */
 	@Override
-	public void setSource(Element newSource) {
-		Element oldSource = source;
+	public void setSource(Failure newSource) {
+		Failure oldSource = source;
 		source = newSource;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, TracemetamodelPackage.LEADS_TO_HAZARD__SOURCE, oldSource, source));
@@ -155,7 +155,7 @@ public class LeadsToHazardImpl extends DirectedTraceLinkImpl implements LeadsToH
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case TracemetamodelPackage.LEADS_TO_HAZARD__SOURCE:
-				setSource((Element)newValue);
+				setSource((Failure)newValue);
 				return;
 			case TracemetamodelPackage.LEADS_TO_HAZARD__TARGET:
 				getTarget().clear();
@@ -174,7 +174,7 @@ public class LeadsToHazardImpl extends DirectedTraceLinkImpl implements LeadsToH
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case TracemetamodelPackage.LEADS_TO_HAZARD__SOURCE:
-				setSource((Element)null);
+				setSource((Failure)null);
 				return;
 			case TracemetamodelPackage.LEADS_TO_HAZARD__TARGET:
 				getTarget().clear();

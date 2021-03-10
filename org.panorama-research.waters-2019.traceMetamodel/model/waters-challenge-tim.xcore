@@ -1,11 +1,14 @@
 package org.panorama.research.waters2019.tracemetamodel
 
-import org.eclipse.emf.ecore.EObject
-import org.eclipse.emf.ecore.util.EcoreUtil
 import ode.base.Element
 import ode.failureLogic.FMEA
 import org.eclipse.app4mc.amalthea.model.INamed
+import org.eclipse.app4mc.amalthea.model.Requirement
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.util.EcoreUtil
 import org.eclipse.uml2.uml.Component
+import ode.dependability.Measure
+import ode.failureLogic.Failure
 
 /*
  * A custom annotation that allows defining which type
@@ -75,7 +78,7 @@ class DerivedFromItemDefinition extends DirectedTraceLink {
  * TODO: Use name from ISO
  */
 class SpecifiedByRequirement extends DirectedTraceLink {
-	refers Element [1] source // Element -- ODE Measure
+	refers Measure [1] source // Element -- ODE Measure
 	@UseWrapperType(className="CapraOfficeObject")
 	refers EObject [1..*] target // CapraOfficeObject -- Safety Requirement
 }
@@ -83,7 +86,7 @@ class SpecifiedByRequirement extends DirectedTraceLink {
 /*
  * Links Safety Goals to Hazards
  */
-class DerivedFromHazard extends DirectedTraceLink {
+class AddressedBySafetyGoal extends DirectedTraceLink {
 	@UseWrapperType(className="CapraOfficeObject")
 	refers EObject [1] source // CapraOfficeObject -- Hazard
 	@UseWrapperType(className="CapraOfficeObject")
@@ -94,7 +97,7 @@ class DerivedFromHazard extends DirectedTraceLink {
  * Links Effects to Hazards
  */
 class LeadsToHazard extends DirectedTraceLink {
-	 refers Element [1] source // Element -- Effect
+	 refers Failure [1] source // Element -- Effect
 	 @UseWrapperType(className="CapraOfficeObject")
 	 refers EObject [1..*] target // CapraOfficeObject -- Hazard
 }
@@ -140,13 +143,23 @@ class RefinesItemDefinition extends DirectedTraceLink {
 	@UseWrapperType(className="File")
 	refers EObject [1] target // File -- Item Definition
 }
+
 /*
  * Links Amalthea Element to Requirement
  */
  class ModelsImplementationOfRequirement extends DirectedTraceLink {
- 	refers INamed [1] source // INamed -- Amalthea Element
+ 	refers Requirement [1] source // INamed -- Amalthea Element
  	@UseWrapperType(className="CapraOfficeObject")
  	refers EObject [1..*] target // CapraOfficeObject -- Requirement
+ }
+ 
+ /*
+ * Links Timing Constraint in Amalthea to Requirement
+ */
+ class RefinesTimingRequirement extends DirectedTraceLink {
+ 	refers INamed [1] source // INamed -- Amalthea Element
+ 	@UseWrapperType(className="CapraOfficeObject")
+ 	refers EObject [1] target // CapraOfficeObject -- Requirement
  }
  
  /*

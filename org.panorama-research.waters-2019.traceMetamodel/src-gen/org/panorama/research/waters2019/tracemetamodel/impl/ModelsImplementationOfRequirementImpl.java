@@ -4,7 +4,7 @@ package org.panorama.research.waters2019.tracemetamodel.impl;
 
 import java.util.Collection;
 
-import org.eclipse.app4mc.amalthea.model.INamed;
+import org.eclipse.app4mc.amalthea.model.Requirement;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -44,7 +44,7 @@ public class ModelsImplementationOfRequirementImpl extends DirectedTraceLinkImpl
 	 * @generated
 	 * @ordered
 	 */
-	protected INamed source;
+	protected Requirement source;
 
 	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference list.
@@ -81,10 +81,10 @@ public class ModelsImplementationOfRequirementImpl extends DirectedTraceLinkImpl
 	 * @generated
 	 */
 	@Override
-	public INamed getSource() {
+	public Requirement getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject)source;
-			source = (INamed)eResolveProxy(oldSource);
+			source = (Requirement)eResolveProxy(oldSource);
 			if (source != oldSource) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TracemetamodelPackage.MODELS_IMPLEMENTATION_OF_REQUIREMENT__SOURCE, oldSource, source));
@@ -98,7 +98,7 @@ public class ModelsImplementationOfRequirementImpl extends DirectedTraceLinkImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public INamed basicGetSource() {
+	public Requirement basicGetSource() {
 		return source;
 	}
 
@@ -108,8 +108,8 @@ public class ModelsImplementationOfRequirementImpl extends DirectedTraceLinkImpl
 	 * @generated
 	 */
 	@Override
-	public void setSource(INamed newSource) {
-		INamed oldSource = source;
+	public void setSource(Requirement newSource) {
+		Requirement oldSource = source;
 		source = newSource;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, TracemetamodelPackage.MODELS_IMPLEMENTATION_OF_REQUIREMENT__SOURCE, oldSource, source));
@@ -155,7 +155,7 @@ public class ModelsImplementationOfRequirementImpl extends DirectedTraceLinkImpl
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case TracemetamodelPackage.MODELS_IMPLEMENTATION_OF_REQUIREMENT__SOURCE:
-				setSource((INamed)newValue);
+				setSource((Requirement)newValue);
 				return;
 			case TracemetamodelPackage.MODELS_IMPLEMENTATION_OF_REQUIREMENT__TARGET:
 				getTarget().clear();
@@ -174,7 +174,7 @@ public class ModelsImplementationOfRequirementImpl extends DirectedTraceLinkImpl
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case TracemetamodelPackage.MODELS_IMPLEMENTATION_OF_REQUIREMENT__SOURCE:
-				setSource((INamed)null);
+				setSource((Requirement)null);
 				return;
 			case TracemetamodelPackage.MODELS_IMPLEMENTATION_OF_REQUIREMENT__TARGET:
 				getTarget().clear();

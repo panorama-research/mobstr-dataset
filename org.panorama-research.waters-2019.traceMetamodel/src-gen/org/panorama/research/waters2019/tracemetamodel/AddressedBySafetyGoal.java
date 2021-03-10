@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Derived From Hazard</b></em>'.
+ * A representation of the model object '<em><b>Addressed By Safety Goal</b></em>'.
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
@@ -19,22 +19,22 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.panorama.research.waters2019.tracemetamodel.DerivedFromHazard#getSource <em>Source</em>}</li>
- *   <li>{@link org.panorama.research.waters2019.tracemetamodel.DerivedFromHazard#getTarget <em>Target</em>}</li>
+ *   <li>{@link org.panorama.research.waters2019.tracemetamodel.AddressedBySafetyGoal#getSource <em>Source</em>}</li>
+ *   <li>{@link org.panorama.research.waters2019.tracemetamodel.AddressedBySafetyGoal#getTarget <em>Target</em>}</li>
  * </ul>
  *
- * @see org.panorama.research.waters2019.tracemetamodel.TracemetamodelPackage#getDerivedFromHazard()
+ * @see org.panorama.research.waters2019.tracemetamodel.TracemetamodelPackage#getAddressedBySafetyGoal()
  * @model
  * @generated
  */
-public interface DerivedFromHazard extends DirectedTraceLink {
+public interface AddressedBySafetyGoal extends DirectedTraceLink {
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source</em>' reference.
 	 * @see #setSource(EObject)
-	 * @see org.panorama.research.waters2019.tracemetamodel.TracemetamodelPackage#getDerivedFromHazard_Source()
+	 * @see org.panorama.research.waters2019.tracemetamodel.TracemetamodelPackage#getAddressedBySafetyGoal_Source()
 	 * @model required="true"
 	 *        annotation="http://panorama-research.org/waters2019/UseWrapperType className='CapraOfficeObject'"
 	 * @generated
@@ -42,7 +42,7 @@ public interface DerivedFromHazard extends DirectedTraceLink {
 	EObject getSource();
 
 	/**
-	 * Sets the value of the '{@link org.panorama.research.waters2019.tracemetamodel.DerivedFromHazard#getSource <em>Source</em>}' reference.
+	 * Sets the value of the '{@link org.panorama.research.waters2019.tracemetamodel.AddressedBySafetyGoal#getSource <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Source</em>' reference.
@@ -57,11 +57,11 @@ public interface DerivedFromHazard extends DirectedTraceLink {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target</em>' reference list.
-	 * @see org.panorama.research.waters2019.tracemetamodel.TracemetamodelPackage#getDerivedFromHazard_Target()
+	 * @see org.panorama.research.waters2019.tracemetamodel.TracemetamodelPackage#getAddressedBySafetyGoal_Target()
 	 * @model required="true"
 	 *        annotation="http://panorama-research.org/waters2019/UseWrapperType className='CapraOfficeObject'"
 	 * @generated
 	 */
 	EList<EObject> getTarget();
 
-} // DerivedFromHazard
+} // AddressedBySafetyGoal

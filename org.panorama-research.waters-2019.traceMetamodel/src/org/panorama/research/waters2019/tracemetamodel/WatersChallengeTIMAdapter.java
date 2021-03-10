@@ -48,8 +48,8 @@ public class WatersChallengeTIMAdapter extends AbstractMetaModelAdapter implemen
 		Collection<EClass> traceTypes = new ArrayList<>();
 		if (selection.size() > 1) {
 			traceTypes.add(TracemetamodelPackage.eINSTANCE.getAddressedByFMEA());
+			traceTypes.add(TracemetamodelPackage.eINSTANCE.getAddressedBySafetyGoal());
 			traceTypes.add(TracemetamodelPackage.eINSTANCE.getBasedOnAssumption());
-			traceTypes.add(TracemetamodelPackage.eINSTANCE.getDerivedFromHazard());
 			traceTypes.add(TracemetamodelPackage.eINSTANCE.getDerivedFromItemDefinition());
 			traceTypes.add(TracemetamodelPackage.eINSTANCE.getDetailsCausesOf());
 			traceTypes.add(TracemetamodelPackage.eINSTANCE.getDetailsHazardWith());
@@ -64,6 +64,7 @@ public class WatersChallengeTIMAdapter extends AbstractMetaModelAdapter implemen
 			traceTypes.add(TracemetamodelPackage.eINSTANCE.getReferencesComponent());
 			traceTypes.add(TracemetamodelPackage.eINSTANCE.getReferencesInEvidences());
 			traceTypes.add(TracemetamodelPackage.eINSTANCE.getRefinesItemDefinition());
+			traceTypes.add(TracemetamodelPackage.eINSTANCE.getRefinesTimingRequirement());
 			traceTypes.add(TracemetamodelPackage.eINSTANCE.getRelatedTo());
 			traceTypes.add(TracemetamodelPackage.eINSTANCE.getSpecifiedByRequirement());
 			traceTypes.add(TracemetamodelPackage.eINSTANCE.getUsesAsEvidence());

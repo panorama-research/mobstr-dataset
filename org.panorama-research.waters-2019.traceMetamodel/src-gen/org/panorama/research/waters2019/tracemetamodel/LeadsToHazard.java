@@ -2,7 +2,7 @@
  */
 package org.panorama.research.waters2019.tracemetamodel;
 
-import ode.base.Element;
+import ode.failureLogic.Failure;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -35,12 +35,12 @@ public interface LeadsToHazard extends DirectedTraceLink {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source</em>' reference.
-	 * @see #setSource(Element)
+	 * @see #setSource(Failure)
 	 * @see org.panorama.research.waters2019.tracemetamodel.TracemetamodelPackage#getLeadsToHazard_Source()
 	 * @model required="true"
 	 * @generated
 	 */
-	Element getSource();
+	Failure getSource();
 
 	/**
 	 * Sets the value of the '{@link org.panorama.research.waters2019.tracemetamodel.LeadsToHazard#getSource <em>Source</em>}' reference.
@@ -50,7 +50,7 @@ public interface LeadsToHazard extends DirectedTraceLink {
 	 * @see #getSource()
 	 * @generated
 	 */
-	void setSource(Element value);
+	void setSource(Failure value);
 
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference list.

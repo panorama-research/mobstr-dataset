@@ -2,7 +2,7 @@
  */
 package org.panorama.research.waters2019.tracemetamodel;
 
-import ode.base.Element;
+import ode.dependability.Measure;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -36,12 +36,12 @@ public interface SpecifiedByRequirement extends DirectedTraceLink {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source</em>' reference.
-	 * @see #setSource(Element)
+	 * @see #setSource(Measure)
 	 * @see org.panorama.research.waters2019.tracemetamodel.TracemetamodelPackage#getSpecifiedByRequirement_Source()
 	 * @model required="true"
 	 * @generated
 	 */
-	Element getSource();
+	Measure getSource();
 
 	/**
 	 * Sets the value of the '{@link org.panorama.research.waters2019.tracemetamodel.SpecifiedByRequirement#getSource <em>Source</em>}' reference.
@@ -51,7 +51,7 @@ public interface SpecifiedByRequirement extends DirectedTraceLink {
 	 * @see #getSource()
 	 * @generated
 	 */
-	void setSource(Element value);
+	void setSource(Measure value);
 
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference list.

@@ -16,24 +16,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
-import org.panorama.research.waters2019.tracemetamodel.DerivedFromHazard;
+import org.panorama.research.waters2019.tracemetamodel.AddressedBySafetyGoal;
 import org.panorama.research.waters2019.tracemetamodel.TracemetamodelPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Derived From Hazard</b></em>'.
+ * An implementation of the model object '<em><b>Addressed By Safety Goal</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.panorama.research.waters2019.tracemetamodel.impl.DerivedFromHazardImpl#getSource <em>Source</em>}</li>
- *   <li>{@link org.panorama.research.waters2019.tracemetamodel.impl.DerivedFromHazardImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link org.panorama.research.waters2019.tracemetamodel.impl.AddressedBySafetyGoalImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link org.panorama.research.waters2019.tracemetamodel.impl.AddressedBySafetyGoalImpl#getTarget <em>Target</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DerivedFromHazardImpl extends DirectedTraceLinkImpl implements DerivedFromHazard {
+public class AddressedBySafetyGoalImpl extends DirectedTraceLinkImpl implements AddressedBySafetyGoal {
 	/**
 	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -59,7 +59,7 @@ public class DerivedFromHazardImpl extends DirectedTraceLinkImpl implements Deri
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DerivedFromHazardImpl() {
+	protected AddressedBySafetyGoalImpl() {
 		super();
 	}
 
@@ -70,7 +70,7 @@ public class DerivedFromHazardImpl extends DirectedTraceLinkImpl implements Deri
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TracemetamodelPackage.Literals.DERIVED_FROM_HAZARD;
+		return TracemetamodelPackage.Literals.ADDRESSED_BY_SAFETY_GOAL;
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class DerivedFromHazardImpl extends DirectedTraceLinkImpl implements Deri
 			source = eResolveProxy(oldSource);
 			if (source != oldSource) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TracemetamodelPackage.DERIVED_FROM_HAZARD__SOURCE, oldSource, source));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TracemetamodelPackage.ADDRESSED_BY_SAFETY_GOAL__SOURCE, oldSource, source));
 			}
 		}
 		return source;
@@ -110,7 +110,7 @@ public class DerivedFromHazardImpl extends DirectedTraceLinkImpl implements Deri
 		EObject oldSource = source;
 		source = newSource;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TracemetamodelPackage.DERIVED_FROM_HAZARD__SOURCE, oldSource, source));
+			eNotify(new ENotificationImpl(this, Notification.SET, TracemetamodelPackage.ADDRESSED_BY_SAFETY_GOAL__SOURCE, oldSource, source));
 	}
 
 	/**
@@ -121,7 +121,7 @@ public class DerivedFromHazardImpl extends DirectedTraceLinkImpl implements Deri
 	@Override
 	public EList<EObject> getTarget() {
 		if (target == null) {
-			target = new EObjectResolvingEList<EObject>(EObject.class, this, TracemetamodelPackage.DERIVED_FROM_HAZARD__TARGET);
+			target = new EObjectResolvingEList<EObject>(EObject.class, this, TracemetamodelPackage.ADDRESSED_BY_SAFETY_GOAL__TARGET);
 		}
 		return target;
 	}
@@ -134,10 +134,10 @@ public class DerivedFromHazardImpl extends DirectedTraceLinkImpl implements Deri
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TracemetamodelPackage.DERIVED_FROM_HAZARD__SOURCE:
+			case TracemetamodelPackage.ADDRESSED_BY_SAFETY_GOAL__SOURCE:
 				if (resolve) return getSource();
 				return basicGetSource();
-			case TracemetamodelPackage.DERIVED_FROM_HAZARD__TARGET:
+			case TracemetamodelPackage.ADDRESSED_BY_SAFETY_GOAL__TARGET:
 				return getTarget();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -152,10 +152,10 @@ public class DerivedFromHazardImpl extends DirectedTraceLinkImpl implements Deri
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TracemetamodelPackage.DERIVED_FROM_HAZARD__SOURCE:
+			case TracemetamodelPackage.ADDRESSED_BY_SAFETY_GOAL__SOURCE:
 				setSource((EObject)newValue);
 				return;
-			case TracemetamodelPackage.DERIVED_FROM_HAZARD__TARGET:
+			case TracemetamodelPackage.ADDRESSED_BY_SAFETY_GOAL__TARGET:
 				getTarget().clear();
 				getTarget().addAll((Collection<? extends EObject>)newValue);
 				return;
@@ -171,10 +171,10 @@ public class DerivedFromHazardImpl extends DirectedTraceLinkImpl implements Deri
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TracemetamodelPackage.DERIVED_FROM_HAZARD__SOURCE:
+			case TracemetamodelPackage.ADDRESSED_BY_SAFETY_GOAL__SOURCE:
 				setSource((EObject)null);
 				return;
-			case TracemetamodelPackage.DERIVED_FROM_HAZARD__TARGET:
+			case TracemetamodelPackage.ADDRESSED_BY_SAFETY_GOAL__TARGET:
 				getTarget().clear();
 				return;
 		}
@@ -189,12 +189,12 @@ public class DerivedFromHazardImpl extends DirectedTraceLinkImpl implements Deri
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TracemetamodelPackage.DERIVED_FROM_HAZARD__SOURCE:
+			case TracemetamodelPackage.ADDRESSED_BY_SAFETY_GOAL__SOURCE:
 				return source != null;
-			case TracemetamodelPackage.DERIVED_FROM_HAZARD__TARGET:
+			case TracemetamodelPackage.ADDRESSED_BY_SAFETY_GOAL__TARGET:
 				return target != null && !target.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //DerivedFromHazardImpl
+} //AddressedBySafetyGoalImpl

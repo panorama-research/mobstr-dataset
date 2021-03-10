@@ -4,7 +4,7 @@ package org.panorama.research.waters2019.tracemetamodel.impl;
 
 import java.util.Collection;
 
-import ode.base.Element;
+import ode.dependability.Measure;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -44,7 +44,7 @@ public class SpecifiedByRequirementImpl extends DirectedTraceLinkImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected Element source;
+	protected Measure source;
 
 	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference list.
@@ -81,10 +81,10 @@ public class SpecifiedByRequirementImpl extends DirectedTraceLinkImpl implements
 	 * @generated
 	 */
 	@Override
-	public Element getSource() {
+	public Measure getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject)source;
-			source = (Element)eResolveProxy(oldSource);
+			source = (Measure)eResolveProxy(oldSource);
 			if (source != oldSource) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TracemetamodelPackage.SPECIFIED_BY_REQUIREMENT__SOURCE, oldSource, source));
@@ -98,7 +98,7 @@ public class SpecifiedByRequirementImpl extends DirectedTraceLinkImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Element basicGetSource() {
+	public Measure basicGetSource() {
 		return source;
 	}
 
@@ -108,8 +108,8 @@ public class SpecifiedByRequirementImpl extends DirectedTraceLinkImpl implements
 	 * @generated
 	 */
 	@Override
-	public void setSource(Element newSource) {
-		Element oldSource = source;
+	public void setSource(Measure newSource) {
+		Measure oldSource = source;
 		source = newSource;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, TracemetamodelPackage.SPECIFIED_BY_REQUIREMENT__SOURCE, oldSource, source));
@@ -155,7 +155,7 @@ public class SpecifiedByRequirementImpl extends DirectedTraceLinkImpl implements
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case TracemetamodelPackage.SPECIFIED_BY_REQUIREMENT__SOURCE:
-				setSource((Element)newValue);
+				setSource((Measure)newValue);
 				return;
 			case TracemetamodelPackage.SPECIFIED_BY_REQUIREMENT__TARGET:
 				getTarget().clear();
@@ -174,7 +174,7 @@ public class SpecifiedByRequirementImpl extends DirectedTraceLinkImpl implements
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case TracemetamodelPackage.SPECIFIED_BY_REQUIREMENT__SOURCE:
-				setSource((Element)null);
+				setSource((Measure)null);
 				return;
 			case TracemetamodelPackage.SPECIFIED_BY_REQUIREMENT__TARGET:
 				getTarget().clear();

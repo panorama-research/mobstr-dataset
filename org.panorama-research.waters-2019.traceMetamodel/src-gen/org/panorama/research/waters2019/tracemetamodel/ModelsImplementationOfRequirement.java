@@ -2,7 +2,7 @@
  */
 package org.panorama.research.waters2019.tracemetamodel;
 
-import org.eclipse.app4mc.amalthea.model.INamed;
+import org.eclipse.app4mc.amalthea.model.Requirement;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -35,12 +35,12 @@ public interface ModelsImplementationOfRequirement extends DirectedTraceLink {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source</em>' reference.
-	 * @see #setSource(INamed)
+	 * @see #setSource(Requirement)
 	 * @see org.panorama.research.waters2019.tracemetamodel.TracemetamodelPackage#getModelsImplementationOfRequirement_Source()
 	 * @model required="true"
 	 * @generated
 	 */
-	INamed getSource();
+	Requirement getSource();
 
 	/**
 	 * Sets the value of the '{@link org.panorama.research.waters2019.tracemetamodel.ModelsImplementationOfRequirement#getSource <em>Source</em>}' reference.
@@ -50,7 +50,7 @@ public interface ModelsImplementationOfRequirement extends DirectedTraceLink {
 	 * @see #getSource()
 	 * @generated
 	 */
-	void setSource(INamed value);
+	void setSource(Requirement value);
 
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference list.
