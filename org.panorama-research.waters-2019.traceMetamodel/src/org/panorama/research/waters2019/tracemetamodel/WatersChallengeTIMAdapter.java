@@ -344,8 +344,24 @@ public class WatersChallengeTIMAdapter extends AbstractMetaModelAdapter implemen
 					}
 				}
 			}
-			for (Object trace : toRemove) {
-				tModel.getTraces().remove(trace);
+
+			// Delete traces within a transaction
+			TransactionalEditingDomain editingDomain = EditingDomainHelper.getEditingDomain();
+			Command cmd = new RecordingCommand(editingDomain, "Remove traces") {
+				@Override
+				protected void doExecute() {
+					for (Object trace : toRemove) {
+						tModel.getTraces().remove(trace);
+					}
+				}
+			};
+
+			try {
+				((TransactionalCommandStack) editingDomain.getCommandStack()).execute(cmd, null); // default options
+			} catch (RollbackException e) {
+				throw new IllegalStateException("Removing trace links was rolled back.", e);
+			} catch (InterruptedException e) {
+				throw new IllegalStateException("Removing trace links was interrupted.", e);
 			}
 
 			TracePersistenceAdapter persistenceAdapter = ExtensionPointHelper.getTracePersistenceAdapter().get();
