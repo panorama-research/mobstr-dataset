@@ -58,11 +58,11 @@
       <failures name="Erroneous point cloud provded by the lidar grabber (false negative)" originType="Internal" failureClass="Too little"/>
       <failures name="Objects not detected by lidar" originType="Output"/>
       <failures name="Erroneous point cloud provided by the lidar grabber (false positive)" originType="Internal" failureClass="Too much"/>
-      <failures name="Ghost objectives provided by lidar" originType="Output"/>
+      <failures name="Ghost objects provided by lidar" originType="Output"/>
       <failures name="Point cloud provided too late by the lidar grabber" originType="Internal" failureClass="Late"/>
       <failures name="Wrong (outdated) objects provided by lidar" originType="Output"/>
       <failures name="No occupancy grid provided by the lidar grabber" originType="Internal" failureClass="Omission"/>
-      <failures name="No precise information about the distance to obstacles by lidar" originType="Output" failureClass=""/>
+      <failures name="No information about the distance to objects provided by lidar" originType="Output" failureClass=""/>
       <failures name="Erroneous occupancy grid provided by the lidar grabber (false negative)" originType="Internal" failureClass="Too little"/>
       <failures name="Distance to objects measured as too high" originType="Output"/>
       <failures name="Erroneous occupancy grid provided by the lidar grabber (false positive)" originType="Internal" failureClass="Too much"/>
@@ -77,7 +77,7 @@
       <failures name="Stuck-at failure of the image grabber (still image)" originType="Internal" failureClass="Late"/>
       <failures name="Image provided too late by the image grabber (old image)" originType="Internal" failureClass="Late"/>
       <failures name="No image provided by the image grabber" originType="Output"/>
-      <failures name="Ghost objectives or lanes / Missing objects or lanes on the image" originType="Output"/>
+      <failures name="Ghost objects or lanes / Missing objects or lanes on the image" originType="Output"/>
       <failures name="Wrong (outdated) lane boundaries or objects on the image" originType="Output"/>
       <failures name="Images with wrong (or no) objects or lanes" originType="Output"/>
     </failureModels>
@@ -87,7 +87,7 @@
       <failures name="Erroneous CAN message" originType="Internal" failureClass="Incorrect"/>
       <failures name="No vehicle information available" originType="Output"/>
       <failures name="Wrong (outdated) vehicle information available" originType="Output"/>
-      <failures name="Erroneous vehicle information available"/>
+      <failures name="Erroneous vehicle information available" originType="Output"/>
     </failureModels>
     <failureModels name="Object Detection">
       <failures name="Internal failure of the object detection leading to loss of object detection" originType="Internal" failureClass="Omission"/>
@@ -163,7 +163,7 @@
     <hazards name="H-5" description="Unintended leaving of the road" failures="//@odeProductPackages.0/@failureModels.3/@failures.5 //@odeProductPackages.0/@failureModels.3/@failures.8 //@odeProductPackages.0/@failureModels.3/@failures.6 //@odeProductPackages.0/@failureModels.3/@failures.7 //@odeProductPackages.0/@failureModels.4/@failures.3 //@odeProductPackages.0/@failureModels.4/@failures.4 //@odeProductPackages.0/@failureModels.4/@failures.5 //@odeProductPackages.0/@failureModels.5/@failures.9 //@odeProductPackages.0/@failureModels.6/@failures.4 //@odeProductPackages.0/@failureModels.6/@failures.5 //@odeProductPackages.0/@failureModels.6/@failures.6 //@odeProductPackages.0/@failureModels.7/@failures.3 //@odeProductPackages.0/@failureModels.7/@failures.4 //@odeProductPackages.0/@failureModels.7/@failures.5 //@odeProductPackages.0/@failureModels.8/@failures.4 //@odeProductPackages.0/@failureModels.8/@failures.3 //@odeProductPackages.0/@failureModels.8/@failures.5 //@odeProductPackages.0/@failureModels.9/@failures.6 //@odeProductPackages.0/@failureModels.9/@failures.7 //@odeProductPackages.0/@failureModels.9/@failures.8"/>
   </odeProductPackages>
   <odeProductPackages xsi:type="dependability_:DependabilityPackage">
-    <measures name="Include a second environemnt senor (image grabber)" mitigates="//@odeProductPackages.0/@failureModels.2/@failures.3 //@odeProductPackages.0/@failureModels.2/@failures.5 //@odeProductPackages.0/@failureModels.2/@failures.9 //@odeProductPackages.0/@failureModels.2/@failures.1 //@odeProductPackages.0/@failureModels.2/@failures.13 //@odeProductPackages.0/@failureModels.2/@failures.11"/>
+    <measures name="Include a second environment sensor (image grabber)" mitigates="//@odeProductPackages.0/@failureModels.2/@failures.3 //@odeProductPackages.0/@failureModels.2/@failures.5 //@odeProductPackages.0/@failureModels.2/@failures.9 //@odeProductPackages.0/@failureModels.2/@failures.1 //@odeProductPackages.0/@failureModels.2/@failures.13 //@odeProductPackages.0/@failureModels.2/@failures.11"/>
     <measures name="Add plausibility checks in the sensor fusion component" mitigates="//@odeProductPackages.0/@failureModels.2/@failures.1 //@odeProductPackages.0/@failureModels.2/@failures.3 //@odeProductPackages.0/@failureModels.2/@failures.5"/>
     <measures name="Add plausibility checks in the path planner component" mitigates="//@odeProductPackages.0/@failureModels.2/@failures.9 //@odeProductPackages.0/@failureModels.2/@failures.11 //@odeProductPackages.0/@failureModels.2/@failures.13"/>
     <measures name="Add plausibility checks in the object detection component" mitigates="//@odeProductPackages.0/@failureModels.3/@failures.5 //@odeProductPackages.0/@failureModels.3/@failures.8 //@odeProductPackages.0/@failureModels.3/@failures.6 //@odeProductPackages.0/@failureModels.3/@failures.7"/>
