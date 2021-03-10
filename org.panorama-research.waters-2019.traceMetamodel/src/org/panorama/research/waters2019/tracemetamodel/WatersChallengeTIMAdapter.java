@@ -10,7 +10,9 @@ import org.eclipse.capra.core.adapters.Connection;
 import org.eclipse.capra.core.adapters.TraceMetaModelAdapter;
 import org.eclipse.capra.core.adapters.TracePersistenceAdapter;
 import org.eclipse.capra.core.helpers.ArtifactHelper;
+import org.eclipse.capra.core.helpers.EditingDomainHelper;
 import org.eclipse.capra.core.helpers.ExtensionPointHelper;
+import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -18,6 +20,10 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.transaction.RecordingCommand;
+import org.eclipse.emf.transaction.RollbackException;
+import org.eclipse.emf.transaction.TransactionalCommandStack;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
 
 /**
  * 
@@ -106,7 +112,23 @@ public class WatersChallengeTIMAdapter extends AbstractMetaModelAdapter implemen
 					.orElseGet(obj::toString));
 		}
 		trace.setName(name.toString());
-		tm.getTraces().add(trace);
+
+		TransactionalEditingDomain editingDomain = EditingDomainHelper.getEditingDomain();
+		// We're saving the trace model and the artifact model in the same transaction
+		Command cmd = new RecordingCommand(editingDomain, "Add trace") {
+			@Override
+			protected void doExecute() {
+				tm.getTraces().add(trace);
+			}
+		};
+
+		try {
+			((TransactionalCommandStack) editingDomain.getCommandStack()).execute(cmd, null); // default options
+		} catch (RollbackException e) {
+			throw new IllegalStateException("Adding a trace link was rolled back.", e);
+		} catch (InterruptedException e) {
+			throw new IllegalStateException("Adding a trace link was interrupted.", e);
+		}
 		return trace;
 	}
 
