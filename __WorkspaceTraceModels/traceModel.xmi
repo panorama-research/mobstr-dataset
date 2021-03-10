@@ -1,23 +1,243 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tracemetamodel:WatersChallengeTIM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tracemetamodel="org.panorama.research.waters2019.tracemetamodel">
-  <traces xsi:type="tracemetamodel:DerivedFrom" name=" : ">
-    <item href="artifactWrappers.xmi#//@artifacts.0"/>
-    <item href="artifactWrappers.xmi#//@artifacts.1"/>
+<tracemetamodel:WatersChallengeTIM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:argumentation_="http://www.deis-project.eu/ode/mergedODE/sacm/argumentation" xmlns:tracemetamodel="org.panorama.research.waters2019.tracemetamodel">
+  <traces xsi:type="tracemetamodel:AddressedBySafetyGoal" name="ID 2: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestrian ... :  ID 2: H-1 | The system shall prevent omitting required braking maneuvers. | Safety goal">
+    <source href="artifactWrappers.xmi#//@artifacts.5"/>
+    <target href="artifactWrappers.xmi#//@artifacts.6"/>
   </traces>
-  <traces xsi:type="tracemetamodel:ImplementedBy" name=" : ">
-    <item href="artifactWrappers.xmi#//@artifacts.2"/>
-    <item href="../org.panorama-research.waters-2019.architecture/waters-challenge-2019-architecture.uml#_ZvuIYH_aEeq1j4EUwdsVmw"/>
+  <traces xsi:type="tracemetamodel:AddressedByFMEA" name="43 : Claim :  WATERS Example : FMEA">
+    <source xsi:type="argumentation_:Claim" href="../org.panorama-research.waters-2019.safetycase/waters-challenge-2019-safetycase.integration#//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.29"/>
+    <target href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.0"/>
   </traces>
-  <traces xsi:type="tracemetamodel:RealizedBy" name=" : ">
-    <item href="../org.panorama-research.waters-2019.architecture/waters-challenge-2019-architecture.uml#_ZvuIYH_aEeq1j4EUwdsVmw"/>
-    <item href="../org.panorama-research.waters-2019.amalthea/waters-challenge-2019.amxmi#Detection?type=Task"/>
+  <traces xsi:type="tracemetamodel:AddressedBySafetyGoal" name="ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... :  ID SG-2: H-2 | The system shall prevent omitting required avoidance maneuvers. | Safety goal">
+    <source href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.8"/>
   </traces>
-  <traces xsi:type="tracemetamodel:PreventedBy" name=" : ">
-    <item href="artifactWrappers.xmi#//@artifacts.2"/>
-    <item href="artifactWrappers.xmi#//@artifacts.1"/>
+  <traces xsi:type="tracemetamodel:AddressedBySafetyGoal" name="ID H-3: Unintended braking | Straight ahead drive on a less frequented urban road with 50 km/h without visible obstacles or vehicles in front of the e... :  ID SG-3: H-3 | The system shall prevent unintended braking. | Safety goal | 3">
+    <source href="artifactWrappers.xmi#//@artifacts.11"/>
+    <target href="artifactWrappers.xmi#//@artifacts.10"/>
   </traces>
-  <traces xsi:type="tracemetamodel:DerivedFrom" name=" : ">
-    <item href="artifactWrappers.xmi#//@artifacts.1"/>
-    <item href="../org.panorama-research.waters-2019.safety-case/safety-assurance-case.assurancecase#//@argumentPackage.0/@argumentationElement.14"/>
+  <traces xsi:type="tracemetamodel:AddressedBySafetyGoal" name="ID H-4: Unintended acceleration | Comfort braking with a residual speed of currently 10 km/h on the left-hand turn lane of an urban intersection to al... :  ID SG-4: H-4 | The system shall prevent unintended acceleration. | Safety goal | 3">
+    <source href="artifactWrappers.xmi#//@artifacts.13"/>
+    <target href="artifactWrappers.xmi#//@artifacts.12"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:AddressedBySafetyGoal" name="ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a... :  ID SG-5: H-5 | The system shall prevent unintended leaving of the road. | Safety goal | 2">
+    <source href="artifactWrappers.xmi#//@artifacts.15"/>
+    <target href="artifactWrappers.xmi#//@artifacts.14"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:SpecifiedByRequirement" name="Include a second environemnt senor (image grabber) : Measure :  ID SR-1.1.1: The system shall use more than one sensor used to identify obstacles. | Safety (redundancy) | Sensor Fusion">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.3/@measures.0"/>
+    <target href="artifactWrappers.xmi#//@artifacts.16"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="No information about objects provided by the lidar : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-3: Unintended braking | Straight ahead drive on a less frequented urban road with 50 km/h without visible obstacles or vehicles in front of the e... ID H-4: Unintended acceleration | Comfort braking with a residual speed of currently 10 km/h on the left-hand turn lane of an urban intersection to al...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.1"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.11"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Objects not detected by lidar : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-4: Unintended acceleration | Comfort braking with a residual speed of currently 10 km/h on the left-hand turn lane of an urban intersection to al...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.3"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Ghost objects provided by lidar : Failure :  ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-3: Unintended braking | Straight ahead drive on a less frequented urban road with 50 km/h without visible obstacles or vehicles in front of the e...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.5"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.11"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Wrong (outdated) objects provided by lidar : Failure :  ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-3: Unintended braking | Straight ahead drive on a less frequented urban road with 50 km/h without visible obstacles or vehicles in front of the e...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.7"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.11"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="No information about the distance to objects provided by lidar : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-3: Unintended braking | Straight ahead drive on a less frequented urban road with 50 km/h without visible obstacles or vehicles in front of the e... ID H-4: Unintended acceleration | Comfort braking with a residual speed of currently 10 km/h on the left-hand turn lane of an urban intersection to al...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.11"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Distance to objects measured as too high : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-4: Unintended acceleration | Comfort braking with a residual speed of currently 10 km/h on the left-hand turn lane of an urban intersection to al...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.11"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Distance to objects measured as too low : Failure :  ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-3: Unintended braking | Straight ahead drive on a less frequented urban road with 50 km/h without visible obstacles or vehicles in front of the e...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.13"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.11"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Wrong (outdated) information about the distance to objects provided by lidar : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-3: Unintended braking | Straight ahead drive on a less frequented urban road with 50 km/h without visible obstacles or vehicles in front of the e... ID H-4: Unintended acceleration | Comfort braking with a residual speed of currently 10 km/h on the left-hand turn lane of an urban intersection to al...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.15"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.11"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="No image provided by the image grabber : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-4: Unintended acceleration | Comfort braking with a residual speed of currently 10 km/h on the left-hand turn lane of an urban intersection to al... ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.5"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Ghost objects or lanes / Missing objects or lanes on the image : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-3: Unintended braking | Straight ahead drive on a less frequented urban road with 50 km/h without visible obstacles or vehicles in front of the e... ID H-4: Unintended acceleration | Comfort braking with a residual speed of currently 10 km/h on the left-hand turn lane of an urban intersection to al... ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.6"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.11"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Wrong (outdated) lane boundaries or objects on the image : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-4: Unintended acceleration | Comfort braking with a residual speed of currently 10 km/h on the left-hand turn lane of an urban intersection to al... ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.7"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Images with wrong (or no) objects or lanes : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-4: Unintended acceleration | Comfort braking with a residual speed of currently 10 km/h on the left-hand turn lane of an urban intersection to al... ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.8"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="No vehicle information available : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.4/@failures.3"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Wrong (outdated) vehicle information available : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.4/@failures.4"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Erroneous vehicle information available : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-3: Unintended braking | Straight ahead drive on a less frequented urban road with 50 km/h without visible obstacles or vehicles in front of the e... ID H-4: Unintended acceleration | Comfort braking with a residual speed of currently 10 km/h on the left-hand turn lane of an urban intersection to al... ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.4/@failures.5"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.11"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Objects on the road are not detected : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-4: Unintended acceleration | Comfort braking with a residual speed of currently 10 km/h on the left-hand turn lane of an urban intersection to al...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.6"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Ghost objects are detected on the road : Failure :  ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-3: Unintended braking | Straight ahead drive on a less frequented urban road with 50 km/h without visible obstacles or vehicles in front of the e...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.7"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.11"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Objects on the road are detected too late : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-4: Unintended acceleration | Comfort braking with a residual speed of currently 10 km/h on the left-hand turn lane of an urban intersection to al...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.8"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="False classification of objects on the road : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-3: Unintended braking | Straight ahead drive on a less frequented urban road with 50 km/h without visible obstacles or vehicles in front of the e... ID H-4: Unintended acceleration | Comfort braking with a residual speed of currently 10 km/h on the left-hand turn lane of an urban intersection to al... ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.11"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Erroneous distance to objects : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-3: Unintended braking | Straight ahead drive on a less frequented urban road with 50 km/h without visible obstacles or vehicles in front of the e... ID H-4: Unintended acceleration | Comfort braking with a residual speed of currently 10 km/h on the left-hand turn lane of an urban intersection to al... ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.10"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.11"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Lanes are not detected : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.6/@failures.4"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Ghost lanes are detected : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-3: Unintended braking | Straight ahead drive on a less frequented urban road with 50 km/h without visible obstacles or vehicles in front of the e... ID H-4: Unintended acceleration | Comfort braking with a residual speed of currently 10 km/h on the left-hand turn lane of an urban intersection to al... ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.6/@failures.5"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.11"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Lanes are detected too late : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.6/@failures.6"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="No information about the vehicle postion and distance to obstacles around the vehicle : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.7/@failures.3"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Incorrect vehicle position information on the road : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-3: Unintended braking | Straight ahead drive on a less frequented urban road with 50 km/h without visible obstacles or vehicles in front of the e... ID H-4: Unintended acceleration | Comfort braking with a residual speed of currently 10 km/h on the left-hand turn lane of an urban intersection to al... ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.7/@failures.4"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.11"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Distance to objects on the road is calculated too high : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.7/@failures.5"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="No steering and speed signal is provided by the path planner : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.8/@failures.3"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Wrong steering or speed signal is provided by the path planner : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-3: Unintended braking | Straight ahead drive on a less frequented urban road with 50 km/h without visible obstacles or vehicles in front of the e... ID H-4: Unintended acceleration | Comfort braking with a residual speed of currently 10 km/h on the left-hand turn lane of an urban intersection to al... ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.8/@failures.4"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.11"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Steering or speed signal is provided too late by the path planner : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.8/@failures.5"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="No steering signal is provided by the controller : Failure :  ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.6"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Wrong steering signal is provided  by the controller : Failure :  ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.7"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Steering signal is provided too late by the controller : Failure :  ID H-2: Omitted avoidance maneuver | Straight ahead drive on a less frequented multi-lane road with 50 km/h at good weather conditions with a pedestri... ID H-5: Unintended leaving of the road | Driving through a narrow road curve on the right-hand lane at 40 km/h in close proximity of a weekly market a...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.8"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="No speed signal is provided  by the controller : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Wrong speed signal is provided  by the controller : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria... ID H-3: Unintended braking | Straight ahead drive on a less frequented urban road with 50 km/h without visible obstacles or vehicles in front of the e... ID H-4: Unintended acceleration | Comfort braking with a residual speed of currently 10 km/h on the left-hand turn lane of an urban intersection to al...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.10"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.11"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
+  </traces>
+  <traces xsi:type="tracemetamodel:LeadsToHazard" name="Speed signal is provided too late  by the controller : Failure :  ID H-1: Omitted braking maneuver | Straight ahead drive on a less frequented single-lane road with 50 km/h at good weather conditions with a pedestria...">
+    <source href="../org.panorama-research.waters-2019.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.11"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
   </traces>
 </tracemetamodel:WatersChallengeTIM>
