@@ -46,23 +46,23 @@
     </failureModels>
     <failureModels name="GPS Grabber">
       <failures name="No position information provided by the GPS grabber" originType="Internal" failureClass="Omission"/>
-      <failures name="Erroneous position infomration provided by the GPS grabber" originType="Internal" failureClass="Incorrect"/>
+	  <failures name="No localization by GPS" originType="Output"/>
+      <failures name="Erroneous position information provided by the GPS grabber" originType="Internal" failureClass="Incorrect"/>
+	  <failures name="Wrong GPS information or inaccurate localization" originType="Output"/>
       <failures name="Stuck-at failure of the GPS grabber" originType="Internal" failureClass="Late"/>
-      <failures name="No localization by GPS" originType="Output"/>
-      <failures name="Wrong GPS information; inaccurate localization" originType="Output"/>
       <failures name="Wrong GPS information" originType="Output"/>
     </failureModels>
     <failureModels name="Lidar Grabber">
       <failures name="No point cloud provided by the lidar grabber" originType="Internal" failureClass="Omission"/>
-      <failures name="No information about objects provided by the lidar" originType="Output"/>
-      <failures name="Erroneous point cloud provded by the lidar grabber (false negative)" originType="Internal" failureClass="Too little"/>
+      <failures name="No information about objects provided by lidar" originType="Output"/>
+      <failures name="Erroneous point cloud provided by the lidar grabber (false negative)" originType="Internal" failureClass="Too little"/>
       <failures name="Objects not detected by lidar" originType="Output"/>
       <failures name="Erroneous point cloud provided by the lidar grabber (false positive)" originType="Internal" failureClass="Too much"/>
       <failures name="Ghost objects provided by lidar" originType="Output"/>
       <failures name="Point cloud provided too late by the lidar grabber" originType="Internal" failureClass="Late"/>
       <failures name="Wrong (outdated) objects provided by lidar" originType="Output"/>
       <failures name="No occupancy grid provided by the lidar grabber" originType="Internal" failureClass="Omission"/>
-      <failures name="No information about the distance to objects provided by lidar" originType="Output" failureClass=""/>
+      <failures name="No information about the distance to objects provided by lidar" originType="Output"/>
       <failures name="Erroneous occupancy grid provided by the lidar grabber (false negative)" originType="Internal" failureClass="Too little"/>
       <failures name="Distance to objects measured as too high" originType="Output"/>
       <failures name="Erroneous occupancy grid provided by the lidar grabber (false positive)" originType="Internal" failureClass="Too much"/>
@@ -71,75 +71,75 @@
       <failures name="Wrong (outdated) information about the distance to objects provided by lidar" originType="Output"/>
     </failureModels>
     <failureModels name="Image Grabber">
-      <failures name="Internal faiilure of the image grabber leading to omission of image" originType="Internal" failureClass="Omission"/>
+      <failures name="Internal failure of the image grabber leading to omission of image" originType="Internal" failureClass="Omission"/>
+	  <failures name="No image provided by the image grabber" originType="Output"/>
       <failures name="Completely erroneous image provided by the image grabber" originType="Internal" failureClass="Incorrect"/>
+	  <failures name="Images with wrong (or no) objects or lanes" originType="Output"/>
       <failures name="Partially erroneous image provided by the image grabber" originType="Internal" failureClass="Incorrect"/>
+	  <failures name="Ghost objects or lanes in the images / Missing objects or lanes in the images" originType="Output"/>
       <failures name="Stuck-at failure of the image grabber (still image)" originType="Internal" failureClass="Late"/>
+	  <failures name="Wrong (outdated) lane boundaries or objects in the images" originType="Output"/>
       <failures name="Image provided too late by the image grabber (old image)" originType="Internal" failureClass="Late"/>
-      <failures name="No image provided by the image grabber" originType="Output"/>
-      <failures name="Ghost objects or lanes / Missing objects or lanes on the image" originType="Output"/>
-      <failures name="Wrong (outdated) lane boundaries or objects on the image" originType="Output"/>
-      <failures name="Images with wrong (or no) objects or lanes" originType="Output"/>
     </failureModels>
     <failureModels name="CAN Bus">
       <failures name="Loss of CAN messages" originType="Internal" failureClass="Omission"/>
+	  <failures name="No vehicle information available" originType="Output"/>
       <failures name="Delay of CAN messages" originType="Internal" failureClass="Late"/>
+	  <failures name="Wrong (outdated) vehicle information available" originType="Output"/>
       <failures name="Erroneous CAN message" originType="Internal" failureClass="Incorrect"/>
-      <failures name="No vehicle information available" originType="Output"/>
-      <failures name="Wrong (outdated) vehicle information available" originType="Output"/>
       <failures name="Erroneous vehicle information available" originType="Output"/>
     </failureModels>
     <failureModels name="Object Detection">
       <failures name="Internal failure of the object detection leading to loss of object detection" originType="Internal" failureClass="Omission"/>
-      <failures name="Incorrect object detection by camera and lidar (false positive)" originType="Internal" failureClass="To much"/>
+	  <failures name="Objects on the road are not detected" originType="Output"/>
+      <failures name="Incorrect object detection by camera and lidar (false positive)" originType="Internal" failureClass="Too much"/>
+	  <failures name="Ghost objectives are detected on the road" originType="Output"/>
       <failures name="Incorrect object detection by camera and lidar (false negative)" originType="Internal" failureClass="Too little"/>
       <failures name="Delayed detection of objects" originType="Internal" failureClass="Late"/>
+	  <failures name="Objects on the road are detected too late" originType="Output"/>
       <failures name="Wrong classification of objects due to internal error" originType="Internal" failureClass="Incorrect"/>
+	  <failures name="False classification of objects on the road" originType="Output"/>
       <failures name="Wrong positioning of objects by camera and lidar" originType="Internal" failureClass="Incorrect"/>
-      <failures name="Objects on the road are not detected" originType="Output"/>
-      <failures name="Ghost objectives are detected on the road" originType="Output"/>
-      <failures name="Objects on the road are detected too late" originType="Output"/>
-      <failures name="False classification of objects on the road" originType="Output"/>
-      <failures name="Erroneous distance to objects" originType="Output" failureClass=""/>
+      <failures name="Erroneous distance to objects" originType="Output"/>
     </failureModels>
     <failureModels name="Lane Detection">
       <failures name="Internal failure of the lane detection leading to loss of lane detection" originType="Internal" failureClass="Omission"/>
+	  <failures name="Lanes are not detected" originType="Output"/>
       <failures name="Incorrect lane detection (false positive)" originType="Internal" failureClass="Too much"/>
+	  <failures name="Ghost lanes are detected" originType="Output"/>
       <failures name="Delayed detection of lanes" originType="Internal" failureClass="Late"/>
+	  <failures name="Lanes are detected too late" originType="Output"/>
       <failures name="Incorrect lane detection (false negative)" originType="Internal" failureClass="Too little"/>
-      <failures name="Lanes are not detected" originType="Output"/>
-      <failures name="Ghost lanes are detected" originType="Output"/>
-      <failures name="Lanes are detected too late" originType="Output"/>
     </failureModels>
     <failureModels name="Localization">
       <failures name="Loss of localization" originType="Internal" failureClass="Omission"/>
+	  <failures name="No information about the vehicle postion and distance to obstacles around the vehicle" originType="Output"/>
       <failures name="Internal failure leading to an erroneously calculated vehicle position" originType="Internal" failureClass="Incorrect"/>
+	  <failures name="Incorrect vehicle position information on the road" originType="Output"/>
       <failures name="Delayed localization" originType="Internal" failureClass="Late"/>
-      <failures name="No information about the vehicle postion and distance to obstacles around the vehicle" originType="Output"/>
-      <failures name="Incorrect vehicle position information on the road" originType="Output"/>
       <failures name="Distance to objects on the road is calculated too high" originType="Output"/>
     </failureModels>
     <failureModels name="Path Planner">
       <failures name="Omission of control commands" originType="Internal" failureClass="Omission"/>
+	  <failures name="No steering or speed signal is provided by the path planner" originType="Output"/>
       <failures name="Erroneous control commands" originType="Internal" failureClass="Incorrect"/>
+	  <failures name="Wrong steering or speed signal is provided  by the path planner" originType="Output"/>
       <failures name="Delayed control commands" originType="Internal" failureClass="Late"/>
-      <failures name="No steering and speed signal is provided by the path planner" originType="Output"/>
-      <failures name="Wrong steering or speed signal is provided  by the path planner" originType="Output"/>
       <failures name="Steering or speed signal is provided too late  by the path planner" originType="Output"/>
     </failureModels>
     <failureModels name="Controller">
       <failures name="Omission of steering commands" originType="Internal" failureClass="Omission"/>
+	  <failures name="No steering signal is provided by the controller" originType="Output"/>
       <failures name="Erroneous steering commands" originType="Internal" failureClass="Incorrect"/>
+	  <failures name="Wrong steering signal is provided by the controller" originType="Output"/>
       <failures name="Delayed steering commands" originType="Internal" failureClass="Late"/>
+	  <failures name="Steering signal is provided too late by the controller" originType="Output"/>
       <failures name="Omission of speed commands" originType="Internal" failureClass="Omission"/>
+	  <failures name="No speed signal is provided by the controller" originType="Output"/>
       <failures name="Erroneous speed commands" originType="Internal" failureClass="Incorrect"/>
+	  <failures name="Wrong speed signal is provided by the controller" originType="Output"/>
       <failures name="Delayed speed commands" originType="Internal" failureClass="Late"/>
-      <failures name="No steering signal is provided by the controller" originType="Output"/>
-      <failures name="Wrong steering signal is provided  by the controller" originType="Output"/>
-      <failures name="Steering signal is provided too late  by the controller" originType="Output"/>
-      <failures name="No speed signal is provided  by the controller" originType="Output"/>
-      <failures name="Wrong speed signal is provided  by the controller" originType="Output"/>
-      <failures name="Speed signal is provided too late  by the controller" originType="Output"/>
+      <failures name="Speed signal is provided too late by the controller" originType="Output"/>
     </failureModels>
   </odeProductPackages>
   <odeProductPackages xsi:type="architecture_:DesignPackage">
