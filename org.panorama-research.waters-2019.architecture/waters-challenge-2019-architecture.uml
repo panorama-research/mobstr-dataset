@@ -105,7 +105,7 @@
   <packagedElement xmi:type="uml:Usage" xmi:id="_ooKb8H_dEeq1j4EUwdsVmw" client="_-NCIEH_cEeq1j4EUwdsVmw" supplier="_Afzb8H_dEeq1j4EUwdsVmw"/>
   <packagedElement xmi:type="uml:Usage" xmi:id="_x193oIlGEeqZns6eDXpo_Q" client="_vaSfYIlGEeqZns6eDXpo_Q" supplier="_aVIDgIlGEeqZns6eDXpo_Q"/>
   <packagedElement xmi:type="uml:Component" xmi:id="_h5v1AOH6EequeMCZdIuVEw" name="Driver Warnings">
-    <ownedAttribute xmi:type="uml:Port" xmi:id="_3tc8cOH7EequeMCZdIuVEw" name="object_detection_input" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_3tc8cOH7EequeMCZdIuVEw" name="object_detection_warnings" aggregation="composite"/>
     <ownedAttribute xmi:type="uml:Port" xmi:id="_oDqSMOH9EequeMCZdIuVEw" name="controller_input" aggregation="composite"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Usage" xmi:id="_9BRmgOH7EequeMCZdIuVEw" client="_3tc8cOH7EequeMCZdIuVEw" supplier="_uEEnYOH7EequeMCZdIuVEw"/>

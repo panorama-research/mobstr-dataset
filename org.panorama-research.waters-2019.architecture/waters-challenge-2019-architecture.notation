@@ -448,7 +448,7 @@
       <children xmi:type="notation:Shape" xmi:id="__ybOAH_bEeq1j4EUwdsVmw" type="Port_Shape">
         <children xmi:type="notation:DecorationNode" xmi:id="__ybOAn_bEeq1j4EUwdsVmw" type="Port_NameLabel">
           <element xmi:type="uml:Port" href="waters-challenge-2019-architecture.uml#__yOZsH_bEeq1j4EUwdsVmw"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="__ybOA3_bEeq1j4EUwdsVmw" x="8" y="-20"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="__ybOA3_bEeq1j4EUwdsVmw" x="18" y="-15"/>
         </children>
         <children xmi:type="notation:DecorationNode" xmi:id="__ybOBH_bEeq1j4EUwdsVmw" type="Port_StereotypeLabel">
           <element xmi:type="uml:Port" href="waters-challenge-2019-architecture.uml#__yOZsH_bEeq1j4EUwdsVmw"/>
@@ -506,13 +506,13 @@
               </children>
               <children xmi:type="notation:Shape" xmi:id="_kW53UGX5Eeu5Bd8fMshJEA" type="Port_Shape">
                 <children xmi:type="notation:DecorationNode" xmi:id="_kW6eYGX5Eeu5Bd8fMshJEA" type="Port_NameLabel">
-                  <layoutConstraint xmi:type="notation:Location" xmi:id="_kW6eYWX5Eeu5Bd8fMshJEA" x="-16" y="-28"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_kW6eYWX5Eeu5Bd8fMshJEA" x="-78" y="-8"/>
                 </children>
                 <children xmi:type="notation:DecorationNode" xmi:id="_kW6eYmX5Eeu5Bd8fMshJEA" type="Port_StereotypeLabel">
                   <layoutConstraint xmi:type="notation:Location" xmi:id="_kW6eY2X5Eeu5Bd8fMshJEA" x="25" y="-10"/>
                 </children>
                 <element xmi:type="uml:Port" href="waters-challenge-2019-architecture.uml#_kWg1wGX5Eeu5Bd8fMshJEA"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kW53UWX5Eeu5Bd8fMshJEA" x="176" y="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kW53UWX5Eeu5Bd8fMshJEA" x="170" y="50"/>
               </children>
               <element xmi:type="uml:Component" href="waters-challenge-2019-architecture.uml#_h63n8GRzEeu5Bd8fMshJEA"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yXE7sWRzEeu5Bd8fMshJEA" x="34" y="19" height="80"/>
@@ -884,7 +884,7 @@
       <children xmi:type="notation:Shape" xmi:id="_3t8rsOH7EequeMCZdIuVEw" type="Port_Shape">
         <children xmi:type="notation:DecorationNode" xmi:id="_3t9SwOH7EequeMCZdIuVEw" type="Port_NameLabel">
           <element xmi:type="uml:Port" href="waters-challenge-2019-architecture.uml#_3tc8cOH7EequeMCZdIuVEw"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_3t9SweH7EequeMCZdIuVEw" x="-130" y="1"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_3t9SweH7EequeMCZdIuVEw" x="-150" y="-10"/>
         </children>
         <children xmi:type="notation:DecorationNode" xmi:id="_3t9SwuH7EequeMCZdIuVEw" type="Port_StereotypeLabel">
           <element xmi:type="uml:Port" href="waters-challenge-2019-architecture.uml#_3tc8cOH7EequeMCZdIuVEw"/>
@@ -1042,7 +1042,7 @@
       <children xmi:type="notation:DecorationNode" xmi:id="_lL6Xgn_dEeq1j4EUwdsVmw" type="Usage_StereotypeLabel">
         <styles xmi:type="notation:BooleanValueStyle" xmi:id="_S03XEIlGEeqZns6eDXpo_Q" name="IS_UPDATED_POSITION" booleanValue="true"/>
         <element xmi:type="uml:Usage" href="waters-challenge-2019-architecture.uml#_lLuKQH_dEeq1j4EUwdsVmw"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_lL6Xg3_dEeq1j4EUwdsVmw" x="-1" y="18"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_lL6Xg3_dEeq1j4EUwdsVmw" x="31" y="27"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_lL1fAX_dEeq1j4EUwdsVmw"/>
       <element xmi:type="uml:Usage" href="waters-challenge-2019-architecture.uml#_lLuKQH_dEeq1j4EUwdsVmw"/>
@@ -1141,10 +1141,12 @@
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_rXEHYGX5Eeu5Bd8fMshJEA" type="Usage_Edge" source="_SlRhgGR0Eeu5Bd8fMshJEA" target="_kW53UGX5Eeu5Bd8fMshJEA">
       <children xmi:type="notation:DecorationNode" xmi:id="_rXEHY2X5Eeu5Bd8fMshJEA" type="Usage_NameLabel">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_rXEHZGX5Eeu5Bd8fMshJEA" y="60"/>
+        <styles xmi:type="notation:BooleanValueStyle" xmi:id="_9iyn8IJIEeu63eJ8lZzAuw" name="IS_UPDATED_POSITION" booleanValue="true"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_rXEHZGX5Eeu5Bd8fMshJEA" x="-1" y="58"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_rXEHZWX5Eeu5Bd8fMshJEA" type="Usage_StereotypeLabel">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_rXEHZmX5Eeu5Bd8fMshJEA" y="30"/>
+        <styles xmi:type="notation:BooleanValueStyle" xmi:id="_9kfREIJIEeu63eJ8lZzAuw" name="IS_UPDATED_POSITION" booleanValue="true"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_rXEHZmX5Eeu5Bd8fMshJEA" x="-5" y="13"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_rXEHYWX5Eeu5Bd8fMshJEA"/>
       <element xmi:type="uml:Usage" href="waters-challenge-2019-architecture.uml#_rXC5QGX5Eeu5Bd8fMshJEA"/>
@@ -1155,7 +1157,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_uhajgGX5Eeu5Bd8fMshJEA" y="60"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_uhajgWX5Eeu5Bd8fMshJEA" type="Usage_StereotypeLabel">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_uhajgmX5Eeu5Bd8fMshJEA" y="30"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_uhajgmX5Eeu5Bd8fMshJEA" x="3" y="26"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_uhZ8cWX5Eeu5Bd8fMshJEA"/>
       <element xmi:type="uml:Usage" href="waters-challenge-2019-architecture.uml#_uhZVYGX5Eeu5Bd8fMshJEA"/>
@@ -1219,7 +1221,7 @@
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_3oXEcmX6Eeu5Bd8fMshJEA" type="Usage_StereotypeLabel">
         <styles xmi:type="notation:BooleanValueStyle" xmi:id="_8wnZ4HwCEeuNhcGKPoMAnQ" name="IS_UPDATED_POSITION" booleanValue="true"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_3oXEc2X6Eeu5Bd8fMshJEA" x="-36" y="21"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_3oXEc2X6Eeu5Bd8fMshJEA" x="-54" y="29"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_3oWdYWX6Eeu5Bd8fMshJEA"/>
       <element xmi:type="uml:Usage" href="waters-challenge-2019-architecture.uml#_3oVPQGX6Eeu5Bd8fMshJEA"/>
