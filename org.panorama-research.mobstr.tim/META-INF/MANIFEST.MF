@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.panorama-research.waters-2019.traceMetamodel;singleton:=true
-Automatic-Module-Name: org.panorama-research.waters-2019.traceMetamodel
+Bundle-SymbolicName: org.panorama-research.mobstr.tim;singleton:=true
+Automatic-Module-Name: org.panorama-research.mobstr.tim
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName

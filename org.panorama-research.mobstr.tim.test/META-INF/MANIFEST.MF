@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.panorama-research.waters-2019.traceMetamodel.test;singleton:=true
+Bundle-SymbolicName: org.panorama-research.mobstr.tim.test;singleton:=true
 Automatic-Module-Name: org.panorama-research.waters-2019.traceMetamodel.test
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
@@ -18,7 +18,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.capra.handler.office,
  org.eclipse.capra.ui.office,
  org.eclipse.ui,
- org.panorama-research.waters-2019.traceMetamodel,
+ org.panorama-research.mobstr.tim,
  ode.concept.deis.meta-model;visibility:=reexport,
  org.eclipse.papyrus.emf.facet.custom.metamodel;visibility:=reexport,
  org.eclipse.app4mc.amalthea.model;visibility:=reexport,
