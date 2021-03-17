@@ -19,6 +19,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.uml2.types;visibility:=reexport,
  org.eclipse.uml2.uml;visibility:=reexport
 Bundle-ActivationPolicy: lazy
-Export-Package: org.panorama.research.waters2019.tracemetamodel,
- org.panorama.research.waters2019.tracemetamodel.impl,
- org.panorama.research.waters2019.tracemetamodel.util
+Export-Package: org.panorama.research.mobstr.tim,
+ org.panorama.research.mobstr.tim.impl,
+ org.panorama.research.mobstr.tim.util

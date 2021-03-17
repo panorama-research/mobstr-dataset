@@ -1,0 +1,230 @@
+package org.panorama.research.mobstr.tim
+
+import ode.base.Element
+import ode.failureLogic.FMEA
+import org.eclipse.app4mc.amalthea.model.INamed
+import org.eclipse.app4mc.amalthea.model.Requirement
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.util.EcoreUtil
+import org.eclipse.uml2.uml.Component
+import ode.dependability.Measure
+import ode.failureLogic.Failure
+
+/*
+ * A custom annotation that allows defining which type
+ * a wrapper should encapsulate. This can be used to ensure
+ * type safety even for non-EObjects.
+ */
+annotation "http://panorama-research.org/mobstr/UseWrapperType" as UseWrapperType
+
+/*
+ * Container for the trace links relevant for
+ * the WATERS challenge.
+ */
+class MobstrTIM {
+	contains AbstractTraceLink[0..*] traces
+} 
+
+/*
+ * Provides an abstract base class for trace links
+ * that contains an ID and a name.
+ */
+abstract class AbstractTraceLink {
+	derived String ID get {
+			EcoreUtil.generateUUID();
+	}
+	String name
+}
+
+/*
+ * A generic trace link that can accept arbitrary
+ * elements and is undirected.
+ */
+class RelatedTo extends AbstractTraceLink {
+	refers EObject [0..*] items
+}
+
+/*
+ * Base class for all link types that have a source and a target
+ */
+abstract class DirectedTraceLink extends AbstractTraceLink {
+	
+}
+
+
+/*
+ * Links requirements to additional assumptions
+ */
+class BasedOnAssumption extends DirectedTraceLink {
+	@UseWrapperType(className="CapraOfficeObject")
+	refers EObject [1] source // CapraOfficeObject
+	@UseWrapperType(className="CapraOfficeObject")
+	refers EObject [1..*] target // CapraOfficeObject
+	
+}
+
+/*
+ * Links requirements to item definitions
+ */
+class DerivedFromItemDefinition extends DirectedTraceLink {
+	@UseWrapperType(className="CapraOfficeObject")
+	refers EObject [1] source // CapraOfficeObject
+	@UseWrapperType(className="File")
+	refers EObject [1..*] target // File
+}
+
+/*
+ * Links measures to safety requirements
+ * TODO: Use name from ISO
+ */
+class SpecifiedByRequirement extends DirectedTraceLink {
+	refers Measure [1] source // Element -- ODE Measure
+	@UseWrapperType(className="CapraOfficeObject")
+	refers EObject [1..*] target // CapraOfficeObject -- Safety Requirement
+}
+
+/*
+ * Links Safety Goals to Hazards
+ */
+class AddressedBySafetyGoal extends DirectedTraceLink {
+	@UseWrapperType(className="CapraOfficeObject")
+	refers EObject [1] source // CapraOfficeObject -- Hazard
+	@UseWrapperType(className="CapraOfficeObject")
+	refers EObject [1..*] target // CapraOfficeObject -- Safety Goal
+}
+
+/*
+ * Links Effects to Hazards
+ */
+class LeadsToHazard extends DirectedTraceLink {
+	 refers Failure [1] source // Element -- Effect
+	 @UseWrapperType(className="CapraOfficeObject")
+	 refers EObject [1..*] target // CapraOfficeObject -- Hazard
+}
+
+/*
+ * Links Effects to Components
+ */
+class EffectsComponent extends DirectedTraceLink {
+	refers Element [1] source // Element -- Effect
+	refers Component [1] target // Component
+}
+
+/*
+ * Links Components to Failure Modes
+ */
+class HasFailureMode extends DirectedTraceLink {
+	refers Component [1] source // Component
+	refers Element [1..*] target // Element -- Failure Mode
+}
+
+/*
+ * Links Runnables to Components
+ */
+class ImplementsComponent extends DirectedTraceLink {
+	refers INamed [1] source // INamed -- Runnable
+	refers Component [1..*] target // Component
+}
+
+/*
+ * Links Components to Item Definition
+ */
+class RealizesItemDefintion extends DirectedTraceLink {
+	refers Component [1] source // Component
+	@UseWrapperType(className="File")
+	refers EObject [1] target // File -- Item Definition
+}
+
+/*
+ * Links Amalthea elements to Item Definition
+ */
+class RefinesItemDefinition extends DirectedTraceLink {
+	refers INamed [1] source // INamed -- Amalthea Element
+	@UseWrapperType(className="File")
+	refers EObject [1] target // File -- Item Definition
+}
+
+/*
+ * Links Amalthea Element to Requirement
+ */
+ class ModelsImplementationOfRequirement extends DirectedTraceLink {
+ 	refers Requirement [1] source // INamed -- Amalthea Element
+ 	@UseWrapperType(className="CapraOfficeObject")
+ 	refers EObject [1..*] target // CapraOfficeObject -- Requirement
+ }
+ 
+ /*
+ * Links Timing Constraint in Amalthea to Requirement
+ */
+ class RefinesTimingRequirement extends DirectedTraceLink {
+ 	refers INamed [1] source // INamed -- Amalthea Element
+ 	@UseWrapperType(className="CapraOfficeObject")
+ 	refers EObject [1] target // CapraOfficeObject -- Requirement
+ }
+ 
+ /*
+  * Links Safety Case to Safety Requirement 
+  */
+ class ExpressesAsClaim extends DirectedTraceLink {
+ 	refers Element [1] source // Element -- Safety Case
+ 	@UseWrapperType(className="CapraOfficeObject")
+ 	refers EObject [1..*] target // CapraOfficeObject -- Safety Requirement
+ }
+ 
+ /*
+  * Links Safety Case to Hazard
+  */
+ class ExpressesAsGoal extends DirectedTraceLink {
+ 	refers Element [1] source // Element -- Safety Case
+ 	@UseWrapperType(className="CapraOfficeObject")
+ 	refers EObject [1..*] target // CapraOfficeObject -- Hazard
+ }
+  
+ /*ˇ
+  * Links Safety Case to V&V Results
+  */
+ class UsesAsEvidence extends DirectedTraceLink {
+ 	refers Element [1] source // Element -- Safety Case
+ 	@UseWrapperType(className="File")
+ 	refers EObject [1..*] target // File -- V&V Report
+ }
+  
+ /*
+  * Links Safety Case to Component
+  */
+ class ReferencesComponent extends DirectedTraceLink {
+ 	refers Element [1] source // Element -- Safety Case
+ 	refers Component [1..*] target // Component
+ }
+ 
+ /*
+  * Links Safety Case to FMEA
+  */
+ class AddressedByFMEA extends DirectedTraceLink {
+ 	refers Element [1] source // Safety Case
+ 	refers FMEA [1] target // FMEA
+ }
+  
+ /*
+  * Links Safety Case to Amalthea Element
+  */
+ class ReferencesInEvidences extends DirectedTraceLink {
+ 	refers Element [1] source // Element -- Safety Case
+ 	refers INamed [1..*] target // Amalthea Element
+ }
+ 
+ /*
+  * Links the Fault Tree Analysis to a Hazard
+  */
+ class DetailsCausesOf extends DirectedTraceLink {
+ 	refers Element [1] source // Element -- Fault Tree Analysis
+ 	refers Element [1..*] target // Element -- Hazard
+ }
+ 
+ /*
+  * Links the Safety Case to the Fault Tree Analysis
+  */
+ class DetailsHazardWith extends DirectedTraceLink {
+ 	refers Element [1] source // Element -- Safety Case
+ 	refers Element [1] target // Element -- Fault Tree Analysis
+ }

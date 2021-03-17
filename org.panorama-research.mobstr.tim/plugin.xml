@@ -7,17 +7,25 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated app4mcmetamodel -->
+      <!-- @generated TIM -->
       <package
-            uri="org.panorama.research.waters2019.tracemetamodel"
-            class="org.panorama.research.waters2019.tracemetamodel.TracemetamodelPackage"
-            genModel="model/waters-challenge-tim.xcore"/>
+            uri="org.panorama.research.mobstr.tim"
+            class="org.panorama.research.mobstr.tim.TimPackage"
+            genModel="model/mobstr-tim.xcore"/>
    </extension>
    <extension
          point="org.eclipse.capra.configuration.traceabilityMetaModel">
       <TraceabilityMetaModelAdapter
-            class="org.panorama.research.waters2019.tracemetamodel.WatersChallengeTIMAdapter">
+            class="org.panorama.research.mobstr.tim.MobstrTIMAdapter">
       </TraceabilityMetaModelAdapter>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated waters-challenge-tim -->
+      <package
+            uri="org.panorama.research.mobster.tim"
+            class="org.panorama.research.mobstr.tim.TimPackage"
+            genModel="model/mobstr-tim.xcore"/>
    </extension>
 
 </plugin>

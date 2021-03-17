@@ -26,4 +26,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.uml2.uml;visibility:=reexport,
  org.junit
 Bundle-ActivationPolicy: lazy
-Export-Package: org.panorama.research.waters2019.tracemetamodel.test;x-internal:=true
+Export-Package: org.panorama.research.mobstr.tim.test;x-internal:=true
