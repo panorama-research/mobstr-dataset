@@ -95,6 +95,7 @@ public class MobstrTIMAdapter extends AbstractMetaModelAdapter implements TraceM
 				trace.eSet(targetRef, targets.get(0));
 			}
 		}
+
 		TracePersistenceAdapter persistenceAdapter = ExtensionPointHelper.getTracePersistenceAdapter().get();
 		EObject artifactModel = persistenceAdapter.getArtifactWrappers(new ResourceSetImpl());
 		ArtifactHelper artifactHelper = new ArtifactHelper(artifactModel);
@@ -106,12 +107,12 @@ public class MobstrTIMAdapter extends AbstractMetaModelAdapter implements TraceM
 		name.append(artifactHelper.getHandler(artifactHelper.unwrapWrapper(origins.get(0))).get()
 				.withCastedHandler(artifactHelper.unwrapWrapper(origins.get(0)), (h, e) -> h.getDisplayName(e))
 				.orElseGet(origins.get(0)::toString));
-		name.append(" : ");
+		name.append(" -> ");
 		for (Object obj : targets) {
-			name.append(" ");
 			name.append(artifactHelper.getHandler(artifactHelper.unwrapWrapper(obj)).get()
 					.withCastedHandler(artifactHelper.unwrapWrapper(obj), (h, e) -> h.getDisplayName(e))
 					.orElseGet(obj::toString));
+			name.append(";");
 		}
 		trace.setName(name.toString());
 
