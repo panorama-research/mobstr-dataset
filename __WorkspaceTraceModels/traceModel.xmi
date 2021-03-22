@@ -1,243 +1,243 @@
 <?xml version="1.0" encoding="ASCII"?>
 <tim:MobstrTIM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:argumentation_="http://www.deis-project.eu/ode/mergedODE/sacm/argumentation" xmlns:tim="org.panorama.research.mobstr.tim">
-  <traces xsi:type="tim:AddressedBySafetyGoal" name="Hazards!H-1 (waters-challenge-2019-hazards.xlsx) -> Requirements!SG-1 (waters-challenge-2019-requirements.xlsx)">
+  <traces xsi:type="tim:AddressedBySafetyGoal" name="Hazards!H-1 (mobstr-hazards.xlsx) -> Requirements!SG-1 (mobstr-requirements.xlsx)">
     <source href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.6"/>
   </traces>
   <traces xsi:type="tim:AddressedByFMEA" name="43 : Claim :  WATERS Example : FMEA">
-    <source xsi:type="argumentation_:Claim" href="../org.panorama-research.mobstr.safetycase/waters-challenge-2019-safetycase.integration#//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.29"/>
-    <target href="../AddressedBySafetyGoal/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.0"/>
+    <source xsi:type="argumentation_:Claim" href="../org.panorama-research.mobstr.safetycase/mobstr-safetycase.integration#//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.29"/>
+    <target href="../AddressedBySafetyGoal/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.0"/>
   </traces>
-  <traces xsi:type="tim:AddressedBySafetyGoal" name="Hazards!H-2 (waters-challenge-2019-hazards.xlsx) -> Requirements!SG-2 (waters-challenge-2019-requirements.xlsx)">
+  <traces xsi:type="tim:AddressedBySafetyGoal" name="Hazards!H-2 (mobstr-hazards.xlsx) -> Requirements!SG-2 (mobstr-requirements.xlsx)">
     <source href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.8"/>
   </traces>
-  <traces xsi:type="tim:AddressedBySafetyGoal" name="Hazards!H-3 (waters-challenge-2019-hazards.xlsx) -> Requirements!SG-3 (waters-challenge-2019-requirements.xlsx)">
+  <traces xsi:type="tim:AddressedBySafetyGoal" name="Hazards!H-3 (mobstr-hazards.xlsx) -> Requirements!SG-3 (mobstr-requirements.xlsx)">
     <source href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.10"/>
   </traces>
-  <traces xsi:type="tim:AddressedBySafetyGoal" name="Hazards!H-4 (waters-challenge-2019-hazards.xlsx) -> Requirements!SG-4 (waters-challenge-2019-requirements.xlsx)">
+  <traces xsi:type="tim:AddressedBySafetyGoal" name="Hazards!H-4 (mobstr-hazards.xlsx) -> Requirements!SG-4 (mobstr-requirements.xlsx)">
     <source href="artifactWrappers.xmi#//@artifacts.13"/>
     <target href="artifactWrappers.xmi#//@artifacts.12"/>
   </traces>
-  <traces xsi:type="tim:AddressedBySafetyGoal" name="Hazards!H-5 (waters-challenge-2019-hazards.xlsx) -> Requirements!SG-5 (waters-challenge-2019-requirements.xlsx)">
+  <traces xsi:type="tim:AddressedBySafetyGoal" name="Hazards!H-5 (mobstr-hazards.xlsx) -> Requirements!SG-5 (mobstr-requirements.xlsx)">
     <source href="artifactWrappers.xmi#//@artifacts.15"/>
     <target href="artifactWrappers.xmi#//@artifacts.14"/>
   </traces>
-  <traces xsi:type="tim:SpecifiedByRequirement" name="Include a second environemnt senor (image grabber) : Measure -> Requirements!SR-1.1.1 (waters-challenge-2019-requirements.xlsx)">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.3/@measures.0"/>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Include a second environemnt senor (image grabber) : Measure -> Requirements!SR-1.1.1 (mobstr-requirements.xlsx)">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.0"/>
     <target href="artifactWrappers.xmi#//@artifacts.16"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="No information about objects provided by the lidar : Failure -> Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-3 (waters-challenge-2019-hazards.xlsx); Hazards!H-4 (waters-challenge-2019-hazards.xlsx)">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.1"/>
+  <traces xsi:type="tim:LeadsToHazard" name="No information about objects provided by the lidar : Failure -> Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx)">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.1"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Objects not detected by lidar : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-4 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.3"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Objects not detected by lidar : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.3"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Ghost objects provided by lidar : Failure ->  Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-3 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.5"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Ghost objects provided by lidar : Failure ->  Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Wrong (outdated) objects provided by lidar : Failure ->  Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-3 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.7"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Wrong (outdated) objects provided by lidar : Failure ->  Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.7"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="No information about the distance to objects provided by lidar : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-3 (waters-challenge-2019-hazards.xlsx); Hazards!H-4 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.9"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
-    <target href="artifactWrappers.xmi#//@artifacts.9"/>
-    <target href="artifactWrappers.xmi#//@artifacts.11"/>
-    <target href="artifactWrappers.xmi#//@artifacts.13"/>
-  </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Distance to objects measured as too high : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-4 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.11"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
-    <target href="artifactWrappers.xmi#//@artifacts.9"/>
-    <target href="artifactWrappers.xmi#//@artifacts.13"/>
-  </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Distance to objects measured as too low : Failure ->  Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-3 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.13"/>
-    <target href="artifactWrappers.xmi#//@artifacts.9"/>
-    <target href="artifactWrappers.xmi#//@artifacts.11"/>
-  </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Wrong (outdated) information about the distance to objects provided by lidar : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-3 (waters-challenge-2019-hazards.xlsx); Hazards!H-4 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.15"/>
+  <traces xsi:type="tim:LeadsToHazard" name="No information about the distance to objects provided by lidar : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="No image provided by the image grabber : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-4 (waters-challenge-2019-hazards.xlsx); Hazards!H-5 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.1"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Distance to objects measured as too high : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.11"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
+  </traces>
+  <traces xsi:type="tim:LeadsToHazard" name="Distance to objects measured as too low : Failure ->  Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.13"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.11"/>
+  </traces>
+  <traces xsi:type="tim:LeadsToHazard" name="Wrong (outdated) information about the distance to objects provided by lidar : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.15"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.11"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
+  </traces>
+  <traces xsi:type="tim:LeadsToHazard" name="No image provided by the image grabber : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.1"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Ghost objects or lanes / Missing objects or lanes on the image : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-3 (waters-challenge-2019-hazards.xlsx); Hazards!H-4 (waters-challenge-2019-hazards.xlsx); Hazards!H-5 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.5"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Ghost objects or lanes / Missing objects or lanes on the image : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Wrong (outdated) lane boundaries or objects on the image : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-4 (waters-challenge-2019-hazards.xlsx); Hazards!H-5 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.7"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Wrong (outdated) lane boundaries or objects on the image : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.7"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Images with wrong (or no) objects or lanes : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-4 (waters-challenge-2019-hazards.xlsx); Hazards!H-5 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.3"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Images with wrong (or no) objects or lanes : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.3"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="No vehicle information available : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-5 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.4/@failures.1"/>
+  <traces xsi:type="tim:LeadsToHazard" name="No vehicle information available : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.4/@failures.1"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Wrong (outdated) vehicle information available : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-5 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.4/@failures.3"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Wrong (outdated) vehicle information available : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.4/@failures.3"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Erroneous vehicle information available : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-3 (waters-challenge-2019-hazards.xlsx); Hazards!H-4 (waters-challenge-2019-hazards.xlsx); Hazards!H-5 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.4/@failures.5"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Erroneous vehicle information available : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.4/@failures.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Objects on the road are not detected : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-4 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.1"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Objects on the road are not detected : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.1"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Ghost objects are detected on the road : Failure ->  Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-3 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.3"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Ghost objects are detected on the road : Failure ->  Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.3"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Objects on the road are detected too late : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-4 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.6"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Objects on the road are detected too late : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.6"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="False classification of objects on the road : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-3 (waters-challenge-2019-hazards.xlsx); Hazards!H-4 (waters-challenge-2019-hazards.xlsx); Hazards!H-5 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.8"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
-    <target href="artifactWrappers.xmi#//@artifacts.11"/>
-    <target href="artifactWrappers.xmi#//@artifacts.13"/>
-    <target href="artifactWrappers.xmi#//@artifacts.15"/>
-  </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Erroneous distance to objects : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-3 (waters-challenge-2019-hazards.xlsx); Hazards!H-4 (waters-challenge-2019-hazards.xlsx); Hazards!H-5 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.10"/>
+  <traces xsi:type="tim:LeadsToHazard" name="False classification of objects on the road : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.8"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Lanes are not detected : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-5 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.6/@failures.1"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
-    <target href="artifactWrappers.xmi#//@artifacts.9"/>
-    <target href="artifactWrappers.xmi#//@artifacts.15"/>
-  </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Ghost lanes are detected : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-3 (waters-challenge-2019-hazards.xlsx); Hazards!H-4 (waters-challenge-2019-hazards.xlsx); Hazards!H-5 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.6/@failures.3"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Erroneous distance to objects : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.10"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Lanes are detected too late : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-5 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.6/@failures.5"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Lanes are not detected : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.6/@failures.1"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="No information about the vehicle postion and distance to obstacles around the vehicle : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-5 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.7/@failures.1"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
-    <target href="artifactWrappers.xmi#//@artifacts.9"/>
-    <target href="artifactWrappers.xmi#//@artifacts.15"/>
-  </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Incorrect vehicle position information on the road : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-3 (waters-challenge-2019-hazards.xlsx); Hazards!H-4 (waters-challenge-2019-hazards.xlsx); Hazards!H-5 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.7/@failures.3"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Ghost lanes are detected : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.6/@failures.3"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Distance to objects on the road is calculated too high : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-5 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.7/@failures.5"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Lanes are detected too late : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.6/@failures.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="No steering and speed signal is provided by the path planner : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-5 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.8/@failures.1"/>
+  <traces xsi:type="tim:LeadsToHazard" name="No information about the vehicle postion and distance to obstacles around the vehicle : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.7/@failures.1"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Wrong steering or speed signal is provided by the path planner : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-3 (waters-challenge-2019-hazards.xlsx); Hazards!H-4 (waters-challenge-2019-hazards.xlsx); Hazards!H-5 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.8/@failures.3"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Incorrect vehicle position information on the road : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.7/@failures.3"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Steering or speed signal is provided too late by the path planner : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-5 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.8/@failures.5"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Distance to objects on the road is calculated too high : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.7/@failures.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="No steering signal is provided by the controller : Failure ->  Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-5 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.1"/>
+  <traces xsi:type="tim:LeadsToHazard" name="No steering and speed signal is provided by the path planner : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.8/@failures.1"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Wrong steering signal is provided  by the controller : Failure ->  Hazards!H-5 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.3"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Wrong steering or speed signal is provided by the path planner : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.8/@failures.3"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.11"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Steering signal is provided too late by the controller : Failure ->  Hazards!H-2 (waters-challenge-2019-hazards.xlsx); Hazards!H-5 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.5"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Steering or speed signal is provided too late by the path planner : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.8/@failures.5"/>
+    <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="No speed signal is provided  by the controller : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.7"/>
+  <traces xsi:type="tim:LeadsToHazard" name="No steering signal is provided by the controller : Failure ->  Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.1"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tim:LeadsToHazard" name="Wrong steering signal is provided  by the controller : Failure ->  Hazards!H-5 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.3"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tim:LeadsToHazard" name="Steering signal is provided too late by the controller : Failure ->  Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.5"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
+  </traces>
+  <traces xsi:type="tim:LeadsToHazard" name="No speed signal is provided  by the controller : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.7"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Wrong speed signal is provided  by the controller : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx); Hazards!H-3 (waters-challenge-2019-hazards.xlsx); Hazards!H-4 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.9"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Wrong speed signal is provided  by the controller : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Speed signal is provided too late  by the controller : Failure ->  Hazards!H-1 (waters-challenge-2019-hazards.xlsx);">
-    <source href="../org.panorama-research.mobstr.fmea/waters-challenge-2019-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.11"/>
+  <traces xsi:type="tim:LeadsToHazard" name="Speed signal is provided too late  by the controller : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
   </traces>
 </tim:MobstrTIM>
