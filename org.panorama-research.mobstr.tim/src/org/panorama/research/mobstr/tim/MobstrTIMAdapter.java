@@ -171,11 +171,15 @@ public class MobstrTIMAdapter extends AbstractMetaModelAdapter implements TraceM
 		List<Connection> connections = new ArrayList<>();
 		List<AbstractTraceLink> traces = root.getTraces();
 
-		if (element instanceof RelatedTo) {
-			RelatedTo trace = (RelatedTo) element;
-			connections.add(new Connection(Arrays.asList(element), trace.getItems(), trace));
-		} else {
-			for (AbstractTraceLink trace : traces) {
+		for (AbstractTraceLink trace : traces) {
+			if (trace instanceof RelatedTo) {
+				RelatedTo relatedToTrace = (RelatedTo) trace;
+				for (EObject item : relatedToTrace.getItems()) {
+					if (EcoreUtil.equals(item, element)) {
+						connections.add(new Connection(Arrays.asList(element), relatedToTrace.getItems(), trace));
+					}
+				}
+			} else {
 				for (EObject item : getTraceOrigin(trace)) {
 					if (EcoreUtil.equals(item, element)) {
 						connections.add(new Connection(Arrays.asList(element), getTraceTarget(trace), trace));
