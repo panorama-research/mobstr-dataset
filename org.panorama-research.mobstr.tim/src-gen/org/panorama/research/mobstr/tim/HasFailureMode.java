@@ -2,7 +2,7 @@
  */
 package org.panorama.research.mobstr.tim;
 
-import ode.base.Element;
+import ode.failureLogic.Failure;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -54,7 +54,7 @@ public interface HasFailureMode extends DirectedTraceLink {
 
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference list.
-	 * The list contents are of type {@link ode.base.Element}.
+	 * The list contents are of type {@link ode.failureLogic.Failure}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target</em>' reference list.
@@ -62,6 +62,6 @@ public interface HasFailureMode extends DirectedTraceLink {
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<Element> getTarget();
+	EList<Failure> getTarget();
 
 } // HasFailureMode

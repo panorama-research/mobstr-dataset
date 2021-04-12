@@ -106,7 +106,7 @@ class LeadsToHazard extends DirectedTraceLink {
  * Links Effects to Components
  */
 class EffectsComponent extends DirectedTraceLink {
-	refers Element [1] source // Element -- Effect
+	refers Failure [1] source // Element -- Effect
 	refers Component [1] target // Component
 }
 
@@ -115,7 +115,7 @@ class EffectsComponent extends DirectedTraceLink {
  */
 class HasFailureMode extends DirectedTraceLink {
 	refers Component [1] source // Component
-	refers Element [1..*] target // Element -- Failure Mode
+	refers Failure [1..*] target // Element -- Failure Mode
 }
 
 /*

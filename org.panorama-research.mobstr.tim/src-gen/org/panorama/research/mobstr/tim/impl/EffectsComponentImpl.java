@@ -2,7 +2,7 @@
  */
 package org.panorama.research.mobstr.tim.impl;
 
-import ode.base.Element;
+import ode.failureLogic.Failure;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -39,7 +39,7 @@ public class EffectsComponentImpl extends DirectedTraceLinkImpl implements Effec
 	 * @generated
 	 * @ordered
 	 */
-	protected Element source;
+	protected Failure source;
 
 	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
@@ -76,10 +76,10 @@ public class EffectsComponentImpl extends DirectedTraceLinkImpl implements Effec
 	 * @generated
 	 */
 	@Override
-	public Element getSource() {
+	public Failure getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject)source;
-			source = (Element)eResolveProxy(oldSource);
+			source = (Failure)eResolveProxy(oldSource);
 			if (source != oldSource) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TimPackage.EFFECTS_COMPONENT__SOURCE, oldSource, source));
@@ -93,7 +93,7 @@ public class EffectsComponentImpl extends DirectedTraceLinkImpl implements Effec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Element basicGetSource() {
+	public Failure basicGetSource() {
 		return source;
 	}
 
@@ -103,8 +103,8 @@ public class EffectsComponentImpl extends DirectedTraceLinkImpl implements Effec
 	 * @generated
 	 */
 	@Override
-	public void setSource(Element newSource) {
-		Element oldSource = source;
+	public void setSource(Failure newSource) {
+		Failure oldSource = source;
 		source = newSource;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, TimPackage.EFFECTS_COMPONENT__SOURCE, oldSource, source));
@@ -177,7 +177,7 @@ public class EffectsComponentImpl extends DirectedTraceLinkImpl implements Effec
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case TimPackage.EFFECTS_COMPONENT__SOURCE:
-				setSource((Element)newValue);
+				setSource((Failure)newValue);
 				return;
 			case TimPackage.EFFECTS_COMPONENT__TARGET:
 				setTarget((Component)newValue);
@@ -195,7 +195,7 @@ public class EffectsComponentImpl extends DirectedTraceLinkImpl implements Effec
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case TimPackage.EFFECTS_COMPONENT__SOURCE:
-				setSource((Element)null);
+				setSource((Failure)null);
 				return;
 			case TimPackage.EFFECTS_COMPONENT__TARGET:
 				setTarget((Component)null);

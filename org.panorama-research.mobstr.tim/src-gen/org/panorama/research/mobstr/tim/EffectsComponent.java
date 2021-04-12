@@ -2,7 +2,7 @@
  */
 package org.panorama.research.mobstr.tim;
 
-import ode.base.Element;
+import ode.failureLogic.Failure;
 
 import org.eclipse.uml2.uml.Component;
 
@@ -33,12 +33,12 @@ public interface EffectsComponent extends DirectedTraceLink {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source</em>' reference.
-	 * @see #setSource(Element)
+	 * @see #setSource(Failure)
 	 * @see org.panorama.research.mobstr.tim.TimPackage#getEffectsComponent_Source()
 	 * @model required="true"
 	 * @generated
 	 */
-	Element getSource();
+	Failure getSource();
 
 	/**
 	 * Sets the value of the '{@link org.panorama.research.mobstr.tim.EffectsComponent#getSource <em>Source</em>}' reference.
@@ -48,7 +48,7 @@ public interface EffectsComponent extends DirectedTraceLink {
 	 * @see #getSource()
 	 * @generated
 	 */
-	void setSource(Element value);
+	void setSource(Failure value);
 
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.
