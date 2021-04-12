@@ -287,9 +287,9 @@ public class TimPackageImpl extends EPackageImpl implements TimPackage {
 		EcorePackage.eINSTANCE.eClass();
 		Dependability_Package.eINSTANCE.eClass();
 		FailureLogic_Package.eINSTANCE.eClass();
-		BasePackage.eINSTANCE.eClass();
 		UMLPackage.eINSTANCE.eClass();
 		AmaltheaPackage.eINSTANCE.eClass();
+		BasePackage.eINSTANCE.eClass();
 		OdeBasePackage.eINSTANCE.eClass();
 		IntegrationPackage.eINSTANCE.eClass();
 		TypesPackage.eINSTANCE.eClass();
@@ -1141,9 +1141,9 @@ public class TimPackageImpl extends EPackageImpl implements TimPackage {
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		Dependability_Package theDependability_Package = (Dependability_Package)EPackage.Registry.INSTANCE.getEPackage(Dependability_Package.eNS_URI);
 		FailureLogic_Package theFailureLogic_Package = (FailureLogic_Package)EPackage.Registry.INSTANCE.getEPackage(FailureLogic_Package.eNS_URI);
-		BasePackage theBasePackage = (BasePackage)EPackage.Registry.INSTANCE.getEPackage(BasePackage.eNS_URI);
 		UMLPackage theUMLPackage = (UMLPackage)EPackage.Registry.INSTANCE.getEPackage(UMLPackage.eNS_URI);
 		AmaltheaPackage theAmaltheaPackage = (AmaltheaPackage)EPackage.Registry.INSTANCE.getEPackage(AmaltheaPackage.eNS_URI);
+		BasePackage theBasePackage = (BasePackage)EPackage.Registry.INSTANCE.getEPackage(BasePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -1207,12 +1207,12 @@ public class TimPackageImpl extends EPackageImpl implements TimPackage {
 		initEReference(getLeadsToHazard_Target(), theEcorePackage.getEObject(), null, "target", null, 1, -1, LeadsToHazard.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(effectsComponentEClass, EffectsComponent.class, "EffectsComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEffectsComponent_Source(), theBasePackage.getElement(), null, "source", null, 1, 1, EffectsComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEffectsComponent_Source(), theFailureLogic_Package.getFailure(), null, "source", null, 1, 1, EffectsComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEffectsComponent_Target(), theUMLPackage.getComponent(), null, "target", null, 1, 1, EffectsComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(hasFailureModeEClass, HasFailureMode.class, "HasFailureMode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getHasFailureMode_Source(), theUMLPackage.getComponent(), null, "source", null, 1, 1, HasFailureMode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getHasFailureMode_Target(), theBasePackage.getElement(), null, "target", null, 1, -1, HasFailureMode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getHasFailureMode_Target(), theFailureLogic_Package.getFailure(), null, "target", null, 1, -1, HasFailureMode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(implementsComponentEClass, ImplementsComponent.class, "ImplementsComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getImplementsComponent_Source(), theAmaltheaPackage.getINamed(), null, "source", null, 1, 1, ImplementsComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

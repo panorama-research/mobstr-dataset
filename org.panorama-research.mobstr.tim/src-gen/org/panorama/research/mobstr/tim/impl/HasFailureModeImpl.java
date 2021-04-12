@@ -4,7 +4,7 @@ package org.panorama.research.mobstr.tim.impl;
 
 import java.util.Collection;
 
-import ode.base.Element;
+import ode.failureLogic.Failure;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -55,7 +55,7 @@ public class HasFailureModeImpl extends DirectedTraceLinkImpl implements HasFail
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Element> target;
+	protected EList<Failure> target;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -122,9 +122,9 @@ public class HasFailureModeImpl extends DirectedTraceLinkImpl implements HasFail
 	 * @generated
 	 */
 	@Override
-	public EList<Element> getTarget() {
+	public EList<Failure> getTarget() {
 		if (target == null) {
-			target = new EObjectResolvingEList<Element>(Element.class, this, TimPackage.HAS_FAILURE_MODE__TARGET);
+			target = new EObjectResolvingEList<Failure>(Failure.class, this, TimPackage.HAS_FAILURE_MODE__TARGET);
 		}
 		return target;
 	}
@@ -160,7 +160,7 @@ public class HasFailureModeImpl extends DirectedTraceLinkImpl implements HasFail
 				return;
 			case TimPackage.HAS_FAILURE_MODE__TARGET:
 				getTarget().clear();
-				getTarget().addAll((Collection<? extends Element>)newValue);
+				getTarget().addAll((Collection<? extends Failure>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
