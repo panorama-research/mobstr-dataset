@@ -113,7 +113,7 @@
     </failureModels>
     <failureModels name="Localization">
       <failures name="Loss of localization" originType="Internal" failureClass="Omission"/>
-	  <failures name="No information about the vehicle postion and distance to objects around the vehicle" originType="Output"/>
+	  <failures name="No information about the vehicle position and distance to objects around the vehicle" originType="Output"/>
       <failures name="Internal failure leading to an erroneously calculated vehicle position" originType="Internal" failureClass="Incorrect"/>
 	  <failures name="Incorrect vehicle position information on the road" originType="Output"/>
       <failures name="Delayed localization" originType="Internal" failureClass="Late"/>
