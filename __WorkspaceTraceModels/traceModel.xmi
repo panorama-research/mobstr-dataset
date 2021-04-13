@@ -368,4 +368,156 @@
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.1"/>
     <target href="artifactWrappers.xmi#//@artifacts.20"/>
   </traces>
+  <traces xsi:type="tim:EffectsComponent" name="No localization by GPS : Failure -> GPS Grabber : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.1/@failures.1"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_8AlbcH_YEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Wrong GPS information or inaccurate localization : Failure -> GPS Grabber : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.1/@failures.3"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_8AlbcH_YEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Wrong GPS information : Failure -> GPS Grabber : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.1/@failures.5"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_8AlbcH_YEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="No information about objects provided by lidar : Failure -> Lidar Grabber : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.1"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QBDgIH_ZEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Objects not detected by lidar : Failure -> Lidar Grabber : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.3"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QBDgIH_ZEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Ghost objects provided by lidar : Failure -> Lidar Grabber : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.5"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QBDgIH_ZEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Wrong (outdated) objects provided by lidar : Failure -> Lidar Grabber : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.7"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QBDgIH_ZEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="No information about the distance to objects provided by lidar : Failure -> Lidar Grabber : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.9"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QBDgIH_ZEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Distance to objects measured as too high : Failure -> Lidar Grabber : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.11"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QBDgIH_ZEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Distance to objects measured as too low : Failure -> Lidar Grabber : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.13"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QBDgIH_ZEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Wrong (outdated) information about the distance to objects provided by lidar : Failure -> Lidar Grabber : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.15"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QBDgIH_ZEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="No image provided by the image grabber : Failure -> Image Grabber (Camera) : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.1"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_8l-gIH_bEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Images with wrong (or no) objects or lanes : Failure -> Image Grabber (Camera) : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.3"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_8l-gIH_bEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Ghost objects or lanes in the images / Missing objects or lanes in the images : Failure -> Image Grabber (Camera) : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.5"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_8l-gIH_bEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Wrong (outdated) lane boundaries or objects in the images : Failure -> Image Grabber (Camera) : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.7"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_8l-gIH_bEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="No vehicle information available : Failure -> CANBus Interface : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.4/@failures.1"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_IWw4gH_aEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Wrong (outdated) vehicle information available : Failure -> CANBus Interface : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.4/@failures.3"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_IWw4gH_aEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Erroneous vehicle information available : Failure -> CANBus Interface : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.4/@failures.5"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_IWw4gH_aEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Objects on the road are not detected : Failure -> Object Detection : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.1"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_EMPt8H_cEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Ghost objectives are detected on the road : Failure -> Object Detection : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.3"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_EMPt8H_cEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Objects on the road are detected too late : Failure -> Object Detection : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.6"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_EMPt8H_cEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="False classification of objects on the road : Failure -> Object Detection : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.8"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_EMPt8H_cEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Erroneous distance to objects : Failure -> Object Detection : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.10"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_EMPt8H_cEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Lanes are not detected : Failure -> Lane Detection : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.6/@failures.1"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QPQz4H_cEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Ghost lanes are detected : Failure -> Lane Detection : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.6/@failures.3"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QPQz4H_cEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Lanes are detected too late : Failure -> Lane Detection : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.6/@failures.5"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QPQz4H_cEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="No information about the vehicle position and distance to objects around the vehicle : Failure -> Localization : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.7/@failures.1"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_ShCJkH_ZEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Incorrect vehicle position information on the road : Failure -> Localization : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.7/@failures.3"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_ShCJkH_ZEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Distance to objects on the road is calculated too high : Failure -> Localization : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.7/@failures.5"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_ShCJkH_ZEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="No steering or speed signal is provided by the path planner : Failure -> Path Planner : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.8/@failures.1"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_ZvuIYH_aEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Wrong steering or speed signal is provided  by the path planner : Failure -> Path Planner : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.8/@failures.3"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_ZvuIYH_aEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Steering or speed signal is provided too late  by the path planner : Failure -> Path Planner : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.8/@failures.5"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_ZvuIYH_aEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="No steering signal is provided by the controller : Failure -> Controller : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.1"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_tXcrAH_cEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Wrong steering signal is provided by the controller : Failure -> Controller : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.3"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_tXcrAH_cEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Steering signal is provided too late by the controller : Failure -> Controller : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.5"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_tXcrAH_cEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="No speed signal is provided by the controller : Failure -> Controller : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.7"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_tXcrAH_cEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Wrong speed signal is provided by the controller : Failure -> Controller : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.9"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_tXcrAH_cEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:EffectsComponent" name="Speed signal is provided too late by the controller : Failure -> Controller : Component;">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.11"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_tXcrAH_cEeq1j4EUwdsVmw"/>
+  </traces>
 </tim:MobstrTIM>
