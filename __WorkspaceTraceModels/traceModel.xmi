@@ -520,4 +520,168 @@
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.11"/>
     <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_tXcrAH_cEeq1j4EUwdsVmw"/>
   </traces>
+  <traces xsi:type="tim:HasFailureMode" name="GPS Grabber : Component -> No position information provided by the GPS grabber : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_8AlbcH_YEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.1/@failures.0"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="GPS Grabber : Component -> Erroneous position information provided by the GPS grabber : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_8AlbcH_YEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.1/@failures.2"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="GPS Grabber : Component -> Stuck-at failure of the GPS grabber : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_8AlbcH_YEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.1/@failures.4"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Lidar Grabber : Component -> No point cloud provided by the lidar grabber : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QBDgIH_ZEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.0"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Lidar Grabber : Component -> Erroneous point cloud provided by the lidar grabber (false negative) : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QBDgIH_ZEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.2"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Lidar Grabber : Component -> Erroneous point cloud provided by the lidar grabber (false positive) : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QBDgIH_ZEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.4"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Lidar Grabber : Component -> Point cloud provided too late by the lidar grabber : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QBDgIH_ZEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.6"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Lidar Grabber : Component -> No occupancy grid provided by the lidar grabber : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QBDgIH_ZEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.8"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Lidar Grabber : Component -> Erroneous occupancy grid provided by the lidar grabber (false negative) : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QBDgIH_ZEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.10"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Lidar Grabber : Component -> Erroneous occupancy grid provided by the lidar grabber (false positive) : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QBDgIH_ZEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.12"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Lidar Grabber : Component -> Occupancy grid provided too late by the lidar grabber : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QBDgIH_ZEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.14"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Image Grabber (Camera) : Component -> Internal failure of the image grabber leading to omission of image : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_8l-gIH_bEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.0"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Image Grabber (Camera) : Component -> Completely erroneous image provided by the image grabber : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_8l-gIH_bEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.2"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Image Grabber (Camera) : Component -> Partially erroneous image provided by the image grabber : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_8l-gIH_bEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.4"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Image Grabber (Camera) : Component -> Stuck-at failure of the image grabber (still image) : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_8l-gIH_bEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.6"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Image Grabber (Camera) : Component -> Image provided too late by the image grabber (old image) : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_8l-gIH_bEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.8"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="CANBus Interface : Component -> Loss of CAN messages : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_IWw4gH_aEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.4/@failures.0"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="CANBus Interface : Component -> Delay of CAN messages : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_IWw4gH_aEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.4/@failures.2"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="CANBus Interface : Component -> Erroneous CAN message : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_IWw4gH_aEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.4/@failures.4"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Object Detection : Component -> Internal failure of the object detection leading to loss of object detection : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_EMPt8H_cEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.0"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Object Detection : Component -> Incorrect object detection by camera and lidar (false positive) : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_EMPt8H_cEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.2"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Object Detection : Component -> Incorrect object detection by camera and lidar (false negative) : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_EMPt8H_cEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.4"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Object Detection : Component -> Delayed detection of objects : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_EMPt8H_cEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.5"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Object Detection : Component -> Wrong classification of objects due to internal error : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_EMPt8H_cEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.7"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Object Detection : Component -> Wrong positioning of objects by camera and lidar : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_EMPt8H_cEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.9"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Lane Detection : Component -> Internal failure of the lane detection leading to loss of lane detection : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QPQz4H_cEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.6/@failures.0"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Lane Detection : Component -> Incorrect lane detection (false positive) : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QPQz4H_cEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.6/@failures.2"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Lane Detection : Component -> Delayed detection of lanes : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QPQz4H_cEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.6/@failures.4"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Lane Detection : Component -> Incorrect lane detection (false negative) : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QPQz4H_cEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.6/@failures.6"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Localization : Component -> Loss of localization : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_ShCJkH_ZEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.7/@failures.0"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Localization : Component -> Internal failure leading to an erroneously calculated vehicle position : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_ShCJkH_ZEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.7/@failures.2"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Localization : Component -> Delayed localization : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_ShCJkH_ZEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.7/@failures.4"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Path Planner : Component -> Omission of control commands : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_ZvuIYH_aEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.8/@failures.0"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Path Planner : Component -> Erroneous control commands : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_ZvuIYH_aEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.8/@failures.2"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Path Planner : Component -> Delayed control commands : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_ZvuIYH_aEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.8/@failures.4"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Controller : Component -> Omission of steering commands : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_tXcrAH_cEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.0"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Controller : Component -> Erroneous steering commands : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_tXcrAH_cEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.2"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Controller : Component -> Delayed steering commands : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_tXcrAH_cEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.4"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Controller : Component -> Omission of speed commands : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_tXcrAH_cEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.6"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Controller : Component -> Erroneous speed commands : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_tXcrAH_cEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.8"/>
+  </traces>
+  <traces xsi:type="tim:HasFailureMode" name="Controller : Component -> Delayed speed commands : Failure;">
+    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_tXcrAH_cEeq1j4EUwdsVmw"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.10"/>
+  </traces>
 </tim:MobstrTIM>
