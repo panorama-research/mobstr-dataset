@@ -240,4 +240,132 @@
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
   </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the sensor fusion component : Measure -> Requirements!SR-1.1.4 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.1"/>
+    <target href="artifactWrappers.xmi#//@artifacts.19"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the path planner component : Measure -> Requirements!SR-1.3.1 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.2"/>
+    <target href="artifactWrappers.xmi#//@artifacts.23"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the object detection component : Measure -> Requirements!SR-1.3.2 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.3"/>
+    <target href="artifactWrappers.xmi#//@artifacts.25"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the sensor fusion component : Measure -> Requirements!SR-1.3.3 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.1"/>
+    <target href="artifactWrappers.xmi#//@artifacts.26"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-1.5 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
+    <target href="artifactWrappers.xmi#//@artifacts.28"/>
+  </traces>
+  <traces xsi:type="tim:RelatedTo" name="Requirements!SR-2.1 (mobstr-requirements.xlsx) -> Requirements!SR-1.1 (mobstr-requirements.xlsx);">
+    <items href="artifactWrappers.xmi#//@artifacts.30"/>
+    <items href="artifactWrappers.xmi#//@artifacts.7"/>
+  </traces>
+  <traces xsi:type="tim:RelatedTo" name="Requirements!SR-2.2 (mobstr-requirements.xlsx) -> Requirements!SR-1.2 (mobstr-requirements.xlsx);">
+    <items href="artifactWrappers.xmi#//@artifacts.29"/>
+    <items href="artifactWrappers.xmi#//@artifacts.31"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the path planner component : Measure -> Requirements!SR-2.3 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.2"/>
+    <target href="artifactWrappers.xmi#//@artifacts.32"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-2.4.1 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
+    <target href="artifactWrappers.xmi#//@artifacts.34"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-2.4.2 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
+    <target href="artifactWrappers.xmi#//@artifacts.35"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-2.5.1 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
+    <target href="artifactWrappers.xmi#//@artifacts.37"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-2.5.2 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
+    <target href="artifactWrappers.xmi#//@artifacts.38"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-2.7.1 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
+    <target href="artifactWrappers.xmi#//@artifacts.41"/>
+  </traces>
+  <traces xsi:type="tim:RelatedTo" name="Requirements!SR-3.1 (mobstr-requirements.xlsx) -> Requirements!SR-1.1 (mobstr-requirements.xlsx);">
+    <items href="artifactWrappers.xmi#//@artifacts.43"/>
+    <items href="artifactWrappers.xmi#//@artifacts.7"/>
+  </traces>
+  <traces xsi:type="tim:RelatedTo" name="Requirements!SR-3.2 (mobstr-requirements.xlsx) -> Requirements!SR-1.2 (mobstr-requirements.xlsx);">
+    <items href="artifactWrappers.xmi#//@artifacts.44"/>
+    <items href="artifactWrappers.xmi#//@artifacts.31"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the path planner component : Measure -> Requirements!SR-3.3 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.2"/>
+    <target href="artifactWrappers.xmi#//@artifacts.45"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-3.5 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
+    <target href="artifactWrappers.xmi#//@artifacts.47"/>
+  </traces>
+  <traces xsi:type="tim:RelatedTo" name="Requirements!SR-4.1 (mobstr-requirements.xlsx) -> Requirements!SR-1.1 (mobstr-requirements.xlsx);">
+    <items href="artifactWrappers.xmi#//@artifacts.51"/>
+    <items href="artifactWrappers.xmi#//@artifacts.7"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the path planner component : Measure -> Requirements!SR-4.3.1 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.2"/>
+    <target href="artifactWrappers.xmi#//@artifacts.54"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the object detection component : Measure -> Requirements!SR-4.3.2 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.3"/>
+    <target href="artifactWrappers.xmi#//@artifacts.55"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the localization component : Measure -> Requirements!SR-4.3.3.1 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.57"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the localization component : Measure -> Requirements!SR-4.3.3.2 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.9"/>
+    <target href="artifactWrappers.xmi#//@artifacts.58"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the sensor fusion component : Measure -> Requirements!SR-4.3.4 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.1"/>
+    <target href="artifactWrappers.xmi#//@artifacts.59"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-4.5 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
+    <target href="artifactWrappers.xmi#//@artifacts.60"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the path planner component : Measure -> Requirements!SR-5.3.3 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.2"/>
+    <target href="artifactWrappers.xmi#//@artifacts.66"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-5.3.1 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
+    <target href="artifactWrappers.xmi#//@artifacts.68"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-5.3.2 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
+    <target href="artifactWrappers.xmi#//@artifacts.69"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the path planner component : Measure -> Requirements!SR-5.4.1 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.2"/>
+    <target href="artifactWrappers.xmi#//@artifacts.71"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-5.5 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
+    <target href="artifactWrappers.xmi#//@artifacts.72"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-5.7 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
+    <target href="artifactWrappers.xmi#//@artifacts.73"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-5.9 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
+    <target href="artifactWrappers.xmi#//@artifacts.74"/>
+  </traces>
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the sensor fusion component : Measure -> Requirements!SR-1.2.2 (mobstr-requirements.xlsx);">
+    <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.1"/>
+    <target href="artifactWrappers.xmi#//@artifacts.20"/>
+  </traces>
 </tim:MobstrTIM>
