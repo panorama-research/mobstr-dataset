@@ -15,9 +15,10 @@ The system described in the WATERS FMTV 2019 challenge and consequently in the M
 |----|----|
 | org.panorama-research.mobstr.amalthea | The Amalthea model of the WATERS FMTV 2019 Challenge by the [PANORAMA research project][2]. You will need [Eclipse APP4MC][3] to open the model. |
 | org.panorama-research.mobstr.architecture | A UML model of the components of the system. |
-| org.panorama-research.mobstr.artifacts | A UML model of the relevant artifacts for the WATERS challenge. This information model is used as the foundation for the TIM. |
+| org.panorama-research.mobstr.artifacts | A UML model of the artifacts that are part of this dataset. This information model is used as the foundation for the TIM. |
 | org.panorama-research.mobstr.assumptions | An Excel spreadsheet with additional assumptions. |
-| org.panorama-research.mobstr.fmea | An [ODE model][6] containing the Failure Mode and Effects Analysis for the system. | 
+| org.panorama-research.mobstr.fmea | An [ODE model][6] containing the results of a Failure Mode and Effects Analysis. |
+| org.panorama-research.mobstr.fta | An [ODE model][6] containing some exemplary fault trees and component fault trees. |
 | org.panorama-research.mobstr.hazards | An Excel spreadsheet with the identified hazards of the system. |
 | org.panorama-research.mobstr.requirements | An Excel spreadsheet with the requirements of the system, including safety requirements. |
 | org.panorama-research.mobstr.safetycase |  An [ODE model][6] containing the safety case for the system. |
