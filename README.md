@@ -29,7 +29,8 @@ The system described in the WATERS FMTV 2019 challenge and consequently in the M
 | WATERS_Industrial_Challenge_2019_final.pdf | The original WATERS FMTV 2019 Challenge description on which the artifacts in this repository are based. |
 
 
-## How to use the custom TIM
+## How to Use the Custom TIM
+
 Additionally the repository contains a custom traceability information model (TIM) that defines which link types can be created between the different artifacts. The current TIM is based on the artifact model in project `org.panorama-research.mobstr.tim`. It is implemented for use in  [Eclipse Capra](https://eclipse.org/capra).  The TIM project is located in `org.panorama-research.mobstr.tim`.
 
 Use the following instructions to try out the TIM.  
