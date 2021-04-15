@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="ASCII"?>
+<integration_:DDIPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:architecture_="http://www.deis-project.eu/ode/mergedODE/architecture" xmlns:failureLogic_="http://www.deis-project.eu/ode/mergedODE/failureLogic" xmlns:integration_="http://www.deis-project.eu/ode/mergedODE/integration" Id="3" name="H-3 Unintended braking" description="">
+  <odeProductPackages xsi:type="failureLogic_:FailureLogicPackage" Id="459" name="" description="">
+    <failureModels xsi:type="failureLogic_:FaultTree" Id="460" name="H-3 Unintended braking.ft" description="">
+      <keyValueMaps key="visibility">
+        <values tag="isPublic" value="true"/>
+      </keyValueMaps>
+      <failures Id="461" name="H-3 Unintended braking" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="462" name="Lane Detection.Incorrect lane detection (false negative)" description="" originType="Internal">
+        <failureProbDistribution Id="462" name="Lane Detection.Incorrect lane detection (false negative)" description="" type="Constant">
+          <parameters Id="462" name="fit" description="" value="299.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="463" name="Image Grabber.Partially erroneous image provided by the image grabber" description="" originType="Internal">
+        <failureProbDistribution Id="463" name="Image Grabber.Partially erroneous image provided by the image grabber" description="" type="Constant">
+          <parameters Id="463" name="fit" description="" value="260.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="464" name="Image Grabber.Completely erroneous image provided by the image grabber" description="" originType="Internal">
+        <failureProbDistribution Id="464" name="Image Grabber.Completely erroneous image provided by the image grabber" description="" type="Constant">
+          <parameters Id="464" name="fit" description="" value="80.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="465" name="Lane Detection.Internal failure leading to loss of lane detection" description="" originType="Internal">
+        <failureProbDistribution Id="465" name="Lane Detection.Internal failure leading to loss of lane detection" description="" type="Constant">
+          <parameters Id="465" name="fit" description="" value="50.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="466" name="Image Grabber.Internal failure leading to omission of image" description="" originType="Internal">
+        <failureProbDistribution Id="466" name="Image Grabber.Internal failure leading to omission of image" description="" type="Constant">
+          <parameters Id="466" name="fit" description="" value="50.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="467" name="Lidar Grabber.Occupancy grid provided too late by the lidar grabber" description="" originType="Internal">
+        <failureProbDistribution Id="467" name="Lidar Grabber.Occupancy grid provided too late by the lidar grabber" description="" type="Constant">
+          <parameters Id="467" name="fit" description="" value="20.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="468" name="GPS Grabber.No position information provided by the GPS grabber" description="" originType="Internal">
+        <failureProbDistribution Id="468" name="GPS Grabber.No position information provided by the GPS grabber" description="" type="Constant">
+          <parameters Id="468" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="469" name="Lidar Grabber.Erroneous point cloud provided by the lidar grabber (false positive)" description="" originType="Internal">
+        <failureProbDistribution Id="469" name="Lidar Grabber.Erroneous point cloud provided by the lidar grabber (false positive)" description="" type="Constant">
+          <parameters Id="469" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="470" name="Lidar Grabber.No point cloud provided by the lidar grabber" description="" originType="Internal">
+        <failureProbDistribution Id="470" name="Lidar Grabber.No point cloud provided by the lidar grabber" description="" type="Constant">
+          <parameters Id="470" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="471" name="CAN Bus.Loss of CAN messages" description="" originType="Internal">
+        <failureProbDistribution Id="471" name="CAN Bus.Loss of CAN messages" description="" type="Constant">
+          <parameters Id="471" name="fit" description="" value="1.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="472" name="Localization.Loss of localization" description="" originType="Internal">
+        <failureProbDistribution Id="472" name="Localization.Loss of localization" description="" type="Constant">
+          <parameters Id="472" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="473" name="Path Panner.Internal failure leading to omission of control commands" description="" originType="Internal">
+        <failureProbDistribution Id="473" name="Path Panner.Internal failure leading to omission of control commands" description="" type="Constant">
+          <parameters Id="473" name="fit" description="" value="25.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="474" name="Object Detection.Internal failure leading to loss of object detection" description="" originType="Internal">
+        <failureProbDistribution Id="474" name="Object Detection.Internal failure leading to loss of object detection" description="" type="Constant">
+          <parameters Id="474" name="fit" description="" value="50.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="475" name="Lidar Grabber.Erroneous point cloud provided by the lidar grabber (false negative)" description="" originType="Internal">
+        <failureProbDistribution Id="475" name="Lidar Grabber.Erroneous point cloud provided by the lidar grabber (false negative)" description="" type="Constant">
+          <parameters Id="475" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="476" name="Object Detection.Incorrect object detection (false negative)" description="" originType="Internal">
+        <failureProbDistribution Id="476" name="Object Detection.Incorrect object detection (false negative)" description="" type="Constant">
+          <parameters Id="476" name="fit" description="" value="200.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="477" name="Controller.Omission of speed commands" description="" originType="Internal">
+        <failureProbDistribution Id="477" name="Controller.Omission of speed commands" description="" type="Constant">
+          <parameters Id="477" name="fit" description="" value="0.5"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="478" name="Controller.Erroneous speed commands" description="" originType="Internal">
+        <failureProbDistribution Id="478" name="Controller.Erroneous speed commands" description="" type="Constant">
+          <parameters Id="478" name="fit" description="" value="1.5"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="479" name="Path Panner.Internal failure leading to erroneous control commands" description="" originType="Internal">
+        <failureProbDistribution Id="479" name="Path Panner.Internal failure leading to erroneous control commands" description="" type="Constant">
+          <parameters Id="479" name="fit" description="" value="40.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="480" name="CAN Bus.Erroneous CAN message" description="" originType="Internal">
+        <failureProbDistribution Id="480" name="CAN Bus.Erroneous CAN message" description="" type="Constant">
+          <parameters Id="480" name="fit" description="" value="0.25"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="481" name="Localization.Internal failure leading to an erroneously calculated vehicle position" description="" originType="Internal">
+        <failureProbDistribution Id="481" name="Localization.Internal failure leading to an erroneously calculated vehicle position" description="" type="Constant">
+          <parameters Id="481" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="482" name="GPS Grabber.Erroneous position information provided by the GPS grabber" description="" originType="Internal">
+        <failureProbDistribution Id="482" name="GPS Grabber.Erroneous position information provided by the GPS grabber" description="" type="Constant">
+          <parameters Id="482" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="483" name="Lidar Grabber.No occupancy grid provided by the lidar grabber" description="" originType="Internal">
+        <failureProbDistribution Id="483" name="Lidar Grabber.No occupancy grid provided by the lidar grabber" description="" type="Constant">
+          <parameters Id="483" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="484" name="Localization.Delayed calculation of vehicle position data" description="" originType="Internal">
+        <failureProbDistribution Id="484" name="Localization.Delayed calculation of vehicle position data" description="" type="Constant">
+          <parameters Id="484" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="485" name="CAN Bus.Delay of CAN messages" description="" originType="Internal">
+        <failureProbDistribution Id="485" name="CAN Bus.Delay of CAN messages" description="" type="Constant">
+          <parameters Id="485" name="fit" description="" value="0.5"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="486" name="GPS Grabber.Stuck-at failure of the GPS grabber" description="" originType="Internal">
+        <failureProbDistribution Id="486" name="GPS Grabber.Stuck-at failure of the GPS grabber" description="" type="Constant">
+          <parameters Id="486" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="487" name="Lidar Grabber.Erroneous occupancy grid provided by the lidar grabber (false negative)" description="" originType="Internal">
+        <failureProbDistribution Id="487" name="Lidar Grabber.Erroneous occupancy grid provided by the lidar grabber (false negative)" description="" type="Constant">
+          <parameters Id="487" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="488" name="Lane Detection.Incorrect lane detection (false positive)" description="" originType="Internal">
+        <failureProbDistribution Id="488" name="Lane Detection.Incorrect lane detection (false positive)" description="" type="Constant">
+          <parameters Id="488" name="fit" description="" value="250.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="489" name="Lidar Grabber.Erroneous occupancy grid provided by the lidar grabber (false positive)" description="" originType="Internal">
+        <failureProbDistribution Id="489" name="Lidar Grabber.Erroneous occupancy grid provided by the lidar grabber (false positive)" description="" type="Constant">
+          <parameters Id="489" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="490" name="Object Detection.Internal failure leading to wrong positioning of objects" description="" originType="Internal">
+        <failureProbDistribution Id="490" name="Object Detection.Internal failure leading to wrong positioning of objects" description="" type="Constant">
+          <parameters Id="490" name="fit" description="" value="50.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="491" name="Image Grabber.Stuck-at failure of the image grabber (still image)" description="" originType="Internal">
+        <failureProbDistribution Id="491" name="Image Grabber.Stuck-at failure of the image grabber (still image)" description="" type="Constant">
+          <parameters Id="491" name="fit" description="" value="50.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="492" name="Image Grabber.Image provided too late by the image grabber (old image)" description="" originType="Internal">
+        <failureProbDistribution Id="492" name="Image Grabber.Image provided too late by the image grabber (old image)" description="" type="Constant">
+          <parameters Id="492" name="fit" description="" value="70.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="493" name="Object Detection.Incorrect object detection (false positive)" description="" originType="Internal">
+        <failureProbDistribution Id="493" name="Object Detection.Incorrect object detection (false positive)" description="" type="Constant">
+          <parameters Id="493" name="fit" description="" value="250.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="494" name="Object Detection.Wrong classification of objects" description="" originType="Internal">
+        <failureProbDistribution Id="494" name="Object Detection.Wrong classification of objects" description="" type="Constant">
+          <parameters Id="494" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="495" name="Controller.Delayed speed commands" description="" originType="Internal">
+        <failureProbDistribution Id="495" name="Controller.Delayed speed commands" description="" type="Constant">
+          <parameters Id="495" name="fit" description="" value="1.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="496" name="Object Detection.Delayed detection of objects" description="" originType="Internal">
+        <failureProbDistribution Id="496" name="Object Detection.Delayed detection of objects" description="" type="Constant">
+          <parameters Id="496" name="fit" description="" value="100.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="497" name="Lane Detection.Delayed detection of lanes" description="" originType="Internal">
+        <failureProbDistribution Id="497" name="Lane Detection.Delayed detection of lanes" description="" type="Constant">
+          <parameters Id="497" name="fit" description="" value="100.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="498" name="Path Panner.Internal failure leading to delayed control commands" description="" originType="Internal">
+        <failureProbDistribution Id="498" name="Path Panner.Internal failure leading to delayed control commands" description="" type="Constant">
+          <parameters Id="498" name="fit" description="" value="25.0"/>
+        </failureProbDistribution>
+      </failures>
+      <causes xsi:type="failureLogic_:Gate" Id="461" name="H-3 Unintended braking" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.0" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.0/@causes.38"/>
+      <causes Id="462" name="Lane Detection.Incorrect lane detection (false negative)" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.1"/>
+      <causes Id="463" name="Image Grabber.Partially erroneous image provided by the image grabber" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.2"/>
+      <causes Id="464" name="Image Grabber.Completely erroneous image provided by the image grabber" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.3"/>
+      <causes Id="465" name="Lane Detection.Internal failure leading to loss of lane detection" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.4"/>
+      <causes Id="466" name="Image Grabber.Internal failure leading to omission of image" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.5"/>
+      <causes Id="467" name="Lidar Grabber.Occupancy grid provided too late by the lidar grabber" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.6"/>
+      <causes Id="468" name="GPS Grabber.No position information provided by the GPS grabber" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.7"/>
+      <causes Id="469" name="Lidar Grabber.Erroneous point cloud provided by the lidar grabber (false positive)" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.8"/>
+      <causes Id="470" name="Lidar Grabber.No point cloud provided by the lidar grabber" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.9"/>
+      <causes Id="471" name="CAN Bus.Loss of CAN messages" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.10"/>
+      <causes Id="472" name="Localization.Loss of localization" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.11"/>
+      <causes Id="473" name="Path Panner.Internal failure leading to omission of control commands" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.12"/>
+      <causes Id="474" name="Object Detection.Internal failure leading to loss of object detection" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.13"/>
+      <causes Id="475" name="Lidar Grabber.Erroneous point cloud provided by the lidar grabber (false negative)" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.14"/>
+      <causes Id="476" name="Object Detection.Incorrect object detection (false negative)" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.15"/>
+      <causes Id="477" name="Controller.Omission of speed commands" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.16"/>
+      <causes Id="478" name="Controller.Erroneous speed commands" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.17"/>
+      <causes Id="479" name="Path Panner.Internal failure leading to erroneous control commands" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.18"/>
+      <causes Id="480" name="CAN Bus.Erroneous CAN message" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.19"/>
+      <causes Id="481" name="Localization.Internal failure leading to an erroneously calculated vehicle position" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.20"/>
+      <causes Id="482" name="GPS Grabber.Erroneous position information provided by the GPS grabber" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.21"/>
+      <causes Id="483" name="Lidar Grabber.No occupancy grid provided by the lidar grabber" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.22"/>
+      <causes Id="484" name="Localization.Delayed calculation of vehicle position data" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.23"/>
+      <causes Id="485" name="CAN Bus.Delay of CAN messages" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.24"/>
+      <causes Id="486" name="GPS Grabber.Stuck-at failure of the GPS grabber" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.25"/>
+      <causes Id="487" name="Lidar Grabber.Erroneous occupancy grid provided by the lidar grabber (false negative)" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.26"/>
+      <causes Id="488" name="Lane Detection.Incorrect lane detection (false positive)" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.27"/>
+      <causes Id="489" name="Lidar Grabber.Erroneous occupancy grid provided by the lidar grabber (false positive)" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.28"/>
+      <causes Id="490" name="Object Detection.Internal failure leading to wrong positioning of objects" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.29"/>
+      <causes Id="491" name="Image Grabber.Stuck-at failure of the image grabber (still image)" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.30"/>
+      <causes Id="492" name="Image Grabber.Image provided too late by the image grabber (old image)" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.31"/>
+      <causes Id="493" name="Object Detection.Incorrect object detection (false positive)" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.32"/>
+      <causes Id="494" name="Object Detection.Wrong classification of objects" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.33"/>
+      <causes Id="495" name="Controller.Delayed speed commands" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.34"/>
+      <causes Id="496" name="Object Detection.Delayed detection of objects" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.35"/>
+      <causes Id="497" name="Lane Detection.Delayed detection of lanes" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.36"/>
+      <causes Id="498" name="Path Panner.Internal failure leading to delayed control commands" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.37"/>
+      <causes xsi:type="failureLogic_:Gate" Id="499" name="or4" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.0/@causes.39 //@odeProductPackages.0/@failureModels.0/@causes.50 //@odeProductPackages.0/@failureModels.0/@causes.68"/>
+      <causes xsi:type="failureLogic_:Gate" Id="500" name="Controller.or4" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.0/@causes.40 //@odeProductPackages.0/@failureModels.0/@causes.16"/>
+      <causes xsi:type="failureLogic_:Gate" Id="501" name="Controller.and1" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.0/@causes.41 //@odeProductPackages.0/@failureModels.0/@causes.10"/>
+      <causes xsi:type="failureLogic_:Gate" Id="502" name="Path Panner.and2" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.0/@causes.44 //@odeProductPackages.0/@failureModels.0/@causes.12 //@odeProductPackages.0/@failureModels.0/@causes.42 //@odeProductPackages.0/@failureModels.0/@causes.48"/>
+      <causes xsi:type="failureLogic_:Gate" Id="503" name="Lane Detection.or1" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.0/@causes.1 //@odeProductPackages.0/@failureModels.0/@causes.4 //@odeProductPackages.0/@failureModels.0/@causes.43 //@odeProductPackages.0/@failureModels.0/@causes.5"/>
+      <causes xsi:type="failureLogic_:Gate" Id="504" name="Image Grabber.or3" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.0/@causes.2 //@odeProductPackages.0/@failureModels.0/@causes.3"/>
+      <causes xsi:type="failureLogic_:Gate" Id="505" name="Path Panner.No precise distance information" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.0/@causes.6 //@odeProductPackages.0/@failureModels.0/@causes.45"/>
+      <causes xsi:type="failureLogic_:Gate" Id="506" name="Localization.or1" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.0/@causes.46 //@odeProductPackages.0/@failureModels.0/@causes.11 //@odeProductPackages.0/@failureModels.0/@causes.10"/>
+      <causes xsi:type="failureLogic_:Gate" Id="507" name="Localization.and1" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.0/@causes.47 //@odeProductPackages.0/@failureModels.0/@causes.7"/>
+      <causes xsi:type="failureLogic_:Gate" Id="508" name="Localization.or5" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.0/@causes.8 //@odeProductPackages.0/@failureModels.0/@causes.9"/>
+      <causes xsi:type="failureLogic_:Gate" Id="509" name="Object Detection.or1" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.0/@causes.13 //@odeProductPackages.0/@failureModels.0/@causes.49 //@odeProductPackages.0/@failureModels.0/@causes.15"/>
+      <causes xsi:type="failureLogic_:Gate" Id="510" name="Object Detection.and3" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.0/@causes.14 //@odeProductPackages.0/@failureModels.0/@causes.5"/>
+      <causes xsi:type="failureLogic_:Gate" Id="511" name="Controller.or5" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.0/@causes.17 //@odeProductPackages.0/@failureModels.0/@causes.51"/>
+      <causes xsi:type="failureLogic_:Gate" Id="512" name="Controller.and2" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.0/@causes.52 //@odeProductPackages.0/@failureModels.0/@causes.19"/>
+      <causes xsi:type="failureLogic_:Gate" Id="513" name="Path Panner.or2" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.0/@causes.18 //@odeProductPackages.0/@failureModels.0/@causes.53 //@odeProductPackages.0/@failureModels.0/@causes.56 //@odeProductPackages.0/@failureModels.0/@causes.61 //@odeProductPackages.0/@failureModels.0/@causes.59 //@odeProductPackages.0/@failureModels.0/@causes.28"/>
+      <causes xsi:type="failureLogic_:Gate" Id="514" name="Path Panner.and4" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.0/@causes.54 //@odeProductPackages.0/@failureModels.0/@causes.22"/>
+      <causes xsi:type="failureLogic_:Gate" Id="515" name="Localization.or2" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.0/@causes.20 //@odeProductPackages.0/@failureModels.0/@causes.55 //@odeProductPackages.0/@failureModels.0/@causes.19"/>
+      <causes xsi:type="failureLogic_:Gate" Id="516" name="Localization.and2" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.0/@causes.47 //@odeProductPackages.0/@failureModels.0/@causes.21"/>
+      <causes xsi:type="failureLogic_:Gate" Id="517" name="Path Panner.and1" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.0/@causes.57 //@odeProductPackages.0/@failureModels.0/@causes.26"/>
+      <causes xsi:type="failureLogic_:Gate" Id="518" name="Localization.or3" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.0/@causes.23 //@odeProductPackages.0/@failureModels.0/@causes.58 //@odeProductPackages.0/@failureModels.0/@causes.24"/>
+      <causes xsi:type="failureLogic_:Gate" Id="519" name="Localization.and3" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.0/@causes.25 //@odeProductPackages.0/@failureModels.0/@causes.14"/>
+      <causes xsi:type="failureLogic_:Gate" Id="520" name="Lane Detection.or2" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.0/@causes.27 //@odeProductPackages.0/@failureModels.0/@causes.60"/>
+      <causes xsi:type="failureLogic_:Gate" Id="521" name="Image Grabber.or2" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.0/@causes.2 //@odeProductPackages.0/@failureModels.0/@causes.3"/>
+      <causes xsi:type="failureLogic_:Gate" Id="522" name="Path Panner.Erroeneous object detection" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.0/@causes.62 //@odeProductPackages.0/@failureModels.0/@causes.65 //@odeProductPackages.0/@failureModels.0/@causes.67"/>
+      <causes xsi:type="failureLogic_:Gate" Id="523" name="Object Detection.or5" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.0/@causes.29 //@odeProductPackages.0/@failureModels.0/@causes.63"/>
+      <causes xsi:type="failureLogic_:Gate" Id="524" name="Object Detection.and1" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.0/@causes.9 //@odeProductPackages.0/@failureModels.0/@causes.64"/>
+      <causes xsi:type="failureLogic_:Gate" Id="525" name="Image Grabber.or1" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.0/@causes.30 //@odeProductPackages.0/@failureModels.0/@causes.31"/>
+      <causes xsi:type="failureLogic_:Gate" Id="526" name="Object Detection.or2" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.0/@causes.32 //@odeProductPackages.0/@failureModels.0/@causes.66"/>
+      <causes xsi:type="failureLogic_:Gate" Id="527" name="Object Detection.and2" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.0/@causes.60 //@odeProductPackages.0/@failureModels.0/@causes.8"/>
+      <causes xsi:type="failureLogic_:Gate" Id="528" name="Object Detection.or4" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.0/@causes.33 //@odeProductPackages.0/@failureModels.0/@causes.64"/>
+      <causes xsi:type="failureLogic_:Gate" Id="529" name="Controller.or9" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.0/@causes.34 //@odeProductPackages.0/@failureModels.0/@causes.69"/>
+      <causes xsi:type="failureLogic_:Gate" Id="530" name="Controller.and3" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.0/@causes.70 //@odeProductPackages.0/@failureModels.0/@causes.24"/>
+      <causes xsi:type="failureLogic_:Gate" Id="531" name="Path Panner.and3" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.0/@causes.37 //@odeProductPackages.0/@failureModels.0/@causes.71 //@odeProductPackages.0/@failureModels.0/@causes.72 //@odeProductPackages.0/@failureModels.0/@causes.22"/>
+      <causes xsi:type="failureLogic_:Gate" Id="532" name="Object Detection.or3" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.0/@causes.35 //@odeProductPackages.0/@failureModels.0/@causes.43"/>
+      <causes xsi:type="failureLogic_:Gate" Id="533" name="Lane Detection.or3" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.0/@causes.36 //@odeProductPackages.0/@failureModels.0/@causes.64"/>
+    </failureModels>
+  </odeProductPackages>
+  <odeProductPackages xsi:type="architecture_:DesignPackage" Id="457" name="H-3 Unintended braking" description="">
+    <systems Id="458" name="H-3 Unintended braking" description="" failureModels="//@odeProductPackages.0/@failureModels.0">
+      <keyValueMaps key="visibility">
+        <values tag="isPublic" value="true"/>
+      </keyValueMaps>
+      <contexts Id="534" name="H-3 Unintended braking" description="" usageHistory=""/>
+    </systems>
+  </odeProductPackages>
+</integration_:DDIPackage>

@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="ASCII"?>
+<integration_:DDIPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:architecture_="http://www.deis-project.eu/ode/mergedODE/architecture" xmlns:failureLogic_="http://www.deis-project.eu/ode/mergedODE/failureLogic" xmlns:integration_="http://www.deis-project.eu/ode/mergedODE/integration" Id="1" name="MobSTr" description="">
+  <odeProductPackages xsi:type="failureLogic_:FailureLogicPackage" Id="3" name="" description="">
+    <failureModels xsi:type="failureLogic_:FaultTree" Id="5" name="Lidar Grabber" description="">
+      <keyValueMaps key="multiplicity">
+        <values tag="multiplicity" value="1.0"/>
+      </keyValueMaps>
+      <failures Id="13" name="No information about objects provided by lidar" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="14" name="Objects not detected by lidar" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="15" name="Ghost objects provided by lidar" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="16" name="Distance to objects measured as too high" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="17" name="Distance to objects measured as too low" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="18" name="No point cloud provided by the lidar grabber" description="" originType="Internal">
+        <failureProbDistribution Id="18" name="No point cloud provided by the lidar grabber" description="" type="Constant">
+          <parameters Id="18" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="19" name="Erroneous point cloud provided by the lidar grabber (false negative)" description="" originType="Internal">
+        <failureProbDistribution Id="19" name="Erroneous point cloud provided by the lidar grabber (false negative)" description="" type="Constant">
+          <parameters Id="19" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="20" name="Erroneous point cloud provided by the lidar grabber (false positive)" description="" originType="Internal">
+        <failureProbDistribution Id="20" name="Erroneous point cloud provided by the lidar grabber (false positive)" description="" type="Constant">
+          <parameters Id="20" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="21" name="No occupancy grid provided by the lidar grabber" description="" originType="Internal">
+        <failureProbDistribution Id="21" name="No occupancy grid provided by the lidar grabber" description="" type="Constant">
+          <parameters Id="21" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="22" name="Erroneous occupancy grid provided by the lidar grabber (false negative)" description="" originType="Internal">
+        <failureProbDistribution Id="22" name="Erroneous occupancy grid provided by the lidar grabber (false negative)" description="" type="Constant">
+          <parameters Id="22" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="23" name="Erroneous occupancy grid provided by the lidar grabber (false positive)" description="" originType="Internal">
+        <failureProbDistribution Id="23" name="Erroneous occupancy grid provided by the lidar grabber (false positive)" description="" type="Constant">
+          <parameters Id="23" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="24" name="No information about the distance to objects provided by lidar" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="25" name="Wrong (outdated) information about the distance to objects provided by lidar" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="26" name="Occupancy grid provided too late by the lidar grabber" description="" originType="Internal">
+        <failureProbDistribution Id="26" name="Occupancy grid provided too late by the lidar grabber" description="" type="Constant">
+          <parameters Id="26" name="fit" description="" value="20.0"/>
+        </failureProbDistribution>
+      </failures>
+      <causes xsi:type="failureLogic_:Gate" Id="6" name="No information about objects provided by lidar" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.0" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.0/@causes.5"/>
+      <causes xsi:type="failureLogic_:Gate" Id="7" name="Objects not detected by lidar" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.1" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.0/@causes.6"/>
+      <causes xsi:type="failureLogic_:Gate" Id="8" name="Ghost objects provided by lidar" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.2" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.0/@causes.7"/>
+      <causes xsi:type="failureLogic_:Gate" Id="9" name="Distance to objects measured as too high" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.3" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.0/@causes.9"/>
+      <causes xsi:type="failureLogic_:Gate" Id="10" name="Distance to objects measured as too low" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.4" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.0/@causes.10"/>
+      <causes Id="18" name="No point cloud provided by the lidar grabber" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.5"/>
+      <causes Id="19" name="Erroneous point cloud provided by the lidar grabber (false negative)" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.6"/>
+      <causes Id="20" name="Erroneous point cloud provided by the lidar grabber (false positive)" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.7"/>
+      <causes Id="21" name="No occupancy grid provided by the lidar grabber" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.8"/>
+      <causes Id="22" name="Erroneous occupancy grid provided by the lidar grabber (false negative)" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.9"/>
+      <causes Id="23" name="Erroneous occupancy grid provided by the lidar grabber (false positive)" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.10"/>
+      <causes xsi:type="failureLogic_:Gate" Id="11" name="No information about the distance to objects provided by lidar" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.11" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.0/@causes.8"/>
+      <causes xsi:type="failureLogic_:Gate" Id="12" name="Wrong (outdated) information about the distance to objects provided by lidar" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.12" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.0/@causes.13"/>
+      <causes Id="26" name="Occupancy grid provided too late by the lidar grabber" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.0/@failures.13"/>
+    </failureModels>
+    <failureModels xsi:type="failureLogic_:FaultTree" Id="27" name="GPS Grabber" description="">
+      <keyValueMaps key="multiplicity">
+        <values tag="multiplicity" value="1.0"/>
+      </keyValueMaps>
+      <failures Id="31" name="No localization by GPS" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="32" name="Wrong GPS information or inaccurate localization" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="33" name="Wrong GPS information" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="34" name="No position information provided by the GPS grabber" description="" originType="Internal">
+        <failureProbDistribution Id="34" name="No position information provided by the GPS grabber" description="" type="Constant">
+          <parameters Id="34" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="35" name="Erroneous position information provided by the GPS grabber" description="" originType="Internal">
+        <failureProbDistribution Id="35" name="Erroneous position information provided by the GPS grabber" description="" type="Constant">
+          <parameters Id="35" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="36" name="Stuck-at failure of the GPS grabber" description="" originType="Internal">
+        <failureProbDistribution Id="36" name="Stuck-at failure of the GPS grabber" description="" type="Constant">
+          <parameters Id="36" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <causes xsi:type="failureLogic_:Gate" Id="28" name="No localization by GPS" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.1/@failures.0" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.1/@causes.3"/>
+      <causes xsi:type="failureLogic_:Gate" Id="29" name="Wrong GPS information or inaccurate localization" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.1/@failures.1" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.1/@causes.4"/>
+      <causes xsi:type="failureLogic_:Gate" Id="30" name="Wrong GPS information" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.1/@failures.2" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.1/@causes.5"/>
+      <causes Id="34" name="No position information provided by the GPS grabber" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.1/@failures.3"/>
+      <causes Id="35" name="Erroneous position information provided by the GPS grabber" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.1/@failures.4"/>
+      <causes Id="36" name="Stuck-at failure of the GPS grabber" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.1/@failures.5"/>
+    </failureModels>
+    <failureModels xsi:type="failureLogic_:FaultTree" Id="37" name="Image Grabber" description="">
+      <keyValueMaps key="multiplicity">
+        <values tag="multiplicity" value="1.0"/>
+      </keyValueMaps>
+      <failures Id="42" name="No image provided by the image grabber" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="43" name="Images with wrong (or no) objects or lanes" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="44" name="Ghost objects or lanes in the images / Missing objects or langes in the images" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="45" name="Wrong (outdated) lane boundaries or objects in the images" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="47" name="Internal failure leading to omission of image" description="" originType="Internal">
+        <failureProbDistribution Id="47" name="Internal failure leading to omission of image" description="" type="Constant">
+          <parameters Id="47" name="fit" description="" value="50.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="48" name="Completely erroneous image provided by the image grabber" description="" originType="Internal">
+        <failureProbDistribution Id="48" name="Completely erroneous image provided by the image grabber" description="" type="Constant">
+          <parameters Id="48" name="fit" description="" value="80.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="49" name="Partially erroneous image provided by the image grabber" description="" originType="Internal">
+        <failureProbDistribution Id="49" name="Partially erroneous image provided by the image grabber" description="" type="Constant">
+          <parameters Id="49" name="fit" description="" value="260.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="50" name="Stuck-at failure of the image grabber (still image)" description="" originType="Internal">
+        <failureProbDistribution Id="50" name="Stuck-at failure of the image grabber (still image)" description="" type="Constant">
+          <parameters Id="50" name="fit" description="" value="50.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="51" name="Image provided too late by the image grabber (old image)" description="" originType="Internal">
+        <failureProbDistribution Id="51" name="Image provided too late by the image grabber (old image)" description="" type="Constant">
+          <parameters Id="51" name="fit" description="" value="70.0"/>
+        </failureProbDistribution>
+      </failures>
+      <causes xsi:type="failureLogic_:Gate" Id="38" name="No image provided by the image grabber" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.2/@failures.0" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.2/@causes.5"/>
+      <causes xsi:type="failureLogic_:Gate" Id="39" name="Images with wrong or ghost objects or lanes" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.2/@failures.1" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.2/@causes.10"/>
+      <causes xsi:type="failureLogic_:Gate" Id="40" name="Missing objects or lanes on the images" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.2/@failures.2" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.2/@causes.11"/>
+      <causes xsi:type="failureLogic_:Gate" Id="41" name="Wrong (outdated) lane boundaries or objects on the picture" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.2/@failures.3" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.2/@causes.4"/>
+      <causes xsi:type="failureLogic_:Gate" Id="46" name="or1" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.2/@causes.8 //@odeProductPackages.0/@failureModels.2/@causes.9"/>
+      <causes Id="47" name="Internal failure leading to omission of image" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.2/@failures.4"/>
+      <causes Id="48" name="Completely erroneous image provided by the image grabber" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.2/@failures.5"/>
+      <causes Id="49" name="Partially erroneous image provided by the image grabber" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.2/@failures.6"/>
+      <causes Id="50" name="Stuck-at failure - still image" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.2/@failures.7"/>
+      <causes Id="51" name="Image too late - old image" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.2/@failures.8"/>
+      <causes xsi:type="failureLogic_:Gate" Id="52" name="or2" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.2/@causes.6 //@odeProductPackages.0/@failureModels.2/@causes.7"/>
+      <causes xsi:type="failureLogic_:Gate" Id="53" name="or3" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.2/@causes.6 //@odeProductPackages.0/@failureModels.2/@causes.7"/>
+    </failureModels>
+    <failureModels xsi:type="failureLogic_:FaultTree" Id="54" name="Localization" description="">
+      <keyValueMaps key="multiplicity">
+        <values tag="multiplicity" value="1.0"/>
+      </keyValueMaps>
+      <failures Id="67" name="No localization by GPS" description="" failureClass="Failure"/>
+      <failures Id="68" name="Wrong GPS information or inaccurate localization" description="" failureClass="Failure"/>
+      <failures Id="69" name="Wrong GPS information" description="" failureClass="Failure"/>
+      <failures Id="70" name="Objects not detected by lidar" description="" failureClass="Failure"/>
+      <failures Id="71" name="No vehicle information available" description="" failureClass="Failure"/>
+      <failures Id="72" name="Wrong (outdated) vehicle information available" description="" failureClass="Failure"/>
+      <failures Id="73" name="Erroneous vehicle information available" description="" failureClass="Failure"/>
+      <failures Id="74" name="Loss of localization" description="" originType="Internal">
+        <failureProbDistribution Id="74" name="Loss of localization" description="" type="Constant">
+          <parameters Id="74" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="75" name="Internal failure leading to an erroneously calculated vehicle position" description="" originType="Internal">
+        <failureProbDistribution Id="75" name="Internal failure leading to an erroneously calculated vehicle position" description="" type="Constant">
+          <parameters Id="75" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="76" name="Delayed calculation of vehicle position data" description="" originType="Internal">
+        <failureProbDistribution Id="76" name="Delayed calculation of vehicle position data" description="" type="Constant">
+          <parameters Id="76" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="77" name="No information about the vehicle postion and distance to objects around the vehicle" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="78" name="Distance to objects on the road is calculated too high" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="83" name="No precise information about the objects around the vehicle provided by lidar" description="" failureClass="Failure"/>
+      <failures Id="86" name="Ghost objects provided by lidar" description="" failureClass="Failure"/>
+      <failures Id="88" name="Incorrect vehicle position information on the road" description="" originType="Output" failureClass="Failure"/>
+      <causes xsi:type="failureLogic_:Gate" Id="55" name="No localization by GPS" description="" failure="//@odeProductPackages.0/@failureModels.3/@failures.0" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.1/@causes.0"/>
+      <causes xsi:type="failureLogic_:Gate" Id="56" name="Wrong GPS information or inaccurate localization" description="" failure="//@odeProductPackages.0/@failureModels.3/@failures.1" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.1/@causes.1"/>
+      <causes xsi:type="failureLogic_:Gate" Id="57" name="Wrong GPS information" description="" failure="//@odeProductPackages.0/@failureModels.3/@failures.2" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.1/@causes.2"/>
+      <causes xsi:type="failureLogic_:Gate" Id="58" name="Objects not detected by lidar" description="" failure="//@odeProductPackages.0/@failureModels.3/@failures.3" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.0/@causes.1"/>
+      <causes xsi:type="failureLogic_:Gate" Id="59" name="No vehicle information available" description="" failure="//@odeProductPackages.0/@failureModels.3/@failures.4" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.6/@causes.0"/>
+      <causes xsi:type="failureLogic_:Gate" Id="60" name="Wrong (outdated) vehicle information available" description="" failure="//@odeProductPackages.0/@failureModels.3/@failures.5" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.6/@causes.1"/>
+      <causes xsi:type="failureLogic_:Gate" Id="61" name="Erroneous vehicle information available" description="" failure="//@odeProductPackages.0/@failureModels.3/@failures.6" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.6/@causes.2"/>
+      <causes Id="74" name="Loss of localization" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.3/@failures.7"/>
+      <causes Id="75" name="Internal failure leading to an erroneously calculated vehicle position" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.3/@failures.8"/>
+      <causes Id="76" name="Delayed calculation of vehicle position data" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.3/@failures.9"/>
+      <causes xsi:type="failureLogic_:Gate" Id="64" name="No information about the vehicle postion and distance to objects around the vehicle" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.3/@failures.10" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.3/@causes.12"/>
+      <causes xsi:type="failureLogic_:Gate" Id="65" name="Distance to objects on the road is calculated too high" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.3/@failures.11" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.3/@causes.14"/>
+      <causes xsi:type="failureLogic_:Gate" Id="79" name="or1" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.3/@causes.7 //@odeProductPackages.0/@failureModels.3/@causes.15 //@odeProductPackages.0/@failureModels.3/@causes.4"/>
+      <causes xsi:type="failureLogic_:Gate" Id="80" name="or2" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.3/@causes.8 //@odeProductPackages.0/@failureModels.3/@causes.17 //@odeProductPackages.0/@failureModels.3/@causes.6"/>
+      <causes xsi:type="failureLogic_:Gate" Id="81" name="or3" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.3/@causes.9 //@odeProductPackages.0/@failureModels.3/@causes.18 //@odeProductPackages.0/@failureModels.3/@causes.5"/>
+      <causes xsi:type="failureLogic_:Gate" Id="82" name="and1" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.3/@causes.0 //@odeProductPackages.0/@failureModels.3/@causes.20"/>
+      <causes xsi:type="failureLogic_:Gate" Id="62" name="No precise information about the objects around the vehicle provided by lidar" description="" failure="//@odeProductPackages.0/@failureModels.3/@failures.12" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.0/@causes.0"/>
+      <causes xsi:type="failureLogic_:Gate" Id="84" name="and2" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.3/@causes.1 //@odeProductPackages.0/@failureModels.3/@causes.20"/>
+      <causes xsi:type="failureLogic_:Gate" Id="85" name="and3" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.3/@causes.2 //@odeProductPackages.0/@failureModels.3/@causes.3"/>
+      <causes xsi:type="failureLogic_:Gate" Id="63" name="Ghost objects provided by lidar" description="" failure="//@odeProductPackages.0/@failureModels.3/@failures.13" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.0/@causes.2"/>
+      <causes xsi:type="failureLogic_:Gate" Id="87" name="or5" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.3/@causes.19 //@odeProductPackages.0/@failureModels.3/@causes.16"/>
+      <causes xsi:type="failureLogic_:Gate" Id="66" name="Incorrect vehicle position information on the road" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.3/@failures.14" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.3/@causes.13"/>
+    </failureModels>
+    <failureModels xsi:type="failureLogic_:FaultTree" Id="89" name="Object Detection" description="">
+      <keyValueMaps key="multiplicity">
+        <values tag="multiplicity" value="1.0"/>
+      </keyValueMaps>
+      <failures Id="102" name="No image provided by the image grabber" description="" failureClass="Failure"/>
+      <failures Id="103" name="Images with wrong or ghost objects" description="" failureClass="Failure"/>
+      <failures Id="104" name="Missing objects in the images" description="" failureClass="Failure"/>
+      <failures Id="105" name="Wrong (outdated) objects in the images" description="" failureClass="Failure"/>
+      <failures Id="106" name="Internal failure leading to loss of object detection" description="" originType="Internal">
+        <failureProbDistribution Id="106" name="Internal failure leading to loss of object detection" description="" type="Constant">
+          <parameters Id="106" name="fit" description="" value="50.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="107" name="Incorrect object detection (false positive)" description="" originType="Internal">
+        <failureProbDistribution Id="107" name="Incorrect object detection - false positive" description="" type="Constant">
+          <parameters Id="107" name="fit" description="" value="250.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="108" name="Delayed detection of objects" description="" originType="Internal">
+        <failureProbDistribution Id="108" name="Delayed detection of objects" description="" type="Constant">
+          <parameters Id="108" name="fit" description="" value="100.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="109" name="Incorrect object detection (false negative)" description="" originType="Internal">
+        <failureProbDistribution Id="109" name="Incorrect object detection - false negative" description="" type="Constant">
+          <parameters Id="109" name="fit" description="" value="200.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="110" name="Wrong classification of objects" description="" originType="Internal">
+        <failureProbDistribution Id="110" name="Wrong classification of objects" description="" type="Constant">
+          <parameters Id="110" name="fit" description="" value="500.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="111" name="Objects on the road are not detected" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="112" name="Ghost objects are detected on the road" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="113" name="Objects on the road are detected too late" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="114" name="False classification of objects on the road" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="119" name="Erroneous distance to objects" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="120" name="Internal failure leading to wrong positioning of objects" description="" originType="Internal">
+        <failureProbDistribution Id="120" name="Internal failure leading to wrong positioning of objects" description="" type="Constant">
+          <parameters Id="120" name="fit" description="" value="50.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="122" name="No information about the objects around the vehicle provided by lidar" description="" failureClass="Failure"/>
+      <failures Id="124" name="Objects not detected by lidar" description="" failureClass="Failure"/>
+      <failures Id="125" name="Ghost objects provided by lidar" description="" failureClass="Failure"/>
+      <causes xsi:type="failureLogic_:Gate" Id="90" name="No image provided by the image grabber" description="" failure="//@odeProductPackages.0/@failureModels.4/@failures.0" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.2/@causes.0"/>
+      <causes xsi:type="failureLogic_:Gate" Id="91" name="Images with wrong or ghost objects" description="" failure="//@odeProductPackages.0/@failureModels.4/@failures.1" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.2/@causes.1"/>
+      <causes xsi:type="failureLogic_:Gate" Id="92" name="Missing objects on the images" description="" failure="//@odeProductPackages.0/@failureModels.4/@failures.2" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.2/@causes.2"/>
+      <causes xsi:type="failureLogic_:Gate" Id="93" name="Wrong (outdated) objects in the images" description="" failure="//@odeProductPackages.0/@failureModels.4/@failures.3" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.2/@causes.3"/>
+      <causes Id="106" name="Internal failure leading to loss of object detection" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.4/@failures.4"/>
+      <causes Id="107" name="Incorrect object detection (false positive)" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.4/@failures.5"/>
+      <causes Id="108" name="Delayed detection of objects" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.4/@failures.6"/>
+      <causes Id="109" name="Incorrect object detection (false negative)" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.4/@failures.7"/>
+      <causes Id="110" name="Wrong classification of objects" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.4/@failures.8"/>
+      <causes xsi:type="failureLogic_:Gate" Id="97" name="Objects on the road are not detected" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.4/@failures.9" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.4/@causes.13"/>
+      <causes xsi:type="failureLogic_:Gate" Id="98" name="Ghost objects are detected on the road" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.4/@failures.10" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.4/@causes.14"/>
+      <causes xsi:type="failureLogic_:Gate" Id="99" name="Objects on the road are detected too late" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.4/@failures.11" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.4/@causes.15"/>
+      <causes xsi:type="failureLogic_:Gate" Id="100" name="False classification of objects on the road" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.4/@failures.12" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.4/@causes.16"/>
+      <causes xsi:type="failureLogic_:Gate" Id="115" name="or1" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.4/@causes.25 //@odeProductPackages.0/@failureModels.4/@causes.4 //@odeProductPackages.0/@failureModels.4/@causes.7"/>
+      <causes xsi:type="failureLogic_:Gate" Id="116" name="or2" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.4/@causes.24 //@odeProductPackages.0/@failureModels.4/@causes.5"/>
+      <causes xsi:type="failureLogic_:Gate" Id="117" name="or3" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.4/@causes.2 //@odeProductPackages.0/@failureModels.4/@causes.6"/>
+      <causes xsi:type="failureLogic_:Gate" Id="118" name="or4" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.4/@causes.3 //@odeProductPackages.0/@failureModels.4/@causes.8"/>
+      <causes xsi:type="failureLogic_:Gate" Id="101" name="Erroneous distance to objects" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.4/@failures.13" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.4/@causes.19"/>
+      <causes Id="120" name="Internal failure leading to wrong positioning of objects" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.4/@failures.14"/>
+      <causes xsi:type="failureLogic_:Gate" Id="121" name="or5" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.4/@causes.18 //@odeProductPackages.0/@failureModels.4/@causes.21"/>
+      <causes xsi:type="failureLogic_:Gate" Id="94" name="No information about the objects around the vehicle provided by lidar" description="" failure="//@odeProductPackages.0/@failureModels.4/@failures.15" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.0/@causes.0"/>
+      <causes xsi:type="failureLogic_:Gate" Id="123" name="and1" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.4/@causes.20 //@odeProductPackages.0/@failureModels.4/@causes.3"/>
+      <causes xsi:type="failureLogic_:Gate" Id="95" name="Objects not detected by lidar" description="" failure="//@odeProductPackages.0/@failureModels.4/@failures.16" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.0/@causes.1"/>
+      <causes xsi:type="failureLogic_:Gate" Id="96" name="Ghost objects provided by lidar" description="" failure="//@odeProductPackages.0/@failureModels.4/@failures.17" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.0/@causes.2"/>
+      <causes xsi:type="failureLogic_:Gate" Id="126" name="and2" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.4/@causes.23 //@odeProductPackages.0/@failureModels.4/@causes.1"/>
+      <causes xsi:type="failureLogic_:Gate" Id="127" name="and3" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.4/@causes.0 //@odeProductPackages.0/@failureModels.4/@causes.22"/>
+    </failureModels>
+    <failureModels xsi:type="failureLogic_:FaultTree" Id="128" name="Lane Detection" description="">
+      <keyValueMaps key="multiplicity">
+        <values tag="multiplicity" value="1.0"/>
+      </keyValueMaps>
+      <failures Id="136" name="Missing lanes in the images" description="" failureClass="Failure"/>
+      <failures Id="137" name="Images with wrong or ghost lanes" description="" failureClass="Failure"/>
+      <failures Id="138" name="No image provided by the image grabber" description="" failureClass="Failure"/>
+      <failures Id="139" name="Wrong (outdated) lane boundaries in the images" description="" failureClass="Failure"/>
+      <failures Id="140" name="Lanes are not detected" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="141" name="Ghost lanes are detected" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="142" name="Lanes are detected too late" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="143" name="Internal failure leading to loss of lane detection" description="" originType="Internal">
+        <failureProbDistribution Id="143" name="Internal failure leading to loss of lane detection" description="" type="Constant">
+          <parameters Id="143" name="fit" description="" value="50.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="144" name="Incorrect lane detection (false positive)" description="" originType="Internal">
+        <failureProbDistribution Id="144" name="Incorrect lane detection - false positive" description="" type="Constant">
+          <parameters Id="144" name="fit" description="" value="250.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="145" name="Delayed detection of lanes" description="" originType="Internal">
+        <failureProbDistribution Id="145" name="Delayed detection of lanes" description="" type="Constant">
+          <parameters Id="145" name="fit" description="" value="100.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="146" name="Incorrect lane detection (false negative)" description="" originType="Internal">
+        <failureProbDistribution Id="146" name="Incorrect lane detection - false negative" description="" type="Constant">
+          <parameters Id="146" name="fit" description="" value="299.0"/>
+        </failureProbDistribution>
+      </failures>
+      <causes xsi:type="failureLogic_:Gate" Id="129" name="Missing lanes on the images" description="" failure="//@odeProductPackages.0/@failureModels.5/@failures.0" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.2/@causes.2"/>
+      <causes xsi:type="failureLogic_:Gate" Id="130" name="Images with wrong or ghost lanes" description="" failure="//@odeProductPackages.0/@failureModels.5/@failures.1" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.2/@causes.1"/>
+      <causes xsi:type="failureLogic_:Gate" Id="131" name="No image provided by the image grabber" description="" failure="//@odeProductPackages.0/@failureModels.5/@failures.2" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.2/@causes.0"/>
+      <causes xsi:type="failureLogic_:Gate" Id="132" name="Wrong (outdated) lane boundaries in the images" description="" failure="//@odeProductPackages.0/@failureModels.5/@failures.3" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.2/@causes.3"/>
+      <causes xsi:type="failureLogic_:Gate" Id="133" name="Lanes are not detected" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.5/@failures.4" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.5/@causes.11"/>
+      <causes xsi:type="failureLogic_:Gate" Id="134" name="Ghost lanes are detected" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.5/@failures.5" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.5/@causes.12"/>
+      <causes xsi:type="failureLogic_:Gate" Id="135" name="Lanes are detected too late" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.5/@failures.6" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.5/@causes.13"/>
+      <causes Id="143" name="Internal failure leading to loss of lane detection" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.5/@failures.7"/>
+      <causes Id="144" name="Incorrect lane detection (false positive)" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.5/@failures.8"/>
+      <causes Id="145" name="Delayed detection of lanes" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.5/@failures.9"/>
+      <causes Id="146" name="Incorrect lane detection (false negative)" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.5/@failures.10"/>
+      <causes xsi:type="failureLogic_:Gate" Id="147" name="or1" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.5/@causes.7 //@odeProductPackages.0/@failureModels.5/@causes.2 //@odeProductPackages.0/@failureModels.5/@causes.10 //@odeProductPackages.0/@failureModels.5/@causes.0"/>
+      <causes xsi:type="failureLogic_:Gate" Id="148" name="or2" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.5/@causes.8 //@odeProductPackages.0/@failureModels.5/@causes.1"/>
+      <causes xsi:type="failureLogic_:Gate" Id="149" name="or3" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.5/@causes.3 //@odeProductPackages.0/@failureModels.5/@causes.9"/>
+    </failureModels>
+    <failureModels xsi:type="failureLogic_:FaultTree" Id="150" name="CAN Bus" description="">
+      <keyValueMaps key="multiplicity">
+        <values tag="multiplicity" value="1.0"/>
+      </keyValueMaps>
+      <failures Id="154" name="No vehicle information available" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="155" name="Outdated vehicle information available" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="156" name="Erroneous vehicle information available" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="157" name="Loss of CAN messages" description="" originType="Internal">
+        <failureProbDistribution Id="157" name="Loss of CAN messages" description="" type="Constant">
+          <parameters Id="157" name="fit" description="" value="1.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="158" name="Delay of CAN messages" description="" originType="Internal">
+        <failureProbDistribution Id="158" name="Delay of CAN messages" description="" type="Constant">
+          <parameters Id="158" name="fit" description="" value="0.5"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="159" name="Erroneous CAN message" description="" originType="Internal">
+        <failureProbDistribution Id="159" name="Erroneous CAN message" description="" type="Constant">
+          <parameters Id="159" name="fit" description="" value="0.25"/>
+        </failureProbDistribution>
+      </failures>
+      <causes xsi:type="failureLogic_:Gate" Id="151" name="No vehicle information available" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.6/@failures.0" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.6/@causes.3"/>
+      <causes xsi:type="failureLogic_:Gate" Id="152" name="Outdated vehicle information available" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.6/@failures.1" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.6/@causes.4"/>
+      <causes xsi:type="failureLogic_:Gate" Id="153" name="Erroneous vehicle information available" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.6/@failures.2" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.6/@causes.5"/>
+      <causes Id="157" name="Loss of CAN messages" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.6/@failures.3"/>
+      <causes Id="158" name="Delay of CAN messages" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.6/@failures.4"/>
+      <causes Id="159" name="Erroneous CAN message" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.6/@failures.5"/>
+    </failureModels>
+    <failureModels xsi:type="failureLogic_:FaultTree" Id="160" name="Path Panner" description="">
+      <keyValueMaps key="multiplicity">
+        <values tag="multiplicity" value="1.0"/>
+      </keyValueMaps>
+      <failures Id="180" name="Internal failure leading to omission of control commands" description="" originType="Internal">
+        <failureProbDistribution Id="180" name="Internal failure leading to omission of control commands" description="" type="Constant">
+          <parameters Id="180" name="fit" description="" value="25.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="181" name="Internal failure leading to erroneous control commands" description="" originType="Internal">
+        <failureProbDistribution Id="181" name="Internal failure leading to erroneous control commands" description="" type="Constant">
+          <parameters Id="181" name="fit" description="" value="40.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="184" name="Internal failure leading to delayed control commands" description="" originType="Internal">
+        <failureProbDistribution Id="184" name="Internal failure leading to delayed control commands" description="" type="Constant">
+          <parameters Id="184" name="fit" description="" value="25.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="185" name="No steering or speed signal is provided by the path planner" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="186" name="Wrong steering or speed signal is provided by the path planner" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="187" name="Steering or speed signal is provided too late by the path planner" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="188" name="Lanes are not detected" description="" failureClass="Failure"/>
+      <failures Id="189" name="Ghost lanes are detected" description="" failureClass="Failure"/>
+      <failures Id="190" name="Lanes are detected too late" description="" failureClass="Failure"/>
+      <failures Id="191" name="Ghost objects are detected on the road" description="" failureClass="Failure"/>
+      <failures Id="192" name="Objects on the road are detected too late" description="" failureClass="Failure"/>
+      <failures Id="193" name="Objects on the road are not detected" description="" failureClass="Failure"/>
+      <failures Id="194" name="False classification of objects on the road" description="" failureClass="Failure"/>
+      <failures Id="195" name="Erroneous distance to objects" description="" failureClass="Failure"/>
+      <failures Id="197" name="No information about the distance to objects provided by lidar" description="" failureClass="Failure"/>
+      <failures Id="198" name="Distance to objects measured as too high" description="" failureClass="Failure"/>
+      <failures Id="199" name="No precise information of distance to objects around the vehicle" description="" failureClass="Failure"/>
+      <failures Id="200" name="Distance to objects on the road is calculated too high" description="" failureClass="Failure"/>
+      <failures Id="203" name="Distance to objects measured as too low" description="" failureClass="Failure"/>
+      <failures Id="204" name="Wrong (outdated) information about the distance to objects provided by lidar" description="" failureClass="Failure"/>
+      <failures Id="205" name="Incorrect vehicle position information on the road" description="" failureClass="Failure"/>
+      <causes xsi:type="failureLogic_:Gate" Id="179" name="and2" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.7/@causes.1 //@odeProductPackages.0/@failureModels.7/@causes.9 //@odeProductPackages.0/@failureModels.7/@causes.14 //@odeProductPackages.0/@failureModels.7/@causes.23"/>
+      <causes Id="180" name="Internal failure leading to omission of control commands" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.7/@failures.0"/>
+      <causes Id="181" name="Internal failure leading to erroneous control commands" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.7/@failures.1"/>
+      <causes xsi:type="failureLogic_:Gate" Id="182" name="or2" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.7/@causes.2 //@odeProductPackages.0/@failureModels.7/@causes.10 //@odeProductPackages.0/@failureModels.7/@causes.17 //@odeProductPackages.0/@failureModels.7/@causes.22 //@odeProductPackages.0/@failureModels.7/@causes.24 //@odeProductPackages.0/@failureModels.7/@causes.27"/>
+      <causes xsi:type="failureLogic_:Gate" Id="183" name="and3" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.7/@causes.5 //@odeProductPackages.0/@failureModels.7/@causes.13 //@odeProductPackages.0/@failureModels.7/@causes.11 //@odeProductPackages.0/@failureModels.7/@causes.25"/>
+      <causes Id="184" name="Internal failure leading to delayed control commands" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.7/@failures.2"/>
+      <causes xsi:type="failureLogic_:Gate" Id="176" name="No steering or speed signal is provided by the path planner" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.7/@failures.3" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.7/@causes.0"/>
+      <causes xsi:type="failureLogic_:Gate" Id="177" name="Wrong steering or speed signal is provided by the path planner" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.7/@failures.4" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.7/@causes.3"/>
+      <causes xsi:type="failureLogic_:Gate" Id="178" name="Steering or speed signal is provided too late by the path planner" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.7/@failures.5" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.7/@causes.4"/>
+      <causes xsi:type="failureLogic_:Gate" Id="161" name="Lanes are not detected" description="" failure="//@odeProductPackages.0/@failureModels.7/@failures.6" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.5/@causes.4"/>
+      <causes xsi:type="failureLogic_:Gate" Id="162" name="Ghost lanes are detected" description="" failure="//@odeProductPackages.0/@failureModels.7/@failures.7" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.5/@causes.5"/>
+      <causes xsi:type="failureLogic_:Gate" Id="163" name="Lanes are detected too late" description="" failure="//@odeProductPackages.0/@failureModels.7/@failures.8" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.5/@causes.6"/>
+      <causes xsi:type="failureLogic_:Gate" Id="164" name="Ghost objects are detected on the road" description="" failure="//@odeProductPackages.0/@failureModels.7/@failures.9" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.4/@causes.10"/>
+      <causes xsi:type="failureLogic_:Gate" Id="165" name="Objects on the road are detected too late" description="" failure="//@odeProductPackages.0/@failureModels.7/@failures.10" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.4/@causes.11"/>
+      <causes xsi:type="failureLogic_:Gate" Id="166" name="Objects on the road are not detected" description="" failure="//@odeProductPackages.0/@failureModels.7/@failures.11" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.4/@causes.9"/>
+      <causes xsi:type="failureLogic_:Gate" Id="167" name="False classification of objects on the road" description="" failure="//@odeProductPackages.0/@failureModels.7/@failures.12" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.4/@causes.12"/>
+      <causes xsi:type="failureLogic_:Gate" Id="168" name="Erroneous distance to objects" description="" failure="//@odeProductPackages.0/@failureModels.7/@failures.13" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.4/@causes.17"/>
+      <causes xsi:type="failureLogic_:Gate" Id="196" name="Erroneous object detection" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.7/@causes.12 //@odeProductPackages.0/@failureModels.7/@causes.15 //@odeProductPackages.0/@failureModels.7/@causes.16"/>
+      <causes xsi:type="failureLogic_:Gate" Id="169" name="No information about the distance to objects provided by lidar" description="" failure="//@odeProductPackages.0/@failureModels.7/@failures.14" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.0/@causes.12"/>
+      <causes xsi:type="failureLogic_:Gate" Id="170" name="Distance to objects measured as too high" description="" failure="//@odeProductPackages.0/@failureModels.7/@failures.15" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.0/@causes.3"/>
+      <causes xsi:type="failureLogic_:Gate" Id="171" name="No precise information of distance to objects around the vehicle" description="" failure="//@odeProductPackages.0/@failureModels.7/@failures.16" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.3/@causes.10"/>
+      <causes xsi:type="failureLogic_:Gate" Id="172" name="Distance to objects on the road is calculated too high" description="" failure="//@odeProductPackages.0/@failureModels.7/@failures.17" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.3/@causes.11"/>
+      <causes xsi:type="failureLogic_:Gate" Id="201" name="and1" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.7/@causes.19 //@odeProductPackages.0/@failureModels.7/@causes.21"/>
+      <causes xsi:type="failureLogic_:Gate" Id="202" name="No precise distance information" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.7/@causes.18 //@odeProductPackages.0/@failureModels.7/@causes.20"/>
+      <causes xsi:type="failureLogic_:Gate" Id="173" name="Distance to objects measured as too low" description="" failure="//@odeProductPackages.0/@failureModels.7/@failures.18" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.0/@causes.4"/>
+      <causes xsi:type="failureLogic_:Gate" Id="174" name="Wrong (outdated) information about the distance to objects provided by lidar" description="" failure="//@odeProductPackages.0/@failureModels.7/@failures.19" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.0/@causes.11"/>
+      <causes xsi:type="failureLogic_:Gate" Id="175" name="Incorrect vehicle position information on the road" description="" failure="//@odeProductPackages.0/@failureModels.7/@failures.20" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.3/@causes.21"/>
+      <causes xsi:type="failureLogic_:Gate" Id="206" name="and4" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.7/@causes.25 //@odeProductPackages.0/@failureModels.7/@causes.26"/>
+    </failureModels>
+    <failureModels xsi:type="failureLogic_:FaultTree" Id="212" name="Controller" description="">
+      <keyValueMaps key="multiplicity">
+        <values tag="multiplicity" value="1.0"/>
+      </keyValueMaps>
+      <failures Id="225" name="Erroneous vehicle information available" description="" failureClass="Failure"/>
+      <failures Id="226" name="Outdated vehicle information available" description="" failureClass="Failure"/>
+      <failures Id="227" name="No vehicle information available" description="" failureClass="Failure"/>
+      <failures Id="228" name="No steering signal is provided the controller" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="229" name="Wrong steering signal is provided the controller" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="230" name="Steering signal is provided too late by the controller" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="231" name="No speed signal is provided by the controller" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="232" name="Wrong speed signal is provided by the controller" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="233" name="Speed signal is provided too late by the controller" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="234" name="Omission of steering commands" description="" originType="Internal">
+        <failureProbDistribution Id="234" name="Omission of steering commands" description="" type="Constant">
+          <parameters Id="234" name="fit" description="" value="1.5"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="235" name="Erroneous steering commands" description="" originType="Internal">
+        <failureProbDistribution Id="235" name="Erroneous steering commands" description="" type="Constant">
+          <parameters Id="235" name="fit" description="" value="2.5"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="236" name="Delayed steering commands" description="" originType="Internal">
+        <failureProbDistribution Id="236" name="Delayed steering commands" description="" type="Constant">
+          <parameters Id="236" name="fit" description="" value="2.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="237" name="Omission of speed commands" description="" originType="Internal">
+        <failureProbDistribution Id="237" name="Omission of speed commands" description="" type="Constant">
+          <parameters Id="237" name="fit" description="" value="0.5"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="238" name="Erroneous speed commands" description="" originType="Internal">
+        <failureProbDistribution Id="238" name="Erroneous speed commands" description="" type="Constant">
+          <parameters Id="238" name="fit" description="" value="1.5"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="239" name="Delayed speed commands" description="" originType="Internal">
+        <failureProbDistribution Id="239" name="Delayed speed commands" description="" type="Constant">
+          <parameters Id="239" name="fit" description="" value="1.0"/>
+        </failureProbDistribution>
+      </failures>
+      <failures Id="242" name="No steering or speed signal is provided by the path planner" description="" failureClass="Failure"/>
+      <failures Id="243" name="Wrong steering or speed signal is provided by the path planner" description="" failureClass="Failure"/>
+      <failures Id="244" name="Steering or speed signal is provided too late by the path planner" description="" failureClass="Failure"/>
+      <causes xsi:type="failureLogic_:Gate" Id="213" name="Erroneous vehicle information available" description="" failure="//@odeProductPackages.0/@failureModels.8/@failures.0" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.6/@causes.2"/>
+      <causes xsi:type="failureLogic_:Gate" Id="214" name="Outdated vehicle information available" description="" failure="//@odeProductPackages.0/@failureModels.8/@failures.1" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.6/@causes.1"/>
+      <causes xsi:type="failureLogic_:Gate" Id="215" name="No vehicle information available" description="" failure="//@odeProductPackages.0/@failureModels.8/@failures.2" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.6/@causes.0"/>
+      <causes xsi:type="failureLogic_:Gate" Id="219" name="No steering signal is provided the controller" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.8/@failures.3" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.8/@causes.15"/>
+      <causes xsi:type="failureLogic_:Gate" Id="220" name="Wrong steering signal is provided the controller" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.8/@failures.4" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.8/@causes.16"/>
+      <causes xsi:type="failureLogic_:Gate" Id="221" name="Steering signal is provided too late by the controller" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.8/@failures.5" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.8/@causes.25"/>
+      <causes xsi:type="failureLogic_:Gate" Id="222" name="No speed signal is provided by the controller" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.8/@failures.6" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.8/@causes.21"/>
+      <causes xsi:type="failureLogic_:Gate" Id="223" name="Wrong speed signal is provided by the controller" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.8/@failures.7" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.8/@causes.22"/>
+      <causes xsi:type="failureLogic_:Gate" Id="224" name="Speed signal is provided too late by the controller" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.8/@failures.8" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.8/@causes.26"/>
+      <causes Id="234" name="Omission of steering commands" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.8/@failures.9"/>
+      <causes Id="235" name="Erroneous steering commands" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.8/@failures.10"/>
+      <causes Id="236" name="Delayed steering commands" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.8/@failures.11"/>
+      <causes Id="237" name="Omission of speed commands" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.8/@failures.12"/>
+      <causes Id="238" name="Erroneous speed commands" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.8/@failures.13"/>
+      <causes Id="239" name="Delayed speed commands" description="" causeType="BasicEvent" failure="//@odeProductPackages.0/@failureModels.8/@failures.14"/>
+      <causes xsi:type="failureLogic_:Gate" Id="240" name="or1" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.8/@causes.9 //@odeProductPackages.0/@failureModels.8/@causes.20"/>
+      <causes xsi:type="failureLogic_:Gate" Id="241" name="or2" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.8/@causes.10 //@odeProductPackages.0/@failureModels.8/@causes.23"/>
+      <causes xsi:type="failureLogic_:Gate" Id="216" name="No steering or speed signal is provided by the path planner" description="" failure="//@odeProductPackages.0/@failureModels.8/@failures.15" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.7/@causes.6"/>
+      <causes xsi:type="failureLogic_:Gate" Id="217" name="Wrong steering or speed signal is provided by the path planner" description="" failure="//@odeProductPackages.0/@failureModels.8/@failures.16" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.7/@causes.7"/>
+      <causes xsi:type="failureLogic_:Gate" Id="218" name="Steering or speed signal is provided too late by the path planner" description="" failure="//@odeProductPackages.0/@failureModels.8/@failures.17" gateType="InputEvent" causes="//@odeProductPackages.0/@failureModels.7/@causes.8"/>
+      <causes xsi:type="failureLogic_:Gate" Id="245" name="and1" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.8/@causes.2 //@odeProductPackages.0/@failureModels.8/@causes.17"/>
+      <causes xsi:type="failureLogic_:Gate" Id="246" name="or4" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.8/@causes.12 //@odeProductPackages.0/@failureModels.8/@causes.20"/>
+      <causes xsi:type="failureLogic_:Gate" Id="247" name="or5" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.8/@causes.23 //@odeProductPackages.0/@failureModels.8/@causes.13"/>
+      <causes xsi:type="failureLogic_:Gate" Id="248" name="and2" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.8/@causes.18 //@odeProductPackages.0/@failureModels.8/@causes.0"/>
+      <causes xsi:type="failureLogic_:Gate" Id="249" name="and3" description="" causeType="Gate" gateType="AND" causes="//@odeProductPackages.0/@failureModels.8/@causes.19 //@odeProductPackages.0/@failureModels.8/@causes.1"/>
+      <causes xsi:type="failureLogic_:Gate" Id="250" name="or8" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.8/@causes.11 //@odeProductPackages.0/@failureModels.8/@causes.24"/>
+      <causes xsi:type="failureLogic_:Gate" Id="251" name="or9" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.8/@causes.14 //@odeProductPackages.0/@failureModels.8/@causes.24"/>
+    </failureModels>
+    <failureModels xsi:type="failureLogic_:FaultTree" Id="4" name="MobSTr" description="" subModels="//@odeProductPackages.0/@failureModels.0 //@odeProductPackages.0/@failureModels.1 //@odeProductPackages.0/@failureModels.2 //@odeProductPackages.0/@failureModels.3 //@odeProductPackages.0/@failureModels.4 //@odeProductPackages.0/@failureModels.5 //@odeProductPackages.0/@failureModels.6 //@odeProductPackages.0/@failureModels.7 //@odeProductPackages.0/@failureModels.8">
+      <keyValueMaps key="visibility">
+        <values tag="isPublic" value="true"/>
+      </keyValueMaps>
+      <failures Id="207" name="H-1 Omitted braking maneuver" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="208" name="H-2 Omitted avoidance maneuver" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="209" name="H-3 Unintended braking" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="210" name="H-4 Unintended acceleration" description="" originType="Output" failureClass="Failure"/>
+      <failures Id="211" name="H-5 Unintended leaving of the road" description="" originType="Output" failureClass="Failure"/>
+      <causes xsi:type="failureLogic_:Gate" Id="207" name="H-1 Omitted braking maneuver" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.9/@failures.0" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.9/@causes.5"/>
+      <causes xsi:type="failureLogic_:Gate" Id="208" name="H-2 Omitted avoidance maneuver" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.9/@failures.1" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.9/@causes.6"/>
+      <causes xsi:type="failureLogic_:Gate" Id="209" name="H-3 Unintended braking" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.9/@failures.2" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.9/@causes.8"/>
+      <causes xsi:type="failureLogic_:Gate" Id="210" name="H-4 Unintended acceleration" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.9/@failures.3" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.9/@causes.9"/>
+      <causes xsi:type="failureLogic_:Gate" Id="211" name="H-5 Unintended leaving of the road" description="" causeType="OutputEvent" failure="//@odeProductPackages.0/@failureModels.9/@failures.4" gateType="OutputEvent" causes="//@odeProductPackages.0/@failureModels.9/@causes.7"/>
+      <causes xsi:type="failureLogic_:Gate" Id="252" name="or1" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.8/@causes.6 //@odeProductPackages.0/@failureModels.8/@causes.7 //@odeProductPackages.0/@failureModels.8/@causes.8"/>
+      <causes xsi:type="failureLogic_:Gate" Id="253" name="or2" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.8/@causes.3 //@odeProductPackages.0/@failureModels.8/@causes.4 //@odeProductPackages.0/@failureModels.8/@causes.5"/>
+      <causes xsi:type="failureLogic_:Gate" Id="254" name="or3" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.8/@causes.3 //@odeProductPackages.0/@failureModels.8/@causes.4 //@odeProductPackages.0/@failureModels.8/@causes.5"/>
+      <causes xsi:type="failureLogic_:Gate" Id="255" name="or4" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.8/@causes.6 //@odeProductPackages.0/@failureModels.8/@causes.7 //@odeProductPackages.0/@failureModels.8/@causes.8"/>
+      <causes xsi:type="failureLogic_:Gate" Id="256" name="or5" description="" causeType="Gate" causes="//@odeProductPackages.0/@failureModels.8/@causes.8 //@odeProductPackages.0/@failureModels.8/@causes.7 //@odeProductPackages.0/@failureModels.8/@causes.6"/>
+    </failureModels>
+  </odeProductPackages>
+  <odeProductPackages xsi:type="architecture_:DesignPackage" Id="1" name="MobSTr" description="">
+    <systems xsi:type="architecture_:PhysicalComponent" Id="257" name="Lidar Grabber" description="" failureModels="//@odeProductPackages.0/@failureModels.0" dimensions="">
+      <keyValueMaps key="classifier">
+        <values tag="string" value="Lidar Grabber"/>
+      </keyValueMaps>
+      <ports Id="258" name="point_cloud" description="" flowType="" direction="OUT"/>
+      <ports Id="259" name="occupancy_grid" description="" flowType="" direction="OUT"/>
+    </systems>
+    <systems xsi:type="architecture_:PhysicalComponent" Id="260" name="GPS Grabber" description="" failureModels="//@odeProductPackages.0/@failureModels.1" dimensions="">
+      <keyValueMaps key="classifier">
+        <values tag="string" value="GPS Grabber"/>
+      </keyValueMaps>
+      <ports Id="261" name="gps_output" description="" flowType="" direction="OUT"/>
+    </systems>
+    <systems xsi:type="architecture_:PhysicalComponent" Id="262" name="Image Grabber" description="" failureModels="//@odeProductPackages.0/@failureModels.2" dimensions="">
+      <keyValueMaps key="classifier">
+        <values tag="string" value="Image Grabber"/>
+      </keyValueMaps>
+      <ports Id="263" name="frame" description="" flowType="" direction="OUT"/>
+    </systems>
+    <systems xsi:type="architecture_:PhysicalComponent" Id="264" name="Localization" description="" failureModels="//@odeProductPackages.0/@failureModels.3" dimensions="">
+      <keyValueMaps key="classifier">
+        <values tag="string" value="Localization"/>
+      </keyValueMaps>
+      <ports Id="265" name="gps_input" description="" flowType=""/>
+      <ports Id="266" name="lidar_input" description="" flowType=""/>
+      <ports Id="267" name="environment_state" description="" flowType="" direction="OUT"/>
+      <ports Id="268" name="vehicle_status" description="" flowType=""/>
+    </systems>
+    <systems xsi:type="architecture_:PhysicalComponent" Id="269" name="Object Detection" description="" failureModels="//@odeProductPackages.0/@failureModels.4" dimensions="">
+      <keyValueMaps key="classifier">
+        <values tag="string" value="Object Detection"/>
+      </keyValueMaps>
+      <ports Id="270" name="frame" description="" flowType=""/>
+      <ports Id="271" name="fused_objects" description="" flowType="" direction="OUT"/>
+      <ports Id="272" name="point_cloud" description="" flowType=""/>
+    </systems>
+    <systems xsi:type="architecture_:PhysicalComponent" Id="273" name="Lane Detection" description="" failureModels="//@odeProductPackages.0/@failureModels.5" dimensions="">
+      <keyValueMaps key="classifier">
+        <values tag="string" value="Lane Detection"/>
+      </keyValueMaps>
+      <ports Id="274" name="frame" description="" flowType=""/>
+      <ports Id="275" name="lane" description="" flowType="" direction="OUT"/>
+    </systems>
+    <systems xsi:type="architecture_:PhysicalComponent" Id="276" name="CAN Bus" description="" failureModels="//@odeProductPackages.0/@failureModels.6" dimensions="">
+      <keyValueMaps key="classifier">
+        <values tag="string" value="CAN Bus"/>
+      </keyValueMaps>
+      <ports Id="277" name="vehicle_status" description="" flowType="" direction="OUT"/>
+      <ports Id="278" name="vehicle_commands" description="" flowType="" direction="OUT"/>
+    </systems>
+    <systems xsi:type="architecture_:PhysicalComponent" Id="279" name="Path Panner" description="" failureModels="//@odeProductPackages.0/@failureModels.7" dimensions="">
+      <keyValueMaps key="classifier">
+        <values tag="string" value="Path Planner"/>
+      </keyValueMaps>
+      <ports Id="280" name="fused_objects" description="" flowType=""/>
+      <ports Id="281" name="lane" description="" flowType=""/>
+      <ports Id="282" name="environment_state" description="" flowType=""/>
+      <ports Id="283" name="occupancy_grid" description="" flowType=""/>
+      <ports Id="284" name="vehicle_goal_state" description="" flowType="" direction="OUT"/>
+    </systems>
+    <systems xsi:type="architecture_:PhysicalComponent" Id="285" name="Controller" description="" failureModels="//@odeProductPackages.0/@failureModels.8" dimensions="">
+      <keyValueMaps key="classifier">
+        <values tag="string" value="Controller"/>
+      </keyValueMaps>
+      <ports Id="286" name="vehicle_commands" description="" flowType=""/>
+      <ports Id="287" name="vehicle_goal_state" description="" flowType=""/>
+    </systems>
+    <systems Id="2" name="MobSTr" description="" subSystems="//@odeProductPackages.1/@systems.0 //@odeProductPackages.1/@systems.1 //@odeProductPackages.1/@systems.2 //@odeProductPackages.1/@systems.3 //@odeProductPackages.1/@systems.4 //@odeProductPackages.1/@systems.5 //@odeProductPackages.1/@systems.6 //@odeProductPackages.1/@systems.7 //@odeProductPackages.1/@systems.8" failureModels="//@odeProductPackages.0/@failureModels.9">
+      <keyValueMaps key="visibility">
+        <values tag="isPublic" value="true"/>
+      </keyValueMaps>
+      <contexts Id="300" name="MobSTr" description="" usageHistory=""/>
+      <signals Id="288" name="" description="" fromPort="//@odeProductPackages.1/@systems.1/@ports.0" toPort="//@odeProductPackages.1/@systems.3/@ports.0"/>
+      <signals Id="289" name="" description="" fromPort="//@odeProductPackages.1/@systems.0/@ports.0" toPort="//@odeProductPackages.1/@systems.3/@ports.1"/>
+      <signals Id="290" name="" description="" fromPort="//@odeProductPackages.1/@systems.2/@ports.0" toPort="//@odeProductPackages.1/@systems.4/@ports.0"/>
+      <signals Id="291" name="" description="" fromPort="//@odeProductPackages.1/@systems.2/@ports.0" toPort="//@odeProductPackages.1/@systems.5/@ports.0"/>
+      <signals Id="292" name="" description="" fromPort="//@odeProductPackages.1/@systems.0/@ports.0" toPort="//@odeProductPackages.1/@systems.4/@ports.2"/>
+      <signals Id="293" name="" description="" fromPort="//@odeProductPackages.1/@systems.5/@ports.1" toPort="//@odeProductPackages.1/@systems.7/@ports.1"/>
+      <signals Id="294" name="" description="" fromPort="//@odeProductPackages.1/@systems.4/@ports.1" toPort="//@odeProductPackages.1/@systems.7/@ports.0"/>
+      <signals Id="295" name="" description="" fromPort="//@odeProductPackages.1/@systems.3/@ports.2" toPort="//@odeProductPackages.1/@systems.7/@ports.2"/>
+      <signals Id="296" name="" description="" fromPort="//@odeProductPackages.1/@systems.0/@ports.1" toPort="//@odeProductPackages.1/@systems.7/@ports.3"/>
+      <signals Id="297" name="" description="" fromPort="//@odeProductPackages.1/@systems.6/@ports.0" toPort="//@odeProductPackages.1/@systems.3/@ports.3"/>
+      <signals Id="298" name="" description="" fromPort="//@odeProductPackages.1/@systems.6/@ports.1" toPort="//@odeProductPackages.1/@systems.8/@ports.0"/>
+      <signals Id="299" name="" description="" fromPort="//@odeProductPackages.1/@systems.7/@ports.4" toPort="//@odeProductPackages.1/@systems.8/@ports.1"/>
+    </systems>
+  </odeProductPackages>
+</integration_:DDIPackage>
