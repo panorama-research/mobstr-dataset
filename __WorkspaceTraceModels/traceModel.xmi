@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tim:MobstrTIM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:argumentation_="http://www.deis-project.eu/ode/mergedODE/sacm/argumentation" xmlns:tim="org.panorama.research.mobstr.tim">
+<tim:MobstrTIM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:am="http://app4mc.eclipse.org/amalthea/1.0.0" xmlns:argumentation_="http://www.deis-project.eu/ode/mergedODE/sacm/argumentation" xmlns:tim="org.panorama.research.mobstr.tim">
   <traces xsi:type="tim:AddressedBySafetyGoal" name="Hazards!H-1 (mobstr-hazards.xlsx) -> Requirements!SG-1 (mobstr-requirements.xlsx)">
     <source href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.6"/>
   </traces>
   <traces xsi:type="tim:AddressedByFMEA" name="43 : Claim :  WATERS Example : FMEA">
     <source xsi:type="argumentation_:Claim" href="../org.panorama-research.mobstr.safetycase/mobstr-safetycase.integration#//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.29"/>
-    <target href="../AddressedBySafetyGoal/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.0"/>
+    <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.0"/>
   </traces>
   <traces xsi:type="tim:AddressedBySafetyGoal" name="Hazards!H-2 (mobstr-hazards.xlsx) -> Requirements!SG-2 (mobstr-requirements.xlsx)">
     <source href="artifactWrappers.xmi#//@artifacts.9"/>
@@ -683,5 +683,73 @@
   <traces xsi:type="tim:HasFailureMode" name="Controller : Component -> Delayed speed commands : Failure;">
     <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_tXcrAH_cEeq1j4EUwdsVmw"/>
     <target href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.10"/>
+  </traces>
+  <traces xsi:type="tim:ImplementsComponent" name="Lidar_Function -> Lidar Grabber : Component;">
+    <source xsi:type="am:Runnable" href="../org.panorama-research.mobstr.amalthea/mobstr.amxmi#Lidar_Function?type=Runnable"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QBDgIH_ZEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:ImplementsComponent" name="CAN_Function -> CANBus Interface : Component;">
+    <source xsi:type="am:Runnable" href="../org.panorama-research.mobstr.amalthea/mobstr.amxmi#CAN_Function?type=Runnable"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_IWw4gH_aEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:ImplementsComponent" name="EKF_Function -> Extended Kalman Filter : Component;">
+    <source xsi:type="am:Runnable" href="../org.panorama-research.mobstr.amalthea/mobstr.amxmi#EKF_Function?type=Runnable"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_VcTCcEBYEeu6P58lsTAauw"/>
+  </traces>
+  <traces xsi:type="tim:ImplementsComponent" name="Planner_Function -> Path Planner : Component;">
+    <source xsi:type="am:Runnable" href="../org.panorama-research.mobstr.amalthea/mobstr.amxmi#Planner_Function?type=Runnable"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_ZvuIYH_aEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:ImplementsComponent" name="DASM_Function -> Controller : Component;">
+    <source xsi:type="am:Runnable" href="../org.panorama-research.mobstr.amalthea/mobstr.amxmi#DASM_Function?type=Runnable"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_tXcrAH_cEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:ImplementsComponent" name="Localization_Function -> Object Localization : Component;">
+    <source xsi:type="am:Runnable" href="../org.panorama-research.mobstr.amalthea/mobstr.amxmi#Localization_Function?type=Runnable"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_YZMdYGRzEeu5Bd8fMshJEA"/>
+  </traces>
+  <traces xsi:type="tim:ImplementsComponent" name="Detection_Preprocessing -> Object Detection : Component;">
+    <source xsi:type="am:Runnable" href="../org.panorama-research.mobstr.amalthea/mobstr.amxmi#Detection_Preprocessing?type=Runnable"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_EMPt8H_cEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:ImplementsComponent" name="Detection_Postprocessing -> Object Detection : Component;">
+    <source xsi:type="am:Runnable" href="../org.panorama-research.mobstr.amalthea/mobstr.amxmi#Detection_Postprocessing?type=Runnable"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_EMPt8H_cEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:ImplementsComponent" name="Lane_Detection_Function -> Lane Detection : Component;">
+    <source xsi:type="am:Runnable" href="../org.panorama-research.mobstr.amalthea/mobstr.amxmi#Lane_Detection_Function?type=Runnable"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QPQz4H_cEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:ImplementsComponent" name="Lane_Detection_Preprocessing -> Lane Detection : Component;">
+    <source xsi:type="am:Runnable" href="../org.panorama-research.mobstr.amalthea/mobstr.amxmi#Lane_Detection_Preprocessing?type=Runnable"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QPQz4H_cEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:ImplementsComponent" name="Lane_Detection_Postprocessing -> Lane Detection : Component;">
+    <source xsi:type="am:Runnable" href="../org.panorama-research.mobstr.amalthea/mobstr.amxmi#Lane_Detection_Postprocessing?type=Runnable"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QPQz4H_cEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:ImplementsComponent" name="Detection_Function -> Object Detection : Component;">
+    <source xsi:type="am:Runnable" href="../org.panorama-research.mobstr.amalthea/mobstr.amxmi#Detection_Function?type=Runnable"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_EMPt8H_cEeq1j4EUwdsVmw"/>
+  </traces>
+  <traces xsi:type="tim:ImplementsComponent" name="Localization_Preprocessing -> Object Localization : Component;">
+    <source xsi:type="am:Runnable" href="../org.panorama-research.mobstr.amalthea/mobstr.amxmi#Localization_Preprocessing?type=Runnable"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_YZMdYGRzEeu5Bd8fMshJEA"/>
+  </traces>
+  <traces xsi:type="tim:ImplementsComponent" name="Localization_Postprocessing -> Object Localization : Component;">
+    <source xsi:type="am:Runnable" href="../org.panorama-research.mobstr.amalthea/mobstr.amxmi#Localization_Postprocessing?type=Runnable"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_YZMdYGRzEeu5Bd8fMshJEA"/>
+  </traces>
+  <traces xsi:type="tim:ImplementsComponent" name="SFM_Function -> Object Localization via Camera : Component;">
+    <source xsi:type="am:Runnable" href="../org.panorama-research.mobstr.amalthea/mobstr.amxmi#SFM_Function?type=Runnable"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_le1d8GRzEeu5Bd8fMshJEA"/>
+  </traces>
+  <traces xsi:type="tim:ImplementsComponent" name="SFM_Preprocessing -> Object Localization via Camera : Component;">
+    <source xsi:type="am:Runnable" href="../org.panorama-research.mobstr.amalthea/mobstr.amxmi#SFM_Preprocessing?type=Runnable"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_le1d8GRzEeu5Bd8fMshJEA"/>
+  </traces>
+  <traces xsi:type="tim:ImplementsComponent" name="SFM_Postprocessing -> Object Localization via Camera : Component;">
+    <source xsi:type="am:Runnable" href="../org.panorama-research.mobstr.amalthea/mobstr.amxmi#SFM_Postprocessing?type=Runnable"/>
+    <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_le1d8GRzEeu5Bd8fMshJEA"/>
   </traces>
 </tim:MobstrTIM>
