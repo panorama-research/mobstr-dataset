@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="ASCII"?>
-<integration_:DDIPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:architecture_="http://www.deis-project.eu/ode/mergedODE/architecture" xmlns:argumentation_="http://www.deis-project.eu/ode/mergedODE/sacm/argumentation" xmlns:failureLogic_="http://www.deis-project.eu/ode/mergedODE/failureLogic" xmlns:integration_="http://www.deis-project.eu/ode/mergedODE/integration" name="WATERS example 2" description="">
+<integration_:DDIPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:architecture_="http://www.deis-project.eu/ode/mergedODE/architecture" xmlns:argumentation_="http://www.deis-project.eu/ode/mergedODE/sacm/argumentation" xmlns:failureLogic_="http://www.deis-project.eu/ode/mergedODE/failureLogic" xmlns:integration_="http://www.deis-project.eu/ode/mergedODE/integration" name="MobSTr" description="">
   <odeProductPackages xsi:type="failureLogic_:FailureLogicPackage" Id="3" name="" description="">
-    <failureModels xsi:type="failureLogic_:FaultTree" Id="4" name="WATERS example.cft" description="">
-      <keyValueMaps key="visibility">
-        <values tag="isPublic" value="true"/>
-      </keyValueMaps>
+    <failureModels xsi:type="failureLogic_:FaultTree" Id="4" name="mobstr-fta.cft.integration" description="">
       <keyValueMaps key="visibility">
         <values tag="isPublic" value="true"/>
       </keyValueMaps>
     </failureModels>
   </odeProductPackages>
-  <odeProductPackages xsi:type="architecture_:DesignPackage" Id="1" name="WATERS example" description="">
-    <systems Id="2" name="WATERS example" description="" failureModels="//@odeProductPackages.0/@failureModels.0">
+  <odeProductPackages xsi:type="architecture_:DesignPackage" Id="1" name="MobSTr" description="">
+    <systems Id="2" name="MobSTr" description="" failureModels="//@odeProductPackages.0/@failureModels.0">
       <keyValueMaps key="visibility">
         <values tag="isPublic" value="true"/>
       </keyValueMaps>
-      <contexts Id="5" name="WATERS example" description="" usageHistory=""/>
+      <contexts Id="5" name="MobSTr" description="" usageHistory=""/>
     </systems>
   </odeProductPackages>
   <assuranceCasePackages gid="">
-    <argumentPackage gid="1">
+    <argumentPackage gid="">
       <name lang="English" content="SafetyCase"/>
       <taggedValue gid="2">
         <key>
@@ -28,7 +25,7 @@
       </taggedValue>
       <taggedValue gid="3">
         <key>
-          <value lang="owner" content="WATERS example"/>
+          <value lang="owner" content="MobSTr"/>
         </key>
       </taggedValue>
       <argumentationElement xsi:type="argumentation_:Claim" gid="4">
@@ -182,7 +179,7 @@
         <name lang="English" content="G8"/>
         <description gid="">
           <content>
-            <value lang="English" content="Avoid hazard H-1 (Omitted breaking maneuver)&#xA;&#xA;ASIL C"/>
+            <value lang="English" content="Avoid hazard H-1 (Omitted braking maneuver)&#xA;&#xA;ASIL C"/>
           </content>
         </description>
       </argumentationElement>
@@ -211,7 +208,7 @@
         <name lang="English" content="G10"/>
         <description gid="">
           <content>
-            <value lang="English" content="Avoid hazard H-3 (Unintended breaking)&#xA;&#xA;ASIL B"/>
+            <value lang="English" content="Avoid hazard H-3 (Unintended braking)&#xA;&#xA;ASIL B"/>
           </content>
         </description>
       </argumentationElement>
@@ -259,7 +256,7 @@
         <name lang="English" content="G16"/>
         <description gid="">
           <content>
-            <value lang="English" content="All risk control measues have been properly realized in the system."/>
+            <value lang="English" content="All risk control measures have been properly realized in the system."/>
           </content>
         </description>
       </argumentationElement>
@@ -317,7 +314,7 @@
         <name lang="English" content="C7"/>
         <description gid="">
           <content>
-            <value lang="English" content="FMEA for hazard H-1 (Omitted breaking maneuver)"/>
+            <value lang="English" content="FMEA for hazard H-1 (Omitted braking maneuver)"/>
           </content>
         </description>
         <taggedValue gid="44">
@@ -338,7 +335,7 @@
         <name lang="English" content="G21"/>
         <description gid="">
           <content>
-            <value lang="English" content="The tolerable hazard rate of hazard H-1 (random hardware failures) is sufficiently low (&lt; 10E-7 / h for ASIL C)."/>
+            <value lang="English" content="The tolerable hazard rate of hazard H-1 (random hardware failures) is sufficiently low (&lt; 10E-7/h for ASIL C)."/>
           </content>
         </description>
       </argumentationElement>
@@ -430,7 +427,7 @@
         <name lang="English" content="G26"/>
         <description gid="">
           <content>
-            <value lang="English" content="All test cases have been executed sucessfully."/>
+            <value lang="English" content="All test cases have been executed successfully."/>
           </content>
         </description>
       </argumentationElement>
@@ -491,7 +488,7 @@
         <name lang="English" content="S4"/>
         <description gid="">
           <content>
-            <value lang="English" content="Argumentation over activities to demonstrate sufficient low occurrence probability of hazard"/>
+            <value lang="English" content="Argumentation over activities to demonstrate sufficiently low occurrence probability of hazard"/>
           </content>
         </description>
       </argumentationElement>
@@ -527,7 +524,7 @@
         <name lang="English" content="S8"/>
         <description gid="">
           <content>
-            <value lang="English" content="Argumentation over traceability from hazard to risk control measures and the successful validation that all critical failures lead to safety state within the fault tolerant time interval"/>
+            <value lang="English" content="Argumentation over traceability from hazard to risk control measures and the successful validation that all critical failures lead to a safe state within the fault tolerant time interval"/>
           </content>
         </description>
       </argumentationElement>
