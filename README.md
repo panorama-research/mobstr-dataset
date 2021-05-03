@@ -31,7 +31,7 @@ The system described in the WATERS FMTV 2019 challenge and consequently in the M
 
 ## How to Use the Custom TIM
 
-Additionally the repository contains a custom traceability information model (TIM) that defines which link types can be created between the different artifacts. The current TIM is based on the artifact model in project `org.panorama-research.mobstr.tim`. It is implemented for use in  [Eclipse Capra](https://eclipse.org/capra).  The TIM project is located in `org.panorama-research.mobstr.tim`.
+Additionally the repository contains a custom traceability information model (TIM) that defines which link types can be created between the different artifacts. The current TIM is based on the artifact model in project `org.panorama-research.mobstr.tim`. It is implemented for use in [Eclipse Capra](https://eclipse.org/capra). The TIM project is located in `org.panorama-research.mobstr.tim`.
 
 Use the following instructions to try out the TIM.  
 
@@ -44,7 +44,7 @@ Use the following instructions to try out the TIM.
 * Click "Apply", then "Run"
 * Once the new workspace opens, import the projects in this repository (apart from `org.panorama-research.mobstr.tim`)
 * Go to Window --> Perspectives and switch to the Capra perspective
-* Go to the Eclipse preferences, open the "Capra Traceability" tree and select "Office Documents". Select "Use this column as the ID" and make sure the column is "A". Tje MobSTr dataset uses the first column in Excel files to  identify requirements and hazards.
+* Go to the Eclipse preferences, open the "Capra Traceability" tree and select "Office Documents". Select "Use this column as the ID" and make sure the column is "A". The MobSTr dataset uses the first column in Excel files to  identify requirements and hazards.
 * Follow [this video](https://www.youtube.com/watch?v=XRtLs5OT_yM&feature=youtu.be) to create and visualize traceability links.
 
 In case you get an error that the wrong APP4MC version is installed, please open `waters-challenge-2019.amxmi` in a text editor and change the model version to the APP4MC version you have installed (usually either 0.9.7 or 1.0.0, depending on the version of Eclipse that you are using and thus the target platform chosen for Eclipse Capra).
