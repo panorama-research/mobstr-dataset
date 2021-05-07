@@ -35,7 +35,7 @@ Additionally the repository contains a custom traceability information model (TI
 
 Use the following instructions to try out the TIM.  
 
-* Download Eclipse Capra development environment using instructions provided [here](https://wiki.eclipse.org/Capra#Using_the_Eclipse_Installer). Make sure that you are using the current `develop` branch.
+* Download Eclipse Capra development environment using instructions provided [here](https://wiki.eclipse.org/Capra#Using_the_Eclipse_Installer). The recommended version of Eclipse Capra to use is 0.8.2. If you would like to use a stable codebase, please checkout the corresponding `0.8.2` tag. Using the `develop` branch is also possible, but changes there can lead to incompatibilites that need to be resolved manually.
 * Close the project `org.eclipse.capra.generic.tracemodel`
 * Import the project `org.panorama-research.mobstr.tim` into your workspace. 
 * Make sure that all the projects have no errors. Some of Eclipse Capra's test projects might show compilation errors due to the missing `org.eclipse.capra.generic.tracemodel` project. You can either ignore these or close the test projects.
