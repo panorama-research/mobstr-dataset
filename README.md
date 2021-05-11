@@ -14,7 +14,7 @@ The system described in the WATERS FMTV 2019 challenge and consequently in the M
 
 | *Artifact* | *Description* |
 |----|----|
-| org.panorama-research.mobstr.amalthea | The AMALTHEA model of the WATERS FMTV 2019 Challenge by the [PANORAMA research project][2]. You will need [Eclipse APP4MC][3] to open the model. |
+| org.panorama-research.mobstr.amalthea | The AMALTHEA model of the WATERS FMTV 2019 Challenge. You will need [Eclipse APP4MC][3] to open the model. |
 | org.panorama-research.mobstr.architecture | A UML model of the components of the system. You will need [Eclipse Papyrus][8] to open the model. |
 | org.panorama-research.mobstr.artifacts | A UML model of the artifacts that are part of this dataset. This information model is used as the foundation for the TIM. You will need [Eclipse Papyrus][8] to open the model. |
 | org.panorama-research.mobstr.assumptions | An Excel spreadsheet with additional assumptions. |
