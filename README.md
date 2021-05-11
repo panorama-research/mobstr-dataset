@@ -15,8 +15,8 @@ The system described in the WATERS FMTV 2019 challenge and consequently in the M
 | *Artifact* | *Description* |
 |----|----|
 | org.panorama-research.mobstr.amalthea | The AMALTHEA model of the WATERS FMTV 2019 Challenge by the [PANORAMA research project][2]. You will need [Eclipse APP4MC][3] to open the model. |
-| org.panorama-research.mobstr.architecture | A UML model of the components of the system. |
-| org.panorama-research.mobstr.artifacts | A UML model of the artifacts that are part of this dataset. This information model is used as the foundation for the TIM. |
+| org.panorama-research.mobstr.architecture | A UML model of the components of the system. You will need [Eclipse Papyrus][8] to open the model. |
+| org.panorama-research.mobstr.artifacts | A UML model of the artifacts that are part of this dataset. This information model is used as the foundation for the TIM. You will need [Eclipse Papyrus][8] to open the model. |
 | org.panorama-research.mobstr.assumptions | An Excel spreadsheet with additional assumptions. |
 | org.panorama-research.mobstr.fmea | An [ODE model][6] containing the results of a Failure Mode and Effects Analysis performed for the system. |
 | org.panorama-research.mobstr.fta | An [ODE model][6] containing a component fault tree and exemplary fault trees for all identified hazards. |
@@ -61,3 +61,4 @@ All artifacts provided here are under [Eclipse Public License v2.0][5]. Copyrigh
 [5]: https://www.eclipse.org/legal/epl-2.0/
 [6]: https://github.com/Digital-Dependability-Identities
 [7]: CONTRIBUTORS
+[8]: https://www.eclipse.org/papyrus/
