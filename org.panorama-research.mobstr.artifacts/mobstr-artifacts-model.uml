@@ -84,6 +84,8 @@
     <packagedElement xmi:type="uml:Class" xmi:id="_oW7dMBeXEeuTMqUKo8T8Tw" name="Safety Goal">
       <generalization xmi:type="uml:Generalization" xmi:id="_oUXoAGRwEeuR2YWzGyrvYw" general="_vlBbkBeXEeuTMqUKo8T8Tw"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_Vjo3YL-KEeueKYS6eI5k0g" name="refines" client="_7kzVYBeZEeuTMqUKo8T8Tw" supplier="_7kzVYBeZEeuTMqUKo8T8Tw"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_a5IVYL-KEeueKYS6eI5k0g" name="requires" client="_7kzVYBeZEeuTMqUKo8T8Tw" supplier="_7kzVYBeZEeuTMqUKo8T8Tw"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_ubWBQBeYEeuTMqUKo8T8Tw" name="Item Definition">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_4_b6QGoaEeu4hZ1ilZwfnw" name="storageType" visibility="private" type="_a8dywGRwEeuR2YWzGyrvYw" isReadOnly="true">
@@ -134,6 +136,12 @@ We do not consider this plan for the purposes of this example.</body>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HaYWEWq5EeuOC6FQdTT0uA" value="1"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_WFkQwWq8EeuOC6FQdTT0uA" name="fta" type="_jBk7kGq5EeuOC6FQdTT0uA" association="_WFjCoGq8EeuOC6FQdTT0uA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_h1C-oL-KEeueKYS6eI5k0g" name="failure" type="_WEeJAL-JEeueKYS6eI5k0g" association="_h1AiYL-KEeueKYS6eI5k0g">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_h1Ez0L-KEeueKYS6eI5k0g" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_153-4r-KEeueKYS6eI5k0g" name="failure" type="_WEeJAL-JEeueKYS6eI5k0g" association="_152JsL-KEeueKYS6eI5k0g">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_156bIL-KEeueKYS6eI5k0g" value="*"/>
+    </ownedAttribute>
   </packagedElement>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_X2oowBeZEeuTMqUKo8T8Tw" name="&lt;&lt;derived from>>" client="_w8BqwBeXEeuTMqUKo8T8Tw" supplier="_ubWBQBeYEeuTMqUKo8T8Tw"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_k9piUBeZEeuTMqUKo8T8Tw" name="Additional Assumption">
@@ -362,15 +370,6 @@ These artifacts are not yet available for the example.</body>
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_HaYWEmq5EeuOC6FQdTT0uA" name="safety case" type="_yuw-QBeYEeuTMqUKo8T8Tw" association="_HaV50Gq5EeuOC6FQdTT0uA"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_jBk7kGq5EeuOC6FQdTT0uA" name="FTA">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_kX-GwGq5EeuOC6FQdTT0uA" name="storageType" visibility="private" type="_a8dywGRwEeuR2YWzGyrvYw">
-      <defaultValue xmi:type="uml:LiteralString" xmi:id="_mb2DAGq5EeuOC6FQdTT0uA" value="ODE"/>
-    </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_EpYGsGq8EeuOC6FQdTT0uA" name="hazard" type="_w8BqwBeXEeuTMqUKo8T8Tw" association="_EpLSYGq8EeuOC6FQdTT0uA">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Epai8Gq8EeuOC6FQdTT0uA"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Epai8Wq8EeuOC6FQdTT0uA" value="1"/>
-    </ownedAttribute>
-  </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_EpLSYGq8EeuOC6FQdTT0uA" name="details causes of" memberEnd="_EpYGsGq8EeuOC6FQdTT0uA _EpcYIGq8EeuOC6FQdTT0uA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EpVqcGq8EeuOC6FQdTT0uA" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EpVqcWq8EeuOC6FQdTT0uA" key="nature" value="UML_Nature"/>
@@ -388,6 +387,51 @@ These artifacts are not yet available for the example.</body>
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MCPcwWrfEeuOC6FQdTT0uA" key="nature" value="UML_Nature"/>
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_MCQq4WrfEeuOC6FQdTT0uA" name="fmea" type="_FfzDcGrfEeuOC6FQdTT0uA" association="_MCOOoGrfEeuOC6FQdTT0uA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_73jJIL-IEeueKYS6eI5k0g" name="Fault Tree Analysis">
+    <packagedElement xmi:type="uml:Class" xmi:id="_jBk7kGq5EeuOC6FQdTT0uA" name="FTA">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_kX-GwGq5EeuOC6FQdTT0uA" name="storageType" visibility="private" type="_a8dywGRwEeuR2YWzGyrvYw">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_mb2DAGq5EeuOC6FQdTT0uA" value="ODE"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_EpYGsGq8EeuOC6FQdTT0uA" name="hazard" type="_w8BqwBeXEeuTMqUKo8T8Tw" association="_EpLSYGq8EeuOC6FQdTT0uA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Epai8Gq8EeuOC6FQdTT0uA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Epai8Wq8EeuOC6FQdTT0uA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_l8gYsL-JEeueKYS6eI5k0g" name="failure" type="_WEeJAL-JEeueKYS6eI5k0g" aggregation="composite" association="_l8aSEL-JEeueKYS6eI5k0g">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EG3egL-KEeueKYS6eI5k0g" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_WEeJAL-JEeueKYS6eI5k0g" name="Failure">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_p7YCAr-JEeueKYS6eI5k0g" name="failureProbability" type="_YpDloL-JEeueKYS6eI5k0g" association="_p7WM0L-JEeueKYS6eI5k0g">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_p7YCA7-JEeueKYS6eI5k0g"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_p7YpEL-JEeueKYS6eI5k0g" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_YpDloL-JEeueKYS6eI5k0g" name="Failure Probability"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_l8aSEL-JEeueKYS6eI5k0g" memberEnd="_l8gYsL-JEeueKYS6eI5k0g _l8i08b-JEeueKYS6eI5k0g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_l8d8cL-JEeueKYS6eI5k0g" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_l8ejgL-JEeueKYS6eI5k0g" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_l8i08b-JEeueKYS6eI5k0g" name="FTA" type="_jBk7kGq5EeuOC6FQdTT0uA" association="_l8aSEL-JEeueKYS6eI5k0g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_p7WM0L-JEeueKYS6eI5k0g" visibility="public" memberEnd="_p7YCAr-JEeueKYS6eI5k0g _p7YpEb-JEeueKYS6eI5k0g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_p7YCAL-JEeueKYS6eI5k0g" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_p7YCAb-JEeueKYS6eI5k0g" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_p7YpEb-JEeueKYS6eI5k0g" name="failure" type="_WEeJAL-JEeueKYS6eI5k0g" association="_p7WM0L-JEeueKYS6eI5k0g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_h1AiYL-KEeueKYS6eI5k0g" name="references as top-level event" memberEnd="_h1C-oL-KEeueKYS6eI5k0g _h1Ez0b-KEeueKYS6eI5k0g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_h1CXkL-KEeueKYS6eI5k0g" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_h1CXkb-KEeueKYS6eI5k0g" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_h1Ez0b-KEeueKYS6eI5k0g" name="safety case" type="_yuw-QBeYEeuTMqUKo8T8Tw" association="_h1AiYL-KEeueKYS6eI5k0g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_152JsL-KEeueKYS6eI5k0g" name="refers to analysis result" memberEnd="_153-4r-KEeueKYS6eI5k0g _156bIb-KEeueKYS6eI5k0g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_153-4L-KEeueKYS6eI5k0g" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_153-4b-KEeueKYS6eI5k0g" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_156bIb-KEeueKYS6eI5k0g" name="safety case" type="_yuw-QBeYEeuTMqUKo8T8Tw" association="_152JsL-KEeueKYS6eI5k0g"/>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_70i3ABeYEeuTMqUKo8T8Tw">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_74IWgBeYEeuTMqUKo8T8Tw" source="http://www.eclipse.org/uml2/2.0.0/UML">
