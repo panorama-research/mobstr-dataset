@@ -51,8 +51,10 @@ import org.panorama.research.mobstr.tim.LeadsToHazard;
 import org.panorama.research.mobstr.tim.MobstrTIM;
 import org.panorama.research.mobstr.tim.ModelsImplementationOfRequirement;
 import org.panorama.research.mobstr.tim.RealizesItemDefintion;
+import org.panorama.research.mobstr.tim.ReferencesAsTopLevelEvent;
 import org.panorama.research.mobstr.tim.ReferencesComponent;
 import org.panorama.research.mobstr.tim.ReferencesInEvidences;
+import org.panorama.research.mobstr.tim.RefersToAnalysisResult;
 import org.panorama.research.mobstr.tim.RefinesItemDefinition;
 import org.panorama.research.mobstr.tim.RefinesTimingRequirement;
 import org.panorama.research.mobstr.tim.RelatedTo;
@@ -235,6 +237,20 @@ public class TimPackageImpl extends EPackageImpl implements TimPackage {
 	 * @generated
 	 */
 	private EClass detailsHazardWithEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass referencesAsTopLevelEventEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass refersToAnalysisResultEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -998,6 +1014,66 @@ public class TimPackageImpl extends EPackageImpl implements TimPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getReferencesAsTopLevelEvent() {
+		return referencesAsTopLevelEventEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getReferencesAsTopLevelEvent_Source() {
+		return (EReference)referencesAsTopLevelEventEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getReferencesAsTopLevelEvent_Target() {
+		return (EReference)referencesAsTopLevelEventEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getRefersToAnalysisResult() {
+		return refersToAnalysisResultEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRefersToAnalysisResult_Source() {
+		return (EReference)refersToAnalysisResultEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRefersToAnalysisResult_Target() {
+		return (EReference)refersToAnalysisResultEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public TimFactory getTimFactory() {
 		return (TimFactory)getEFactoryInstance();
 	}
@@ -1112,6 +1188,14 @@ public class TimPackageImpl extends EPackageImpl implements TimPackage {
 		detailsHazardWithEClass = createEClass(DETAILS_HAZARD_WITH);
 		createEReference(detailsHazardWithEClass, DETAILS_HAZARD_WITH__SOURCE);
 		createEReference(detailsHazardWithEClass, DETAILS_HAZARD_WITH__TARGET);
+
+		referencesAsTopLevelEventEClass = createEClass(REFERENCES_AS_TOP_LEVEL_EVENT);
+		createEReference(referencesAsTopLevelEventEClass, REFERENCES_AS_TOP_LEVEL_EVENT__SOURCE);
+		createEReference(referencesAsTopLevelEventEClass, REFERENCES_AS_TOP_LEVEL_EVENT__TARGET);
+
+		refersToAnalysisResultEClass = createEClass(REFERS_TO_ANALYSIS_RESULT);
+		createEReference(refersToAnalysisResultEClass, REFERS_TO_ANALYSIS_RESULT__SOURCE);
+		createEReference(refersToAnalysisResultEClass, REFERS_TO_ANALYSIS_RESULT__TARGET);
 	}
 
 	/**
@@ -1172,6 +1256,8 @@ public class TimPackageImpl extends EPackageImpl implements TimPackage {
 		referencesInEvidencesEClass.getESuperTypes().add(this.getDirectedTraceLink());
 		detailsCausesOfEClass.getESuperTypes().add(this.getDirectedTraceLink());
 		detailsHazardWithEClass.getESuperTypes().add(this.getDirectedTraceLink());
+		referencesAsTopLevelEventEClass.getESuperTypes().add(this.getDirectedTraceLink());
+		refersToAnalysisResultEClass.getESuperTypes().add(this.getDirectedTraceLink());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(mobstrTIMEClass, MobstrTIM.class, "MobstrTIM", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1265,6 +1351,14 @@ public class TimPackageImpl extends EPackageImpl implements TimPackage {
 		initEClass(detailsHazardWithEClass, DetailsHazardWith.class, "DetailsHazardWith", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDetailsHazardWith_Source(), theBasePackage.getElement(), null, "source", null, 1, 1, DetailsHazardWith.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDetailsHazardWith_Target(), theBasePackage.getElement(), null, "target", null, 1, 1, DetailsHazardWith.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(referencesAsTopLevelEventEClass, ReferencesAsTopLevelEvent.class, "ReferencesAsTopLevelEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getReferencesAsTopLevelEvent_Source(), theBasePackage.getElement(), null, "source", null, 1, 1, ReferencesAsTopLevelEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getReferencesAsTopLevelEvent_Target(), theBasePackage.getElement(), null, "target", null, 1, -1, ReferencesAsTopLevelEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(refersToAnalysisResultEClass, RefersToAnalysisResult.class, "RefersToAnalysisResult", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRefersToAnalysisResult_Source(), theBasePackage.getElement(), null, "source", null, 1, 1, RefersToAnalysisResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRefersToAnalysisResult_Target(), theBasePackage.getElement(), null, "target", null, 1, -1, RefersToAnalysisResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -252,6 +252,22 @@ public class TimSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case TimPackage.REFERENCES_AS_TOP_LEVEL_EVENT: {
+				ReferencesAsTopLevelEvent referencesAsTopLevelEvent = (ReferencesAsTopLevelEvent)theEObject;
+				T result = caseReferencesAsTopLevelEvent(referencesAsTopLevelEvent);
+				if (result == null) result = caseDirectedTraceLink(referencesAsTopLevelEvent);
+				if (result == null) result = caseAbstractTraceLink(referencesAsTopLevelEvent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TimPackage.REFERS_TO_ANALYSIS_RESULT: {
+				RefersToAnalysisResult refersToAnalysisResult = (RefersToAnalysisResult)theEObject;
+				T result = caseRefersToAnalysisResult(refersToAnalysisResult);
+				if (result == null) result = caseDirectedTraceLink(refersToAnalysisResult);
+				if (result == null) result = caseAbstractTraceLink(refersToAnalysisResult);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -613,6 +629,36 @@ public class TimSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDetailsHazardWith(DetailsHazardWith object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>References As Top Level Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>References As Top Level Event</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseReferencesAsTopLevelEvent(ReferencesAsTopLevelEvent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Refers To Analysis Result</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Refers To Analysis Result</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRefersToAnalysisResult(RefersToAnalysisResult object) {
 		return null;
 	}
 

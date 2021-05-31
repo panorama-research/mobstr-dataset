@@ -78,6 +78,8 @@ public class TimFactoryImpl extends EFactoryImpl implements TimFactory {
 			case TimPackage.REFERENCES_IN_EVIDENCES: return createReferencesInEvidences();
 			case TimPackage.DETAILS_CAUSES_OF: return createDetailsCausesOf();
 			case TimPackage.DETAILS_HAZARD_WITH: return createDetailsHazardWith();
+			case TimPackage.REFERENCES_AS_TOP_LEVEL_EVENT: return createReferencesAsTopLevelEvent();
+			case TimPackage.REFERS_TO_ANALYSIS_RESULT: return createRefersToAnalysisResult();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -323,6 +325,28 @@ public class TimFactoryImpl extends EFactoryImpl implements TimFactory {
 	public DetailsHazardWith createDetailsHazardWith() {
 		DetailsHazardWithImpl detailsHazardWith = new DetailsHazardWithImpl();
 		return detailsHazardWith;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ReferencesAsTopLevelEvent createReferencesAsTopLevelEvent() {
+		ReferencesAsTopLevelEventImpl referencesAsTopLevelEvent = new ReferencesAsTopLevelEventImpl();
+		return referencesAsTopLevelEvent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public RefersToAnalysisResult createRefersToAnalysisResult() {
+		RefersToAnalysisResultImpl refersToAnalysisResult = new RefersToAnalysisResultImpl();
+		return refersToAnalysisResult;
 	}
 
 	/**

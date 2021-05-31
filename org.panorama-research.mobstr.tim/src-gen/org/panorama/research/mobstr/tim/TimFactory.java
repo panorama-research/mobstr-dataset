@@ -220,6 +220,24 @@ public interface TimFactory extends EFactory {
 	DetailsHazardWith createDetailsHazardWith();
 
 	/**
+	 * Returns a new object of class '<em>References As Top Level Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>References As Top Level Event</em>'.
+	 * @generated
+	 */
+	ReferencesAsTopLevelEvent createReferencesAsTopLevelEvent();
+
+	/**
+	 * Returns a new object of class '<em>Refers To Analysis Result</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Refers To Analysis Result</em>'.
+	 * @generated
+	 */
+	RefersToAnalysisResult createRefersToAnalysisResult();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

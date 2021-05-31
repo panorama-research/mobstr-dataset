@@ -164,6 +164,14 @@ public class TimAdapterFactory extends AdapterFactoryImpl {
 				return createDetailsHazardWithAdapter();
 			}
 			@Override
+			public Adapter caseReferencesAsTopLevelEvent(ReferencesAsTopLevelEvent object) {
+				return createReferencesAsTopLevelEventAdapter();
+			}
+			@Override
+			public Adapter caseRefersToAnalysisResult(RefersToAnalysisResult object) {
+				return createRefersToAnalysisResultAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -516,6 +524,34 @@ public class TimAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDetailsHazardWithAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.panorama.research.mobstr.tim.ReferencesAsTopLevelEvent <em>References As Top Level Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.panorama.research.mobstr.tim.ReferencesAsTopLevelEvent
+	 * @generated
+	 */
+	public Adapter createReferencesAsTopLevelEventAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.panorama.research.mobstr.tim.RefersToAnalysisResult <em>Refers To Analysis Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.panorama.research.mobstr.tim.RefersToAnalysisResult
+	 * @generated
+	 */
+	public Adapter createRefersToAnalysisResultAdapter() {
 		return null;
 	}
 

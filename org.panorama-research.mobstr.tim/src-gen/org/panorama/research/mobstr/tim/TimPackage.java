@@ -1521,6 +1521,134 @@ public interface TimPackage extends EPackage {
 	 */
 	int DETAILS_HAZARD_WITH_OPERATION_COUNT = DIRECTED_TRACE_LINK_OPERATION_COUNT + 0;
 
+	/**
+	 * The meta object id for the '{@link org.panorama.research.mobstr.tim.impl.ReferencesAsTopLevelEventImpl <em>References As Top Level Event</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.panorama.research.mobstr.tim.impl.ReferencesAsTopLevelEventImpl
+	 * @see org.panorama.research.mobstr.tim.impl.TimPackageImpl#getReferencesAsTopLevelEvent()
+	 * @generated
+	 */
+	int REFERENCES_AS_TOP_LEVEL_EVENT = 24;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCES_AS_TOP_LEVEL_EVENT__ID = DIRECTED_TRACE_LINK__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCES_AS_TOP_LEVEL_EVENT__NAME = DIRECTED_TRACE_LINK__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCES_AS_TOP_LEVEL_EVENT__SOURCE = DIRECTED_TRACE_LINK_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCES_AS_TOP_LEVEL_EVENT__TARGET = DIRECTED_TRACE_LINK_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>References As Top Level Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCES_AS_TOP_LEVEL_EVENT_FEATURE_COUNT = DIRECTED_TRACE_LINK_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>References As Top Level Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCES_AS_TOP_LEVEL_EVENT_OPERATION_COUNT = DIRECTED_TRACE_LINK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.panorama.research.mobstr.tim.impl.RefersToAnalysisResultImpl <em>Refers To Analysis Result</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.panorama.research.mobstr.tim.impl.RefersToAnalysisResultImpl
+	 * @see org.panorama.research.mobstr.tim.impl.TimPackageImpl#getRefersToAnalysisResult()
+	 * @generated
+	 */
+	int REFERS_TO_ANALYSIS_RESULT = 25;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERS_TO_ANALYSIS_RESULT__ID = DIRECTED_TRACE_LINK__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERS_TO_ANALYSIS_RESULT__NAME = DIRECTED_TRACE_LINK__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERS_TO_ANALYSIS_RESULT__SOURCE = DIRECTED_TRACE_LINK_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERS_TO_ANALYSIS_RESULT__TARGET = DIRECTED_TRACE_LINK_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Refers To Analysis Result</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERS_TO_ANALYSIS_RESULT_FEATURE_COUNT = DIRECTED_TRACE_LINK_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Refers To Analysis Result</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERS_TO_ANALYSIS_RESULT_OPERATION_COUNT = DIRECTED_TRACE_LINK_OPERATION_COUNT + 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link org.panorama.research.mobstr.tim.MobstrTIM <em>Mobstr TIM</em>}'.
@@ -2247,6 +2375,70 @@ public interface TimPackage extends EPackage {
 	EReference getDetailsHazardWith_Target();
 
 	/**
+	 * Returns the meta object for class '{@link org.panorama.research.mobstr.tim.ReferencesAsTopLevelEvent <em>References As Top Level Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>References As Top Level Event</em>'.
+	 * @see org.panorama.research.mobstr.tim.ReferencesAsTopLevelEvent
+	 * @generated
+	 */
+	EClass getReferencesAsTopLevelEvent();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.panorama.research.mobstr.tim.ReferencesAsTopLevelEvent#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see org.panorama.research.mobstr.tim.ReferencesAsTopLevelEvent#getSource()
+	 * @see #getReferencesAsTopLevelEvent()
+	 * @generated
+	 */
+	EReference getReferencesAsTopLevelEvent_Source();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.panorama.research.mobstr.tim.ReferencesAsTopLevelEvent#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Target</em>'.
+	 * @see org.panorama.research.mobstr.tim.ReferencesAsTopLevelEvent#getTarget()
+	 * @see #getReferencesAsTopLevelEvent()
+	 * @generated
+	 */
+	EReference getReferencesAsTopLevelEvent_Target();
+
+	/**
+	 * Returns the meta object for class '{@link org.panorama.research.mobstr.tim.RefersToAnalysisResult <em>Refers To Analysis Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Refers To Analysis Result</em>'.
+	 * @see org.panorama.research.mobstr.tim.RefersToAnalysisResult
+	 * @generated
+	 */
+	EClass getRefersToAnalysisResult();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.panorama.research.mobstr.tim.RefersToAnalysisResult#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see org.panorama.research.mobstr.tim.RefersToAnalysisResult#getSource()
+	 * @see #getRefersToAnalysisResult()
+	 * @generated
+	 */
+	EReference getRefersToAnalysisResult_Source();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.panorama.research.mobstr.tim.RefersToAnalysisResult#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Target</em>'.
+	 * @see org.panorama.research.mobstr.tim.RefersToAnalysisResult#getTarget()
+	 * @see #getRefersToAnalysisResult()
+	 * @generated
+	 */
+	EReference getRefersToAnalysisResult_Target();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2860,6 +3052,58 @@ public interface TimPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DETAILS_HAZARD_WITH__TARGET = eINSTANCE.getDetailsHazardWith_Target();
+
+		/**
+		 * The meta object literal for the '{@link org.panorama.research.mobstr.tim.impl.ReferencesAsTopLevelEventImpl <em>References As Top Level Event</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.panorama.research.mobstr.tim.impl.ReferencesAsTopLevelEventImpl
+		 * @see org.panorama.research.mobstr.tim.impl.TimPackageImpl#getReferencesAsTopLevelEvent()
+		 * @generated
+		 */
+		EClass REFERENCES_AS_TOP_LEVEL_EVENT = eINSTANCE.getReferencesAsTopLevelEvent();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REFERENCES_AS_TOP_LEVEL_EVENT__SOURCE = eINSTANCE.getReferencesAsTopLevelEvent_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REFERENCES_AS_TOP_LEVEL_EVENT__TARGET = eINSTANCE.getReferencesAsTopLevelEvent_Target();
+
+		/**
+		 * The meta object literal for the '{@link org.panorama.research.mobstr.tim.impl.RefersToAnalysisResultImpl <em>Refers To Analysis Result</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.panorama.research.mobstr.tim.impl.RefersToAnalysisResultImpl
+		 * @see org.panorama.research.mobstr.tim.impl.TimPackageImpl#getRefersToAnalysisResult()
+		 * @generated
+		 */
+		EClass REFERS_TO_ANALYSIS_RESULT = eINSTANCE.getRefersToAnalysisResult();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REFERS_TO_ANALYSIS_RESULT__SOURCE = eINSTANCE.getRefersToAnalysisResult_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REFERS_TO_ANALYSIS_RESULT__TARGET = eINSTANCE.getRefersToAnalysisResult_Target();
 
 	}
 

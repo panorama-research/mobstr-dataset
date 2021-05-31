@@ -228,3 +228,19 @@ class RefinesItemDefinition extends DirectedTraceLink {
  	refers Element [1] source // Element -- Safety Case
  	refers Element [1] target // Element -- Fault Tree Analysis
  }
+ 
+ /*
+  * Links the Safety Case to a Failure from Fault Tree Analysis
+  */
+ class ReferencesAsTopLevelEvent extends DirectedTraceLink {
+ 	refers Element [1] source // Element -- Safety Case
+ 	refers Element [1..*] target // Element -- Failure in FTA
+ }
+ 
+ /*
+  * Links the Safety Case to a Failure from Fault Tree Analysis
+  */
+ class RefersToAnalysisResult extends DirectedTraceLink {
+ 	refers Element [1] source // Element -- Safety Case
+ 	refers Element [1..*] target // Element -- Failure in FTA
+ }
