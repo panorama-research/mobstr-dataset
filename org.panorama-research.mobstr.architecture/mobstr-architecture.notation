@@ -1409,6 +1409,6 @@
     </edges>
   </notation:Diagram>
   <css:ModelStyleSheets xmi:id="_mlfKkGYAEeu5Bd8fMshJEA">
-    <stylesheets xmi:type="css:StyleSheetReference" xmi:id="_JjJusGX-Eeu5Bd8fMshJEA" path="/org.panorama-research.waters-2019.architecture/names_only.css"/>
+    <stylesheets xmi:type="css:StyleSheetReference" xmi:id="_JjJusGX-Eeu5Bd8fMshJEA" path="/org.panorama-research.mobstr.architecture/names_only.css"/>
   </css:ModelStyleSheets>
 </xmi:XMI>
