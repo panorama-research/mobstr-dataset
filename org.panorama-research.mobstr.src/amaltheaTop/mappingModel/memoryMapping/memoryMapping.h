@@ -1,0 +1,35 @@
+// This code was generated for simulation with app4mc.sim
+
+#pragma once
+
+#include "Common.h"
+#include "MappingModel.h"
+void init_MemoryMapping_Bounding_box_device_to_SYSTEM_DRAM();
+void init_MemoryMapping_Bounding_box_host_to_SYSTEM_DRAM();
+void init_MemoryMapping_Cloud_map_device_to_SYSTEM_DRAM();
+void init_MemoryMapping_Cloud_map_host_to_SYSTEM_DRAM();
+void init_MemoryMapping_Image_device_to_SYSTEM_DRAM();
+void init_MemoryMapping_Image_host_to_SYSTEM_DRAM();
+void init_MemoryMapping_Image_lane_lines_device_to_SYSTEM_DRAM();
+void init_MemoryMapping_Image_lane_lines_host_to_SYSTEM_DRAM();
+void init_MemoryMapping_Image_SFM_device_to_SYSTEM_DRAM();
+void init_MemoryMapping_Image_SFM_host_to_SYSTEM_DRAM();
+void init_MemoryMapping_IMU_data_device_to_SYSTEM_DRAM();
+void init_MemoryMapping_IMU_data_host_to_SYSTEM_DRAM();
+void init_MemoryMapping_Lane_boundaries_device_to_SYSTEM_DRAM();
+void init_MemoryMapping_Lane_boundaries_host_to_SYSTEM_DRAM();
+void init_MemoryMapping_Matrix_SFM_device_to_SYSTEM_DRAM();
+void init_MemoryMapping_Matrix_SFM_host_to_SYSTEM_DRAM();
+void init_MemoryMapping_Occupancy_grid_host_to_SYSTEM_DRAM();
+void init_MemoryMapping_speed_objective_to_SYSTEM_DRAM();
+void init_MemoryMapping_steer_objective_to_SYSTEM_DRAM();
+void init_MemoryMapping_Vehicle_status_device_to_SYSTEM_DRAM();
+void init_MemoryMapping_Vehicle_status_host_to_SYSTEM_DRAM();
+void init_MemoryMapping_vel_car_to_SYSTEM_DRAM();
+void init_MemoryMapping_x_car_device_to_SYSTEM_DRAM();
+void init_MemoryMapping_x_car_host_to_SYSTEM_DRAM();
+void init_MemoryMapping_y_car_device_to_SYSTEM_DRAM();
+void init_MemoryMapping_y_car_host_to_SYSTEM_DRAM();
+void init_MemoryMapping_yaw_car_device_to_SYSTEM_DRAM();
+void init_MemoryMapping_yaw_car_host_to_SYSTEM_DRAM();
+void init_MemoryMapping_yaw_rate_to_SYSTEM_DRAM();
