@@ -43,10 +43,10 @@ The repository contains a custom traceability information model (TIM) that defin
 
 Use the following instructions to try out the TIM:  
 
-1. **Install Eclipse Capra**: Download Eclipse Capra development environment using instructions provided [here](https://wiki.eclipse.org/Capra#Using_the_Eclipse_Installer). The recommended version of Eclipse Capra to use is 0.8.2. If you would like to use a stable codebase, please checkout the corresponding `0.8.2` tag. Using the `develop` branch is also possible, but changes there can lead to incompatibilites that need to be resolved manually.
-2. **Get the ODE meta-model project**
-  * Clone the [ODE Editor][9] project.
-  * Import the project `ode.concept.deis.meta-model` into your workspace.
+1. **Install Eclipse Capra**: 
+  * Download Eclipse Capra development environment using instructions provided [here](https://wiki.eclipse.org/Capra#Using_the_Eclipse_Installer). The recommended version of Eclipse Capra to use is 0.8.2. If you would like to use a stable codebase, please checkout the corresponding `0.8.2` tag. Using the `develop` branch is also possible, but changes there can lead to incompatibilites that need to be resolved manually.
+  * At the time of writing, the best target platform to use is the one for Eclipse 2020-09 (e4.17). You can either set this as the target platform during install or after install, by opening the file `eclipse-capra-e4.17.target` and clicking on "Set as Active Target Platform". This should resolve most dependency issues. The remaining one (about `http-client`) can be safety ignored.
+2. **Get the ODE meta-model dependencies**: Use the "Install new Software" feature to install the ODE meta-model and editors using the ODE update site at: https://digital-dependability-identities.github.io/ODE_Editor/
 3. **Import the TIM project**
   * Clone this GitHub project.
   * Close the project `org.eclipse.capra.generic.tracemodel`
@@ -60,8 +60,7 @@ Use the following instructions to try out the TIM:
   * Once the new workspace opens, import the projects in this repository (apart from `org.panorama-research.mobstr.tim` and `org.panorama-research.mobstr.tim.test`). 
   * Go to Window --> Perspectives and switch to the Capra perspective
   * Go to the Eclipse preferences, open the "Capra Traceability" tree and select "Office Documents". Select "Use this column as the ID" and make sure the column is "A". The MobSTr dataset uses the first column in Excel files to  identify requirements and hazards.
-6. **Start creating and using traceability links**
-  * Follow [this video](https://www.youtube.com/watch?v=XRtLs5OT_yM&feature=youtu.be) to create and visualize traceability links.
+6. **Start creating and using traceability links**: Follow [this video](https://www.youtube.com/watch?v=XRtLs5OT_yM&feature=youtu.be) to create and visualize traceability links.
 
 In case you get an error that the wrong APP4MC version is installed, please open `waters-challenge-2019.amxmi` in a text editor and change the model version to the APP4MC version you have installed (usually either 0.9.7 or 1.0.0, depending on the version of Eclipse that you are using and thus the target platform chosen for Eclipse Capra).
 
