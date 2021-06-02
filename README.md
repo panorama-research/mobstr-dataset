@@ -29,6 +29,13 @@ The system described in the WATERS FMTV 2019 challenge and consequently in the M
 | __WorkspaceTraceModels | The traceability links between the different artifacts conforming to the TIM. Please note that the links are partial, i.e., not all artifacts that should be linked are currently connected by a trace link. |
 | WATERS_Industrial_Challenge_2019_final.pdf | The original WATERS FMTV 2019 Challenge description on which the artifacts in this repository are based. |
 
+## The MobSTr TIM
+
+The MobSTr dataset comes with its own custom traceability information model (TIM). The TIM has been designed to fulfill the needs of an organisation that develops a safety-critical product. Therefore, the trace link types, the directionality of the trace link types, and the artifacts they connect are based on the goal to allow constructing a safety case from the existing artifacts as easily as possible and to trace all required evidence from the safety case. In particular, the trace link types are informed by the traceability described in ISO 26262.
+
+Each combination of artifacts that needs to be traced has a unique trace link type which also carries a unique name that reflects its semantics. All trace link types are shown in the figure below. Please note that the cardinalities in the figure differ from the cardinalities that are implemented in the custom TIM (see below). The reason is that while it might make sense that not all hazards are assigned to a safety goal on the global level (e.g., while hazards are developed and refined and safety goals have not yet been updated), no trace links would exist in such cases.
+
+![The information model for the MobSTr dataset](org.panorama-research.mobstr.artifacts/mobstr-tim.png)
 
 ## How to Use the Custom TIM
 
