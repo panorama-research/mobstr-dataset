@@ -36,20 +36,25 @@ The repository contains a custom traceability information model (TIM) that defin
 
 Use the following instructions to try out the TIM:  
 
-* Download Eclipse Capra development environment using instructions provided [here](https://wiki.eclipse.org/Capra#Using_the_Eclipse_Installer). The recommended version of Eclipse Capra to use is 0.8.2. If you would like to use a stable codebase, please checkout the corresponding `0.8.2` tag. Using the `develop` branch is also possible, but changes there can lead to incompatibilites that need to be resolved manually.
-* Close the project `org.eclipse.capra.generic.tracemodel`
-* Clone the [ODE Editor][9] project.
-* Import the project `ode.concept.deis.meta-model` into your workspace.
-* Clone this GitHub project.
-* Import the project `org.panorama-research.mobstr.tim` into your workspace.
-* Make sure that all the projects have no errors. Some of Eclipse Capra's test projects might show compilation errors due to the missing `org.eclipse.capra.generic.tracemodel` project. You can either ignore these or close the test projects.
-* Click on Run --> Run Configurations and create a new Eclipse Application Configuration
-* Select a new folder as the workspace for your Eclipse application
-* Click "Apply", then "Run"
-* Once the new workspace opens, import the projects in this repository (apart from `org.panorama-research.mobstr.tim`)
-* Go to Window --> Perspectives and switch to the Capra perspective
-* Go to the Eclipse preferences, open the "Capra Traceability" tree and select "Office Documents". Select "Use this column as the ID" and make sure the column is "A". The MobSTr dataset uses the first column in Excel files to  identify requirements and hazards.
-* Follow [this video](https://www.youtube.com/watch?v=XRtLs5OT_yM&feature=youtu.be) to create and visualize traceability links.
+1. **Install Eclipse Capra**: Download Eclipse Capra development environment using instructions provided [here](https://wiki.eclipse.org/Capra#Using_the_Eclipse_Installer). The recommended version of Eclipse Capra to use is 0.8.2. If you would like to use a stable codebase, please checkout the corresponding `0.8.2` tag. Using the `develop` branch is also possible, but changes there can lead to incompatibilites that need to be resolved manually.
+2. **Get the ODE meta-model project**
+  * Clone the [ODE Editor][9] project.
+  * Import the project `ode.concept.deis.meta-model` into your workspace.
+3. **Import the TIM project**
+  * Clone this GitHub project.
+  * Close the project `org.eclipse.capra.generic.tracemodel`
+  * Import the project `org.panorama-research.mobstr.tim` into your workspace.
+  * Make sure that all the projects have no errors. Some of Eclipse Capra's test projects might show compilation errors due to the missing `org.eclipse.capra.generic.tracemodel` project. You can either ignore these or close the test projects.
+4. **Create a new run configuration**
+  * Click on Run --> Run Configurations and create a new Eclipse Application Configuration
+  * Select a new folder as the workspace for your Eclipse application
+  * Click "Apply", then "Run"
+5. **Import the MobSTr projects into the runtime Eclipse workspace**
+  * Once the new workspace opens, import the projects in this repository (apart from `org.panorama-research.mobstr.tim` and `org.panorama-research.mobstr.tim.test`). 
+  * Go to Window --> Perspectives and switch to the Capra perspective
+  * Go to the Eclipse preferences, open the "Capra Traceability" tree and select "Office Documents". Select "Use this column as the ID" and make sure the column is "A". The MobSTr dataset uses the first column in Excel files to  identify requirements and hazards.
+6. **Start creating and using traceability links**
+  * Follow [this video](https://www.youtube.com/watch?v=XRtLs5OT_yM&feature=youtu.be) to create and visualize traceability links.
 
 In case you get an error that the wrong APP4MC version is installed, please open `waters-challenge-2019.amxmi` in a text editor and change the model version to the APP4MC version you have installed (usually either 0.9.7 or 1.0.0, depending on the version of Eclipse that you are using and thus the target platform chosen for Eclipse Capra).
 
