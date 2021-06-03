@@ -41,35 +41,43 @@ Each combination of artifacts that needs to be traced has a unique trace link ty
 
 The repository contains a custom traceability information model (TIM) that defines which link types can be created between the different artifacts. The current TIM is based on the artifact model in project `org.panorama-research.mobstr.artifacts` and is implemented for use in [Eclipse Capra](https://eclipse.org/capra). The TIM project is located in `org.panorama-research.mobstr.tim`.
 
-Use the following instructions to try out the TIM:  
+Use the following instructions to install Eclipse Capra and all necessary components of the MobSTr dataset:  
 
-1. **Install Eclipse Capra**: 
-  * Download Eclipse Capra development environment using instructions provided [here](https://wiki.eclipse.org/Capra#Using_the_Eclipse_Installer). The recommended version of Eclipse Capra to use is 0.8.2. If you would like to use a stable codebase, please checkout the corresponding `0.8.2` tag. Using the `develop` branch is also possible, but changes there can lead to incompatibilites that need to be resolved manually.
-  * Optional: At the time of writing, the Eclipse Installer does not allow selecting a target platform for Eclipse Capra that uses the latest versions of Eclipse (2021-03 and 2021-06). However, it is possible to set these target platforms, once the installer has completed. To do this, open the files `eclipse-capra-e4.19.target` (for Eclipse 2021-03) or `eclipse-capra-e4.20.target` (for Eclipse 2021-06) in the `org.eclipse.capra.releng.target` project and click on "Set as Active Target Platform".
-2. **Install the "UML2 Extender SDK**
-  * In your brand new Eclipse installation, go to Help->Install new Software.
-  * Under "Work with", select the release update site (should have a URL like `http://download.eclipse.org/releases/2021-03`).
-  * Select the "UML2 Extender SDK" from the available software.
-  * Click "Next" as many times as necessary to finish the installation.
-  * Restart Eclipse.
-3. **Get the ODE meta-model dependencies**: Use the "Install new Software" feature to install the ODE meta-model and editors using the ODE update site at: https://digital-dependability-identities.github.io/ODE_Editor/
-4. **Import the TIM project**
-  * Clone this GitHub project.
-  * Close the project `org.eclipse.capra.generic.tracemodel`
-  * Import the project `org.panorama-research.mobstr.tim` into your workspace.
-  * Make sure that all the projects have no errors. Some of Eclipse Capra's test projects might show compilation errors due to the missing `org.eclipse.capra.generic.tracemodel` project. You can either ignore these or close the test projects.
-5. **Create a new run configuration**
-  * Click on Run --> Run Configurations and create a new Eclipse Application Configuration
-  * Select a new folder as the workspace for your Eclipse application
-  * Click "Apply", then "Run"
+1. **Download the Eclipse Installer** from [here](https://wiki.eclipse.org/Eclipse_Installer).
+2. **Download the Installation file** for Eclipse Capra for MobSTr [here](EclipseCapraForMobSTr.setup).
+3. **Install Eclipse Capra**
+  * Open the Eclipse Installer.
+  * If necessary, switch to "Advanced Mode" using the Hamburger menu in the top right corner (if you don't see that menu, you are already in advanced mode).
+  * Select "Eclipse for Committers".
+  * Select JDK 11 in the list of possible JREs (Note: please make sure that Java 11 is installed locally on your machine. If that is not the case, please download Java 11 from [here](https://adoptopenjdk.net/index.html?variant=openjdk11&jvmVariant=hotspot) and locate it on your hard drive in this step).
+  * Click Next.
+  * On the second page, either: click the "+" button. In the dropdown menu, select "Eclipse Projects". Click on "Browse File System..." and locate the file you just downloaded on your hard disk; *or* drag and drop the file you downloaded onto the "Eclipse Projects" entry in the list.
+  * Make sure that the checkbox before the entry "Eclipse Capra for MobSTr" is selected.
+  * Click next and follow the rest of the installation process. The Eclipse installer will then download the necessary files, close itself, and start the newly downloaded Eclipse which will then complete the setup. By the end of it, you will have all necessary files on your local machine to start using Eclipse Capra with the MobSTr dataset.
+4. **Create a new run configuration**
+  * Click on Run --> Run Configurations and create a new Eclipse Application Configuration.
+  * Select a new folder as the workspace for your Eclipse application.
+  * Click "Apply", then "Run".
   * Depending on your chosen Eclipse version and target platform, you might see a warning about a dependency to `http-client`. This message can be safely ignored.
-6. **Import the MobSTr projects into the runtime Eclipse workspace**
+5. **Import the MobSTr projects into the runtime Eclipse workspace**
   * Once the new workspace opens, import the projects in this repository (apart from `org.panorama-research.mobstr.tim` and `org.panorama-research.mobstr.tim.test`). 
-  * Go to Window --> Perspectives and switch to the Capra perspective
+  * Go to Window --> Perspectives and switch to the Capra perspective.
   * Go to the Eclipse preferences, open the "Capra Traceability" tree and select "Office Documents". Select "Use this column as the ID" and make sure the column is "A". The MobSTr dataset uses the first column in Excel files to  identify requirements and hazards.
-7. **Start creating and using traceability links**: Follow [this video](https://www.youtube.com/watch?v=XRtLs5OT_yM&feature=youtu.be) to create and visualize traceability links.
+6. **Start creating and using traceability links**: Follow [this video](https://www.youtube.com/watch?v=XRtLs5OT_yM&feature=youtu.be) to create and visualize traceability links.
 
-In case you get an error that the wrong APP4MC version is installed, please open `waters-challenge-2019.amxmi` in a text editor and change the model version to the APP4MC version you have installed (usually either 0.9.7 or 1.0.0, depending on the version of Eclipse that you are using and thus the target platform chosen for Eclipse Capra).
+If you prefer a more manual installation, please refer to this [separate guide](manual-installation.md).
+
+## Troubleshooting
+
+### The traceability matrix shows many entries as "EObject"
+
+This can happen when the MobSTr projects are imported to the runtime workspace for the first time. Simply restart your runtime Eclipse to fix the issue. Also make sure that you followed the instructions for setting the column as the ID for Office documents as described above.
+
+### Compilation errors or errors when opening the runtime Eclipse
+Please make sure that you have JDK 11 installed and that this is the Java runtime your Eclipse is using. Newer JDK versions might not be 100% compatible with Eclipse Capra at this point.
+
+### Issues opening the Amalthea model
+In case you get an error that the wrong APP4MC version is installed, please open `mobstr.amxmi` in a text editor and change the model version to the APP4MC version you have installed (usually either 0.9.7 or 1.0.0, depending on the version of Eclipse that you are using and thus the target platform chosen for Eclipse Capra).
 
 
 ## License and Copyright
