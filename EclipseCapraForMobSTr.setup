@@ -653,14 +653,10 @@
     <setupTask
         xsi:type="git:GitCloneTask"
         id="git.clone.capra"
-        remoteURI="capra/org.eclipse.capra"
+        remoteURI="git://git.eclipse.org/gitroot/capra/org.eclipse.capra.git"
         checkoutBranch="release/0.8.2-mobstr">
       <annotation
           source="http://www.eclipse.org/oomph/setup/InducedChoices">
-        <detail
-            key="inherit">
-          <value>eclipse.git.remoteURIs</value>
-        </detail>
         <detail
             key="label">
           <value>${scope.project.label} git repository</value>
