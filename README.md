@@ -54,6 +54,7 @@ Use the following instructions to install Eclipse Capra and all necessary compon
   * On the second page, either: click the "+" button. In the dropdown menu, select "Eclipse Projects". Click on "Browse File System..." and locate the file you just downloaded on your hard disk; *or* drag and drop the file you downloaded onto the "Eclipse Projects" entry in the list.
   * Make sure that the checkbox before the entry "Eclipse Capra for MobSTr" is selected.
   * Click next and follow the rest of the installation process. The Eclipse installer will then download the necessary files, close itself, and start the newly downloaded Eclipse which will then complete the setup. By the end of it, you will have all necessary files on your local machine to start using Eclipse Capra with the MobSTr dataset.
+  * You might need to install graphiz to make the "Capra PlantUML Viewer" work. Please follow the [installation instructions](https://plantuml.com/graphviz-dot) for your platform.
 4. **Create a new run configuration**
   * Click on Run --> Run Configurations and create a new Eclipse Application Configuration.
   * Select a new folder as the workspace for your Eclipse application.
