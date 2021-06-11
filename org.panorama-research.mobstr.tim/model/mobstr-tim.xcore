@@ -1,3 +1,4 @@
+@Ecore(nsURI="http://www.panorama-research.org/mobstr/1.0.0")
 package org.panorama.research.mobstr.tim
 
 import ode.base.Element

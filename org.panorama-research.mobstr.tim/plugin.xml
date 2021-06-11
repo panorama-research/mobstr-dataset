@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated TIM -->
       <package
-            uri="org.panorama.research.mobstr.tim"
+            uri="http://www.panorama-research.org/mobstr/1.0.0"
             class="org.panorama.research.mobstr.tim.TimPackage"
             genModel="model/mobstr-tim.xcore"/>
    </extension>

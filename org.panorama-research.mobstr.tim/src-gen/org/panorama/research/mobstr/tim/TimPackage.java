@@ -39,7 +39,7 @@ public interface TimPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "org.panorama.research.mobstr.tim";
+	String eNS_URI = "http://www.panorama-research.org/mobstr/1.0.0";
 
 	/**
 	 * The package namespace name.
