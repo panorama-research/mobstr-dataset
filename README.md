@@ -50,8 +50,11 @@ Use the following instructions to install Eclipse Capra and all necessary compon
   * If necessary, switch to "Advanced Mode" using the Hamburger menu in the top right corner (if you don't see that menu, you are already in advanced mode).
   * Select "Eclipse for Committers".
   * Select JDK 11 in the list of possible JREs (Note: please make sure that Java 11 is installed locally on your machine. If that is not the case, please download Java 11 from [here](https://adoptopenjdk.net/index.html?variant=openjdk11&jvmVariant=hotspot) and locate it on your hard drive in this step).
+  * The recommended version of Eclipse is *2021-03* at the time of writing. Please select this version from the "Product Version" dropdown menu.
   * Click Next.
-  * On the second page, either: click the "+" button. In the dropdown menu, select "Eclipse Projects". Click on "Browse File System..." and locate the file you just downloaded on your hard disk; *or* drag and drop the file you downloaded onto the "Eclipse Projects" entry in the list.
+  * On the second page, either: 
+     * click the "+" button. In the dropdown menu, select "Eclipse Projects". Click on "Browse File System..." and locate the file you just downloaded on your hard disk;
+     * *or* drag and drop the file you downloaded onto the "Eclipse Projects" entry in the list.
   * Make sure that the checkbox before the entry "Eclipse Capra for MobSTr" is selected.
   * Click next and follow the rest of the installation process. The Eclipse installer will then download the necessary files, close itself, and start the newly downloaded Eclipse which will then complete the setup. By the end of it, you will have all necessary files on your local machine to start using Eclipse Capra with the MobSTr dataset.
   * You might need to install graphiz to make the "Capra PlantUML Viewer" work. Please follow the [installation instructions](https://plantuml.com/graphviz-dot) for your platform.
