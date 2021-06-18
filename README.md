@@ -23,7 +23,7 @@ The system described in the WATERS FMTV 2019 challenge and consequently in the M
 | org.panorama-research.mobstr.hazards | An Excel spreadsheet with the identified hazards of the system. |
 | org.panorama-research.mobstr.requirements | An Excel spreadsheet with the requirements of the system, including safety requirements. |
 | org.panorama-research.mobstr.safetycase |  An [ODE model][6] containing the safety case for the system. |
-| org.panorama-research.mobstr.src |  Source code generated out of the Amalthea model. Part of the code is in SystemC, part of it (`synthetic_gen`) is for the Linux platform. The code is not compilable or executable on its own at this point.|
+| org.panorama-research.mobstr.src |  Source code generated out of the Amalthea model for two simulators. Please refer to [the README file](org.panorama-research.mobstr.src/README.md) in the folder for more information. |
 | org.panorama-research.mobstr.tim | An Eclipse plugin project containing the implementation of the traceability information model (TIM) for Eclipse Capra (see below). |
 | org.panorama-research.mobstr.tim.test | An Eclipse test plugin with test cases for the TIM implementation. |
 | __WorkspaceTraceModels | The traceability links between the different artifacts conforming to the TIM. Please note that the links are partial, i.e., not all artifacts that should be linked are currently connected by a trace link. |
