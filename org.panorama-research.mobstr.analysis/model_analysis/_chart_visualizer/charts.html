@@ -1,0 +1,848 @@
+<!doctype html>
+<html class="no-js" lang="">
+	<head>
+	    <meta charset="utf-8">
+	    <title>APP4MC Visualizations</title>
+	
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+	    <script src="https://unpkg.com/@sgratzl/chartjs-chart-boxplot@2.3.2/build/Chart.BoxPlot.min.js"></script>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+        <style>
+        	html {
+                margin: 0;
+                min-height: 100%;
+            }
+            
+            body {
+            	margin: 0;
+                padding: 1rem;
+                min-height: 100vh;
+            }
+
+            #grid {
+                display: grid;
+                grid-template-rows: max-content;
+                grid-gap: 1rem;
+            }
+
+            .modal {
+                display: none; 
+                position: fixed; 
+                z-index: 1;
+                padding: 3%;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgb(0, 0, 0);
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+
+            .modal-content {
+                background-color: #fefefe;
+                position: relative;
+                left: 0;
+                top: 0;
+                z-index: 3;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #888;
+                border-radius: 10px;
+                width: 100%;
+                height: 100%;
+            }
+
+            .modalClose {
+                color: #555;
+                width: 2rem;
+                height: 2rem;
+                position: absolute;
+                padding: auto;
+                right: -1rem;
+                top: -1rem;
+                z-index: 4;
+            }
+
+            .modalClose:hover,
+            .modalClose:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            
+            .single{
+            	width: 100%;
+            	height: 85vh;
+            }
+
+        </style>
+	</head>
+
+	<body>
+        <h2 class="mx-auto mt-3 mb-0 text-center">The Label Metrics for the Amalthea Model</h2>
+        
+        <!-- If the number of charts is greater than 1, show a grid and a modal for detailed view -->
+        
+        	<p class="mx-auto mt-0 mb-5 text-center text-secondary">Click on each chart for a detailed view</p>
+        	
+        	<div id="grid" style="grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));">
+	            <div class="card" onclick="openDetailedChart(&#39;1&#39;)">
+	                <div class="card-body">
+	                    <canvas id="can1"></canvas>
+	                </div>
+	            </div>
+	            <div class="card" onclick="openDetailedChart(&#39;2&#39;)">
+	                <div class="card-body">
+	                    <canvas id="can2"></canvas>
+	                </div>
+	            </div>
+	            <div class="card" onclick="openDetailedChart(&#39;3&#39;)">
+	                <div class="card-body">
+	                    <canvas id="can3"></canvas>
+	                </div>
+	            </div>
+	            <div class="card" onclick="openDetailedChart(&#39;4&#39;)">
+	                <div class="card-body">
+	                    <canvas id="can4"></canvas>
+	                </div>
+	            </div>
+			</div>
+			
+			<div id="detailedChart" class="modal" onclick="event.stopPropagation()">
+	            <div class="modal-content">
+	                <canvas id="detailed"></canvas>
+	                <div class="modalClose" id="closeModal" onclick="$('#detailedChart').hide()">
+	                    <i class="far fa-times-circle fa-2x m-auto"></i>
+	                </div>
+	            </div>
+	        </div>
+        
+        
+        <!-- If the number of charts is equal to 1, just show detailed view of chart instead -->
+        
+	
+        <script>
+        /*<![CDATA[*/
+            
+            function makeColor(colorNum, colors){
+                if (colors < 1) colors = 1; // defaults to one color - avoid divide by zero
+                    return colorNum * (360 / colors) % 360;
+            }
+            
+            function makeBarChart(ctx, data, isDetailed = false){
+                
+                var chartBorderColors = [];
+                var chartColors = []
+
+                var colorAlpha = 0.1;
+                var color = Chart.helpers.color;
+                
+                var chartType = data.type;
+                var chartTitle = data.chartTitle;
+                var xAxisData = data.xAxisData;
+                var yAxisData = data.yAxisData;
+                var xAxisTitle = data.xAxisTitle;
+                var yAxisTitle = data.yAxisTitle;
+                var xAxisDataSetLabels = data.xAxisDataSetLabels;
+                var offsetYAxis = data.offsetYAxis;
+                var showLegend = isDetailed? data.showLegend : false;
+                var legendPosition = data.legendPosition;
+                var unit = data.unit;
+                var prependUnit = data.prependUnit;
+                var colors = data.colors;
+
+                if (colors !== [] && colors != null){
+                    chartColors = []
+                    chartBorderColors = []
+                    for(i=0; i<colors.length;i++)
+                    {
+                        chartColors[i] = color(colors[i]).alpha(colorAlpha).rgbString();
+                        chartBorderColors[i] = color(colors[i]).alpha(1).rgbString();
+                    }
+                }
+                else
+                {
+                    chartBorderColors = [];
+                    for(i=0; i<xAxisDataSetLabels.length;i++)
+                    {
+                        chartColors[i]= "hsla( " + makeColor(i, xAxisDataSetLabels.length) + ", 100%, 50% , "+colorAlpha+")";
+                        chartBorderColors[i] = "hsl( " + makeColor(i, xAxisDataSetLabels.length) + ", 100%, 50% )";
+                    }
+                }
+
+                Chart.scaleService.updateScaleDefaults('linear', {
+                    ticks: {
+                        min: offsetYAxis
+                    }
+                });
+
+                var datasets= [];
+                for (let i = 0; i < yAxisData.length; i++) {
+                    let dataObj = {
+                        label: xAxisDataSetLabels? xAxisDataSetLabels[i] : "",
+                        backgroundColor: xAxisDataSetLabels? chartColors[i] : chartColors,
+                        borderColor: xAxisDataSetLabels? chartBorderColors[i] : chartBorderColors,
+                        borderWidth: 1,
+                        data: yAxisData[i]
+                    }
+                    datasets.push(dataObj);
+                }
+
+                var barChartData = {
+                labels: xAxisData,
+                datasets: datasets
+                };
+
+                var chartOptions = {
+                responsive: true,
+                maintainAspectRatio: !isDetailed,
+                legend: {
+                    display : showLegend,
+                    position: legendPosition
+                },
+                title: {
+                    display: true,
+                    text: chartTitle
+                },
+                scales: {
+                    yAxes: [{
+                        scaleLabel : {
+                        display: yAxisTitle? true : false,
+                        labelString: yAxisTitle
+                        },
+                        stacked: chartType === 'stacked',
+                        ticks: {
+                            callback: function(value, index, values) {
+                                        return prependUnit? unit + value : value + unit;
+                            }
+                        }
+                    }],
+                    xAxes: [{
+                        scaleLabel : {
+                        display: xAxisTitle? true : false,
+                        labelString: xAxisTitle
+                        },
+                        stacked: chartType === 'stacked'
+                    }]
+                }
+                }
+
+                if (isDetailed) {
+                    if (window.detailedChart != undefined) window.detailedChart.destroy();
+                    window.detailedChart = new Chart(ctx, {
+                        type: "bar",
+                        data: barChartData,
+                        options: chartOptions
+                    });
+                } else {
+                    var chart = new Chart(ctx, {
+                        type: "bar",
+                        data: barChartData,
+                        options: chartOptions
+                    });
+                }
+
+            }
+            
+            function makeBoxPlot(ctx, data, isDetailed = false)
+            {
+                var chartBorderColors = [];
+                var chartColors = []
+
+                var colorAlpha = 0.1;
+                var color = Chart.helpers.color;
+                
+                
+                var chartTitle = data.chartTitle;
+                var xAxisData = data.xAxisData;
+                var yAxisData = data.yAxisData;
+                var xAxisTitle = data.xAxisTitle;
+                var yAxisTitle = data.yAxisTitle;
+                var xAxisDataSetLabels = data.xAxisDataSetLabels;
+                var offsetYAxis = data.offsetYAxis;
+                var showLegend = isDetailed ? data.showLegend : false;
+                var legendPosition = data.legendPosition;
+                var unit = data.unit;
+                var prependUnit = data.prependUnit;
+                var colors = data.colors;
+
+
+                if (colors !== [] && colors != null){
+                    chartColors = []
+                    chartBorderColors = []
+                    for(i=0; i<colors.length;i++)
+                    {
+                        chartColors[i] = color(colors[i]).alpha(colorAlpha).rgbString();
+                        chartBorderColors[i] = color(colors[i]).alpha(1).rgbString();
+                    }
+                }
+                else
+                {
+                    chartBorderColors = [];
+                    for(i=0; i<xAxisDataSetLabels.length;i++)
+                    {
+                        chartColors[i]= "hsla( " + makeColor(i, xAxisDataSetLabels.length) + ", 100%, 50% , "+colorAlpha+")";
+                        chartBorderColors[i] = "hsl( " + makeColor(i, xAxisDataSetLabels.length) + ", 100%, 50% )";
+                    }
+                }
+
+                Chart.scaleService.updateScaleDefaults('linear', {
+                    ticks: {
+                        min: offsetYAxis
+                    }
+                });
+
+                var datasets= [];
+                for (let i = 0; i < yAxisData.length; i++) {
+                    let dataObj = {
+                        label: xAxisDataSetLabels? xAxisDataSetLabels[i] : "",
+                        backgroundColor: xAxisDataSetLabels? chartColors[i] : chartColors,
+                        borderColor: xAxisDataSetLabels? chartBorderColors[i] : chartBorderColors,
+                        borderWidth: 1,
+                        outlierColor: '#999999',
+                        itemRadius: 0,
+                        padding: 10,
+                        data: yAxisData[i]
+                    }
+                    datasets.push(dataObj);
+                }
+
+                var boxplotData = {
+                labels: xAxisData,
+                datasets: datasets
+                };
+
+                var chartOptions = {
+                responsive: true,
+                maintainAspectRatio: !isDetailed,
+                legend: {
+                    display : showLegend,
+                    position: legendPosition
+                },
+                title: {
+                    display: true,
+                    text: chartTitle
+                },
+                scales: {
+                    yAxes: [{
+                        scaleLabel : {
+                        display: yAxisTitle? true : false,
+                        labelString: yAxisTitle
+                        },
+                    ticks: {
+                        callback: function(value, index, values) {
+                                    return prependUnit? unit + value : value + unit;
+                            }
+                    }
+                    }],
+                    xAxes: [{
+                        scaleLabel : {
+                        display: xAxisTitle? true : false,
+                        labelString: xAxisTitle
+                        }
+                    }]
+                }
+                }
+
+                if (isDetailed) {
+                    if (window.detailedChart != undefined) window.detailedChart.destroy();
+                    window.detailedChart = new Chart(ctx, {
+                        type: "boxplot",
+                        data: boxplotData,
+                        options: chartOptions
+                    });
+                } else {
+                    var chart = new Chart(ctx, {
+                        type: "boxplot",
+                        data: boxplotData,
+                        options: chartOptions
+                    }); 
+                }   	
+            }
+            
+            function makeStackedBarChart(ctx, data, isDetailed = false){
+                var chartBorderColors = [];
+                var chartColors = []
+
+                var colorAlpha = 0.1;
+                var color = Chart.helpers.color;
+                
+                var chartTitle = data.chartTitle;
+                var xAxisData = data.xAxisData;
+                var dataList = data.dataList;
+                var xAxisTitle = data.xAxisTitle;
+                var yAxisTitle = data.yAxisTitle;
+                var offsetYAxis = data.offsetYAxis;
+                var showLegend = isDetailed ? data.showLegend : false;
+                var legendPosition = data.legendPosition;
+                var unit = data.unit;
+                var prependUnit = data.prependUnit;
+                var colors = data.colors;
+
+                if (colors !== [] && colors != null){
+                    chartColors = []
+                    chartBorderColors = []
+                    for(i=0; i<colors.length;i++)
+                    {
+                        chartColors[i] = color(colors[i]).alpha(colorAlpha).rgbString();
+                        chartBorderColors[i] = color(colors[i]).alpha(1).rgbString();
+                    }
+                }
+                else
+                {
+                    chartBorderColors = [];
+                    for(i=0; i< dataList.length;i++)
+                    {
+                        chartColors[i]= "hsla( " + makeColor(i, dataList.length) + ", 100%, 50% , "+colorAlpha+")";
+                        chartBorderColors[i] = "hsl( " + makeColor(i, dataList.length) + ", 100%, 50% )";
+                    }
+                }
+
+                Chart.scaleService.updateScaleDefaults('linear', {
+                    ticks: {
+                        min: offsetYAxis
+                    }
+                });
+
+                var datasets= [];
+                for (let i = 0; i < dataList.length; i++) {
+                    let dataObj = {
+                        label: dataList[i]['label'],
+                        backgroundColor: chartColors[i],
+                        borderColor: chartBorderColors[i],
+                        borderWidth: 1,
+                        stack: dataList[i]['parentStack'],
+                        data: dataList[i]['dataset']
+                    }
+                    datasets.push(dataObj);
+                }
+
+                var barChartData = {
+                labels: xAxisData,
+                datasets: datasets
+                };
+
+                var chartOptions = {
+                responsive: true,
+                maintainAspectRatio: !isDetailed,
+                legend: {
+                    display : showLegend,
+                    position: legendPosition
+                },
+                title: {
+                    display: true,
+                    text: chartTitle
+                },
+                scales: {
+                    yAxes: [{
+                        scaleLabel : {
+                        display: yAxisTitle? true : false,
+                        labelString: yAxisTitle
+                        },
+                        stacked: true,
+                    ticks: {
+                        callback: function(value, index, values) {
+                                    return prependUnit? unit + value : value + unit;
+                            }
+                    }
+                    }],
+                    xAxes: [{
+                        scaleLabel : {
+                        display: xAxisTitle? true : false,
+                        labelString: xAxisTitle
+                        },
+                        stacked: true
+                    }]
+                }
+                }
+
+                if (isDetailed) {
+                    if (window.detailedChart != undefined) window.detailedChart.destroy();
+                    window.detailedChart = new Chart(ctx, {
+                        type: "bar",
+                        data: barChartData,
+                        options: chartOptions
+                    });
+                } else {
+                    var chart = new Chart(ctx, {
+                        type: "bar",
+                        data: barChartData,
+                        options: chartOptions
+                    });
+                }
+            }
+            
+            function makeSpiderChart(ctx, chartdata, isDetailed = false)
+            {
+                var chartBorderColors = [];
+                var chartColors = []
+
+                var colorAlpha = 0.1;
+                var color = Chart.helpers.color;
+
+                var chartTitle = chartdata.chartTitle;
+                var xAxisData = chartdata.xAxisData;
+                var yAxisData = chartdata.yAxisData;
+                var xAxisTitle = chartdata.xAxisTitle;
+                var yAxisTitle = chartdata.yAxisTitle;
+                var xAxisDataSetLabels = chartdata.xAxisDataSetLabels;
+                var offsetYAxis = chartdata.offsetYAxis;
+                var showLegend = isDetailed ? chartdata.showLegend : false;
+                var legendPosition = chartdata.legendPosition;
+                var unit = chartdata.unit;
+                var prependUnit = chartdata.prependUnit;
+                var colors = chartdata.colors;
+                var normyAxis= chartdata.normalizedyAxisData;
+                var units = chartdata.units;
+                
+                if(units == null)
+		        {
+			         units = [];
+			         for(i=0;i<xAxisData.length;i++)
+                     {
+                        units[i]=unit;
+                     }
+		        }
+                
+                if (colors !== [] && colors != null){
+                    chartColors = []
+                    chartBorderColors = []
+                    for(i=0; i<colors.length;i++)
+                    {
+                        chartColors[i] = color(colors[i]).alpha(colorAlpha).rgbString();
+                        chartBorderColors[i] = color(colors[i]).alpha(1).rgbString();
+                    }
+                }
+                else
+                {
+                    chartBorderColors = [];
+                    for(i=0; i<xAxisDataSetLabels.length;i++)
+                    {
+                        chartColors[i]= "hsla( " + makeColor(i, xAxisDataSetLabels.length) + ", 100%, 50% , "+colorAlpha+")";
+                        chartBorderColors[i] = "hsl( " + makeColor(i, xAxisDataSetLabels.length) + ", 100%, 50% )";
+                    }
+                }
+
+                Chart.scaleService.updateScaleDefaults('linear', {
+                    ticks: {
+                        min: offsetYAxis
+                    }
+                });
+
+                var yAxisDatatmp=[];
+                if(normyAxis == null)
+                {
+                    yAxisDatatmp = yAxisData;
+                }
+                else
+                {
+                    yAxisDatatmp = normyAxis;
+                }
+
+                var datasets= [];
+                    for (let i = 0; i < yAxisData.length; i++) {
+                        let dataObj = {
+                            label: xAxisDataSetLabels? xAxisDataSetLabels[i] : "",
+                            backgroundColor: xAxisDataSetLabels? chartColors[i] : chartColors,
+                            borderColor: xAxisDataSetLabels? chartBorderColors[i] : chartBorderColors,
+                            borderWidth: 1,
+                            data: yAxisDatatmp[i]
+                        }
+                        datasets.push(dataObj);
+                    }
+
+                var spiderChartData = {
+                labels: xAxisData,
+                datasets: datasets
+                };
+
+                var chartOptions = 
+                {
+                responsive: true,
+                maintainAspectRatio: !isDetailed,
+                legend: {
+                    display : showLegend,
+                    position: legendPosition
+                },
+                title: {
+                    display: true,
+                    text: chartTitle
+                },
+                scale: {
+                ticks: {
+                        callback: function() {return ""},
+                        backdropColor: "rgba(0, 0, 0, 0)"
+                    }
+                },
+                tooltips: 
+                {
+                    callbacks:
+                    {
+                        title: function()
+                        {
+                            return "";
+                        },
+                        label: function(item, data) 
+                        {
+
+                            var datasetLabel = data.datasets[item.datasetIndex].label || "";
+                            var dataPoint = parseFloat(item.yLabel);        
+                                
+                            var i=item.datasetIndex;
+                            var j=item.index;
+                            
+                            if(normyAxis!=null)
+                            {
+                                if(normyAxis[i][j]==dataPoint)
+                                {
+                                    out =xAxisData[j]+ " - " + datasetLabel + ": " + yAxisData[i][j] +" "+ units[j] + "\n  (normalized to: " + dataPoint.toFixed(2)+")";
+                                }
+                            }
+                            else
+                            {
+                                var out = datasetLabel + ": " + dataPoint + " "+ units[j];
+                            }
+                            return out;
+                        }
+                    }
+                }
+                }
+
+                if (isDetailed) {
+                    if (window.detailedChart != undefined) window.detailedChart.destroy();
+                    window.detailedChart = new Chart(ctx, {
+                        type: "radar",
+                        data: spiderChartData,
+                        options: chartOptions
+                    });
+                } else {
+                    var chart = new Chart(ctx, {
+                        type: "radar",
+                        data: spiderChartData,
+                        options: chartOptions
+                    });
+                }
+            }
+            
+            function makeLineChart(ctx, data, isDetailed = false){
+                var chartBorderColors = [];
+                var chartColors = []
+
+                var colorAlpha = 0.1;
+                var color = Chart.helpers.color;
+                
+                var chartTitle = data.chartTitle;
+                var xAxisData = data.xAxisData;
+                var dataList = data.dataList;
+                var xAxisTitle = data.xAxisTitle;
+                var yAxisTitle = data.yAxisTitle;
+                var offsetYAxis = data.offsetYAxis;
+                var showLegend = isDetailed ? data.showLegend : false;
+                var legendPosition = data.legendPosition;
+                var unit = data.unit;
+                var prependUnit = data.prependUnit;
+                var colors = data.colors;
+
+                if (colors !== [] && colors != null){
+                    chartColors = []
+                    chartBorderColors = []
+                    for(i=0; i<colors.length;i++)
+                    {
+                        chartColors[i] = color(colors[i]).alpha(colorAlpha).rgbString();
+                        chartBorderColors[i] = color(colors[i]).alpha(1).rgbString();
+                    }
+                }
+                else
+                {
+                    chartBorderColors = [];
+                    for(i=0; i< dataList.length;i++)
+                    {
+                        chartColors[i]= "hsla( " + makeColor(i, dataList.length) + ", 100%, 50% , "+colorAlpha+")";
+                        chartBorderColors[i] = "hsl( " + makeColor(i, dataList.length) + ", 100%, 50% )";
+                    }
+                }
+
+                Chart.scaleService.updateScaleDefaults('linear', {
+                    ticks: {
+                        min: offsetYAxis
+                    }
+                });
+
+                var datasets= [];
+                for (let i = 0; i < dataList.length; i++) {
+                    let dataObj = {
+                        label: dataList[i].label,
+                        borderColor: dataList[i].lineColor ?? chartBorderColors[i],
+                        borderWidth: 1,
+                        fill: false,
+                        pointBackgroundColor: dataList[i].pointBGColorList ? dataList[i].pointBGColorList : dataList[i].pointBackgroundColor,
+                        pointRadius: dataList[i].pointSizeList? dataList[i].pointSizeList : dataList[i].pointSize,
+                        pointHoverRadius: dataList[i].pointHoverSizeList ? dataList[i].pointHoverSizeList : dataList[i].pointHoverSize,
+                        steppedLine: dataList[i].stepped ? dataList[i].steppingStyle : false,
+                        data: dataList[i].points
+                    }
+                    datasets.push(dataObj);
+                }
+
+                var lineChartData = {
+                labels: [],
+                datasets: datasets
+                };
+
+                var chartOptions = {
+                responsive: true,
+                maintainAspectRatio: !isDetailed,
+                legend: {
+                    display : showLegend,
+                    position: legendPosition
+                },
+                title: {
+                    display: true,
+                    text: chartTitle
+                },
+                elements: {
+                    line: {
+                        tension: data.lineTension ?? 0.4
+                    }
+                },
+                scales: {
+                    yAxes: [{
+                        scaleLabel : {
+	                        display: yAxisTitle? true : false,
+	                        labelString: yAxisTitle
+                        },
+	                    ticks: {
+	                        callback: function(value, index, values) {
+	                                    return prependUnit? unit + value : value + unit;
+	                        }
+                    	}
+                    }],
+                    xAxes: [{
+                        type: 'linear',
+                        scaleLabel : {
+	                        display: xAxisTitle? true : false,
+	                        labelString: xAxisTitle
+                        }
+                    }]
+                }
+                }
+
+                if (isDetailed) {
+                    if (window.detailedChart != undefined) window.detailedChart.destroy();
+                    window.detailedChart = new Chart(ctx, {
+                        type: "line",
+                        data: lineChartData,
+                        options: chartOptions
+                    });
+                } else {
+                    var chart = new Chart(ctx, {
+                        type: "line",
+                        data: lineChartData,
+                        options: chartOptions
+                    });
+                }
+            }
+
+
+            const chartDatas = [{"chartTitle":"Label access metrics per Core","xAxisTitle":"Core","yAxisTitle":"Label Count","xAxisData":["GP10B","Core2","Core3","Core4","Core5","Core0","Core1"],"xAxisDataSetLabels":null,"offsetXAxis":0.0,"offsetYAxis":0.0,"viewportXMin":0.0,"viewportXMax":0.0,"showLegend":true,"legendPosition":"top","unit":"","prependUnit":false,"colors":null,"charttype":"stackedbarchart","stackLabels":["LABEL","MEMORY"],"dataList":[{"label":"Read only Labels","parentStack":"LABEL","dataset":[12.0,0.0,0.0,0.0,8.0,1.0,0.0]},{"label":"Write only Labels","parentStack":"LABEL","dataset":[12.0,2.0,0.0,0.0,2.0,1.0,0.0]},{"label":"Read and Write Labels","parentStack":"LABEL","dataset":[0.0,4.0,0.0,2.0,4.0,2.0,5.0]},{"label":"SYSTEM_DRAM Labels","parentStack":"MEMORY","dataset":[24.0,6.0,0.0,2.0,14.0,4.0,5.0]}],"type":""},{"chartTitle":"Label Access Metrics per Task","xAxisTitle":"Task","yAxisTitle":"Label Count","xAxisData":["OS_Overhead","Lidar_Grabber","DASM","CANbus_polling","EKF","Planner","PRE_SFM_gpu_POST","PRE_Localization_gpu_POST","PRE_Lane_detection_gpu_POST","PRE_Detection_gpu_POST","SFM","Localization","Lane_detection","Detection"],"xAxisDataSetLabels":null,"offsetXAxis":0.0,"offsetYAxis":0.0,"viewportXMin":0.0,"viewportXMax":0.0,"showLegend":true,"legendPosition":"top","unit":"","prependUnit":false,"colors":null,"charttype":"stackedbarchart","stackLabels":["TASK"],"dataList":[{"label":"Read only Labels","parentStack":"TASK","dataset":[0.0,0.0,0.0,0.0,1.0,10.0,1.0,0.0,0.0,0.0,3.0,5.0,2.0,2.0]},{"label":"Write only Labels","parentStack":"TASK","dataset":[0.0,1.0,0.0,1.0,2.0,2.0,0.0,0.0,0.0,0.0,3.0,5.0,2.0,2.0]},{"label":"Read and Write Labels","parentStack":"TASK","dataset":[0.0,1.0,2.0,0.0,3.0,0.0,1.0,5.0,2.0,2.0,0.0,0.0,0.0,0.0]}],"type":""},{"chartTitle":"Label Access Metrics per Memory","xAxisTitle":"Memory","yAxisTitle":"Label Count","xAxisData":["SYSTEM_DRAM"],"xAxisDataSetLabels":null,"offsetXAxis":0.0,"offsetYAxis":0.0,"viewportXMin":0.0,"viewportXMax":0.0,"showLegend":true,"legendPosition":"top","unit":"","prependUnit":false,"colors":null,"charttype":"stackedbarchart","stackLabels":["MEMORY"],"dataList":[{"label":"Read only Labels","parentStack":"MEMORY","dataset":[7.0]},{"label":"Write only Labels","parentStack":"MEMORY","dataset":[6.0]},{"label":"Read and Write Labels","parentStack":"MEMORY","dataset":[16.0]}],"type":""},{"chartTitle":"Label Access Metrics per Size","xAxisTitle":"Label Size","yAxisTitle":"Label Count","xAxisData":["256 B","1 kB","24 kB","500 kB","750 kB","1500 kB","2 MB","142 MB"],"xAxisDataSetLabels":null,"offsetXAxis":0.0,"offsetYAxis":0.0,"viewportXMin":0.0,"viewportXMax":0.0,"showLegend":true,"legendPosition":"top","unit":"","prependUnit":false,"colors":null,"charttype":"stackedbarchart","stackLabels":["SIZE"],"dataList":[{"label":"Number of Labels","parentStack":"SIZE","dataset":[4.0,12.0,2.0,1.0,2.0,2.0,6.0,1.0]}],"type":""}];
+            let detailedView = null;
+            if (chartDatas.length > 1) {
+	            detailedView = document.getElementById('detailed');
+            }
+            
+            const detailedCtx = detailedView?.getContext('2d');
+            window.detailedChart = detailedView !== null ? new Chart(detailedCtx, {}) : null;
+
+            const openDetailedChart = (chartIndex) => {
+                $('#detailedChart').css("display", "block");
+                let data = chartDatas[chartIndex-1];
+                
+                switch (data.charttype) {
+                    case 'spiderchart':
+                        makeSpiderChart(detailedCtx, data, true);
+                        break;
+                    case 'barchart':
+                        makeBarChart(detailedCtx, data, true);
+                        break;
+                    case 'stackedbarchart':
+                        makeStackedBarChart(detailedCtx, data, true);
+                        break;
+                    case 'linechart':
+                        makeLineChart(detailedCtx, data, true);
+                        break;
+                    case 'boxplot':
+                        makeBoxPlot(detailedCtx, data, true);
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            const getContextById = (id) => document.getElementById(id).getContext('2d');
+            
+            // If there are multiple charts then show a grid of charts without detail
+            if (chartDatas.length > 1) {
+	            chartDatas.map((data, index) => {
+	                let ctx = undefined;
+	                switch (data.charttype) {
+	                    case 'spiderchart':
+	                        ctx = getContextById(`can${index + 1}`);
+	                        makeSpiderChart(ctx, data);
+	                        break;
+	                    case 'barchart':
+	                        ctx = getContextById(`can${index + 1}`);
+	                        makeBarChart(ctx, data);
+	                        break;
+	                    case 'stackedbarchart':
+	                        ctx = getContextById(`can${index + 1}`);
+	                        makeStackedBarChart(ctx, data);
+	                        break;
+                        case 'linechart':
+                            ctx = getContextById(`can${index + 1}`);
+                            makeLineChart(ctx, data);
+                            break;
+	                    case 'boxplot':
+	                        ctx = getContextById(`can${index + 1}`);
+	                        makeBoxPlot(ctx, data);
+	                        break;
+	                    default:
+	                        break;
+	                }
+	            });
+            }
+            
+            // If there is just one chart, show a detailed view of the chart
+            if (chartDatas.length === 1) {
+	            chartDatas.map((data) => {
+	                const ctx = getContextById('singleDetailed');
+	                switch (data.charttype) {
+	                    case 'spiderchart':
+	                        makeSpiderChart(ctx, data, true);
+	                        break;
+	                    case 'barchart':
+	                        makeBarChart(ctx, data, true);
+	                        break;
+	                    case 'stackedbarchart':
+	                        makeStackedBarChart(ctx, data, true);
+	                        break;
+                        case 'linechart':
+                            makeLineChart(ctx, data, true);
+                            break;
+	                    case 'boxplot':
+	                        makeBoxPlot(ctx, data, true);
+	                        break;
+	                    default:
+	                        break;
+	                }
+	            });
+            }
+                
+        /*]]>*/
+        </script>
+    </body>
+</html>
