@@ -26,9 +26,8 @@ The source code for Linux (in the `linux` sub-folder) should be compilable on an
 The built-in Linux trace functions can be used to check if it behaves as expected. This load generator can also be combined with other programs that emulate other parts of the system to do integration testing.
 
 At this point, the load generator is partial and only works based on ticks and label accesses.
-    
 
-    
+
 [1]: https://gitlab.idial.institute/panorama.systemc.group/app4mc.sim
 [2]: https://gitlab.idial.institute/panorama.systemc.group/amalthea2systemc.transformation
 [3]: https://github.com/anand6105/MBSE

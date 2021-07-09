@@ -5,7 +5,7 @@ This repository contains artifacts such as requirements and architecture models 
 
 The WATERS FMTV 2019 challenge is an industrial case study used as part of the 10th International Workshop on Analysis Tools and Methodologies for Embedded and Real-time Systems (WATERS). It was originally proposed by Arne Hamann, Dakshina Dasari, and Falk Wurst, Corporate Research Robert Bosch GmbH and Ignacio Sañudo, Nicola Capodieci, Paolo Burgio and Marko Bertogna, University of Modena and Reggio Emilia. 
 
-The artifacts in this repository are based on the challenge description and are provided by the [PANORAMA research project][2], specifically by the [contributors][7]. The corresponding AMALTHEA model for the challenge is included here. The original file can be found in the [Eclipse APP4MC Github Repository][4].
+The artifacts in this repository are based on the challenge description and are provided by the [PANORAMA research project][2], specifically by the [contributors][7]. The corresponding Amalthea model for the challenge is included here. The original file can be found in the [Eclipse APP4MC Github Repository][4].
 
 The system described in the WATERS FMTV 2019 challenge and consequently in the MobSTr dataset is an automated driving system that includes lane following and routing features. The original challenge definition was used as a starting point, but refinements have been applied when necessary. We make no claim on the completeness or correctness of any of the artifacts available for download here.
 
@@ -14,7 +14,7 @@ The system described in the WATERS FMTV 2019 challenge and consequently in the M
 
 | *Artifact* | *Description* |
 |----|----|
-| org.panorama-research.mobstr.amalthea | The AMALTHEA model of the WATERS FMTV 2019 Challenge. You will need [Eclipse APP4MC][3] to open the model. |
+| org.panorama-research.mobstr.amalthea | The Amalthea model of the WATERS FMTV 2019 Challenge. You will need [Eclipse APP4MC][3] to open the model. |
 | org.panorama-research.mobstr.architecture | A UML model of the components of the system. You will need [Eclipse Papyrus][8] to open the model. |
 | org.panorama-research.mobstr.artifacts | A UML model of the artifacts that are part of this dataset. This information model is used as the foundation for the TIM. You will need [Eclipse Papyrus][8] to open the model. |
 | org.panorama-research.mobstr.assumptions | An Excel spreadsheet with additional assumptions. |
@@ -29,6 +29,7 @@ The system described in the WATERS FMTV 2019 challenge and consequently in the M
 | __WorkspaceTraceModels | The traceability links between the different artifacts conforming to the TIM. Please note that the links are partial, i.e., not all artifacts that should be linked are currently connected by a trace link. |
 | WATERS_Industrial_Challenge_2019_final.pdf | The original WATERS FMTV 2019 Challenge description on which the artifacts in this repository are based. |
 
+
 ## The MobSTr TIM
 
 The MobSTr dataset comes with its own custom traceability information model (TIM). The TIM has been designed to fulfill the needs of an organisation that develops a safety-critical product. Therefore, the trace link types, the directionality of the trace link types, and the artifacts they connect are based on the goal to allow constructing a safety case from the existing artifacts as easily as possible and to trace all required evidence from the safety case. In particular, the trace link types are informed by the traceability described in ISO 26262.
@@ -36,6 +37,7 @@ The MobSTr dataset comes with its own custom traceability information model (TIM
 Each combination of artifacts that needs to be traced has a unique trace link type which also carries a unique name that reflects its semantics. All trace link types are shown in the figure below. Please note that the cardinalities in the figure differ from the cardinalities that are implemented in the custom TIM (see below). The reason is that while it might make sense that not all hazards are assigned to a safety goal on the global level (e.g., while hazards are developed and refined and safety goals have not yet been updated), no trace links would exist in such cases.
 
 ![The information model for the MobSTr dataset](org.panorama-research.mobstr.artifacts/mobstr-tim.png)
+
 
 ## How to Use the Custom TIM
 
@@ -70,6 +72,7 @@ Use the following instructions to install Eclipse Capra and all necessary compon
 6. **Start creating and using traceability links**: Follow [this video](https://www.youtube.com/watch?v=XRtLs5OT_yM&feature=youtu.be) to create and visualize traceability links.
 
 If you prefer a more manual installation, please refer to this [separate guide](manual-installation.md).
+
 
 ## Troubleshooting
 
