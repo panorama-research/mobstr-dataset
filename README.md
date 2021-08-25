@@ -3,6 +3,19 @@
 Provided by the [PANORAMA Research Project][2].
 
 <!--ts-->
+* [The MobSTr dataset: <em>Mo</em>del-<em>B</em>ased <em>S</em>afety Assurance and <em>Tr</em>aceability](#the-mobstr-dataset-model-based-safety-assurance-and-traceability)
+   * [Included Artifacts](#included-artifacts)
+   * [The MobSTr TIM](#the-mobstr-tim)
+   * [How to Use the Custom TIM](#how-to-use-the-custom-tim)
+   * [Troubleshooting](#troubleshooting)
+      * [The traceability matrix shows many entries as "EObject"](#the-traceability-matrix-shows-many-entries-as-eobject)
+      * [Compilation errors or errors when opening the runtime Eclipse](#compilation-errors-or-errors-when-opening-the-runtime-eclipse)
+      * [Issues opening the Amalthea model](#issues-opening-the-amalthea-model)
+   * [Citing MobSTr](#citing-mobstr)
+   * [License and Copyright](#license-and-copyright)
+
+<!-- Added by: runner, at: Wed Aug 25 13:21:36 UTC 2021 -->
+
 <!--te-->
 
 This repository contains artifacts such as requirements and architecture models for the MobSTr dataset, based on the [WATERS FMTV 2019 challenge][1]. The MobSTr dataset provides a number of artifacts and traceability links for use in demonstrating model-based safety assurance and traceability.
