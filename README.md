@@ -86,6 +86,40 @@ Please make sure that you have JDK 11 installed and that this is the Java runtim
 ### Issues opening the Amalthea model
 In case you get an error that the wrong APP4MC version is installed, please open `mobstr.amxmi` in a text editor and change the model version to the APP4MC version you have installed (usually either 0.9.7 or 1.0.0, depending on the version of Eclipse that you are using and thus the target platform chosen for Eclipse Capra).
 
+## Citing MobSTr
+
+Stable releases of MobSTr are published to Zenodo. You can find the current version [here][10]. If you want to cite the dataset in your own work, please use the bibliographical information on the Zenodo page or this BibTeX entry:
+
+```
+@misc{mobstr_2021_06, 
+  author={Jan-Philipp Steghöfer and Björn Koopmann
+          and Jan Steffen Becker and Ingo Stierand
+          and Marc Zeller and Maria Bonner
+          and David Schmelter and Salome Maro},
+  title={The MobSTr dataset: Model-Based Safety Assurance and Traceability},
+  DOI={10.5281/zenodo.4981481},
+  publisher={Zenodo}, 
+  year={2021},
+  month={Jun}
+}
+```
+
+We have also published a short paper about MobSTr at the [29th IEEE International Requirements Engineering Conference][11]. To cite it, please use the following BibTex entry:
+
+```
+@inproceedings{
+  author={Jan-Philipp Steghöfer and Björn Koopmann
+          and Jan Steffen Becker and Ingo Stierand
+          and Marc Zeller and Maria Bonner
+          and David Schmelter and Salome Maro},
+  title={The MobSTr Dataset -- An Exemplar for Traceability and Model-based Safety Assessment},
+  booktitle={Proceedings of the 29th IEEE International Requirements Engineering Conference, Notre Dame, South Bend, USA}
+  publisher={IEEE},
+  year={2021},
+  month={Aug}
+}
+```
+
 
 ## License and Copyright
 
@@ -100,3 +134,5 @@ All artifacts provided here are under [Eclipse Public License v2.0][5]. Copyrigh
 [7]: CONTRIBUTORS
 [8]: https://www.eclipse.org/papyrus/
 [9]: https://github.com/Digital-Dependability-Identities/ODE_Editor
+[10]: https://zenodo.org/record/4981481
+[11]: https://conf.researchr.org/home/re-2021
