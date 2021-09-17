@@ -103,6 +103,10 @@ Please make sure that you have JDK 11 installed and that this is the Java runtim
 ### Issues opening the Amalthea model
 In case you get an error that the wrong APP4MC version is installed, please open `mobstr.amxmi` in a text editor and change the model version to the APP4MC version you have installed (usually either 0.9.7 or 1.0.0, depending on the version of Eclipse that you are using and thus the target platform chosen for Eclipse Capra).
 
+## Known Uses
+
+The MobSTr dataset is intended to be used as an exemplar and as a dataset for evaluation in all research for which it is relevant. We track the known uses of the dataset [here][12].
+
 ## Citing MobSTr
 
 Stable releases of MobSTr are published to Zenodo. You can find the current version [here][10]. If you want to cite the dataset in your own work, please use the bibliographical information on the Zenodo page or this BibTeX entry:
@@ -153,3 +157,4 @@ All artifacts provided here are under [Eclipse Public License v2.0][5]. Copyrigh
 [9]: https://github.com/Digital-Dependability-Identities/ODE_Editor
 [10]: https://zenodo.org/record/4981481
 [11]: https://conf.researchr.org/home/re-2021
+[12]: KNOWNUSES.md
