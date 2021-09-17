@@ -11,10 +11,11 @@ Provided by the [PANORAMA Research Project][2].
       * [The traceability matrix shows many entries as "EObject"](#the-traceability-matrix-shows-many-entries-as-eobject)
       * [Compilation errors or errors when opening the runtime Eclipse](#compilation-errors-or-errors-when-opening-the-runtime-eclipse)
       * [Issues opening the Amalthea model](#issues-opening-the-amalthea-model)
+   * [Known Uses](#known-uses)
    * [Citing MobSTr](#citing-mobstr)
    * [License and Copyright](#license-and-copyright)
 
-<!-- Added by: runner, at: Wed Aug 25 13:21:36 UTC 2021 -->
+<!-- Added by: runner, at: Fri Sep 17 13:50:24 UTC 2021 -->
 
 <!--te-->
 
