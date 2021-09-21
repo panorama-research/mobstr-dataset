@@ -58,25 +58,24 @@ Each combination of artifacts that needs to be traced has a unique trace link ty
 ![The information model for the MobSTr dataset](org.panorama-research.mobstr.artifacts/mobstr-tim.png)
 
 
-## How to Use the Custom TIM
+## Interacting with the MobSTr Artifacts using the Custom Eclipse Installation
 
-The repository contains a custom traceability information model (TIM) that defines which link types can be created between the different artifacts. The current TIM is based on the artifact model in project `org.panorama-research.mobstr.artifacts` and is implemented for use in [Eclipse Capra](https://eclipse.org/capra). The TIM project is located in `org.panorama-research.mobstr.tim`.
+It is possible to use the MobSTr dataset using a custom Eclipse installation that contains all tools required to access the artifacts. This includes [Eclipse Papyrus](13), the [ODE Editor](6), and [APP4MC](3).
 
-Use the following instructions to install Eclipse Capra and all necessary components of the MobSTr dataset:  
+The repository also contains a custom traceability information model (TIM) that defines which link types can be created between the different artifacts. The current TIM is based on the artifact model in project `org.panorama-research.mobstr.artifacts` and is implemented for use in [Eclipse Capra](https://eclipse.org/capra). The TIM project is located in `org.panorama-research.mobstr.tim`.
+
+Use the following instructions to install Eclipse and all necessary components of the MobSTr dataset:  
 
 1. **Download the Eclipse Installer** from [here](https://wiki.eclipse.org/Eclipse_Installer).
-2. **Download the Installation file** for Eclipse Capra for MobSTr [here](https://panorama-research.github.io/mobstr-dataset/setup/EclipseCapraForMobSTr.setup).
-3. **Install Eclipse Capra**
+2. **Install Eclipse Capra**
   * Open the Eclipse Installer.
   * If necessary, switch to "Advanced Mode" using the Hamburger menu in the top right corner (if you don't see that menu, you are already in advanced mode).
   * Select "Eclipse for Committers".
   * Select JDK 11 in the list of possible JREs (Note: please make sure that Java 11 is installed locally on your machine. If that is not the case, please download Java 11 from [here](https://adoptopenjdk.net/index.html?variant=openjdk11&jvmVariant=hotspot) and locate it on your hard drive in this step).
   * The recommended version of Eclipse is *2021-03* at the time of writing. Please select this version from the "Product Version" dropdown menu.
   * Click Next.
-  * On the second page, either: 
-     * click the "+" button. In the dropdown menu, select "Eclipse Projects". Click on "Browse File System..." and locate the file you just downloaded on your hard disk;
-     * *or* drag and drop the file you downloaded onto the "Eclipse Projects" entry in the list.
-  * Make sure that the checkbox before the entry "Eclipse Capra for MobSTr" is selected.
+  * On the second page, drag and drop [this link](https://panorama-research.github.io/mobstr-dataset/setup/EclipseCapraForMobSTr.setup) onto the "&lt;User&gt;" entry in the list.
+  * ***Make sure that the checkbox before the entry "Eclipse Capra for MobSTr" is selected.***
   * Click next and follow the rest of the installation process. The Eclipse installer will then download the necessary files, close itself, and start the newly downloaded Eclipse which will then complete the setup. By the end of it, you will have all necessary files on your local machine to start using Eclipse Capra with the MobSTr dataset.
   * You might need to install graphiz to make the "Capra PlantUML Viewer" work. Please follow the [installation instructions](https://plantuml.com/graphviz-dot) for your platform.
 4. **Create a new run configuration**
@@ -94,11 +93,6 @@ If you prefer a more manual installation, please refer to this [separate guide](
 
 
 ## Troubleshooting
-
-### The Eclipse Installer claims that the setup file "does not contain a valid project"
-
-If the Eclipse Installer does not recognise the setup file on *macOS*, make sure it has [access to the folder](https://support.apple.com/guide/mac-help/control-access-to-files-and-folders-on-mac-mchld5a35146/mac). Alternatively, copy the setup file to a location that the Installer does have access to.
-
 
 ### The traceability matrix shows many entries as "EObject"
 
@@ -165,3 +159,4 @@ All artifacts provided here are under [Eclipse Public License v2.0][5]. Copyrigh
 [10]: https://zenodo.org/record/4981481
 [11]: https://conf.researchr.org/home/re-2021
 [12]: KNOWNUSES.md
+[13]: https://www.eclipse.org/papyrus/
