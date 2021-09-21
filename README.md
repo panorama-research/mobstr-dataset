@@ -73,7 +73,7 @@ Use the following instructions to install Eclipse and all necessary components o
   * Select JDK 11 in the list of possible JREs (Note: please make sure that Java 11 is installed locally on your machine. If that is not the case, please download Java 11 from [here](https://adoptopenjdk.net/index.html?variant=openjdk11&jvmVariant=hotspot) and locate it on your hard drive in this step).
   * The recommended version of Eclipse is *2021-03* at the time of writing. Please select this version from the "Product Version" dropdown menu.
   * Click Next.
-  * On the second page, drag and drop [this link](https://panorama-research.github.io/mobstr-dataset/setup/EclipseCapraForMobSTr.setup) onto the "&lt;User&gt;" entry in the list.
+  * On the second page, drag and drop [this link](https://panorama-research.github.io/mobstr-dataset/setup/EclipseCapraForMobSTr.setup) onto the "Eclipse Projects" entry in the list.
   * ***Make sure that the checkbox before the entry "Eclipse Capra for MobSTr" is selected.***
   * Click next and follow the rest of the installation process. The Eclipse installer will then download the necessary files, close itself, and start the newly downloaded Eclipse which will then complete the setup. By the end of it, you will have all necessary files on your local machine to start using Eclipse Capra with the MobSTr dataset.
   * You might need to install graphiz to make the "Capra PlantUML Viewer" work. Please follow the [installation instructions](https://plantuml.com/graphviz-dot) for your platform.
