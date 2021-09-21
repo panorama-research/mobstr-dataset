@@ -1,8 +1,9 @@
 name: Deploy setup file to Github Pages
 on:
   push:
-    branches:
-      - master
+    branches: [master]
+    paths: ['org.panorama-research.mobstr.oomph/EclipseCapraForMobSTr.setup']
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest

@@ -1,3 +1,4 @@
+name: Add TOC to README.md
 on:
   push:
     branches: [master]
