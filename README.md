@@ -64,7 +64,7 @@ The repository contains a custom traceability information model (TIM) that defin
 Use the following instructions to install Eclipse Capra and all necessary components of the MobSTr dataset:  
 
 1. **Download the Eclipse Installer** from [here](https://wiki.eclipse.org/Eclipse_Installer).
-2. **Download the Installation file** for Eclipse Capra for MobSTr [here](EclipseCapraForMobSTr.setup).
+2. **Download the Installation file** for Eclipse Capra for MobSTr [here](https://panorama-research.github.io/mobstr-dataset/setup/EclipseCapraForMobSTr.setup).
 3. **Install Eclipse Capra**
   * Open the Eclipse Installer.
   * If necessary, switch to "Advanced Mode" using the Hamburger menu in the top right corner (if you don't see that menu, you are already in advanced mode).
@@ -93,6 +93,11 @@ If you prefer a more manual installation, please refer to this [separate guide](
 
 
 ## Troubleshooting
+
+### The Eclipse Installer claims that the setup file "does not contain a valid project"
+
+If the Eclipse Installer does not recognise the setup file on *macOS*, make sure it has [access to the folder](https://support.apple.com/guide/mac-help/control-access-to-files-and-folders-on-mac-mchld5a35146/mac). Alternatively, copy the setup file to a location that the Installer does have access to.
+
 
 ### The traceability matrix shows many entries as "EObject"
 
