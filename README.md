@@ -6,9 +6,8 @@ Provided by the [PANORAMA Research Project][2].
 * [The MobSTr dataset: <em>Mo</em>del-<em>B</em>ased <em>S</em>afety Assurance and <em>Tr</em>aceability](#the-mobstr-dataset-model-based-safety-assurance-and-traceability)
    * [Included Artifacts](#included-artifacts)
    * [The MobSTr TIM](#the-mobstr-tim)
-   * [How to Use the Custom TIM](#how-to-use-the-custom-tim)
+   * [Interacting with the MobSTr Artifacts using the Custom Eclipse Installation](#interacting-with-the-mobstr-artifacts-using-the-custom-eclipse-installation)
    * [Troubleshooting](#troubleshooting)
-      * [The Eclipse Installer claims that the setup file "does not contain a valid project"](#the-eclipse-installer-claims-that-the-setup-file-does-not-contain-a-valid-project)
       * [The traceability matrix shows many entries as "EObject"](#the-traceability-matrix-shows-many-entries-as-eobject)
       * [Compilation errors or errors when opening the runtime Eclipse](#compilation-errors-or-errors-when-opening-the-runtime-eclipse)
       * [Issues opening the Amalthea model](#issues-opening-the-amalthea-model)
@@ -16,7 +15,7 @@ Provided by the [PANORAMA Research Project][2].
    * [Citing MobSTr](#citing-mobstr)
    * [License and Copyright](#license-and-copyright)
 
-<!-- Added by: runner, at: Tue Sep 21 15:20:34 UTC 2021 -->
+<!-- Added by: runner, at: Tue Sep 21 19:25:53 UTC 2021 -->
 
 <!--te-->
 
