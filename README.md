@@ -76,17 +76,17 @@ Use the following instructions to install Eclipse and all necessary components o
   * On the second page, drag and drop [this link](https://panorama-research.github.io/mobstr-dataset/setup/EclipseCapraForMobSTr.setup) onto the "Eclipse Projects" entry in the list.
   * ***Make sure that the checkbox before the entry "Eclipse Capra for MobSTr" is selected.***
   * Click next and follow the rest of the installation process. The Eclipse installer will then download the necessary files, close itself, and start the newly downloaded Eclipse which will then complete the setup. By the end of it, you will have all necessary files on your local machine to start using Eclipse Capra with the MobSTr dataset.
-  * You might need to install graphiz to make the "Capra PlantUML Viewer" work. Please follow the [installation instructions](https://plantuml.com/graphviz-dot) for your platform.
-4. **Create a new run configuration**
+  * You might need to install Graphviz to make the "Capra PlantUML Viewer" work. Please follow the [installation instructions](https://plantuml.com/graphviz-dot) for your platform.
+3. **Create a new run configuration**
   * Click on Run --> Run Configurations and create a new Eclipse Application Configuration.
   * Select a new folder as the workspace for your Eclipse application.
   * Click "Apply", then "Run".
   * Depending on your chosen Eclipse version and target platform, you might see a warning about a dependency to `http-client`. This message can be safely ignored.
-5. **Import the MobSTr projects into the runtime Eclipse workspace**
+4. **Import the MobSTr projects into the runtime Eclipse workspace**
   * Once the new workspace opens, import the projects in this repository (apart from `org.panorama-research.mobstr.tim` and `org.panorama-research.mobstr.tim.test`). 
   * Go to Window --> Perspectives and switch to the Capra perspective.
   * Go to the Eclipse preferences, open the "Capra Traceability" tree and select "Office Documents". Select "Use this column as the ID" and make sure the column is "A". The MobSTr dataset uses the first column in Excel files to  identify requirements and hazards.
-6. **Start creating and using traceability links**: Follow [this video](https://www.youtube.com/watch?v=XRtLs5OT_yM&feature=youtu.be) to create and visualize traceability links.
+5. **Start creating and using traceability links**: Follow [this video](https://www.youtube.com/watch?v=XRtLs5OT_yM&feature=youtu.be) to create and visualize traceability links.
 
 If you prefer a more manual installation, please refer to this [separate guide](manual-installation.md).
 
