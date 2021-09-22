@@ -37,6 +37,13 @@ public class MobstrTIMAdapter extends AbstractMetaModelAdapter implements TraceM
 
 	private static final int DEFAULT_INITIAL_TRANSITIVITY_DEPTH = 1;
 
+	/**
+	 * A delimiter used in the construction of the trace link name. It's not very
+	 * pretty that this is here since this is PlantUML specific, but it works for
+	 * now.
+	 */
+	private static final String TRACE_LINK_NAME_PORTION_DELIMITER = "\\l\\t";
+
 	@Override
 	public EObject createModel() {
 		// TODO Auto-generated method stub
@@ -110,11 +117,13 @@ public class MobstrTIMAdapter extends AbstractMetaModelAdapter implements TraceM
 				.withCastedHandler(artifactHelper.unwrapWrapper(origins.get(0)), (h, e) -> h.getDisplayName(e))
 				.orElseGet(origins.get(0)::toString));
 		name.append(" -> ");
+		name.append(TRACE_LINK_NAME_PORTION_DELIMITER);
 		for (Object obj : targets) {
 			name.append(artifactHelper.getHandler(artifactHelper.unwrapWrapper(obj)).get()
 					.withCastedHandler(artifactHelper.unwrapWrapper(obj), (h, e) -> h.getDisplayName(e))
 					.orElseGet(obj::toString));
 			name.append(";");
+			name.append(TRACE_LINK_NAME_PORTION_DELIMITER);
 		}
 		trace.setName(name.toString());
 
