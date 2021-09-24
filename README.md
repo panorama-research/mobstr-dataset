@@ -8,6 +8,7 @@ Provided by the [PANORAMA Research Project][2].
    * [The MobSTr TIM](#the-mobstr-tim)
    * [Interacting with the MobSTr Artifacts using the Custom Eclipse Installation](#interacting-with-the-mobstr-artifacts-using-the-custom-eclipse-installation)
    * [Troubleshooting](#troubleshooting)
+      * [Incomplete custom Eclipse installation](#incomplete-custom-eclipse-installation)
       * [The traceability matrix shows many entries as "EObject"](#the-traceability-matrix-shows-many-entries-as-eobject)
       * [Compilation errors or errors when opening the runtime Eclipse](#compilation-errors-or-errors-when-opening-the-runtime-eclipse)
       * [Issues opening the Amalthea model](#issues-opening-the-amalthea-model)
@@ -15,7 +16,7 @@ Provided by the [PANORAMA Research Project][2].
    * [Citing MobSTr](#citing-mobstr)
    * [License and Copyright](#license-and-copyright)
 
-<!-- Added by: runner, at: Wed Sep 22 13:45:39 UTC 2021 -->
+<!-- Added by: runner, at: Fri Sep 24 12:36:22 UTC 2021 -->
 
 <!--te-->
 
