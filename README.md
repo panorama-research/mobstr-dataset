@@ -95,7 +95,7 @@ If you prefer a more manual installation, please refer to this [separate guide](
 
 ### Incomplete custom Eclipse installation
 
-During the custom installation process on Windows, it may happen that the process does not complete successfully. This error can be recognized by the fact that no further installation window opens after starting the newly downloaded Eclipse instance and no projects are shown in the Project Explorer. Please delete or rename the temporary ".eclipse" and ".p2" directories in your home directory and start the installation process again.
+During the custom installation process on Windows, it may happen that the process does not complete successfully. This error can be recognized by the fact that no further installation window opens after starting the newly downloaded Eclipse instance and no projects are shown in the Project Explorer. Please delete or rename the temporary `.eclipse` and `.p2` directories in your home directory and start the installation process again.
 
 
 ### The traceability matrix shows many entries as "EObject"
