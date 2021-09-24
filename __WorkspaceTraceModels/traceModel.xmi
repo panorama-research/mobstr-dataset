@@ -24,7 +24,7 @@
     <source href="artifactWrappers.xmi#//@artifacts.15"/>
     <target href="artifactWrappers.xmi#//@artifacts.14"/>
   </traces>
-  <traces xsi:type="tim:SpecifiedByRequirement" name="Include a second environemnt senor (image grabber) : Measure ->\l\tRequirements!SR-1.1.1 (mobstr-requirements.xlsx)">
+  <traces xsi:type="tim:SpecifiedByRequirement" name="Include a second environment sensor (image grabber) : Measure ->\l\tRequirements!SR-1.1.1 (mobstr-requirements.xlsx)">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.0"/>
     <target href="artifactWrappers.xmi#//@artifacts.16"/>
   </traces>
@@ -217,7 +217,7 @@
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Wrong steering signal is provided  by the controller : Failure ->\l\tHazards!H-5 (mobstr-hazards.xlsx);">
+  <traces xsi:type="tim:LeadsToHazard" name="Wrong steering signal is provided by the controller : Failure ->\l\tHazards!H-5 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.3"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
@@ -226,17 +226,17 @@
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="No speed signal is provided  by the controller : Failure ->\l\tHazards!H-1 (mobstr-hazards.xlsx);">
+  <traces xsi:type="tim:LeadsToHazard" name="No speed signal is provided by the controller : Failure ->\l\tHazards!H-1 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.7"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Wrong speed signal is provided  by the controller : Failure ->\l\tHazards!H-1 (mobstr-hazards.xlsx);\l\tHazards!H-3 (mobstr-hazards.xlsx);\l\tHazards!H-4 (mobstr-hazards.xlsx);">
+  <traces xsi:type="tim:LeadsToHazard" name="Wrong speed signal is provided by the controller : Failure ->\l\tHazards!H-1 (mobstr-hazards.xlsx);\l\tHazards!H-3 (mobstr-hazards.xlsx);\l\tHazards!H-4 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
   </traces>
-  <traces xsi:type="tim:LeadsToHazard" name="Speed signal is provided too late  by the controller : Failure ->\l\tHazards!H-1 (mobstr-hazards.xlsx);">
+  <traces xsi:type="tim:LeadsToHazard" name="Speed signal is provided too late by the controller : Failure ->\l\tHazards!H-1 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.17"/>
   </traces>
@@ -488,11 +488,11 @@
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.8/@failures.1"/>
     <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_ZvuIYH_aEeq1j4EUwdsVmw"/>
   </traces>
-  <traces xsi:type="tim:EffectsComponent" name="Wrong steering or speed signal is provided  by the path planner : Failure ->\l\tPath Planner : Component;">
+  <traces xsi:type="tim:EffectsComponent" name="Wrong steering or speed signal is provided by the path planner : Failure ->\l\tPath Planner : Component;">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.8/@failures.3"/>
     <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_ZvuIYH_aEeq1j4EUwdsVmw"/>
   </traces>
-  <traces xsi:type="tim:EffectsComponent" name="Steering or speed signal is provided too late  by the path planner : Failure ->\l\tPath Planner : Component;">
+  <traces xsi:type="tim:EffectsComponent" name="Steering or speed signal is provided too late by the path planner : Failure ->\l\tPath Planner : Component;">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.8/@failures.5"/>
     <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_ZvuIYH_aEeq1j4EUwdsVmw"/>
   </traces>
