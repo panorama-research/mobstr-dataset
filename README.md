@@ -93,19 +93,30 @@ If you prefer a more manual installation, please refer to this [separate guide](
 
 ## Troubleshooting
 
+### Incomplete custom Eclipse installation
+
+During the custom installation process on Windows, it may happen that the process does not complete successfully. This error can be recognized by the fact that no further installation window opens after starting the newly downloaded Eclipse instance and no projects are shown in the Project Explorer. Please delete or rename the temporary ".eclipse" and ".p2" directories in your home directory and start the installation process again.
+
+
 ### The traceability matrix shows many entries as "EObject"
 
 This can happen when the MobSTr projects are imported to the runtime workspace for the first time. Simply restart your runtime Eclipse to fix the issue. Also make sure that you followed the instructions for setting the column as the ID for Office documents as described above.
 
+
 ### Compilation errors or errors when opening the runtime Eclipse
+
 Please make sure that you have JDK 11 installed and that this is the Java runtime your Eclipse is using. Newer JDK versions might not be 100% compatible with Eclipse Capra at this point.
 
+
 ### Issues opening the Amalthea model
+
 In case you get an error that the wrong APP4MC version is installed, please open `mobstr.amxmi` in a text editor and change the model version to the APP4MC version you have installed (usually either 0.9.7 or 1.0.0, depending on the version of Eclipse that you are using and thus the target platform chosen for Eclipse Capra).
+
 
 ## Known Uses
 
 The MobSTr dataset is intended to be used as an exemplar and as a dataset for evaluation in all research for which it is relevant. We track the known uses of the dataset [here][12].
+
 
 ## Citing MobSTr
 
