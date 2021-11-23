@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependability_:RequirementPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dependability_="http://www.deis-project.eu/ode/mergedODE/dependability" name="mobstr-contracts">
+  <dependabilityRequirements xsi:type="dependability_:SafetyRequirement" name="Req Object Detection">
+    <dependabilityContracts name="C1" assumptions="//@assumptions.0 //@assumptions.1 //@assumptions.2">
+      <guaranteeFormalization expression=" fused_objects occurs every [5,800]ms" language="MTSL"/>
+    </dependabilityContracts>
+  </dependabilityRequirements>
+  <dependabilityRequirements xsi:type="dependability_:SafetyRequirement" name="Req Lidar Grabber">
+    <dependabilityContracts name="C2" assumptions="//@assumptions.0">
+      <guaranteeFormalization expression="lidar_output does not occur in mode Lidar.NOT_OK" language="MTSL"/>
+      <guaranteeFormalization expression=" lidar_output occurs every [10,60] ms in mode Lidar.OK" language="MTSL"/>
+    </dependabilityContracts>
+  </dependabilityRequirements>
+  <dependabilityRequirements xsi:type="dependability_:SafetyRequirement" name="Req Camera Grabber">
+    <dependabilityContracts name="C3" assumptions="//@assumptions.1">
+      <guaranteeFormalization expression="frame does not occur in mode Camera.NOT_OK" language="MTSL"/>
+      <guaranteeFormalization expression="frame occurs every [10,60] ms in mode Camera.OK" language="MTSL"/>
+    </dependabilityContracts>
+  </dependabilityRequirements>
+  <dependabilityRequirements xsi:type="dependability_:SafetyRequirement" name="Req Object Localization via LIDAR">
+    <dependabilityContracts name="C4" assumptions="//@assumptions.4">
+      <guaranteeFormalization expression="Reaction(lidar_input, object_poses) within [120,795]ms" language="MTSL"/>
+    </dependabilityContracts>
+  </dependabilityRequirements>
+  <dependabilityRequirements xsi:type="dependability_:SafetyRequirement" name="Req Oject Localization via Camera">
+    <dependabilityContracts name="C5" assumptions="//@assumptions.3">
+      <guaranteeFormalization expression="Reaction(frame, bounding_boxes) within [20,55]ms" language="MTSL"/>
+    </dependabilityContracts>
+  </dependabilityRequirements>
+  <dependabilityRequirements xsi:type="dependability_:SafetyRequirement" name="Req Sensor Fusion">
+    <dependabilityContracts name="C6" assumptions="//@assumptions.5">
+      <guaranteeFormalization expression="Reaction(object_poses, fused_objects) within [5,25]ms" language="MTSL"/>
+      <guaranteeFormalization expression="Reaction(bounding_boxes, fused_objects) within [5,25]ms" language="MTSL"/>
+    </dependabilityContracts>
+  </dependabilityRequirements>
+  <assumptions name="A1">
+    <formalization expression="Lidar fails at most once every 200ms with latency [10,30] ms" language="MTSL"/>
+  </assumptions>
+  <assumptions name="A2">
+    <formalization expression="Camera fails at most once every 400ms with latency [10,30] ms" language="MTSL"/>
+  </assumptions>
+  <assumptions name="A3">
+    <formalization expression="at most one of {Camera, Lidar} fails permanently" language="MTSL"/>
+  </assumptions>
+  <assumptions name="A4">
+    <formalization expression="frame occurs every [15,inf[ ms" language="MTSL"/>
+  </assumptions>
+  <assumptions name="A5">
+    <formalization expression="lidar_input occurs every [15,inf[ ms" language="MTSL"/>
+  </assumptions>
+  <assumptions name="A6">
+    <formalization expression="one of {object_poses, bounding_boxes} occurs every [5, 700] ms" language="MTSL"/>
+  </assumptions>
+</dependability_:RequirementPackage>

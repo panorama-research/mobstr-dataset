@@ -268,6 +268,22 @@ public class TimSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case TimPackage.FORMALIZES_REQUIREMENT: {
+				FormalizesRequirement formalizesRequirement = (FormalizesRequirement)theEObject;
+				T result = caseFormalizesRequirement(formalizesRequirement);
+				if (result == null) result = caseDirectedTraceLink(formalizesRequirement);
+				if (result == null) result = caseAbstractTraceLink(formalizesRequirement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TimPackage.SPECIFIED_BY_CONTRACT: {
+				SpecifiedByContract specifiedByContract = (SpecifiedByContract)theEObject;
+				T result = caseSpecifiedByContract(specifiedByContract);
+				if (result == null) result = caseDirectedTraceLink(specifiedByContract);
+				if (result == null) result = caseAbstractTraceLink(specifiedByContract);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -659,6 +675,36 @@ public class TimSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRefersToAnalysisResult(RefersToAnalysisResult object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Formalizes Requirement</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Formalizes Requirement</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFormalizesRequirement(FormalizesRequirement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Specified By Contract</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Specified By Contract</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSpecifiedByContract(SpecifiedByContract object) {
 		return null;
 	}
 

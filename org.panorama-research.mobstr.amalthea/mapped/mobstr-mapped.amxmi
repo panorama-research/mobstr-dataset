@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<am:Amalthea xmlns:am="http://app4mc.eclipse.org/amalthea/1.0.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <customProperties key="origin">
+    <value xsi:type="am:StringObject" value="https://www.ecrts.org/forum/viewtopic.php?f=43&amp;t=124&amp;sid=2ed215f5b81414d188799074f433adcf&#xA;&#xA;Update October 2nd 2019:&#xA;Amalthea model of the challenge has been replaced with a fixed version, where no overload situation occurs.&#xA;&#xA;Link to zipped model:&#xA;https://www.ecrts.org/forum/download/file.php?id=117&amp;sid=2f2479cc441ce3ec64309965c5e9a994" />
+  </customProperties>
+  <swModel>
+    <tasks xmi:id="OS_Overhead?type=Task" name="OS_Overhead" stimuli="periodic_100ms?type=PeriodicStimulus" preemption="preemptive" multipleTaskActivationLimit="0">
+      <activityGraph>
+        <items xsi:type="am:Group" name="CallSequence" ordered="true">
+          <items xsi:type="am:RunnableCall" runnable="OS_Ops_Function?type=Runnable" />
+        </items>
+      </activityGraph>
+    </tasks>
+    <tasks xmi:id="Lidar_Grabber?type=Task" name="Lidar_Grabber" stimuli="periodic_33ms?type=PeriodicStimulus" preemption="preemptive" multipleTaskActivationLimit="0">
+      <activityGraph>
+        <items xsi:type="am:Group" name="CallSequence" ordered="true">
+          <items xsi:type="am:RunnableCall" runnable="Lidar_Function?type=Runnable" />
+        </items>
+      </activityGraph>
+    </tasks>
+    <tasks xmi:id="DASM?type=Task" name="DASM" stimuli="periodic_5ms?type=PeriodicStimulus" preemption="preemptive" multipleTaskActivationLimit="0">
+      <activityGraph>
+        <items xsi:type="am:Group" name="CallSequence" ordered="true">
+          <items xsi:type="am:RunnableCall" runnable="DASM_Function?type=Runnable" />
+        </items>
+      </activityGraph>
+    </tasks>
+    <tasks xmi:id="CANbus_polling?type=Task" name="CANbus_polling" stimuli="periodic_10ms?type=PeriodicStimulus" preemption="preemptive" multipleTaskActivationLimit="0">
+      <activityGraph>
+        <items xsi:type="am:Group" name="CallSequence" ordered="true">
+          <items xsi:type="am:RunnableCall" runnable="CAN_Function?type=Runnable" />
+        </items>
+      </activityGraph>
+    </tasks>
+    <tasks xmi:id="EKF?type=Task" name="EKF" stimuli="periodic_15ms?type=PeriodicStimulus" preemption="preemptive" multipleTaskActivationLimit="0">
+      <activityGraph>
+        <items xsi:type="am:Group" name="CallSequence" ordered="true">
+          <items xsi:type="am:RunnableCall" runnable="EKF_Function?type=Runnable" />
+        </items>
+      </activityGraph>
+    </tasks>
+    <tasks xmi:id="Planner?type=Task" name="Planner" stimuli="periodic_15ms?type=PeriodicStimulus" preemption="preemptive" multipleTaskActivationLimit="0">
+      <activityGraph>
+        <items xsi:type="am:Group" name="CallSequence" ordered="true">
+          <items xsi:type="am:RunnableCall" runnable="Planner_Function?type=Runnable" />
+        </items>
+      </activityGraph>
+    </tasks>
+    <tasks xmi:id="PRE_SFM_gpu_POST?type=Task" name="PRE_SFM_gpu_POST" stimuli="periodic_33ms?type=PeriodicStimulus" preemption="preemptive" multipleTaskActivationLimit="0">
+      <activityGraph>
+        <items xsi:type="am:Group" name="CallSequence" ordered="true">
+          <items xsi:type="am:RunnableCall" runnable="SFM_Preprocessing?type=Runnable" />
+          <items xsi:type="am:InterProcessTrigger" stimulus="SFM_stim?type=InterProcessStimulus" />
+          <items xsi:type="am:WaitEvent" waitingBehaviour="active">
+            <eventMask events="SFM?type=OsEvent" />
+          </items>
+          <items xsi:type="am:ClearEvent">
+            <eventMask events="SFM?type=OsEvent" />
+          </items>
+          <items xsi:type="am:RunnableCall" runnable="SFM_Postprocessing?type=Runnable" />
+        </items>
+      </activityGraph>
+    </tasks>
+    <tasks xmi:id="PRE_Localization_gpu_POST?type=Task" name="PRE_Localization_gpu_POST" stimuli="periodic_400ms?type=PeriodicStimulus" preemption="preemptive" multipleTaskActivationLimit="0">
+      <activityGraph>
+        <items xsi:type="am:Group" name="CallSequence" ordered="true">
+          <items xsi:type="am:RunnableCall" runnable="Localization_Preprocessing?type=Runnable" />
+          <items xsi:type="am:InterProcessTrigger" stimulus="Localization_stim?type=InterProcessStimulus" />
+          <items xsi:type="am:WaitEvent" waitingBehaviour="active">
+            <eventMask events="Localization_GPU?type=OsEvent" />
+          </items>
+          <items xsi:type="am:ClearEvent">
+            <eventMask events="Localization_GPU?type=OsEvent" />
+          </items>
+          <items xsi:type="am:RunnableCall" runnable="Localization_Postprocessing?type=Runnable" />
+        </items>
+      </activityGraph>
+    </tasks>
+    <tasks xmi:id="PRE_Lane_detection_gpu_POST?type=Task" name="PRE_Lane_detection_gpu_POST" stimuli="periodic_66ms?type=PeriodicStimulus" preemption="preemptive" multipleTaskActivationLimit="0">
+      <activityGraph>
+        <items xsi:type="am:Group" name="CallSequence" ordered="true">
+          <items xsi:type="am:RunnableCall" runnable="Lane_Detection_Preprocessing?type=Runnable" />
+          <items xsi:type="am:InterProcessTrigger" stimulus="Lane_detection_stim?type=InterProcessStimulus" />
+          <items xsi:type="am:WaitEvent" waitingBehaviour="active">
+            <eventMask events="Lane_detect_GPU?type=OsEvent" />
+          </items>
+          <items xsi:type="am:ClearEvent">
+            <eventMask events="Lane_detect_GPU?type=OsEvent" />
+          </items>
+          <items xsi:type="am:RunnableCall" runnable="Lane_Detection_Postprocessing?type=Runnable" />
+        </items>
+      </activityGraph>
+    </tasks>
+    <tasks xmi:id="PRE_Detection_gpu_POST?type=Task" name="PRE_Detection_gpu_POST" stimuli="periodic_200ms?type=PeriodicStimulus" preemption="preemptive" multipleTaskActivationLimit="0">
+      <activityGraph>
+        <items xsi:type="am:Group" name="CallSequence" ordered="true">
+          <items xsi:type="am:RunnableCall" runnable="Detection_Preprocessing?type=Runnable" />
+          <items xsi:type="am:InterProcessTrigger" stimulus="detection_stim?type=InterProcessStimulus" />
+          <items xsi:type="am:WaitEvent" waitingBehaviour="passive">
+            <eventMask events="Detect?type=OsEvent" />
+          </items>
+          <items xsi:type="am:RunnableCall" runnable="AsyncOffloadingCosts?type=Runnable" />
+          <items xsi:type="am:ClearEvent">
+            <eventMask events="Detect?type=OsEvent" />
+          </items>
+          <items xsi:type="am:RunnableCall" runnable="Detection_Postprocessing?type=Runnable" />
+        </items>
+      </activityGraph>
+    </tasks>
+    <tasks xmi:id="SFM?type=Task" name="SFM" stimuli="SFM_stim?type=InterProcessStimulus" preemption="preemptive" multipleTaskActivationLimit="0">
+      <activityGraph>
+        <items xsi:type="am:Group" name="CallSequence" ordered="true">
+          <items xsi:type="am:RunnableCall" runnable="SFM_host_to_device?type=Runnable" />
+          <items xsi:type="am:RunnableCall" runnable="SFM_Function?type=Runnable" />
+          <items xsi:type="am:RunnableCall" runnable="SFM_device_to_host?type=Runnable" />
+          <items xsi:type="am:SetEvent" process="PRE_SFM_gpu_POST?type=Task">
+            <eventMask events="SFM?type=OsEvent" />
+          </items>
+        </items>
+      </activityGraph>
+    </tasks>
+    <tasks xmi:id="Localization?type=Task" name="Localization" stimuli="Localization_stim?type=InterProcessStimulus" preemption="preemptive" multipleTaskActivationLimit="0">
+      <activityGraph>
+        <items xsi:type="am:Group" name="CallSequence" ordered="true">
+          <items xsi:type="am:RunnableCall" runnable="Localization_host_to_device?type=Runnable" />
+          <items xsi:type="am:RunnableCall" runnable="Localization_Function?type=Runnable" />
+          <items xsi:type="am:RunnableCall" runnable="Localization_device_to_host?type=Runnable" />
+          <items xsi:type="am:SetEvent" process="PRE_Localization_gpu_POST?type=Task">
+            <eventMask events="Localization_GPU?type=OsEvent" />
+          </items>
+        </items>
+      </activityGraph>
+    </tasks>
+    <tasks xmi:id="Lane_detection?type=Task" name="Lane_detection" stimuli="Lane_detection_stim?type=InterProcessStimulus" preemption="preemptive" multipleTaskActivationLimit="0">
+      <activityGraph>
+        <items xsi:type="am:Group" name="CallSequence" ordered="true">
+          <items xsi:type="am:RunnableCall" runnable="Lane_Detection_host_to_device?type=Runnable" />
+          <items xsi:type="am:RunnableCall" runnable="Lane_Detection_Function?type=Runnable" />
+          <items xsi:type="am:RunnableCall" runnable="Lane_Detection_device_to_host?type=Runnable" />
+          <items xsi:type="am:SetEvent" process="PRE_Lane_detection_gpu_POST?type=Task">
+            <eventMask events="Lane_detect_GPU?type=OsEvent" />
+          </items>
+        </items>
+      </activityGraph>
+    </tasks>
+    <tasks xmi:id="Detection?type=Task" name="Detection" stimuli="detection_stim?type=InterProcessStimulus" preemption="preemptive" multipleTaskActivationLimit="0">
+      <activityGraph>
+        <items xsi:type="am:Group" name="CallSequence" ordered="true">
+          <items xsi:type="am:RunnableCall" runnable="Detection_host_to_device?type=Runnable" />
+          <items xsi:type="am:RunnableCall" runnable="Detection_Function?type=Runnable" />
+          <items xsi:type="am:RunnableCall" runnable="Detection_device_to_host?type=Runnable" />
+          <items xsi:type="am:SetEvent" process="PRE_Detection_gpu_POST?type=Task">
+            <eventMask events="Detect?type=OsEvent" />
+          </items>
+        </items>
+      </activityGraph>
+    </tasks>
+    <runnables xmi:id="OS_Ops_Function?type=Runnable" name="OS_Ops_Function" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:Ticks">
+          <extended key="Denver?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="100000000" upperBound="100000000" average="1.0E8" />
+          </extended>
+          <extended key="A57?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="100000000" upperBound="100000000" average="1.0E8" />
+          </extended>
+        </items>
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="Lidar_Function?type=Runnable" name="Lidar_Function" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:LabelAccess" data="Cloud_map_host?type=Label" access="read" />
+        <items xsi:type="am:Ticks">
+          <extended key="Denver?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="19588000" upperBound="21736000" average="2.034807E7" />
+          </extended>
+          <extended key="A57?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="20320000" upperBound="27320000" average="2.352E7" />
+          </extended>
+        </items>
+        <items xsi:type="am:LabelAccess" data="Cloud_map_host?type=Label" access="write" />
+        <items xsi:type="am:LabelAccess" data="Occupancy_grid_host?type=Label" access="write" />
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="CAN_Function?type=Runnable" name="CAN_Function" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:Ticks">
+          <extended key="Denver?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="799744" upperBound="1199744" average="999744.0" />
+          </extended>
+          <extended key="A57?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="799360" upperBound="1199360" average="999360.0" />
+          </extended>
+        </items>
+        <items xsi:type="am:LabelAccess" data="Vehicle_status_host?type=Label" access="write" />
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="EKF_Function?type=Runnable" name="EKF_Function" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:LabelAccess" data="Vehicle_status_host?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="x_car_host?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="y_car_host?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="yaw_car_host?type=Label" access="read" />
+        <items xsi:type="am:Ticks">
+          <extended key="Denver?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="8179736" upperBound="8858959" average="8398959.0" />
+          </extended>
+          <extended key="A57?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="7959340" upperBound="9519340" average="8799340.0" />
+          </extended>
+        </items>
+        <items xsi:type="am:LabelAccess" data="x_car_host?type=Label" access="write" />
+        <items xsi:type="am:LabelAccess" data="y_car_host?type=Label" access="write" />
+        <items xsi:type="am:LabelAccess" data="yaw_car_host?type=Label" access="write" />
+        <items xsi:type="am:LabelAccess" data="vel_car?type=Label" access="write" />
+        <items xsi:type="am:LabelAccess" data="yaw_rate?type=Label" access="write" />
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="Planner_Function?type=Runnable" name="Planner_Function" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:LabelAccess" data="Lane_boundaries_host?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="Occupancy_grid_host?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="Vehicle_status_host?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="Matrix_SFM_host?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="Bounding_box_host?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="x_car_host?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="y_car_host?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="yaw_car_host?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="vel_car?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="yaw_rate?type=Label" access="read" />
+        <items xsi:type="am:Ticks">
+          <extended key="Denver?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="19073529" upperBound="24873529" average="2.0273529E7" />
+          </extended>
+          <extended key="A57?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="19243822" upperBound="26483822" average="2.2743822E7" />
+          </extended>
+        </items>
+        <items xsi:type="am:LabelAccess" data="speed_objective?type=Label" access="write" />
+        <items xsi:type="am:LabelAccess" data="steer_objective?type=Label" access="write" />
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="DASM_Function?type=Runnable" name="DASM_Function" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:LabelAccess" data="speed_objective?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="steer_objective?type=Label" access="read" />
+        <items xsi:type="am:Ticks">
+          <extended key="Denver?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="2099996" upperBound="2599996" average="2399996.0" />
+          </extended>
+          <extended key="A57?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="2599990" upperBound="3719990" average="3219990.0" />
+          </extended>
+        </items>
+        <items xsi:type="am:LabelAccess" data="speed_objective?type=Label" access="write" />
+        <items xsi:type="am:LabelAccess" data="steer_objective?type=Label" access="write" />
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="Detection_Preprocessing?type=Runnable" name="Detection_Preprocessing" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:LabelAccess" data="Image_host?type=Label" access="read" />
+        <items xsi:type="am:Ticks">
+          <extended key="Denver?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="4755924" upperBound="6354526" average="5853824.0" />
+          </extended>
+          <extended key="A57?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="6378560" upperBound="7379120" average="6921260.0" />
+          </extended>
+        </items>
+        <items xsi:type="am:LabelAccess" data="Image_host?type=Label" access="write" />
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="Detection_Postprocessing?type=Runnable" name="Detection_Postprocessing" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:LabelAccess" data="Bounding_box_host?type=Label" access="read" />
+        <items xsi:type="am:Ticks">
+          <extended key="Denver?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="1246000" upperBound="1816000" average="1416000.0" />
+          </extended>
+          <extended key="A57?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="1640000" upperBound="2040000" average="1840000.0" />
+          </extended>
+        </items>
+        <items xsi:type="am:LabelAccess" data="Bounding_box_host?type=Label" access="write" />
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="Localization_Function?type=Runnable" name="Localization_Function" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:Ticks">
+          <extended key="Denver?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="553415742" upperBound="589615742" average="5.62615742E8" />
+          </extended>
+          <extended key="A57?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="733039355" upperBound="774839355" average="7.54439355E8" />
+          </extended>
+          <extended key="GPU_def?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="175500000" upperBound="186000000" average="1.8E8" />
+          </extended>
+        </items>
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="Lane_Detection_Function?type=Runnable" name="Lane_Detection_Function" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:Ticks">
+          <extended key="Denver?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="76875648" upperBound="84475648" average="8.0075648E7" />
+          </extended>
+          <extended key="A57?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="95689120" upperBound="102089120" average="9.868912E7" />
+          </extended>
+          <extended key="GPU_def?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="36750000" upperBound="41000000" average="3.975E7" />
+          </extended>
+        </items>
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="Lane_Detection_Preprocessing?type=Runnable" name="Lane_Detection_Preprocessing" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:LabelAccess" data="Image_lane_lines_host?type=Label" access="read" />
+        <items xsi:type="am:Ticks">
+          <extended key="Denver?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="6151472" upperBound="7051367" average="6551424.0" />
+          </extended>
+          <extended key="A57?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="6573410" upperBound="7951921" average="7178560.0" />
+          </extended>
+        </items>
+        <items xsi:type="am:LabelAccess" data="Image_lane_lines_host?type=Label" access="write" />
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="Lane_Detection_Postprocessing?type=Runnable" name="Lane_Detection_Postprocessing" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:LabelAccess" data="Lane_boundaries_host?type=Label" access="read" />
+        <items xsi:type="am:Ticks">
+          <extended key="Denver?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="5999632" upperBound="8199496" average="7399142.0" />
+          </extended>
+          <extended key="A57?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="6999284" upperBound="8513680" average="7561630.0" />
+          </extended>
+        </items>
+        <items xsi:type="am:LabelAccess" data="Lane_boundaries_host?type=Label" access="write" />
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="SFM_Function?type=Runnable" name="SFM_Function" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:Ticks">
+          <extended key="A57?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="48274300" upperBound="59003000" average="5.377531E7" />
+          </extended>
+          <extended key="Denver?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="44363022" upperBound="55623380" average="4.953413E7" />
+          </extended>
+          <extended key="GPU_def?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="10575000" upperBound="11850000" average="1.08E7" />
+          </extended>
+        </items>
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="SFM_Preprocessing?type=Runnable" name="SFM_Preprocessing" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:LabelAccess" data="Image_SFM_host?type=Label" access="read" />
+        <items xsi:type="am:Ticks">
+          <extended key="Denver?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="5151424" upperBound="6355142" average="5751424.0" />
+          </extended>
+          <extended key="A57?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="5878560" upperBound="7459318" average="6977531.0" />
+          </extended>
+        </items>
+        <items xsi:type="am:LabelAccess" data="Image_SFM_host?type=Label" access="write" />
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="SFM_Postprocessing?type=Runnable" name="SFM_Postprocessing" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:LabelAccess" data="Matrix_SFM_host?type=Label" access="read" />
+        <items xsi:type="am:Ticks">
+          <extended key="Denver?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="5669568" upperBound="7064516" average="6363125.0" />
+          </extended>
+          <extended key="A57?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="6773920" upperBound="8347392" average="7213436.0" />
+          </extended>
+        </items>
+        <items xsi:type="am:LabelAccess" data="Image_SFM_host?type=Label" access="write" />
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="Localization_Preprocessing?type=Runnable" name="Localization_Preprocessing" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:LabelAccess" data="Cloud_map_host?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="Vehicle_status_host?type=Label" access="read" />
+        <items xsi:type="am:Ticks">
+          <extended key="Denver?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="6031488" upperBound="16431488" average="9231488.0" />
+          </extended>
+          <extended key="A57?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="6278720" upperBound="17878720" average="1.107872E7" />
+          </extended>
+        </items>
+        <items xsi:type="am:LabelAccess" data="Cloud_map_host?type=Label" access="write" />
+        <items xsi:type="am:LabelAccess" data="Vehicle_status_host?type=Label" access="write" />
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="Localization_Postprocessing?type=Runnable" name="Localization_Postprocessing" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:LabelAccess" data="x_car_host?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="y_car_host?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="yaw_car_host?type=Label" access="read" />
+        <items xsi:type="am:Ticks">
+          <extended key="Denver?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="6199994" upperBound="12599994" average="8399994.0" />
+          </extended>
+          <extended key="A57?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="8399985" upperBound="17399985" average="1.0599985E7" />
+          </extended>
+        </items>
+        <items xsi:type="am:LabelAccess" data="x_car_host?type=Label" access="write" />
+        <items xsi:type="am:LabelAccess" data="y_car_host?type=Label" access="write" />
+        <items xsi:type="am:LabelAccess" data="yaw_car_host?type=Label" access="write" />
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="Detection_host_to_device?type=Runnable" name="Detection_host_to_device" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:LabelAccess" data="Image_host?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="Image_device?type=Label" access="write" />
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="Detection_device_to_host?type=Runnable" name="Detection_device_to_host" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:LabelAccess" data="Bounding_box_device?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="Bounding_box_host?type=Label" access="write" />
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="Lane_Detection_host_to_device?type=Runnable" name="Lane_Detection_host_to_device" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:LabelAccess" data="Image_lane_lines_host?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="Image_lane_lines_device?type=Label" access="write" />
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="Lane_Detection_device_to_host?type=Runnable" name="Lane_Detection_device_to_host" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:LabelAccess" data="Lane_boundaries_device?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="Lane_boundaries_host?type=Label" access="write" />
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="SFM_host_to_device?type=Runnable" name="SFM_host_to_device" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:LabelAccess" data="IMU_data_host?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="Image_SFM_host?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="Image_SFM_device?type=Label" access="write" />
+        <items xsi:type="am:LabelAccess" data="IMU_data_device?type=Label" access="write" />
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="SFM_device_to_host?type=Runnable" name="SFM_device_to_host" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:LabelAccess" data="Matrix_SFM_device?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="Matrix_SFM_host?type=Label" access="write" />
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="Localization_host_to_device?type=Runnable" name="Localization_host_to_device" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:LabelAccess" data="Cloud_map_host?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="Vehicle_status_host?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="Cloud_map_device?type=Label" access="write" />
+        <items xsi:type="am:LabelAccess" data="Vehicle_status_device?type=Label" access="write" />
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="Localization_device_to_host?type=Runnable" name="Localization_device_to_host" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:LabelAccess" data="x_car_device?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="y_car_device?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="yaw_car_device?type=Label" access="read" />
+        <items xsi:type="am:LabelAccess" data="x_car_host?type=Label" access="write" />
+        <items xsi:type="am:LabelAccess" data="y_car_host?type=Label" access="write" />
+        <items xsi:type="am:LabelAccess" data="yaw_car_host?type=Label" access="write" />
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="Detection_Function?type=Runnable" name="Detection_Function" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:Ticks">
+          <extended key="GPU_def?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueStatistics" lowerBound="162000000" upperBound="174000000" average="1.65E8" />
+          </extended>
+        </items>
+      </activityGraph>
+    </runnables>
+    <runnables xmi:id="AsyncOffloadingCosts?type=Runnable" name="AsyncOffloadingCosts" callback="false" service="false">
+      <activityGraph>
+        <items xsi:type="am:Ticks">
+          <extended key="Denver?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueConstant" value="5000" />
+          </extended>
+          <extended key="A57?type=ProcessingUnitDefinition">
+            <value xsi:type="am:DiscreteValueConstant" value="5000" />
+          </extended>
+        </items>
+      </activityGraph>
+    </runnables>
+    <labels xmi:id="Cloud_map_host?type=Label" name="Cloud_map_host" constant="false" bVolatile="false">
+      <size value="1500" unit="kB" />
+    </labels>
+    <labels xmi:id="Occupancy_grid_host?type=Label" name="Occupancy_grid_host" constant="false" bVolatile="false">
+      <size value="500" unit="kB" />
+    </labels>
+    <labels xmi:id="Cloud_map_device?type=Label" name="Cloud_map_device" constant="false" bVolatile="false">
+      <size value="1500" unit="kB" />
+    </labels>
+    <labels xmi:id="Vehicle_status_host?type=Label" name="Vehicle_status_host" constant="false" bVolatile="false">
+      <size value="1" unit="kB" />
+    </labels>
+    <labels xmi:id="Vehicle_status_device?type=Label" name="Vehicle_status_device" constant="false" bVolatile="false">
+      <size value="1" unit="kB" />
+    </labels>
+    <labels xmi:id="x_car_host?type=Label" name="x_car_host" constant="false" bVolatile="false">
+      <size value="1" unit="kB" />
+    </labels>
+    <labels xmi:id="y_car_host?type=Label" name="y_car_host" constant="false" bVolatile="false">
+      <size value="1" unit="kB" />
+    </labels>
+    <labels xmi:id="yaw_car_host?type=Label" name="yaw_car_host" constant="false" bVolatile="false">
+      <size value="1" unit="kB" />
+    </labels>
+    <labels xmi:id="x_car_device?type=Label" name="x_car_device" constant="false" bVolatile="false">
+      <size value="1" unit="kB" />
+    </labels>
+    <labels xmi:id="y_car_device?type=Label" name="y_car_device" constant="false" bVolatile="false">
+      <size value="1" unit="kB" />
+    </labels>
+    <labels xmi:id="yaw_car_device?type=Label" name="yaw_car_device" constant="false" bVolatile="false">
+      <size value="1" unit="kB" />
+    </labels>
+    <labels xmi:id="vel_car?type=Label" name="vel_car" constant="false" bVolatile="false">
+      <size value="1" unit="kB" />
+    </labels>
+    <labels xmi:id="yaw_rate?type=Label" name="yaw_rate" constant="false" bVolatile="false">
+      <size value="1" unit="kB" />
+    </labels>
+    <labels xmi:id="steer_objective?type=Label" name="steer_objective" constant="false" bVolatile="false">
+      <size value="1" unit="kB" />
+    </labels>
+    <labels xmi:id="speed_objective?type=Label" name="speed_objective" constant="false" bVolatile="false">
+      <size value="1" unit="kB" />
+    </labels>
+    <labels xmi:id="NN_weights?type=Label" name="NN_weights" constant="false" bVolatile="false">
+      <size value="142" unit="MB" />
+    </labels>
+    <labels xmi:id="Matrix_SFM_host?type=Label" name="Matrix_SFM_host" constant="true" bVolatile="false">
+      <size value="24" unit="kB" />
+    </labels>
+    <labels xmi:id="Matrix_SFM_device?type=Label" name="Matrix_SFM_device" constant="true" bVolatile="false">
+      <size value="24" unit="kB" />
+    </labels>
+    <labels xmi:id="Image_lane_lines_host?type=Label" name="Image_lane_lines_host" constant="false" bVolatile="false">
+      <size value="2" unit="MB" />
+    </labels>
+    <labels xmi:id="Image_lane_lines_device?type=Label" name="Image_lane_lines_device" constant="false" bVolatile="false">
+      <size value="2" unit="MB" />
+    </labels>
+    <labels xmi:id="Bounding_box_host?type=Label" name="Bounding_box_host" constant="false" bVolatile="false">
+      <size value="750" unit="kB" />
+    </labels>
+    <labels xmi:id="Bounding_box_device?type=Label" name="Bounding_box_device" constant="false" bVolatile="false">
+      <size value="750" unit="kB" />
+    </labels>
+    <labels xmi:id="Image_host?type=Label" name="Image_host" constant="true" bVolatile="false">
+      <size value="2" unit="MB" />
+    </labels>
+    <labels xmi:id="Image_device?type=Label" name="Image_device" constant="true" bVolatile="false">
+      <size value="2" unit="MB" />
+    </labels>
+    <labels xmi:id="Image_SFM_host?type=Label" name="Image_SFM_host" constant="true" bVolatile="false">
+      <size value="2" unit="MB" />
+    </labels>
+    <labels xmi:id="Image_SFM_device?type=Label" name="Image_SFM_device" constant="true" bVolatile="false">
+      <size value="2" unit="MB" />
+    </labels>
+    <labels xmi:id="IMU_data_host?type=Label" name="IMU_data_host" constant="false" bVolatile="false">
+      <size value="256" unit="B" />
+    </labels>
+    <labels xmi:id="IMU_data_device?type=Label" name="IMU_data_device" constant="true" bVolatile="false">
+      <size value="256" unit="B" />
+    </labels>
+    <labels xmi:id="Lane_boundaries_host?type=Label" name="Lane_boundaries_host" constant="false" bVolatile="false">
+      <size value="256" unit="B" />
+    </labels>
+    <labels xmi:id="Lane_boundaries_device?type=Label" name="Lane_boundaries_device" constant="false" bVolatile="false">
+      <size value="256" unit="B" />
+    </labels>
+    <events xmi:id="Lane_detect_GPU?type=OsEvent" name="Lane_detect_GPU" communicationOverheadInBit="0" />
+    <events xmi:id="Detect?type=OsEvent" name="Detect" communicationOverheadInBit="0" />
+    <events xmi:id="SFM?type=OsEvent" name="SFM" communicationOverheadInBit="0" />
+    <events xmi:id="Localization_GPU?type=OsEvent" name="Localization_GPU" communicationOverheadInBit="0" />
+  </swModel>
+  <hwModel>
+    <definitions xsi:type="am:ProcessingUnitDefinition" xmi:id="A57?type=ProcessingUnitDefinition" name="A57" puType="CPU" />
+    <definitions xsi:type="am:ProcessingUnitDefinition" xmi:id="Denver?type=ProcessingUnitDefinition" name="Denver" puType="CPU" />
+    <definitions xsi:type="am:ProcessingUnitDefinition" xmi:id="GPU_def?type=ProcessingUnitDefinition" name="GPU_def" puType="GPU" features="CudaCores/CudaCoreXSM_128?type=HwFeature SMs/SM_2?type=HwFeature" />
+    <definitions xsi:type="am:MemoryDefinition" xmi:id="LPDDR4?type=MemoryDefinition" name="LPDDR4" memoryType="DRAM">
+      <size value="8" unit="GB" />
+      <accessLatency xsi:type="am:DiscreteValueConstant" value="0" />
+    </definitions>
+    <definitions xsi:type="am:ConnectionHandlerDefinition" xmi:id="Interconnect?type=ConnectionHandlerDefinition" name="Interconnect" policy="RoundRobin" maxBurstSize="4" maxConcurrentTransfers="1" />
+    <definitions xsi:type="am:CacheDefinition" xmi:id="CPU_L2?type=CacheDefinition" name="CPU_L2" cacheType="unified" writeStrategy="writeback" nWays="4" coherency="false" exclusive="false" hitRate="0.0">
+      <size value="2" unit="MB" />
+      <lineSize value="64" unit="B" />
+    </definitions>
+    <definitions xsi:type="am:CacheDefinition" xmi:id="GPU_L2?type=CacheDefinition" name="GPU_L2" cacheType="data" writeStrategy="writeback" nWays="4" coherency="false" exclusive="false" hitRate="0.0">
+      <size value="512" unit="kB" />
+      <lineSize value="64" unit="B" />
+    </definitions>
+    <featureCategories xmi:id="CudaCores?type=HwFeatureCategory" name="CudaCores" description="" featureType="performance">
+      <features xmi:id="CudaCores/CudaCoreXSM_128?type=HwFeature" name="CudaCoreXSM_128" value="128.0" />
+    </featureCategories>
+    <featureCategories xmi:id="SMs?type=HwFeatureCategory" name="SMs" featureType="performance">
+      <features xmi:id="SMs/SM_2?type=HwFeature" name="SM_2" value="2.0" />
+    </featureCategories>
+    <structures xmi:id="JetsonTX2?type=HwStructure" name="JetsonTX2" structureType="System">
+      <structures xmi:id="GPU+island?type=HwStructure" name="GPU island" structureType="Cluster">
+        <modules xsi:type="am:ProcessingUnit" xmi:id="GP10B?type=ProcessingUnit" name="GP10B" frequencyDomain="GPU_Domain?type=FrequencyDomain" definition="GPU_def?type=ProcessingUnitDefinition">
+          <ports xmi:id="GP10B/P1?type=HwPort" name="P1" bitWidth="128" priority="0" portType="initiator" portInterface="custom" />
+          <accessElements name="GPUtoDRAM" destination="SYSTEM_DRAM?type=Memory">
+            <readLatency xsi:type="am:DiscreteValueConstant" value="5" />
+            <writeLatency xsi:type="am:DiscreteValueConstant" value="5" />
+            <dataRate value="20" unit="GBPerSecond" />
+          </accessElements>
+        </modules>
+        <modules xsi:type="am:Cache" xmi:id="L2_GP10B?type=Cache" name="L2_GP10B" frequencyDomain="GPU_Domain?type=FrequencyDomain" definition="GPU_L2?type=CacheDefinition" />
+      </structures>
+      <structures xmi:id="ARM+island?type=HwStructure" name="ARM island" structureType="Cluster">
+        <modules xsi:type="am:ProcessingUnit" xmi:id="Core2?type=ProcessingUnit" name="Core2" frequencyDomain="A57_Domain?type=FrequencyDomain" definition="A57?type=ProcessingUnitDefinition">
+          <ports xmi:id="Core2/P1?type=HwPort" name="P1" bitWidth="64" priority="0" portType="initiator" portInterface="custom" />
+          <accessElements name="C2toDRAM" destination="SYSTEM_DRAM?type=Memory">
+            <readLatency xsi:type="am:DiscreteValueConstant" value="40" />
+            <writeLatency xsi:type="am:DiscreteValueConstant" value="40" />
+          </accessElements>
+        </modules>
+        <modules xsi:type="am:ProcessingUnit" xmi:id="Core3?type=ProcessingUnit" name="Core3" frequencyDomain="A57_Domain?type=FrequencyDomain" definition="A57?type=ProcessingUnitDefinition">
+          <ports xmi:id="Core3/P1?type=HwPort" name="P1" bitWidth="64" priority="0" portType="initiator" portInterface="custom" />
+          <accessElements name="C3toDRAM" destination="SYSTEM_DRAM?type=Memory">
+            <readLatency xsi:type="am:DiscreteValueConstant" value="40" />
+            <writeLatency xsi:type="am:DiscreteValueConstant" value="40" />
+          </accessElements>
+        </modules>
+        <modules xsi:type="am:ProcessingUnit" xmi:id="Core4?type=ProcessingUnit" name="Core4" frequencyDomain="A57_Domain?type=FrequencyDomain" definition="A57?type=ProcessingUnitDefinition">
+          <ports xmi:id="Core4/P1?type=HwPort" name="P1" bitWidth="64" priority="0" portType="initiator" portInterface="custom" />
+          <accessElements name="C4toDRAM" destination="SYSTEM_DRAM?type=Memory">
+            <readLatency xsi:type="am:DiscreteValueConstant" value="40" />
+            <writeLatency xsi:type="am:DiscreteValueConstant" value="40" />
+          </accessElements>
+        </modules>
+        <modules xsi:type="am:ProcessingUnit" xmi:id="Core5?type=ProcessingUnit" name="Core5" frequencyDomain="A57_Domain?type=FrequencyDomain" definition="A57?type=ProcessingUnitDefinition">
+          <ports xmi:id="Core5/P1?type=HwPort" name="P1" bitWidth="64" priority="0" portType="initiator" portInterface="custom" />
+          <accessElements name="C5toDRAM" destination="SYSTEM_DRAM?type=Memory">
+            <readLatency xsi:type="am:DiscreteValueConstant" value="40" />
+            <writeLatency xsi:type="am:DiscreteValueConstant" value="40" />
+          </accessElements>
+        </modules>
+        <modules xsi:type="am:Cache" xmi:id="L2_A57?type=Cache" name="L2_A57" frequencyDomain="A57_Domain?type=FrequencyDomain" definition="CPU_L2?type=CacheDefinition" />
+      </structures>
+      <structures xmi:id="Denver+island?type=HwStructure" name="Denver island" structureType="Cluster">
+        <modules xsi:type="am:ProcessingUnit" xmi:id="Core0?type=ProcessingUnit" name="Core0" frequencyDomain="Denver_Domain?type=FrequencyDomain" definition="Denver?type=ProcessingUnitDefinition">
+          <ports xmi:id="Core0/P1?type=HwPort" name="P1" bitWidth="64" priority="0" portType="initiator" portInterface="custom" />
+          <accessElements name="C0toDRAM" destination="SYSTEM_DRAM?type=Memory">
+            <readLatency xsi:type="am:DiscreteValueConstant" value="16" />
+            <writeLatency xsi:type="am:DiscreteValueConstant" value="16" />
+          </accessElements>
+        </modules>
+        <modules xsi:type="am:ProcessingUnit" xmi:id="Core1?type=ProcessingUnit" name="Core1" frequencyDomain="Denver_Domain?type=FrequencyDomain" definition="Denver?type=ProcessingUnitDefinition">
+          <ports xmi:id="Core1/P1?type=HwPort" name="P1" bitWidth="64" priority="0" portType="initiator" portInterface="custom" />
+          <accessElements name="C1toDRAM" destination="SYSTEM_DRAM?type=Memory">
+            <readLatency xsi:type="am:DiscreteValueConstant" value="16" />
+            <writeLatency xsi:type="am:DiscreteValueConstant" value="16" />
+          </accessElements>
+        </modules>
+        <modules xsi:type="am:Cache" xmi:id="L2_Denver?type=Cache" name="L2_Denver" frequencyDomain="Denver_Domain?type=FrequencyDomain" definition="CPU_L2?type=CacheDefinition" />
+      </structures>
+      <modules xsi:type="am:Memory" xmi:id="SYSTEM_DRAM?type=Memory" name="SYSTEM_DRAM" frequencyDomain="DRAM_eff_Freq?type=FrequencyDomain" definition="LPDDR4?type=MemoryDefinition">
+        <ports xmi:id="SYSTEM_DRAM/Mem_P1?type=HwPort" name="Mem_P1" bitWidth="128" priority="0" portType="responder" portInterface="AXI" />
+      </modules>
+      <modules xsi:type="am:ConnectionHandler" xmi:id="Intercon?type=ConnectionHandler" name="Intercon" frequencyDomain="DRAM_eff_Freq?type=FrequencyDomain" definition="Interconnect?type=ConnectionHandlerDefinition">
+        <ports xmi:id="Intercon/Inter_P1?type=HwPort" name="Inter_P1" bitWidth="128" priority="0" portType="responder" portInterface="AXI" />
+        <ports xmi:id="Intercon/Inter_P2?type=HwPort" name="Inter_P2" bitWidth="128" priority="0" portType="responder" portInterface="AXI" />
+        <ports xmi:id="Intercon/Inter_P3?type=HwPort" name="Inter_P3" bitWidth="128" priority="0" portType="responder" portInterface="AXI" />
+        <ports xmi:id="Intercon/Inter_P4?type=HwPort" name="Inter_P4" bitWidth="128" priority="0" portType="initiator" portInterface="AXI" />
+      </modules>
+    </structures>
+    <domains xsi:type="am:FrequencyDomain" xmi:id="A57_Domain?type=FrequencyDomain" name="A57_Domain" clockGating="false">
+      <defaultValue value="2.0" unit="GHz" />
+    </domains>
+    <domains xsi:type="am:FrequencyDomain" xmi:id="Denver_Domain?type=FrequencyDomain" name="Denver_Domain" clockGating="false">
+      <defaultValue value="2.0" unit="GHz" />
+    </domains>
+    <domains xsi:type="am:FrequencyDomain" xmi:id="GPU_Domain?type=FrequencyDomain" name="GPU_Domain" clockGating="false">
+      <defaultValue value="1.5" unit="GHz" />
+    </domains>
+    <domains xsi:type="am:FrequencyDomain" xmi:id="DRAM_eff_Freq?type=FrequencyDomain" name="DRAM_eff_Freq" clockGating="false">
+      <defaultValue value="1.5" unit="GHz" />
+    </domains>
+  </hwModel>
+  <osModel>
+    <operatingSystems name="Sched_Cluster_A57">
+      <taskSchedulers xmi:id="Scheduler_A57?type=TaskScheduler" name="Scheduler_A57">
+        <schedulingAlgorithm xsi:type="am:FixedPriorityPreemptive" />
+      </taskSchedulers>
+    </operatingSystems>
+    <operatingSystems name="GPU_Cluster">
+      <taskSchedulers xmi:id="GPU_Sched?type=TaskScheduler" name="GPU_Sched">
+        <schedulingAlgorithm xsi:type="am:UserSpecificSchedulingAlgorithm">
+          <parameterExtensions key="minimumTimeslice" value="1000 µs" />
+          <parameterExtensions key="maximumTimeslice" value="50000 µs" />
+        </schedulingAlgorithm>
+      </taskSchedulers>
+    </operatingSystems>
+    <operatingSystems name="Scheduling_Cluster_Denver">
+      <taskSchedulers xmi:id="Scheduler_Denver?type=TaskScheduler" name="Scheduler_Denver">
+        <schedulingAlgorithm xsi:type="am:FixedPriorityPreemptive" />
+      </taskSchedulers>
+    </operatingSystems>
+  </osModel>
+  <stimuliModel>
+    <stimuli xsi:type="am:InterProcessStimulus" xmi:id="SFM_stim?type=InterProcessStimulus" name="SFM_stim" />
+    <stimuli xsi:type="am:InterProcessStimulus" xmi:id="Localization_stim?type=InterProcessStimulus" name="Localization_stim" />
+    <stimuli xsi:type="am:InterProcessStimulus" xmi:id="detection_stim?type=InterProcessStimulus" name="detection_stim" />
+    <stimuli xsi:type="am:InterProcessStimulus" xmi:id="Lane_detection_stim?type=InterProcessStimulus" name="Lane_detection_stim" />
+    <stimuli xsi:type="am:PeriodicStimulus" xmi:id="periodic_5ms?type=PeriodicStimulus" name="periodic_5ms">
+      <recurrence value="5" unit="ms" />
+    </stimuli>
+    <stimuli xsi:type="am:PeriodicStimulus" xmi:id="periodic_10ms?type=PeriodicStimulus" name="periodic_10ms">
+      <recurrence value="10" unit="ms" />
+    </stimuli>
+    <stimuli xsi:type="am:PeriodicStimulus" xmi:id="periodic_15ms?type=PeriodicStimulus" name="periodic_15ms">
+      <recurrence value="15" unit="ms" />
+    </stimuli>
+    <stimuli xsi:type="am:PeriodicStimulus" xmi:id="periodic_33ms?type=PeriodicStimulus" name="periodic_33ms">
+      <recurrence value="33" unit="ms" />
+    </stimuli>
+    <stimuli xsi:type="am:PeriodicStimulus" xmi:id="periodic_66ms?type=PeriodicStimulus" name="periodic_66ms">
+      <recurrence value="66" unit="ms" />
+    </stimuli>
+    <stimuli xsi:type="am:PeriodicStimulus" xmi:id="periodic_100ms?type=PeriodicStimulus" name="periodic_100ms">
+      <recurrence value="100" unit="ms" />
+    </stimuli>
+    <stimuli xsi:type="am:PeriodicStimulus" xmi:id="periodic_200ms?type=PeriodicStimulus" name="periodic_200ms">
+      <recurrence value="200" unit="ms" />
+    </stimuli>
+    <stimuli xsi:type="am:PeriodicStimulus" xmi:id="periodic_400ms?type=PeriodicStimulus" name="periodic_400ms">
+      <recurrence value="400" unit="ms" />
+    </stimuli>
+  </stimuliModel>
+  <constraintsModel>
+    <requirements xsi:type="am:ProcessRequirement" name="Deadline_Task_DASM" process="DASM?type=Task">
+      <limit xsi:type="am:TimeRequirementLimit" limitType="UpperLimit" metric="ResponseTime">
+        <limitValue value="5" unit="ms" />
+      </limit>
+    </requirements>
+    <requirements xsi:type="am:ProcessRequirement" name="Deadline_Task_CAN" process="CANbus_polling?type=Task">
+      <limit xsi:type="am:TimeRequirementLimit" limitType="UpperLimit" metric="ResponseTime">
+        <limitValue value="10" unit="ms" />
+      </limit>
+    </requirements>
+    <requirements xsi:type="am:ProcessRequirement" name="Deadline_Task_Planner" process="Planner?type=Task">
+      <limit xsi:type="am:TimeRequirementLimit" limitType="UpperLimit" metric="ResponseTime">
+        <limitValue value="12" unit="ms" />
+      </limit>
+    </requirements>
+    <requirements xsi:type="am:ProcessRequirement" name="Deadline_Task_EKF" process="EKF?type=Task">
+      <limit xsi:type="am:TimeRequirementLimit" limitType="UpperLimit" metric="ResponseTime">
+        <limitValue value="15" unit="ms" />
+      </limit>
+    </requirements>
+    <requirements xsi:type="am:ProcessRequirement" name="Deadline_Task_LIDAR" process="Lidar_Grabber?type=Task">
+      <limit xsi:type="am:TimeRequirementLimit" limitType="UpperLimit" metric="ResponseTime">
+        <limitValue value="33" unit="ms" />
+      </limit>
+    </requirements>
+    <requirements xsi:type="am:ProcessRequirement" name="Deadline_Task_SFM" process="PRE_SFM_gpu_POST?type=Task">
+      <limit xsi:type="am:TimeRequirementLimit" limitType="UpperLimit" metric="ResponseTime">
+        <limitValue value="33" unit="ms" />
+      </limit>
+    </requirements>
+    <requirements xsi:type="am:ProcessRequirement" name="Deadline_Task_Detection" process="PRE_Detection_gpu_POST?type=Task">
+      <limit xsi:type="am:TimeRequirementLimit" limitType="UpperLimit" metric="ResponseTime">
+        <limitValue value="200" unit="ms" />
+      </limit>
+    </requirements>
+    <requirements xsi:type="am:ProcessRequirement" name="Deadline_Task_Lane_Detection" process="PRE_Lane_detection_gpu_POST?type=Task">
+      <limit xsi:type="am:TimeRequirementLimit" limitType="UpperLimit" metric="ResponseTime">
+        <limitValue value="66" unit="ms" />
+      </limit>
+    </requirements>
+    <requirements xsi:type="am:ProcessRequirement" name="Deadline_Task_Localization" process="PRE_Localization_gpu_POST?type=Task">
+      <limit xsi:type="am:TimeRequirementLimit" limitType="UpperLimit" metric="ResponseTime">
+        <limitValue value="400" unit="ms" />
+      </limit>
+    </requirements>
+  </constraintsModel>
+  <mappingModel addressMappingType="address">
+    <schedulerAllocation scheduler="GPU_Sched?type=TaskScheduler" responsibility="GP10B?type=ProcessingUnit" executingPU="GP10B?type=ProcessingUnit" />
+    <schedulerAllocation scheduler="Scheduler_Denver?type=TaskScheduler" responsibility="Core0?type=ProcessingUnit Core1?type=ProcessingUnit" executingPU="Core0?type=ProcessingUnit" />
+    <schedulerAllocation scheduler="Scheduler_A57?type=TaskScheduler" responsibility="Core2?type=ProcessingUnit Core3?type=ProcessingUnit Core4?type=ProcessingUnit Core5?type=ProcessingUnit" executingPU="Core0?type=ProcessingUnit" />
+    <taskAllocation task="CANbus_polling?type=Task" scheduler="Scheduler_A57?type=TaskScheduler" affinity="Core2?type=ProcessingUnit">
+      <schedulingParameters priority="5" />
+    </taskAllocation>
+    <taskAllocation task="OS_Overhead?type=Task" scheduler="Scheduler_A57?type=TaskScheduler" affinity="Core5?type=ProcessingUnit">
+      <schedulingParameters priority="0" />
+    </taskAllocation>
+    <taskAllocation task="DASM?type=Task" scheduler="Scheduler_A57?type=TaskScheduler" affinity="Core5?type=ProcessingUnit">
+      <schedulingParameters priority="3" />
+    </taskAllocation>
+    <taskAllocation task="Lidar_Grabber?type=Task" scheduler="Scheduler_A57?type=TaskScheduler" affinity="Core4?type=ProcessingUnit">
+      <schedulingParameters priority="8" />
+    </taskAllocation>
+    <taskAllocation task="Planner?type=Task" scheduler="Scheduler_Denver?type=TaskScheduler" affinity="Core0?type=ProcessingUnit">
+      <schedulingParameters priority="9" />
+    </taskAllocation>
+    <taskAllocation task="EKF?type=Task" scheduler="Scheduler_A57?type=TaskScheduler" affinity="Core2?type=ProcessingUnit">
+      <schedulingParameters priority="1" />
+    </taskAllocation>
+    <taskAllocation task="PRE_Detection_gpu_POST?type=Task" scheduler="Scheduler_A57?type=TaskScheduler" affinity="Core4?type=ProcessingUnit">
+      <schedulingParameters priority="4" />
+    </taskAllocation>
+    <taskAllocation task="PRE_Lane_detection_gpu_POST?type=Task" scheduler="Scheduler_Denver?type=TaskScheduler" affinity="Core1?type=ProcessingUnit">
+      <schedulingParameters priority="2" />
+    </taskAllocation>
+    <taskAllocation task="PRE_SFM_gpu_POST?type=Task" scheduler="Scheduler_Denver?type=TaskScheduler" affinity="Core1?type=ProcessingUnit">
+      <schedulingParameters priority="6" />
+    </taskAllocation>
+    <taskAllocation task="PRE_Localization_gpu_POST?type=Task" scheduler="Scheduler_A57?type=TaskScheduler" affinity="Core3?type=ProcessingUnit">
+      <schedulingParameters priority="4" />
+    </taskAllocation>
+    <taskAllocation task="Lane_detection?type=Task" scheduler="Scheduler_Denver?type=TaskScheduler" affinity="Core1?type=ProcessingUnit">
+      <schedulingParameters priority="2" />
+    </taskAllocation>
+    <taskAllocation task="Detection?type=Task" scheduler="GPU_Sched?type=TaskScheduler" affinity="GP10B?type=ProcessingUnit">
+      <parameterExtensions key="TimeSlice_Detection" value="50000µs" />
+    </taskAllocation>
+    <taskAllocation task="SFM?type=Task" scheduler="GPU_Sched?type=TaskScheduler" affinity="GP10B?type=ProcessingUnit">
+      <schedulingParameters priority="1" />
+      <parameterExtensions key="TimeSlice_SFM" value="7200µs" />
+    </taskAllocation>
+    <taskAllocation task="Localization?type=Task" scheduler="Scheduler_A57?type=TaskScheduler" affinity="Core3?type=ProcessingUnit">
+      <schedulingParameters priority="4" />
+      <parameterExtensions key="TimeSlice_Localization" value="50000µs" />
+    </taskAllocation>
+    <memoryMapping abstractElement="Bounding_box_device?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="Bounding_box_host?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="Cloud_map_device?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="Cloud_map_host?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="Image_device?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="Image_host?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="Image_lane_lines_device?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="Image_lane_lines_host?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="Image_SFM_device?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="Image_SFM_host?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="IMU_data_device?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="IMU_data_host?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="Lane_boundaries_device?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="Lane_boundaries_host?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="Matrix_SFM_device?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="Matrix_SFM_host?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="NN_weights?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="Occupancy_grid_host?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="speed_objective?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="steer_objective?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="Vehicle_status_device?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="Vehicle_status_host?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="vel_car?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="x_car_device?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="x_car_host?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="y_car_device?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="y_car_host?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="yaw_car_device?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="yaw_car_host?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+    <memoryMapping abstractElement="yaw_rate?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
+  </mappingModel>
+</am:Amalthea>

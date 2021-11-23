@@ -78,6 +78,10 @@ public class MobstrTIMAdapter extends AbstractMetaModelAdapter implements TraceM
 			traceTypes.add(TimPackage.eINSTANCE.getRelatedTo());
 			traceTypes.add(TimPackage.eINSTANCE.getSpecifiedByRequirement());
 			traceTypes.add(TimPackage.eINSTANCE.getUsesAsEvidence());
+			
+			// OFFIS Extensions
+			traceTypes.add(TimPackage.eINSTANCE.getFormalizesRequirement());
+			traceTypes.add(TimPackage.eINSTANCE.getSpecifiedByContract());
 		}
 		return traceTypes;
 	}

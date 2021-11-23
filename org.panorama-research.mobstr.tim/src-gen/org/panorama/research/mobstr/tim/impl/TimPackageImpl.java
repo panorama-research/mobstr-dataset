@@ -45,6 +45,7 @@ import org.panorama.research.mobstr.tim.DirectedTraceLink;
 import org.panorama.research.mobstr.tim.EffectsComponent;
 import org.panorama.research.mobstr.tim.ExpressesAsClaim;
 import org.panorama.research.mobstr.tim.ExpressesAsGoal;
+import org.panorama.research.mobstr.tim.FormalizesRequirement;
 import org.panorama.research.mobstr.tim.HasFailureMode;
 import org.panorama.research.mobstr.tim.ImplementsComponent;
 import org.panorama.research.mobstr.tim.LeadsToHazard;
@@ -58,6 +59,7 @@ import org.panorama.research.mobstr.tim.RefersToAnalysisResult;
 import org.panorama.research.mobstr.tim.RefinesItemDefinition;
 import org.panorama.research.mobstr.tim.RefinesTimingRequirement;
 import org.panorama.research.mobstr.tim.RelatedTo;
+import org.panorama.research.mobstr.tim.SpecifiedByContract;
 import org.panorama.research.mobstr.tim.SpecifiedByRequirement;
 import org.panorama.research.mobstr.tim.TimFactory;
 import org.panorama.research.mobstr.tim.TimPackage;
@@ -251,6 +253,20 @@ public class TimPackageImpl extends EPackageImpl implements TimPackage {
 	 * @generated
 	 */
 	private EClass refersToAnalysisResultEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass formalizesRequirementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass specifiedByContractEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1074,6 +1090,66 @@ public class TimPackageImpl extends EPackageImpl implements TimPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getFormalizesRequirement() {
+		return formalizesRequirementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getFormalizesRequirement_Source() {
+		return (EReference)formalizesRequirementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getFormalizesRequirement_Target() {
+		return (EReference)formalizesRequirementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSpecifiedByContract() {
+		return specifiedByContractEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSpecifiedByContract_Source() {
+		return (EReference)specifiedByContractEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSpecifiedByContract_Target() {
+		return (EReference)specifiedByContractEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public TimFactory getTimFactory() {
 		return (TimFactory)getEFactoryInstance();
 	}
@@ -1196,6 +1272,14 @@ public class TimPackageImpl extends EPackageImpl implements TimPackage {
 		refersToAnalysisResultEClass = createEClass(REFERS_TO_ANALYSIS_RESULT);
 		createEReference(refersToAnalysisResultEClass, REFERS_TO_ANALYSIS_RESULT__SOURCE);
 		createEReference(refersToAnalysisResultEClass, REFERS_TO_ANALYSIS_RESULT__TARGET);
+
+		formalizesRequirementEClass = createEClass(FORMALIZES_REQUIREMENT);
+		createEReference(formalizesRequirementEClass, FORMALIZES_REQUIREMENT__SOURCE);
+		createEReference(formalizesRequirementEClass, FORMALIZES_REQUIREMENT__TARGET);
+
+		specifiedByContractEClass = createEClass(SPECIFIED_BY_CONTRACT);
+		createEReference(specifiedByContractEClass, SPECIFIED_BY_CONTRACT__SOURCE);
+		createEReference(specifiedByContractEClass, SPECIFIED_BY_CONTRACT__TARGET);
 	}
 
 	/**
@@ -1258,6 +1342,8 @@ public class TimPackageImpl extends EPackageImpl implements TimPackage {
 		detailsHazardWithEClass.getESuperTypes().add(this.getDirectedTraceLink());
 		referencesAsTopLevelEventEClass.getESuperTypes().add(this.getDirectedTraceLink());
 		refersToAnalysisResultEClass.getESuperTypes().add(this.getDirectedTraceLink());
+		formalizesRequirementEClass.getESuperTypes().add(this.getDirectedTraceLink());
+		specifiedByContractEClass.getESuperTypes().add(this.getDirectedTraceLink());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(mobstrTIMEClass, MobstrTIM.class, "MobstrTIM", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1359,6 +1445,14 @@ public class TimPackageImpl extends EPackageImpl implements TimPackage {
 		initEClass(refersToAnalysisResultEClass, RefersToAnalysisResult.class, "RefersToAnalysisResult", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRefersToAnalysisResult_Source(), theBasePackage.getElement(), null, "source", null, 1, 1, RefersToAnalysisResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRefersToAnalysisResult_Target(), theBasePackage.getElement(), null, "target", null, 1, -1, RefersToAnalysisResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(formalizesRequirementEClass, FormalizesRequirement.class, "FormalizesRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFormalizesRequirement_Source(), theDependability_Package.getDependabilityContract(), null, "source", null, 1, 1, FormalizesRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFormalizesRequirement_Target(), theEcorePackage.getEObject(), null, "target", null, 1, -1, FormalizesRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(specifiedByContractEClass, SpecifiedByContract.class, "SpecifiedByContract", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSpecifiedByContract_Source(), theUMLPackage.getComponent(), null, "source", null, 1, 1, SpecifiedByContract.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpecifiedByContract_Target(), theDependability_Package.getDependabilityContract(), null, "target", null, 1, -1, SpecifiedByContract.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -1483,6 +1577,12 @@ public class TimPackageImpl extends EPackageImpl implements TimPackage {
 		   source,
 		   new String[] {
 			   "className", "File"
+		   });
+		addAnnotation
+		  (getFormalizesRequirement_Target(),
+		   source,
+		   new String[] {
+			   "className", "CapraOfficeObject"
 		   });
 	}
 

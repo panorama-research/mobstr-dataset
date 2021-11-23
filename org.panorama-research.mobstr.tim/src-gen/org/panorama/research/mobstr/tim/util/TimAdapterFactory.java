@@ -172,6 +172,14 @@ public class TimAdapterFactory extends AdapterFactoryImpl {
 				return createRefersToAnalysisResultAdapter();
 			}
 			@Override
+			public Adapter caseFormalizesRequirement(FormalizesRequirement object) {
+				return createFormalizesRequirementAdapter();
+			}
+			@Override
+			public Adapter caseSpecifiedByContract(SpecifiedByContract object) {
+				return createSpecifiedByContractAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -552,6 +560,34 @@ public class TimAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRefersToAnalysisResultAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.panorama.research.mobstr.tim.FormalizesRequirement <em>Formalizes Requirement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.panorama.research.mobstr.tim.FormalizesRequirement
+	 * @generated
+	 */
+	public Adapter createFormalizesRequirementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.panorama.research.mobstr.tim.SpecifiedByContract <em>Specified By Contract</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.panorama.research.mobstr.tim.SpecifiedByContract
+	 * @generated
+	 */
+	public Adapter createSpecifiedByContractAdapter() {
 		return null;
 	}
 

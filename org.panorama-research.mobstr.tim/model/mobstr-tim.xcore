@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.util.EcoreUtil
 import org.eclipse.uml2.uml.Component
 import ode.dependability.Measure
+import ode.dependability.DependabilityContract
 import ode.failureLogic.Failure
 
 /*
@@ -245,3 +246,25 @@ class RefinesItemDefinition extends DirectedTraceLink {
  	refers Element [1] source // Element -- Safety Case
  	refers Element [1..*] target // Element -- Failure in FTA
  }
+ 
+ /*******************************
+  *       OFFIS Extensions
+  *******************************/
+  
+  /*
+   * Links Dependability Contracts to (Safety) Requirements
+   */
+  class FormalizesRequirement extends DirectedTraceLink {
+  	 refers DependabilityContract[1] source // Contract
+  	 @UseWrapperType(className="CapraOfficeObject")
+ 	 refers EObject [1..*] target // formalized Requirements
+  }
+  
+  /*
+   * Links Components to their Contracts 
+   */
+  class SpecifiedByContract extends DirectedTraceLink {
+  	 refers Component[1] source // Component
+  	 refers DependabilityContract[1..*] target // Contracts
+  }
+  
