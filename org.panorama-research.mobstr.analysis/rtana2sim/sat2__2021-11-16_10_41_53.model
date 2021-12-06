@@ -1,0 +1,234 @@
+const FAULT_NOT_PRESENT=1;
+const FAULT_PRESENT=2;
+ports dummy periodic_100ms_OS_Overhead OS_Overhead_fin[0]:=1 periodic_33ms_Lidar_Grabber Lidar_Grabber_fin[0]:=1 Lidar.transient_failure[0]:=FAULT_NOT_PRESENT Lidar.permanent_failure[0]:=FAULT_NOT_PRESENT Camera.permanent_failure[0]:=FAULT_NOT_PRESENT Camera.transient_failure[0]:=FAULT_NOT_PRESENT lidar_input[0]:=1 Occupancy_grid_host[0]:=1 Image_host[0]:=1 frame[0]:=1 Image_lane_lines_host[0]:=1 periodic_5ms_DASM DASM_fin[0]:=1 speed_objective[0]:=1 steer_objective[0]:=1 periodic_10ms_CANbus_polling CANbus_polling_fin[0]:=1 Vehicle_status_host[0]:=1 periodic_15ms_EKF EKF_fin[0]:=1 object_poses[0]:=1 y_car_host[0]:=1 yaw_car_host[0]:=1 vel_car[0]:=1 yaw_rate[0]:=1 periodic_15ms_Planner Planner_fin[0]:=1 bounding_boxes[0]:=1 fused_objects[0]:=1 Lane_boundaries_host[0]:=1 Bounding_box_host[0]:=1 periodic_33ms_PRE_SFM_gpu_POST PRE_SFM_gpu_POST_fin[0]:=1 SFM_PRE_SFM_gpu_POST[0]:=0 periodic_400ms_PRE_Localization_gpu_POST PRE_Localization_gpu_POST_fin[0]:=1 Localization_GPU_PRE_Localization_gpu_POST[0]:=0 periodic_66ms_PRE_Lane_detection_gpu_POST PRE_Lane_detection_gpu_POST_fin[0]:=1 Lane_detect_GPU_PRE_Lane_detection_gpu_POST[0]:=0 periodic_200ms_PRE_Detection_gpu_POST PRE_Detection_gpu_POST_fin[0]:=1 Detect_PRE_Detection_gpu_POST[0]:=0 SFM_stim_SFM SFM_fin[0]:=1 IMU_data_host[0]:=1 Image_SFM_device[0]:=1 IMU_data_device[0]:=1 Matrix_SFM_device[0]:=1 Localization_stim_Localization Localization_fin[0]:=1 Cloud_map_device[0]:=1 Vehicle_status_device[0]:=1 x_car_device[0]:=1 y_car_device[0]:=1 yaw_car_device[0]:=1 Lane_detection_stim_Lane_detection Lane_detection_fin[0]:=1 Image_lane_lines_device[0]:=1 Lane_boundaries_device[0]:=1 detection_stim_Detection Detection_fin[0]:=1 Image_device[0]:=1 Bounding_box_device[0]:=1 Object_Localization_via_Lidar.object_poses Object_Localization_via_Camera.bounding_boxes Sensor_Fusion.sensor_warnings;
+
+portmap Object_Localization_via_Camera.frame -> frame;
+portmap warnings -> Sensor_Fusion.sensor_warnings;
+portmap Sensor_Fusion.bounding_boxes -> Object_Localization_via_Camera.bounding_boxes;
+portmap Sensor_Fusion.object_poses -> Object_Localization_via_Lidar.object_poses;
+portmap Sensor_Fusion.fused_objects -> fused_objects;
+portmap Object_Localization_via_Lidar.lidar_input -> lidar_input;
+signal periodic_100ms_signal -> periodic_100ms_OS_Overhead;
+signal periodic_33ms_signal -> periodic_33ms_Lidar_Grabber periodic_33ms_PRE_SFM_gpu_POST;
+signal periodic_5ms_signal -> periodic_5ms_DASM;
+signal periodic_10ms_signal -> periodic_10ms_CANbus_polling;
+signal periodic_15ms_signal -> periodic_15ms_EKF periodic_15ms_Planner;
+signal SFM_stim_signal -> SFM_stim_SFM;
+signal periodic_400ms_signal -> periodic_400ms_PRE_Localization_gpu_POST;
+signal Localization_stim_signal -> Localization_stim_Localization;
+signal periodic_66ms_signal -> periodic_66ms_PRE_Lane_detection_gpu_POST;
+signal Lane_detection_stim_signal -> Lane_detection_stim_Lane_detection;
+signal periodic_200ms_signal -> periodic_200ms_PRE_Detection_gpu_POST;
+signal detection_stim_signal -> detection_stim_Detection;
+source periodic_100ms [20,20] periodic_100ms_signal!1;
+source periodic_33ms [6,6] periodic_33ms_signal!1;
+source periodic_5ms [1,1] periodic_5ms_signal!1;
+source periodic_10ms [2,2] periodic_10ms_signal!1;
+source periodic_15ms [3,3] periodic_15ms_signal!1;
+source periodic_400ms [80,80] periodic_400ms_signal!1;
+source periodic_66ms [13,13] periodic_66ms_signal!1;
+source periodic_200ms [40,40] periodic_200ms_signal!1;
+sched_fpp Core5:
+
+  task DASM @PRIO = 3: 
+    trigger in (I, 0) on  periodic_5ms_DASM: 
+      case periodic_5ms_DASM?*: 
+        after [1,1] write speed_objective:=1, steer_objective:=1, DASM_fin:=1;
+        goto (I, 0); 
+  endtask;
+  task OS_Overhead @PRIO = 1: 
+    trigger in (I, 0) on  periodic_100ms_OS_Overhead: 
+      case periodic_100ms_OS_Overhead?*: 
+        after [10,10] write OS_Overhead_fin:=1;
+        goto (I, 0); 
+  endtask;
+endsched;
+sched_fpp Core4:
+
+  task Lidar_Grabber @PRIO = 6: 
+    trigger in (I, 0) on  periodic_33ms_Lidar_Grabber: 
+      case Camera.transient_failure==FAULT_NOT_PRESENT, Lidar.permanent_failure==FAULT_NOT_PRESENT, periodic_33ms_Lidar_Grabber?*, Lidar.transient_failure==FAULT_NOT_PRESENT, Camera.permanent_failure==FAULT_NOT_PRESENT: 
+        after [2,3] write lidar_input:=1, Occupancy_grid_host:=1, Image_host:=1, frame:=1, Image_lane_lines_host:=1, Lidar_Grabber_fin:=1;
+        goto (I, 0); 
+      case Lidar.permanent_failure==FAULT_NOT_PRESENT, periodic_33ms_Lidar_Grabber?*, Lidar.transient_failure==FAULT_NOT_PRESENT, Camera.permanent_failure==FAULT_PRESENT: 
+        after [2,3] write lidar_input:=1, Occupancy_grid_host:=1, Lidar_Grabber_fin:=1;
+        goto (I, 0); 
+      case Camera.transient_failure==FAULT_PRESENT, Lidar.permanent_failure==FAULT_NOT_PRESENT, periodic_33ms_Lidar_Grabber?*, Lidar.transient_failure==FAULT_NOT_PRESENT: 
+        after [2,3] write lidar_input:=1, Occupancy_grid_host:=1, Lidar_Grabber_fin:=1;
+        goto (I, 0); 
+      case Camera.transient_failure==FAULT_NOT_PRESENT, periodic_33ms_Lidar_Grabber?*, Lidar.transient_failure==FAULT_PRESENT, Camera.permanent_failure==FAULT_NOT_PRESENT: 
+        after [2,3] write Image_host:=1, frame:=1, Image_lane_lines_host:=1, Lidar_Grabber_fin:=1;
+        goto (I, 0); 
+      case periodic_33ms_Lidar_Grabber?*, Lidar.transient_failure==FAULT_PRESENT, Camera.permanent_failure==FAULT_PRESENT: 
+        after [2,3] write Lidar_Grabber_fin:=1;
+        goto (I, 0); 
+      case periodic_33ms_Lidar_Grabber?*, Lidar.transient_failure==FAULT_PRESENT, Camera.transient_failure==FAULT_PRESENT: 
+        after [2,3] write Lidar_Grabber_fin:=1;
+        goto (I, 0); 
+      case Camera.transient_failure==FAULT_NOT_PRESENT, Lidar.permanent_failure==FAULT_PRESENT, periodic_33ms_Lidar_Grabber?*, Camera.permanent_failure==FAULT_NOT_PRESENT: 
+        after [2,3] write Image_host:=1, frame:=1, Image_lane_lines_host:=1, Lidar_Grabber_fin:=1;
+        goto (I, 0); 
+      case Lidar.permanent_failure==FAULT_PRESENT, periodic_33ms_Lidar_Grabber?*, Camera.permanent_failure==FAULT_PRESENT: 
+        after [2,3] write Lidar_Grabber_fin:=1;
+        goto (I, 0); 
+      case Lidar.permanent_failure==FAULT_PRESENT, periodic_33ms_Lidar_Grabber?*, Camera.transient_failure==FAULT_PRESENT: 
+        after [2,3] write Lidar_Grabber_fin:=1;
+        goto (I, 0); 
+  endtask;
+  task PRE_Detection_gpu_POST @PRIO = 4: 
+    trigger in (I, 0) on  periodic_200ms_PRE_Detection_gpu_POST: 
+      case periodic_200ms_PRE_Detection_gpu_POST?*: 
+        after [1,1] write Image_host:=1, detection_stim_signal!1;
+        goto (W, 1); 
+    trigger in (W, 1) on  Detect_PRE_Detection_gpu_POST: 
+      case Detect_PRE_Detection_gpu_POST==*: 
+        after [1,1] write Detect_PRE_Detection_gpu_POST:=0;
+        after [0,1] write Bounding_box_host:=1, PRE_Detection_gpu_POST_fin:=1;
+        goto (I, 0); 
+  endtask;
+endsched;
+sched_fpp Core2:
+
+  task CANbus_polling @PRIO = 5: 
+    trigger in (I, 0) on  periodic_10ms_CANbus_polling: 
+      case periodic_10ms_CANbus_polling?*: 
+        after [1,1] write Vehicle_status_host:=1, CANbus_polling_fin:=1;
+        goto (I, 0); 
+  endtask;
+  task EKF @PRIO = 2: 
+    trigger in (I, 0) on  periodic_15ms_EKF: 
+      case periodic_15ms_EKF?*: 
+        after [1,1] write object_poses:=1, y_car_host:=1, yaw_car_host:=1, vel_car:=1, yaw_rate:=1, EKF_fin:=1;
+        goto (I, 0); 
+  endtask;
+endsched;
+sched_fpp Core0:
+
+  task Planner @PRIO = 3: 
+    trigger in (I, 0) on  periodic_15ms_Planner: 
+      case periodic_15ms_Planner?*: 
+        after [1,1] write fused_objects:=1;
+        after [0,2] write speed_objective:=1, steer_objective:=1, Planner_fin:=1;
+        goto (I, 0); 
+  endtask;
+endsched;
+sched_fpp Core1:
+
+  task PRE_SFM_gpu_POST @PRIO = 2: 
+    trigger in (I, 0) on  periodic_33ms_PRE_SFM_gpu_POST: 
+      case periodic_33ms_PRE_SFM_gpu_POST?*: 
+        after [1,1] write frame:=1, SFM_stim_signal!1;
+        goto (B, 1); 
+    trigger in (B, 1) on  SFM_PRE_SFM_gpu_POST: 
+      case SFM_PRE_SFM_gpu_POST==*: 
+        after [1,1] write SFM_PRE_SFM_gpu_POST:=0;
+        after [0,1] write frame:=1, PRE_SFM_gpu_POST_fin:=1;
+        goto (I, 0); 
+  endtask;
+  task PRE_Lane_detection_gpu_POST @PRIO = 1: 
+    trigger in (I, 0) on  periodic_66ms_PRE_Lane_detection_gpu_POST: 
+      case periodic_66ms_PRE_Lane_detection_gpu_POST?*: 
+        after [1,1] write Image_lane_lines_host:=1, Lane_detection_stim_signal!1;
+        goto (B, 1); 
+    trigger in (B, 1) on  Lane_detect_GPU_PRE_Lane_detection_gpu_POST: 
+      case Lane_detect_GPU_PRE_Lane_detection_gpu_POST==*: 
+        after [1,1] write Lane_detect_GPU_PRE_Lane_detection_gpu_POST:=0;
+        after [0,1] write Lane_boundaries_host:=1, PRE_Lane_detection_gpu_POST_fin:=1;
+        goto (I, 0); 
+  endtask;
+  task Lane_detection @PRIO = 1: 
+    trigger in (I, 0) on  Lane_detection_stim_Lane_detection: 
+      case Lane_detection_stim_Lane_detection?*: 
+        after [1,1] write Image_lane_lines_device:=1;
+        after [7,9] write Lane_boundaries_host:=1, Lane_detect_GPU_PRE_Lane_detection_gpu_POST:=1, Lane_detection_fin:=1;
+        goto (I, 0); 
+  endtask;
+endsched;
+sched_fpp Core3:
+
+  task PRE_Localization_gpu_POST @PRIO = 4: 
+    trigger in (I, 0) on  periodic_400ms_PRE_Localization_gpu_POST: 
+      case periodic_400ms_PRE_Localization_gpu_POST?*: 
+        after [1,2] write lidar_input:=1, Vehicle_status_host:=1, Localization_stim_signal!1;
+        goto (B, 1); 
+    trigger in (B, 1) on  Localization_GPU_PRE_Localization_gpu_POST: 
+      case Localization_GPU_PRE_Localization_gpu_POST==*: 
+        after [1,1] write Localization_GPU_PRE_Localization_gpu_POST:=0;
+        after [0,2] write object_poses:=1, y_car_host:=1, yaw_car_host:=1, PRE_Localization_gpu_POST_fin:=1;
+        goto (I, 0); 
+  endtask;
+  task Localization @PRIO = 4: 
+    trigger in (I, 0) on  Localization_stim_Localization: 
+      case Localization_stim_Localization?*: 
+        after [1,1] write Cloud_map_device:=1, Vehicle_status_device:=1;
+        after [73,78] write object_poses:=1, y_car_host:=1, yaw_car_host:=1, Localization_GPU_PRE_Localization_gpu_POST:=1, Localization_fin:=1;
+        goto (I, 0); 
+  endtask;
+endsched;
+sched_fpp GP10B:
+
+  task SFM @PRIO = 1: 
+    trigger in (I, 0) on  SFM_stim_SFM: 
+      case SFM_stim_SFM?*: 
+        after [1,1] write Image_SFM_device:=1, IMU_data_device:=1;
+        after [1,2] write bounding_boxes:=1, SFM_PRE_SFM_gpu_POST:=1, SFM_fin:=1;
+        goto (I, 0); 
+  endtask;
+  task Detection @PRIO = 0: 
+    trigger in (I, 0) on  detection_stim_Detection: 
+      case detection_stim_Detection?*: 
+        after [1,1] write Image_device:=1;
+        after [21,24] write Bounding_box_host:=1, Detect_PRE_Detection_gpu_POST:=1, Detection_fin:=1;
+        goto (I, 0); 
+  endtask;
+endsched;
+//at most one of {Camera, Lidar} fails permanently
+comp C1__A3:
+  trigger in (I,0) on Camera.permanent_failure:
+    case Camera.permanent_failure == *:
+      after [1,100] write Camera.permanent_failure := FAULT_PRESENT;
+      goto (B,0);
+  trigger in (I,0) on Camera.permanent_failure:
+    case Camera.permanent_failure == *:
+      after [100,100] write Camera.permanent_failure := FAULT_NOT_PRESENT;
+      goto (I,0);
+  trigger in (I,0) on Lidar.permanent_failure:
+    case Lidar.permanent_failure == *:
+      after [1,100] write Lidar.permanent_failure := FAULT_PRESENT;
+      goto (B,0);
+endcomp;
+
+//Camera fails at most once every 400ms with latency [10,30] ms
+comp C1__A2:
+  trigger in (I,0) on Camera.transient_failure:
+    case Camera.transient_failure == *:
+      after [80, 80] write Camera.transient_failure := FAULT_NOT_PRESENT;
+      goto (I,0);
+  trigger in (I,0) on Camera.transient_failure:
+    case Camera.transient_failure == *:
+      after [80, 160] write Camera.transient_failure := FAULT_PRESENT;
+      after [2, 6] write Camera.transient_failure := FAULT_NOT_PRESENT;
+      goto (I,0);
+endcomp;
+
+//Lidar fails at most once every 200ms with latency [10,30] ms
+comp C1__A1:
+  trigger in (I,0) on Lidar.transient_failure:
+    case Lidar.transient_failure == *:
+      after [40, 40] write Lidar.transient_failure := FAULT_NOT_PRESENT;
+      goto (I,0);
+  trigger in (I,0) on Lidar.transient_failure:
+    case Lidar.transient_failure == *:
+      after [40, 80] write Lidar.transient_failure := FAULT_PRESENT;
+      after [2, 6] write Lidar.transient_failure := FAULT_NOT_PRESENT;
+      goto (I,0);
+endcomp;
+
+
+// fused_objects occurs every [5,800]ms
+obs C1__G:
+  mode 0 [160]:
+  -- Sensor_Fusion.fused_objects [1, 160] -> 0;
+endobs;
+property C1__G.mode != BAD;
+

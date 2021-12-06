@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<analysisresults:AnalysisConfig xmlns:analysisresults="http://www.offis.de/s2x/analysisresults" analysisID="de.offis.s2x.rtanatiming.vitanalysis">
+  <targets href="../../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QBDgIH_ZEeq1j4EUwdsVmw"/>
+  <targets href="../../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_8l-gIH_bEeq1j4EUwdsVmw"/>
+  <targets href="../../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_h63n8GRzEeu5Bd8fMshJEA"/>
+  <targets href="../../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_le1d8GRzEeu5Bd8fMshJEA"/>
+  <targets href="../../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_t98fwH_bEeq1j4EUwdsVmw"/>
+  <config key="de.offis.s2x.rtanatiming.RTAnaAnalysis.MaxStates" value="100000"/>
+  <config key="de.offis.s2x.rtanatiming.RTAnaAnalysis.StepsPerSecond" value="200"/>
+  <config key="de.offis.s2x.rtanatiming.RTAnaAnalysis.Timeout" value="100"/>
+  <config key="de.offis.s2x.rtanatiming.RTAnaAnalysis.Strategy" value="RANDOM"/>
+  <namedTargets key="public void de.offis.s2x.rtanatiming.RTAnaVITAnalysis2.setToplevelComponent(org.eclipse.uml2.uml.Component)">
+    <value href="../../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_YZMdYGRzEeu5Bd8fMshJEA"/>
+  </namedTargets>
+</analysisresults:AnalysisConfig>

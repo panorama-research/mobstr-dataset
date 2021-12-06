@@ -80,6 +80,8 @@ public class TimFactoryImpl extends EFactoryImpl implements TimFactory {
 			case TimPackage.DETAILS_HAZARD_WITH: return createDetailsHazardWith();
 			case TimPackage.REFERENCES_AS_TOP_LEVEL_EVENT: return createReferencesAsTopLevelEvent();
 			case TimPackage.REFERS_TO_ANALYSIS_RESULT: return createRefersToAnalysisResult();
+			case TimPackage.FORMALIZES_REQUIREMENT: return createFormalizesRequirement();
+			case TimPackage.SPECIFIED_BY_CONTRACT: return createSpecifiedByContract();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -347,6 +349,28 @@ public class TimFactoryImpl extends EFactoryImpl implements TimFactory {
 	public RefersToAnalysisResult createRefersToAnalysisResult() {
 		RefersToAnalysisResultImpl refersToAnalysisResult = new RefersToAnalysisResultImpl();
 		return refersToAnalysisResult;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FormalizesRequirement createFormalizesRequirement() {
+		FormalizesRequirementImpl formalizesRequirement = new FormalizesRequirementImpl();
+		return formalizesRequirement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SpecifiedByContract createSpecifiedByContract() {
+		SpecifiedByContractImpl specifiedByContract = new SpecifiedByContractImpl();
+		return specifiedByContract;
 	}
 
 	/**

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<analysisresults:AnalysisConfig xmlns:analysisresults="http://www.offis.de/s2x/analysisresults" analysisID="de.offis.s2x.rtanatiming.analysis">
+  <targets href="../../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_YZMdYGRzEeu5Bd8fMshJEA"/>
+  <targets href="../../org.panorama-research.mobstr.contracts/mobstr-contracts.dependability_#/"/>
+  <targets href="../../org.panorama-research.mobstr.amalthea/mapped+safety/mobstr-mapped+safety.amxmi#/"/>
+  <config key="de.offis.s2x.rtanatiming.RTAnaSatisfactionAnalysis2.LabelPortSize" value="0"/>
+  <config key="de.offis.s2x.rtanatiming.RTAnaSatisfactionAnalysis2.TranslateAllPorts" value="false"/>
+  <config key="de.offis.s2x.rtanatiming.RTAnaSatisfactionAnalysis2.ConsiderHwLatencies" value="false"/>
+  <config key="de.offis.s2x.rtanatiming.RTAnaAnalysis.Strategy" value="RANDOM"/>
+  <config key="de.offis.s2x.rtanatiming.RTAnaAnalysis.MaxStates" value="1000000"/>
+  <config key="de.offis.s2x.rtanatiming.RTAnaAnalysis.StepsPerSecond" value="200"/>
+  <config key="de.offis.s2x.rtanatiming.RTAnaAnalysis.Timeout" value="0"/>
+</analysisresults:AnalysisConfig>

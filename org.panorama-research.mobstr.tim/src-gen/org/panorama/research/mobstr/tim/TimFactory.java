@@ -238,6 +238,24 @@ public interface TimFactory extends EFactory {
 	RefersToAnalysisResult createRefersToAnalysisResult();
 
 	/**
+	 * Returns a new object of class '<em>Formalizes Requirement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Formalizes Requirement</em>'.
+	 * @generated
+	 */
+	FormalizesRequirement createFormalizesRequirement();
+
+	/**
+	 * Returns a new object of class '<em>Specified By Contract</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Specified By Contract</em>'.
+	 * @generated
+	 */
+	SpecifiedByContract createSpecifiedByContract();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

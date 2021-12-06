@@ -1649,6 +1649,134 @@ public interface TimPackage extends EPackage {
 	 */
 	int REFERS_TO_ANALYSIS_RESULT_OPERATION_COUNT = DIRECTED_TRACE_LINK_OPERATION_COUNT + 0;
 
+	/**
+	 * The meta object id for the '{@link org.panorama.research.mobstr.tim.impl.FormalizesRequirementImpl <em>Formalizes Requirement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.panorama.research.mobstr.tim.impl.FormalizesRequirementImpl
+	 * @see org.panorama.research.mobstr.tim.impl.TimPackageImpl#getFormalizesRequirement()
+	 * @generated
+	 */
+	int FORMALIZES_REQUIREMENT = 26;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORMALIZES_REQUIREMENT__ID = DIRECTED_TRACE_LINK__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORMALIZES_REQUIREMENT__NAME = DIRECTED_TRACE_LINK__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORMALIZES_REQUIREMENT__SOURCE = DIRECTED_TRACE_LINK_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORMALIZES_REQUIREMENT__TARGET = DIRECTED_TRACE_LINK_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Formalizes Requirement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORMALIZES_REQUIREMENT_FEATURE_COUNT = DIRECTED_TRACE_LINK_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Formalizes Requirement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORMALIZES_REQUIREMENT_OPERATION_COUNT = DIRECTED_TRACE_LINK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.panorama.research.mobstr.tim.impl.SpecifiedByContractImpl <em>Specified By Contract</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.panorama.research.mobstr.tim.impl.SpecifiedByContractImpl
+	 * @see org.panorama.research.mobstr.tim.impl.TimPackageImpl#getSpecifiedByContract()
+	 * @generated
+	 */
+	int SPECIFIED_BY_CONTRACT = 27;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFIED_BY_CONTRACT__ID = DIRECTED_TRACE_LINK__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFIED_BY_CONTRACT__NAME = DIRECTED_TRACE_LINK__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFIED_BY_CONTRACT__SOURCE = DIRECTED_TRACE_LINK_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFIED_BY_CONTRACT__TARGET = DIRECTED_TRACE_LINK_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Specified By Contract</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFIED_BY_CONTRACT_FEATURE_COUNT = DIRECTED_TRACE_LINK_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Specified By Contract</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFIED_BY_CONTRACT_OPERATION_COUNT = DIRECTED_TRACE_LINK_OPERATION_COUNT + 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link org.panorama.research.mobstr.tim.MobstrTIM <em>Mobstr TIM</em>}'.
@@ -2439,6 +2567,70 @@ public interface TimPackage extends EPackage {
 	EReference getRefersToAnalysisResult_Target();
 
 	/**
+	 * Returns the meta object for class '{@link org.panorama.research.mobstr.tim.FormalizesRequirement <em>Formalizes Requirement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Formalizes Requirement</em>'.
+	 * @see org.panorama.research.mobstr.tim.FormalizesRequirement
+	 * @generated
+	 */
+	EClass getFormalizesRequirement();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.panorama.research.mobstr.tim.FormalizesRequirement#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see org.panorama.research.mobstr.tim.FormalizesRequirement#getSource()
+	 * @see #getFormalizesRequirement()
+	 * @generated
+	 */
+	EReference getFormalizesRequirement_Source();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.panorama.research.mobstr.tim.FormalizesRequirement#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Target</em>'.
+	 * @see org.panorama.research.mobstr.tim.FormalizesRequirement#getTarget()
+	 * @see #getFormalizesRequirement()
+	 * @generated
+	 */
+	EReference getFormalizesRequirement_Target();
+
+	/**
+	 * Returns the meta object for class '{@link org.panorama.research.mobstr.tim.SpecifiedByContract <em>Specified By Contract</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Specified By Contract</em>'.
+	 * @see org.panorama.research.mobstr.tim.SpecifiedByContract
+	 * @generated
+	 */
+	EClass getSpecifiedByContract();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.panorama.research.mobstr.tim.SpecifiedByContract#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see org.panorama.research.mobstr.tim.SpecifiedByContract#getSource()
+	 * @see #getSpecifiedByContract()
+	 * @generated
+	 */
+	EReference getSpecifiedByContract_Source();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.panorama.research.mobstr.tim.SpecifiedByContract#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Target</em>'.
+	 * @see org.panorama.research.mobstr.tim.SpecifiedByContract#getTarget()
+	 * @see #getSpecifiedByContract()
+	 * @generated
+	 */
+	EReference getSpecifiedByContract_Target();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3104,6 +3296,58 @@ public interface TimPackage extends EPackage {
 		 * @generated
 		 */
 		EReference REFERS_TO_ANALYSIS_RESULT__TARGET = eINSTANCE.getRefersToAnalysisResult_Target();
+
+		/**
+		 * The meta object literal for the '{@link org.panorama.research.mobstr.tim.impl.FormalizesRequirementImpl <em>Formalizes Requirement</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.panorama.research.mobstr.tim.impl.FormalizesRequirementImpl
+		 * @see org.panorama.research.mobstr.tim.impl.TimPackageImpl#getFormalizesRequirement()
+		 * @generated
+		 */
+		EClass FORMALIZES_REQUIREMENT = eINSTANCE.getFormalizesRequirement();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FORMALIZES_REQUIREMENT__SOURCE = eINSTANCE.getFormalizesRequirement_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FORMALIZES_REQUIREMENT__TARGET = eINSTANCE.getFormalizesRequirement_Target();
+
+		/**
+		 * The meta object literal for the '{@link org.panorama.research.mobstr.tim.impl.SpecifiedByContractImpl <em>Specified By Contract</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.panorama.research.mobstr.tim.impl.SpecifiedByContractImpl
+		 * @see org.panorama.research.mobstr.tim.impl.TimPackageImpl#getSpecifiedByContract()
+		 * @generated
+		 */
+		EClass SPECIFIED_BY_CONTRACT = eINSTANCE.getSpecifiedByContract();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPECIFIED_BY_CONTRACT__SOURCE = eINSTANCE.getSpecifiedByContract_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPECIFIED_BY_CONTRACT__TARGET = eINSTANCE.getSpecifiedByContract_Target();
 
 	}
 
