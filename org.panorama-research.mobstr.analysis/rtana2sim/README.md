@@ -5,7 +5,7 @@ This folder contains configurations and results of an analysis of the MobSTr saf
 * A *virtual integration test (VIT)* of the `Object Localization` component in the UML model. The VIT analysis verifies the decomposition of the `Object Localization` component into its sub-components by checking refinement of the attached contracts in the [`../../org.panorama-research.mobstr.contracts`](../../org.panorama-research.mobstr.contracts) folder. 
 * A *satisfaction check* on the `Object Localization` component. It checks whether the AMALTHEA software model in the [`../../org.panorama-research.mobstr.amalthea/mapped+safety`](../../org.panorama-research.mobstr.amalthea/mapped+safety) folder satisfies the timing contract of the `Object Localization` component. The AMALTHEA model is a modified version of the original WATERS Challenge model that reflects the task-to-core mapping determined in [2] and some of the introduced safety mechanisms.   
 
-For both types of analyses, the mappings between components, contracts, and AMALTHEA model elements is derived from the CAPRA trace links. 
+For both types of analyses, the mappings between components, contracts, and AMALTHEA model elements is derived from the Capra trace links. 
 
 The files in this folder are organized as follows:
 
@@ -14,7 +14,8 @@ The files in this folder are organized as follows:
 * `*.model` files are the intermediate RTana<sub>2sim</sub> models that have been generated from the UML and AMALTHEA models and the timing contracts.
 * In case of contract violations, the `*.btf` file contains a counter-example trace that shows the contract violation. It can be opened for example with [Tracecompass](https://www.eclipse.org/tracecompass/). 
 
-####References
+
+#### References
 
 [1] Jan Steffen Becker, Björn Koopmann and Ingo Stierand: "[AMALTHEA Timing Analyses with RTana2sim](https://panorama-research.org/pdf/aramis2-timing-analysis.pdf)", Presentation, 2021
 
