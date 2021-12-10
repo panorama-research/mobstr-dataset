@@ -1,4 +1,4 @@
-# MobSTr dataset Artifact Model
+# MobSTr Artifact Model
 
 This project contains an artifact model of the MobSTr dataset. This means that it shows the different artifacts that are available and how they are related with each other. The model is the source for the traceability information model in `org.panorama-research.mobstr.tim`.
 
