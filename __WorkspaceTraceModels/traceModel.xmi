@@ -752,32 +752,20 @@
     <source xsi:type="am:Runnable" href="../org.panorama-research.mobstr.amalthea/mapped+safety/mobstr-mapped+safety.amxmi#SFM_Postprocessing?type=Runnable"/>
     <target href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_le1d8GRzEeu5Bd8fMshJEA"/>
   </traces>
-  <traces xsi:type="tim:SpecifiedByContract" name="Object Localization : Component -> C1 : DependabilityContract;">
-    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_YZMdYGRzEeu5Bd8fMshJEA"/>
-    <target href="../org.panorama-research.mobstr.contracts/mobstr-contracts.dependability_#//@dependabilityRequirements.0/@dependabilityContracts.0"/>
+  <traces xsi:type="tim:ExpressesAsGoal" name="29 : Claim -> \l\tHazards!H-2 (mobstr-hazards.xlsx);\l\t">
+    <source xsi:type="argumentation_:Claim" href="../org.panorama-research.mobstr.safetycase/mobstr-safetycase.integration#//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.16"/>
+    <target href="artifactWrappers.xmi#//@artifacts.9"/>
   </traces>
-  <traces xsi:type="tim:FormalizesRequirement" name="C1 : DependabilityContract -> Requirements!8 (mobstr-requirements_v7.xlsx);">
-    <source href="../org.panorama-research.mobstr.contracts/mobstr-contracts.dependability_#//@dependabilityRequirements.0/@dependabilityContracts.0"/>
-    <target href="artifactWrappers.xmi#//@artifacts.81"/>
+  <traces xsi:type="tim:ExpressesAsGoal" name="30 : Claim -> \l\tHazards!H-3 (mobstr-hazards.xlsx);\l\t">
+    <source xsi:type="argumentation_:Claim" href="../org.panorama-research.mobstr.safetycase/mobstr-safetycase.integration#//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.11"/>
   </traces>
-  <traces xsi:type="tim:SpecifiedByContract" name="Lidar Grabber : Component -> C2 : DependabilityContract;">
-    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QBDgIH_ZEeq1j4EUwdsVmw"/>
-    <target href="../org.panorama-research.mobstr.contracts/mobstr-contracts.dependability_#//@dependabilityRequirements.1/@dependabilityContracts.0"/>
+  <traces xsi:type="tim:ExpressesAsGoal" name="31 : Claim -> \l\tHazards!H-4 (mobstr-hazards.xlsx);\l\t">
+    <source xsi:type="argumentation_:Claim" href="../org.panorama-research.mobstr.safetycase/mobstr-safetycase.integration#//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.18"/>
+    <target href="artifactWrappers.xmi#//@artifacts.13"/>
   </traces>
-  <traces xsi:type="tim:SpecifiedByContract" name="Image Grabber (Camera) : Component -> C3 : DependabilityContract;">
-    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_8l-gIH_bEeq1j4EUwdsVmw"/>
-    <target href="../org.panorama-research.mobstr.contracts/mobstr-contracts.dependability_#//@dependabilityRequirements.2/@dependabilityContracts.0"/>
-  </traces>
-  <traces xsi:type="tim:SpecifiedByContract" name="Object Localization via Lidar : Component -> C4 : DependabilityContract;">
-    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_h63n8GRzEeu5Bd8fMshJEA"/>
-    <target href="../org.panorama-research.mobstr.contracts/mobstr-contracts.dependability_#//@dependabilityRequirements.3/@dependabilityContracts.0"/>
-  </traces>
-  <traces xsi:type="tim:SpecifiedByContract" name="Object Localization via Camera : Component -> C5 : DependabilityContract;">
-    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_le1d8GRzEeu5Bd8fMshJEA"/>
-    <target href="../org.panorama-research.mobstr.contracts/mobstr-contracts.dependability_#//@dependabilityRequirements.4/@dependabilityContracts.0"/>
-  </traces>
-  <traces xsi:type="tim:SpecifiedByContract" name="Sensor Fusion : Component -> C6 : DependabilityContract;">
-    <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_t98fwH_bEeq1j4EUwdsVmw"/>
-    <target href="../org.panorama-research.mobstr.contracts/mobstr-contracts.dependability_#//@dependabilityRequirements.5/@dependabilityContracts.0"/>
+  <traces xsi:type="tim:ExpressesAsGoal" name="32 : Claim -> \l\tHazards!H-5 (mobstr-hazards.xlsx);\l\t">
+    <source xsi:type="argumentation_:Claim" href="../org.panorama-research.mobstr.safetycase/mobstr-safetycase.integration#//@assuranceCasePackages.0/@argumentPackage.0/@argumentationElement.19"/>
+    <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
 </tim:MobstrTIM>
