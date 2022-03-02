@@ -30,14 +30,14 @@
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="No information about objects provided by the lidar : Failure -> Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx)">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.1"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="Objects not detected by lidar : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.3"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
   </traces>
@@ -53,14 +53,14 @@
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="No information about the distance to objects provided by lidar : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.9"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="Distance to objects measured as too high : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.11"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
   </traces>
@@ -71,21 +71,21 @@
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="Wrong (outdated) information about the distance to objects provided by lidar : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.2/@failures.15"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="No image provided by the image grabber : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.1"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="Ghost objects or lanes / Missing objects or lanes on the image : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.5"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
@@ -93,40 +93,40 @@
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="Wrong (outdated) lane boundaries or objects on the image : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.7"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="Images with wrong (or no) objects or lanes : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.3/@failures.3"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="No vehicle information available : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.4/@failures.1"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="Wrong (outdated) vehicle information available : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.4/@failures.3"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="Erroneous vehicle information available : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.4/@failures.5"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="Objects on the road are not detected : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.1"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
   </traces>
@@ -137,78 +137,78 @@
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="Objects on the road are detected too late : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.6"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="False classification of objects on the road : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.8"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="Erroneous distance to objects : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.5/@failures.10"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="Lanes are not detected : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.6/@failures.1"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="Ghost lanes are detected : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.6/@failures.3"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="Lanes are detected too late : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.6/@failures.5"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="No information about the vehicle postion and distance to obstacles around the vehicle : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.7/@failures.1"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="Incorrect vehicle position information on the road : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.7/@failures.3"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="Distance to objects on the road is calculated too high : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.7/@failures.5"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="No steering and speed signal is provided by the path planner : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.8/@failures.1"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="Wrong steering or speed signal is provided by the path planner : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.8/@failures.3"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="Steering or speed signal is provided too late by the path planner : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-2 (mobstr-hazards.xlsx); Hazards!H-5 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.8/@failures.5"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.9"/>
     <target href="artifactWrappers.xmi#//@artifacts.15"/>
   </traces>
@@ -228,145 +228,145 @@
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="No speed signal is provided  by the controller : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.7"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="Wrong speed signal is provided  by the controller : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx); Hazards!H-3 (mobstr-hazards.xlsx); Hazards!H-4 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.9"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.11"/>
     <target href="artifactWrappers.xmi#//@artifacts.13"/>
   </traces>
   <traces xsi:type="tim:LeadsToHazard" name="Speed signal is provided too late  by the controller : Failure ->  Hazards!H-1 (mobstr-hazards.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.9/@failures.11"/>
-    <target href="artifactWrappers.xmi#//@artifacts.17"/>
+    <target href="artifactWrappers.xmi#//@artifacts.5"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the sensor fusion component : Measure -> Requirements!SR-1.1.4 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.1"/>
-    <target href="artifactWrappers.xmi#//@artifacts.19"/>
+    <target href="artifactWrappers.xmi#//@artifacts.18"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the path planner component : Measure -> Requirements!SR-1.3.1 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.2"/>
-    <target href="artifactWrappers.xmi#//@artifacts.23"/>
+    <target href="artifactWrappers.xmi#//@artifacts.22"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the object detection component : Measure -> Requirements!SR-1.3.2 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.3"/>
-    <target href="artifactWrappers.xmi#//@artifacts.25"/>
+    <target href="artifactWrappers.xmi#//@artifacts.24"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the sensor fusion component : Measure -> Requirements!SR-1.3.3 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.1"/>
-    <target href="artifactWrappers.xmi#//@artifacts.26"/>
+    <target href="artifactWrappers.xmi#//@artifacts.25"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-1.5 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
-    <target href="artifactWrappers.xmi#//@artifacts.28"/>
+    <target href="artifactWrappers.xmi#//@artifacts.27"/>
   </traces>
   <traces xsi:type="tim:RelatedTo" name="Requirements!SR-2.1 (mobstr-requirements.xlsx) -> Requirements!SR-1.1 (mobstr-requirements.xlsx);">
-    <items href="artifactWrappers.xmi#//@artifacts.30"/>
+    <items href="artifactWrappers.xmi#//@artifacts.29"/>
     <items href="artifactWrappers.xmi#//@artifacts.7"/>
   </traces>
   <traces xsi:type="tim:RelatedTo" name="Requirements!SR-2.2 (mobstr-requirements.xlsx) -> Requirements!SR-1.2 (mobstr-requirements.xlsx);">
-    <items href="artifactWrappers.xmi#//@artifacts.29"/>
-    <items href="artifactWrappers.xmi#//@artifacts.31"/>
+    <items href="artifactWrappers.xmi#//@artifacts.28"/>
+    <items href="artifactWrappers.xmi#//@artifacts.30"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the path planner component : Measure -> Requirements!SR-2.3 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.2"/>
-    <target href="artifactWrappers.xmi#//@artifacts.32"/>
+    <target href="artifactWrappers.xmi#//@artifacts.31"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-2.4.1 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
-    <target href="artifactWrappers.xmi#//@artifacts.34"/>
+    <target href="artifactWrappers.xmi#//@artifacts.33"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-2.4.2 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
-    <target href="artifactWrappers.xmi#//@artifacts.35"/>
+    <target href="artifactWrappers.xmi#//@artifacts.34"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-2.5.1 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
-    <target href="artifactWrappers.xmi#//@artifacts.37"/>
+    <target href="artifactWrappers.xmi#//@artifacts.36"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-2.5.2 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
-    <target href="artifactWrappers.xmi#//@artifacts.38"/>
+    <target href="artifactWrappers.xmi#//@artifacts.37"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-2.7.1 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
-    <target href="artifactWrappers.xmi#//@artifacts.41"/>
+    <target href="artifactWrappers.xmi#//@artifacts.40"/>
   </traces>
   <traces xsi:type="tim:RelatedTo" name="Requirements!SR-3.1 (mobstr-requirements.xlsx) -> Requirements!SR-1.1 (mobstr-requirements.xlsx);">
-    <items href="artifactWrappers.xmi#//@artifacts.43"/>
+    <items href="artifactWrappers.xmi#//@artifacts.42"/>
     <items href="artifactWrappers.xmi#//@artifacts.7"/>
   </traces>
   <traces xsi:type="tim:RelatedTo" name="Requirements!SR-3.2 (mobstr-requirements.xlsx) -> Requirements!SR-1.2 (mobstr-requirements.xlsx);">
-    <items href="artifactWrappers.xmi#//@artifacts.44"/>
-    <items href="artifactWrappers.xmi#//@artifacts.31"/>
+    <items href="artifactWrappers.xmi#//@artifacts.43"/>
+    <items href="artifactWrappers.xmi#//@artifacts.30"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the path planner component : Measure -> Requirements!SR-3.3 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.2"/>
-    <target href="artifactWrappers.xmi#//@artifacts.45"/>
+    <target href="artifactWrappers.xmi#//@artifacts.44"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-3.5 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
-    <target href="artifactWrappers.xmi#//@artifacts.47"/>
+    <target href="artifactWrappers.xmi#//@artifacts.46"/>
   </traces>
   <traces xsi:type="tim:RelatedTo" name="Requirements!SR-4.1 (mobstr-requirements.xlsx) -> Requirements!SR-1.1 (mobstr-requirements.xlsx);">
-    <items href="artifactWrappers.xmi#//@artifacts.51"/>
+    <items href="artifactWrappers.xmi#//@artifacts.50"/>
     <items href="artifactWrappers.xmi#//@artifacts.7"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the path planner component : Measure -> Requirements!SR-4.3.1 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.2"/>
-    <target href="artifactWrappers.xmi#//@artifacts.54"/>
+    <target href="artifactWrappers.xmi#//@artifacts.53"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the object detection component : Measure -> Requirements!SR-4.3.2 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.3"/>
-    <target href="artifactWrappers.xmi#//@artifacts.55"/>
+    <target href="artifactWrappers.xmi#//@artifacts.54"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the localization component : Measure -> Requirements!SR-4.3.3.1 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.9"/>
-    <target href="artifactWrappers.xmi#//@artifacts.57"/>
+    <target href="artifactWrappers.xmi#//@artifacts.56"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the localization component : Measure -> Requirements!SR-4.3.3.2 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.9"/>
-    <target href="artifactWrappers.xmi#//@artifacts.58"/>
+    <target href="artifactWrappers.xmi#//@artifacts.57"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the sensor fusion component : Measure -> Requirements!SR-4.3.4 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.1"/>
-    <target href="artifactWrappers.xmi#//@artifacts.59"/>
+    <target href="artifactWrappers.xmi#//@artifacts.58"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-4.5 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
-    <target href="artifactWrappers.xmi#//@artifacts.60"/>
+    <target href="artifactWrappers.xmi#//@artifacts.59"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the path planner component : Measure -> Requirements!SR-5.3.3 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.2"/>
-    <target href="artifactWrappers.xmi#//@artifacts.66"/>
+    <target href="artifactWrappers.xmi#//@artifacts.65"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-5.3.1 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
-    <target href="artifactWrappers.xmi#//@artifacts.68"/>
+    <target href="artifactWrappers.xmi#//@artifacts.67"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-5.3.2 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
-    <target href="artifactWrappers.xmi#//@artifacts.69"/>
+    <target href="artifactWrappers.xmi#//@artifacts.68"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the path planner component : Measure -> Requirements!SR-5.4.1 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.2"/>
-    <target href="artifactWrappers.xmi#//@artifacts.71"/>
+    <target href="artifactWrappers.xmi#//@artifacts.70"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-5.5 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
-    <target href="artifactWrappers.xmi#//@artifacts.72"/>
+    <target href="artifactWrappers.xmi#//@artifacts.71"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-5.7 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
-    <target href="artifactWrappers.xmi#//@artifacts.73"/>
+    <target href="artifactWrappers.xmi#//@artifacts.72"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility and limit checks : Measure -> Requirements!SR-5.9 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.12"/>
-    <target href="artifactWrappers.xmi#//@artifacts.74"/>
+    <target href="artifactWrappers.xmi#//@artifacts.73"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByRequirement" name="Add plausibility checks in the sensor fusion component : Measure -> Requirements!SR-1.2.2 (mobstr-requirements.xlsx);">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.3/@measures.1"/>
-    <target href="artifactWrappers.xmi#//@artifacts.20"/>
+    <target href="artifactWrappers.xmi#//@artifacts.19"/>
   </traces>
   <traces xsi:type="tim:EffectsComponent" name="No localization by GPS : Failure -> GPS Grabber : Component;">
     <source href="../org.panorama-research.mobstr.fmea/mobstr-fmea.integration#//@odeProductPackages.0/@failureModels.1/@failures.1"/>
@@ -758,7 +758,7 @@
   </traces>
   <traces xsi:type="tim:FormalizesRequirement" name="C1 : DependabilityContract -> Requirements!8 (mobstr-requirements_v7.xlsx);">
     <source href="../org.panorama-research.mobstr.contracts/mobstr-contracts.dependability_#//@dependabilityRequirements.0/@dependabilityContracts.0"/>
-    <target href="artifactWrappers.xmi#//@artifacts.82"/>
+    <target href="artifactWrappers.xmi#//@artifacts.81"/>
   </traces>
   <traces xsi:type="tim:SpecifiedByContract" name="Lidar Grabber : Component -> C2 : DependabilityContract;">
     <source href="../org.panorama-research.mobstr.architecture/mobstr-architecture.uml#_QBDgIH_ZEeq1j4EUwdsVmw"/>
