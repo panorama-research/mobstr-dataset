@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<am:Amalthea xmlns:am="http://app4mc.eclipse.org/amalthea/1.0.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+<am:Amalthea xmlns:am="http://app4mc.eclipse.org/amalthea/2.0.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
   <customProperties key="origin">
     <value xsi:type="am:StringObject" value="https://www.ecrts.org/forum/viewtopic.php?f=43&amp;t=124&amp;sid=2ed215f5b81414d188799074f433adcf&#xA;&#xA;Update October 2nd 2019:&#xA;Amalthea model of the challenge has been replaced with a fixed version, where no overload situation occurs.&#xA;&#xA;Link to zipped model:&#xA;https://www.ecrts.org/forum/download/file.php?id=117&amp;sid=2f2479cc441ce3ec64309965c5e9a994" />
   </customProperties>
@@ -699,23 +699,29 @@
   </hwModel>
   <osModel>
     <operatingSystems name="Sched_Cluster_A57">
-      <taskSchedulers xmi:id="Scheduler_A57?type=TaskScheduler" name="Scheduler_A57">
-        <schedulingAlgorithm xsi:type="am:FixedPriorityPreemptive" />
-      </taskSchedulers>
+      <taskSchedulers xmi:id="Scheduler_A57?type=TaskScheduler" name="Scheduler_A57" definition="FixedPriorityPreemptive?type=SchedulerDefinition" />
     </operatingSystems>
     <operatingSystems name="GPU_Cluster">
-      <taskSchedulers xmi:id="GPU_Sched?type=TaskScheduler" name="GPU_Sched">
-        <schedulingAlgorithm xsi:type="am:UserSpecificSchedulingAlgorithm">
-          <parameterExtensions key="minimumTimeslice" value="1000 µs" />
-          <parameterExtensions key="maximumTimeslice" value="50000 µs" />
-        </schedulingAlgorithm>
+      <taskSchedulers xmi:id="GPU_Sched?type=TaskScheduler" name="GPU_Sched" definition="UserSpecificSchedulingAlgorithm1?type=SchedulerDefinition">
+        <schedulingParameters key="extended%3A+minimumTimeslice?type=SchedulingParameterDefinition">
+          <value xsi:type="am:StringObject" value="1000 µs" />
+        </schedulingParameters>
+        <schedulingParameters key="extended%3A+maximumTimeslice?type=SchedulingParameterDefinition">
+          <value xsi:type="am:StringObject" value="50000 µs" />
+        </schedulingParameters>
       </taskSchedulers>
     </operatingSystems>
     <operatingSystems name="Scheduling_Cluster_Denver">
-      <taskSchedulers xmi:id="Scheduler_Denver?type=TaskScheduler" name="Scheduler_Denver">
-        <schedulingAlgorithm xsi:type="am:FixedPriorityPreemptive" />
-      </taskSchedulers>
+      <taskSchedulers xmi:id="Scheduler_Denver?type=TaskScheduler" name="Scheduler_Denver" definition="FixedPriorityPreemptive?type=SchedulerDefinition" />
     </operatingSystems>
+    <schedulerDefinitions xmi:id="FixedPriorityPreemptive?type=SchedulerDefinition" name="FixedPriorityPreemptive" description="Fixed Priority Preemptive Scheduling (e.g. AUTOSAR),&#xA;same as OSEK but without task groups.&#xA;&#xA;Algorithm parameters&#xA; -&#xA;&#xA;Process parameters&#xA; - priority [1] Integer&#xA;      The priority of the process (a higher value means a higher priority).&#xA;&#xA;Options:&#xA; -&#xA;&#xA;Reference:&#xA; - TODO" processParameters="priority?type=SchedulingParameterDefinition" hasExactlyOneChild="false" passesParametersUpwards="false" requiresParentScheduler="false" />
+    <schedulerDefinitions xmi:id="UserSpecificSchedulingAlgorithm1?type=SchedulerDefinition" name="UserSpecificSchedulingAlgorithm1" algorithmParameters="extended%3A+minimumTimeslice?type=SchedulingParameterDefinition extended%3A+maximumTimeslice?type=SchedulingParameterDefinition" />
+    <schedulingParameterDefinitions xmi:id="priority?type=SchedulingParameterDefinition" name="priority" type="Integer" many="false" mandatory="true" />
+    <schedulingParameterDefinitions xmi:id="extended%3A+TimeSlice_Detection?type=SchedulingParameterDefinition" name="extended: TimeSlice_Detection" type="String" many="false" mandatory="false" />
+    <schedulingParameterDefinitions xmi:id="extended%3A+TimeSlice_Localization?type=SchedulingParameterDefinition" name="extended: TimeSlice_Localization" type="String" many="false" mandatory="false" />
+    <schedulingParameterDefinitions xmi:id="extended%3A+TimeSlice_SFM?type=SchedulingParameterDefinition" name="extended: TimeSlice_SFM" type="String" many="false" mandatory="false" />
+    <schedulingParameterDefinitions xmi:id="extended%3A+maximumTimeslice?type=SchedulingParameterDefinition" name="extended: maximumTimeslice" type="String" many="false" mandatory="false" />
+    <schedulingParameterDefinitions xmi:id="extended%3A+minimumTimeslice?type=SchedulingParameterDefinition" name="extended: minimumTimeslice" type="String" many="false" mandatory="false" />
   </osModel>
   <stimuliModel>
     <stimuli xsi:type="am:InterProcessStimulus" xmi:id="SFM_stim?type=InterProcessStimulus" name="SFM_stim" />
@@ -799,48 +805,76 @@
     <schedulerAllocation scheduler="Scheduler_Denver?type=TaskScheduler" responsibility="Core0?type=ProcessingUnit Core1?type=ProcessingUnit" executingPU="Core0?type=ProcessingUnit" />
     <schedulerAllocation scheduler="Scheduler_A57?type=TaskScheduler" responsibility="Core2?type=ProcessingUnit Core3?type=ProcessingUnit Core4?type=ProcessingUnit Core5?type=ProcessingUnit" executingPU="Core0?type=ProcessingUnit" />
     <taskAllocation task="CANbus_polling?type=Task" scheduler="Scheduler_A57?type=TaskScheduler" affinity="Core2?type=ProcessingUnit">
-      <schedulingParameters priority="5" />
+      <schedulingParameters key="priority?type=SchedulingParameterDefinition">
+        <value xsi:type="am:IntegerObject" value="5" />
+      </schedulingParameters>
     </taskAllocation>
-    <taskAllocation task="OS_Overhead?type=Task" scheduler="Scheduler_A57?type=TaskScheduler" affinity="Core5?type=ProcessingUnit">
-      <schedulingParameters priority="0" />
-    </taskAllocation>
+    <taskAllocation task="OS_Overhead?type=Task" scheduler="Scheduler_A57?type=TaskScheduler" affinity="Core5?type=ProcessingUnit" />
     <taskAllocation task="DASM?type=Task" scheduler="Scheduler_A57?type=TaskScheduler" affinity="Core5?type=ProcessingUnit">
-      <schedulingParameters priority="3" />
+      <schedulingParameters key="priority?type=SchedulingParameterDefinition">
+        <value xsi:type="am:IntegerObject" value="3" />
+      </schedulingParameters>
     </taskAllocation>
     <taskAllocation task="Lidar_Grabber?type=Task" scheduler="Scheduler_A57?type=TaskScheduler" affinity="Core4?type=ProcessingUnit">
-      <schedulingParameters priority="8" />
+      <schedulingParameters key="priority?type=SchedulingParameterDefinition">
+        <value xsi:type="am:IntegerObject" value="8" />
+      </schedulingParameters>
     </taskAllocation>
     <taskAllocation task="Planner?type=Task" scheduler="Scheduler_Denver?type=TaskScheduler" affinity="Core0?type=ProcessingUnit">
-      <schedulingParameters priority="9" />
+      <schedulingParameters key="priority?type=SchedulingParameterDefinition">
+        <value xsi:type="am:IntegerObject" value="9" />
+      </schedulingParameters>
     </taskAllocation>
     <taskAllocation task="EKF?type=Task" scheduler="Scheduler_A57?type=TaskScheduler" affinity="Core2?type=ProcessingUnit">
-      <schedulingParameters priority="1" />
+      <schedulingParameters key="priority?type=SchedulingParameterDefinition">
+        <value xsi:type="am:IntegerObject" value="1" />
+      </schedulingParameters>
     </taskAllocation>
     <taskAllocation task="PRE_Detection_gpu_POST?type=Task" scheduler="Scheduler_A57?type=TaskScheduler" affinity="Core4?type=ProcessingUnit">
-      <schedulingParameters priority="4" />
+      <schedulingParameters key="priority?type=SchedulingParameterDefinition">
+        <value xsi:type="am:IntegerObject" value="4" />
+      </schedulingParameters>
     </taskAllocation>
     <taskAllocation task="PRE_Lane_detection_gpu_POST?type=Task" scheduler="Scheduler_Denver?type=TaskScheduler" affinity="Core1?type=ProcessingUnit">
-      <schedulingParameters priority="2" />
+      <schedulingParameters key="priority?type=SchedulingParameterDefinition">
+        <value xsi:type="am:IntegerObject" value="2" />
+      </schedulingParameters>
     </taskAllocation>
     <taskAllocation task="PRE_SFM_gpu_POST?type=Task" scheduler="Scheduler_Denver?type=TaskScheduler" affinity="Core1?type=ProcessingUnit">
-      <schedulingParameters priority="6" />
+      <schedulingParameters key="priority?type=SchedulingParameterDefinition">
+        <value xsi:type="am:IntegerObject" value="6" />
+      </schedulingParameters>
     </taskAllocation>
     <taskAllocation task="PRE_Localization_gpu_POST?type=Task" scheduler="Scheduler_A57?type=TaskScheduler" affinity="Core3?type=ProcessingUnit">
-      <schedulingParameters priority="4" />
+      <schedulingParameters key="priority?type=SchedulingParameterDefinition">
+        <value xsi:type="am:IntegerObject" value="4" />
+      </schedulingParameters>
     </taskAllocation>
     <taskAllocation task="Lane_detection?type=Task" scheduler="Scheduler_Denver?type=TaskScheduler" affinity="Core1?type=ProcessingUnit">
-      <schedulingParameters priority="2" />
+      <schedulingParameters key="priority?type=SchedulingParameterDefinition">
+        <value xsi:type="am:IntegerObject" value="2" />
+      </schedulingParameters>
     </taskAllocation>
     <taskAllocation task="Detection?type=Task" scheduler="GPU_Sched?type=TaskScheduler" affinity="GP10B?type=ProcessingUnit">
-      <parameterExtensions key="TimeSlice_Detection" value="50000µs" />
+      <schedulingParameters key="extended%3A+TimeSlice_Detection?type=SchedulingParameterDefinition">
+        <value xsi:type="am:StringObject" value="50000µs" />
+      </schedulingParameters>
     </taskAllocation>
     <taskAllocation task="SFM?type=Task" scheduler="GPU_Sched?type=TaskScheduler" affinity="GP10B?type=ProcessingUnit">
-      <schedulingParameters priority="1" />
-      <parameterExtensions key="TimeSlice_SFM" value="7200µs" />
+      <schedulingParameters key="priority?type=SchedulingParameterDefinition">
+        <value xsi:type="am:IntegerObject" value="1" />
+      </schedulingParameters>
+      <schedulingParameters key="extended%3A+TimeSlice_SFM?type=SchedulingParameterDefinition">
+        <value xsi:type="am:StringObject" value="7200µs" />
+      </schedulingParameters>
     </taskAllocation>
     <taskAllocation task="Localization?type=Task" scheduler="Scheduler_A57?type=TaskScheduler" affinity="Core3?type=ProcessingUnit">
-      <schedulingParameters priority="4" />
-      <parameterExtensions key="TimeSlice_Localization" value="50000µs" />
+      <schedulingParameters key="priority?type=SchedulingParameterDefinition">
+        <value xsi:type="am:IntegerObject" value="4" />
+      </schedulingParameters>
+      <schedulingParameters key="extended%3A+TimeSlice_Localization?type=SchedulingParameterDefinition">
+        <value xsi:type="am:StringObject" value="50000µs" />
+      </schedulingParameters>
     </taskAllocation>
     <memoryMapping abstractElement="Bounding_box_device?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
     <memoryMapping abstractElement="Bounding_box_host?type=Label" memory="SYSTEM_DRAM?type=Memory" memoryPositionAddress="0x0" />
