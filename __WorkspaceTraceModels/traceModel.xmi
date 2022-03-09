@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tim:MobstrTIM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:am="http://app4mc.eclipse.org/amalthea/1.0.0" xmlns:argumentation_="http://www.deis-project.eu/ode/mergedODE/sacm/argumentation" xmlns:tim="http://www.panorama-research.org/mobstr/1.0.0">
+<tim:MobstrTIM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:am="http://app4mc.eclipse.org/amalthea/2.0.0" xmlns:argumentation_="http://www.deis-project.eu/ode/mergedODE/sacm/argumentation" xmlns:tim="http://www.panorama-research.org/mobstr/1.0.0">
   <traces xsi:type="tim:AddressedBySafetyGoal" name="Hazards!H-1 (mobstr-hazards.xlsx) -> Requirements!SG-1 (mobstr-requirements.xlsx)">
     <source href="artifactWrappers.xmi#//@artifacts.5"/>
     <target href="artifactWrappers.xmi#//@artifacts.6"/>
